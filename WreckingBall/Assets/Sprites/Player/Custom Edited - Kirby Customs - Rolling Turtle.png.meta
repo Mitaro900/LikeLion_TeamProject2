@@ -1,0 +1,3250 @@
+fileFormatVersion: 2
+guid: 67b0f117242d7b14487d0abc84968dc4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5162847623264230700
+    second: Custom Edited - Kirby Customs - Rolling Turtle_0
+  - first:
+      213: 3388580296479579004
+    second: Custom Edited - Kirby Customs - Rolling Turtle_1
+  - first:
+      213: 1883991635748462305
+    second: Custom Edited - Kirby Customs - Rolling Turtle_2
+  - first:
+      213: -8979592096497392029
+    second: Custom Edited - Kirby Customs - Rolling Turtle_3
+  - first:
+      213: -2748841379298872618
+    second: Custom Edited - Kirby Customs - Rolling Turtle_4
+  - first:
+      213: -8156830219494067491
+    second: Custom Edited - Kirby Customs - Rolling Turtle_5
+  - first:
+      213: -2845585931473260915
+    second: Custom Edited - Kirby Customs - Rolling Turtle_6
+  - first:
+      213: 3372902214796725777
+    second: Custom Edited - Kirby Customs - Rolling Turtle_7
+  - first:
+      213: -6940462933237412135
+    second: Custom Edited - Kirby Customs - Rolling Turtle_8
+  - first:
+      213: 7229151624018160635
+    second: Custom Edited - Kirby Customs - Rolling Turtle_9
+  - first:
+      213: 5007569942257127302
+    second: Custom Edited - Kirby Customs - Rolling Turtle_10
+  - first:
+      213: -5690848538347139305
+    second: Custom Edited - Kirby Customs - Rolling Turtle_11
+  - first:
+      213: 8193717093541705443
+    second: Custom Edited - Kirby Customs - Rolling Turtle_12
+  - first:
+      213: 829898514888204086
+    second: Custom Edited - Kirby Customs - Rolling Turtle_13
+  - first:
+      213: -139974197645500572
+    second: Custom Edited - Kirby Customs - Rolling Turtle_14
+  - first:
+      213: -1258708919109489401
+    second: Custom Edited - Kirby Customs - Rolling Turtle_15
+  - first:
+      213: 6507015996138522070
+    second: Custom Edited - Kirby Customs - Rolling Turtle_16
+  - first:
+      213: -4732533370983177758
+    second: Custom Edited - Kirby Customs - Rolling Turtle_17
+  - first:
+      213: 5963460853143893159
+    second: Custom Edited - Kirby Customs - Rolling Turtle_18
+  - first:
+      213: 3248594362682900755
+    second: Custom Edited - Kirby Customs - Rolling Turtle_19
+  - first:
+      213: -2982687481120139890
+    second: Custom Edited - Kirby Customs - Rolling Turtle_20
+  - first:
+      213: 2892636548728950929
+    second: Custom Edited - Kirby Customs - Rolling Turtle_21
+  - first:
+      213: -3162683457048266539
+    second: Custom Edited - Kirby Customs - Rolling Turtle_22
+  - first:
+      213: -8455803456101573610
+    second: Custom Edited - Kirby Customs - Rolling Turtle_23
+  - first:
+      213: -358690013988540611
+    second: Custom Edited - Kirby Customs - Rolling Turtle_24
+  - first:
+      213: -4200840275633374778
+    second: Custom Edited - Kirby Customs - Rolling Turtle_25
+  - first:
+      213: 1041936434741056568
+    second: Custom Edited - Kirby Customs - Rolling Turtle_26
+  - first:
+      213: 4411180638324886229
+    second: Custom Edited - Kirby Customs - Rolling Turtle_27
+  - first:
+      213: -2774182466746008360
+    second: Custom Edited - Kirby Customs - Rolling Turtle_28
+  - first:
+      213: -3905165070558771672
+    second: Custom Edited - Kirby Customs - Rolling Turtle_29
+  - first:
+      213: -6963401641408856012
+    second: Custom Edited - Kirby Customs - Rolling Turtle_30
+  - first:
+      213: 6397101096878770960
+    second: Custom Edited - Kirby Customs - Rolling Turtle_31
+  - first:
+      213: 849738820320984852
+    second: Custom Edited - Kirby Customs - Rolling Turtle_32
+  - first:
+      213: -2285589013093153240
+    second: Custom Edited - Kirby Customs - Rolling Turtle_33
+  - first:
+      213: -4773304872532149585
+    second: Custom Edited - Kirby Customs - Rolling Turtle_34
+  - first:
+      213: -1403478753870276105
+    second: Custom Edited - Kirby Customs - Rolling Turtle_35
+  - first:
+      213: 7690651064241215473
+    second: Custom Edited - Kirby Customs - Rolling Turtle_36
+  - first:
+      213: -3863912559039518541
+    second: Custom Edited - Kirby Customs - Rolling Turtle_37
+  - first:
+      213: -2300415700804925468
+    second: Custom Edited - Kirby Customs - Rolling Turtle_38
+  - first:
+      213: 76967156825285691
+    second: Custom Edited - Kirby Customs - Rolling Turtle_39
+  - first:
+      213: -4546892216900729300
+    second: Custom Edited - Kirby Customs - Rolling Turtle_40
+  - first:
+      213: 1690623103898866685
+    second: Custom Edited - Kirby Customs - Rolling Turtle_41
+  - first:
+      213: -3531359969435895883
+    second: Custom Edited - Kirby Customs - Rolling Turtle_42
+  - first:
+      213: 270385746455811049
+    second: Custom Edited - Kirby Customs - Rolling Turtle_43
+  - first:
+      213: -4229772627365938055
+    second: Custom Edited - Kirby Customs - Rolling Turtle_44
+  - first:
+      213: 6932658012511599280
+    second: Custom Edited - Kirby Customs - Rolling Turtle_45
+  - first:
+      213: -5472486364240997845
+    second: Custom Edited - Kirby Customs - Rolling Turtle_46
+  - first:
+      213: 7100287247242101242
+    second: Custom Edited - Kirby Customs - Rolling Turtle_47
+  - first:
+      213: 6845507676545039912
+    second: Custom Edited - Kirby Customs - Rolling Turtle_48
+  - first:
+      213: -1691978863094652377
+    second: Custom Edited - Kirby Customs - Rolling Turtle_49
+  - first:
+      213: 7377393897307060865
+    second: Custom Edited - Kirby Customs - Rolling Turtle_50
+  - first:
+      213: -4637959607926072723
+    second: Custom Edited - Kirby Customs - Rolling Turtle_51
+  - first:
+      213: 1484315146527696158
+    second: Custom Edited - Kirby Customs - Rolling Turtle_52
+  - first:
+      213: -5443762562726201408
+    second: Custom Edited - Kirby Customs - Rolling Turtle_53
+  - first:
+      213: -1724473886807429334
+    second: Custom Edited - Kirby Customs - Rolling Turtle_54
+  - first:
+      213: 8218253168006032791
+    second: Custom Edited - Kirby Customs - Rolling Turtle_55
+  - first:
+      213: 5382705468746876044
+    second: Custom Edited - Kirby Customs - Rolling Turtle_56
+  - first:
+      213: -4491618037996002763
+    second: Custom Edited - Kirby Customs - Rolling Turtle_57
+  - first:
+      213: 451947192568080514
+    second: Custom Edited - Kirby Customs - Rolling Turtle_58
+  - first:
+      213: 1161574363382750048
+    second: Custom Edited - Kirby Customs - Rolling Turtle_59
+  - first:
+      213: 6900445522384087746
+    second: Custom Edited - Kirby Customs - Rolling Turtle_60
+  - first:
+      213: -6885002300261939534
+    second: Custom Edited - Kirby Customs - Rolling Turtle_61
+  - first:
+      213: -6646243537157932130
+    second: Custom Edited - Kirby Customs - Rolling Turtle_62
+  - first:
+      213: -1731359204772532076
+    second: Custom Edited - Kirby Customs - Rolling Turtle_63
+  - first:
+      213: 5272201703745416318
+    second: Custom Edited - Kirby Customs - Rolling Turtle_64
+  - first:
+      213: 7057610472218981953
+    second: Custom Edited - Kirby Customs - Rolling Turtle_65
+  - first:
+      213: -4644532020589921887
+    second: Custom Edited - Kirby Customs - Rolling Turtle_66
+  - first:
+      213: 5701891077493251599
+    second: Custom Edited - Kirby Customs - Rolling Turtle_67
+  - first:
+      213: 4004082239432202050
+    second: Custom Edited - Kirby Customs - Rolling Turtle_68
+  - first:
+      213: 2274063562981576751
+    second: Custom Edited - Kirby Customs - Rolling Turtle_69
+  - first:
+      213: 420201636054598184
+    second: Custom Edited - Kirby Customs - Rolling Turtle_70
+  - first:
+      213: -4837521657269364335
+    second: Custom Edited - Kirby Customs - Rolling Turtle_71
+  - first:
+      213: 2400443405218420306
+    second: Custom Edited - Kirby Customs - Rolling Turtle_72
+  - first:
+      213: -3375434338186894496
+    second: Custom Edited - Kirby Customs - Rolling Turtle_73
+  - first:
+      213: -7611387370318291206
+    second: Custom Edited - Kirby Customs - Rolling Turtle_74
+  - first:
+      213: 6366762118964336140
+    second: Custom Edited - Kirby Customs - Rolling Turtle_75
+  - first:
+      213: -4183048451984609818
+    second: Custom Edited - Kirby Customs - Rolling Turtle_76
+  - first:
+      213: 4708071237635486963
+    second: Custom Edited - Kirby Customs - Rolling Turtle_77
+  - first:
+      213: -6794370891208010731
+    second: Custom Edited - Kirby Customs - Rolling Turtle_78
+  - first:
+      213: 7138051251159068132
+    second: Custom Edited - Kirby Customs - Rolling Turtle_79
+  - first:
+      213: 7517108403896654352
+    second: Custom Edited - Kirby Customs - Rolling Turtle_80
+  - first:
+      213: -4197815175852866521
+    second: Custom Edited - Kirby Customs - Rolling Turtle_81
+  - first:
+      213: -7402607247962046697
+    second: Custom Edited - Kirby Customs - Rolling Turtle_82
+  - first:
+      213: -312513200260713371
+    second: Custom Edited - Kirby Customs - Rolling Turtle_83
+  - first:
+      213: -2319324396853369623
+    second: Custom Edited - Kirby Customs - Rolling Turtle_84
+  - first:
+      213: -8475120518784465407
+    second: Custom Edited - Kirby Customs - Rolling Turtle_85
+  - first:
+      213: -5249104675016573774
+    second: Custom Edited - Kirby Customs - Rolling Turtle_86
+  - first:
+      213: -2687726393178428491
+    second: Custom Edited - Kirby Customs - Rolling Turtle_87
+  - first:
+      213: 607646114666429631
+    second: Custom Edited - Kirby Customs - Rolling Turtle_88
+  - first:
+      213: 6506785730869365946
+    second: Custom Edited - Kirby Customs - Rolling Turtle_89
+  - first:
+      213: 2886618994984082747
+    second: Custom Edited - Kirby Customs - Rolling Turtle_90
+  - first:
+      213: 6200125516961116157
+    second: Custom Edited - Kirby Customs - Rolling Turtle_91
+  - first:
+      213: 8397943032602124934
+    second: Custom Edited - Kirby Customs - Rolling Turtle_92
+  - first:
+      213: 2558866559513327924
+    second: Custom Edited - Kirby Customs - Rolling Turtle_93
+  - first:
+      213: -7662260643532381198
+    second: Custom Edited - Kirby Customs - Rolling Turtle_94
+  - first:
+      213: -6097335529027186210
+    second: Custom Edited - Kirby Customs - Rolling Turtle_95
+  - first:
+      213: 5574150851793919475
+    second: Custom Edited - Kirby Customs - Rolling Turtle_96
+  - first:
+      213: 7722898272137522935
+    second: Custom Edited - Kirby Customs - Rolling Turtle_97
+  - first:
+      213: 7911217586380997978
+    second: Custom Edited - Kirby Customs - Rolling Turtle_98
+  - first:
+      213: 6316216426215480847
+    second: Custom Edited - Kirby Customs - Rolling Turtle_99
+  - first:
+      213: 670568319217541427
+    second: Custom Edited - Kirby Customs - Rolling Turtle_100
+  - first:
+      213: 2708163209124488549
+    second: Custom Edited - Kirby Customs - Rolling Turtle_101
+  - first:
+      213: -3202551860220554203
+    second: Custom Edited - Kirby Customs - Rolling Turtle_102
+  - first:
+      213: -7357513407509895505
+    second: Custom Edited - Kirby Customs - Rolling Turtle_103
+  - first:
+      213: 7528406219672535238
+    second: Custom Edited - Kirby Customs - Rolling Turtle_104
+  - first:
+      213: 1063684313875436196
+    second: Custom Edited - Kirby Customs - Rolling Turtle_105
+  - first:
+      213: 3819243356017273572
+    second: Custom Edited - Kirby Customs - Rolling Turtle_106
+  - first:
+      213: 8162897756620005755
+    second: Custom Edited - Kirby Customs - Rolling Turtle_107
+  - first:
+      213: -628163571639086958
+    second: Custom Edited - Kirby Customs - Rolling Turtle_108
+  - first:
+      213: 4725776101140750616
+    second: Custom Edited - Kirby Customs - Rolling Turtle_109
+  - first:
+      213: -7749009360096859977
+    second: Custom Edited - Kirby Customs - Rolling Turtle_110
+  - first:
+      213: -7360359554057151001
+    second: Custom Edited - Kirby Customs - Rolling Turtle_111
+  - first:
+      213: -6819580819082411080
+    second: Custom Edited - Kirby Customs - Rolling Turtle_112
+  - first:
+      213: -2804324014058231264
+    second: Custom Edited - Kirby Customs - Rolling Turtle_113
+  - first:
+      213: -8399109162054559990
+    second: Custom Edited - Kirby Customs - Rolling Turtle_114
+  - first:
+      213: -3422533785424639321
+    second: Custom Edited - Kirby Customs - Rolling Turtle_115
+  - first:
+      213: 7552733564236476906
+    second: Custom Edited - Kirby Customs - Rolling Turtle_116
+  - first:
+      213: 4057186301427423174
+    second: Custom Edited - Kirby Customs - Rolling Turtle_117
+  - first:
+      213: 1072185628792522055
+    second: Custom Edited - Kirby Customs - Rolling Turtle_118
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 24
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 202
+        width: 66
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d2add9c071e958b0800000000000000
+      internalID: -5162847623264230700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 204
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7b9d8083d7a60f20800000000000000
+      internalID: 3388580296479579004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_2
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 204
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ee18903968452a10800000000000000
+      internalID: 1883991635748462305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_3
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 204
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3662e5c6094126380800000000000000
+      internalID: -8979592096497392029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_4
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 204
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d2fefa54572ad9d0800000000000000
+      internalID: -2748841379298872618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_5
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 204
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd272e1d12e1dce80800000000000000
+      internalID: -8156830219494067491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_6
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 204
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8eefa00ca27288d0800000000000000
+      internalID: -2845585931473260915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_7
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 202
+        width: 84
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11e4617a1b4fece20800000000000000
+      internalID: 3372902214796725777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_8
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 204
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9de4e9ffbb58eaf90800000000000000
+      internalID: -6940462933237412135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_9
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 204
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfb6a01b91b135460800000000000000
+      internalID: 7229151624018160635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_10
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 204
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68fc82cc4567e7540800000000000000
+      internalID: 5007569942257127302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_11
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 202
+        width: 52
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71f8441e76b0601b0800000000000000
+      internalID: -5690848538347139305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_12
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 204
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e6799ec84ee5b170800000000000000
+      internalID: 8193717093541705443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_13
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 202
+        width: 43
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63f19836d44648b00800000000000000
+      internalID: 829898514888204086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_14
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 204
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46f9e977536be0ef0800000000000000
+      internalID: -139974197645500572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_15
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 158
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70decd038ea288ee0800000000000000
+      internalID: -1258708919109489401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_16
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 158
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d50f95a2909d4a50800000000000000
+      internalID: 6507015996138522070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_17
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 158
+        width: 37
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e1adde19f9a25eb0800000000000000
+      internalID: -4732533370983177758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_18
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 158
+        width: 37
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a4f697dc0872c250800000000000000
+      internalID: 5963460853143893159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_19
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 158
+        width: 37
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3110d0f6c53551d20800000000000000
+      internalID: 3248594362682900755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_20
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 158
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8554d3f98d5b96d0800000000000000
+      internalID: -2982687481120139890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_21
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 158
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1901d4f7d95b42820800000000000000
+      internalID: 2892636548728950929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_22
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 158
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d832a50724eb14d0800000000000000
+      internalID: -3162683457048266539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_23
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 158
+        width: 38
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61c9b84be83f6aa80800000000000000
+      internalID: -8455803456101573610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_24
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 160
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3fabbb255da50bf0800000000000000
+      internalID: -358690013988540611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_25
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 161
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c9f7bcb60e93b5c0800000000000000
+      internalID: -4200840275633374778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_26
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 161
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 834174fbaa3b57e00800000000000000
+      internalID: 1041936434741056568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_27
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 161
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5da8f6b4b69a73d30800000000000000
+      internalID: 4411180638324886229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_28
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 161
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dcbc77aebf1089d0800000000000000
+      internalID: -2774182466746008360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_29
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 161
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 826c41c0f011ec9c0800000000000000
+      internalID: -3905165070558771672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_30
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 160
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 430047fc9170d5f90800000000000000
+      internalID: -6963401641408856012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_31
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 161
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01b88b7ed8117c850800000000000000
+      internalID: 6397101096878770960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_32
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 159
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41f771974f0eacb00800000000000000
+      internalID: 849738820320984852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_33
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 161
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8260c04f6e4f740e0800000000000000
+      internalID: -2285589013093153240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_34
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 161
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faa741c2280d1cdb0800000000000000
+      internalID: -4773304872532149585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_35
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 161
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f911c16287d58ce0800000000000000
+      internalID: -1403478753870276105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_36
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 161
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f7d397656eaaba60800000000000000
+      internalID: 7690651064241215473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_37
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 114
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b8674bdfff906ac0800000000000000
+      internalID: -3863912559039518541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_38
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 114
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e78ac5bb184310e0800000000000000
+      internalID: -2300415700804925468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_39
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 114
+        width: 37
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3461f9a831711100800000000000000
+      internalID: 76967156825285691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_40
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 114
+        width: 37
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c26c4a38e9136e0c0800000000000000
+      internalID: -4546892216900729300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_41
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 114
+        width: 37
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df3d5f471cc467710800000000000000
+      internalID: 1690623103898866685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_42
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 114
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b73db751d61efec0800000000000000
+      internalID: -3531359969435895883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_43
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 114
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e3d3d1676a90c300800000000000000
+      internalID: 270385746455811049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_44
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 114
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97cbe29a434dc45c0800000000000000
+      internalID: -4229772627365938055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_45
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 114
+        width: 38
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0baf4094bbfb53060800000000000000
+      internalID: 6932658012511599280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_46
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 116
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b221f3d65a2dd04b0800000000000000
+      internalID: -5472486364240997845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_47
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 117
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af10a17e1a9498260800000000000000
+      internalID: 7100287247242101242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_48
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 117
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e3da776f0200f50800000000000000
+      internalID: 6845507676545039912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_49
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 117
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72226c14032e488e0800000000000000
+      internalID: -1691978863094652377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_50
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 117
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18a3f1999a4c16660800000000000000
+      internalID: 7377393897307060865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_51
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 117
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6ad4fe3f48a2afb0800000000000000
+      internalID: -4637959607926072723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_52
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 116
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e15e383f2c8599410800000000000000
+      internalID: 1484315146527696158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_53
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 117
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c7722f9aced374b0800000000000000
+      internalID: -5443762562726201408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_54
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 115
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2fe768f2207118e0800000000000000
+      internalID: -1724473886807429334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_55
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 117
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79d6a31d6b91d0270800000000000000
+      internalID: 8218253168006032791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_56
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 117
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c84c533ea1633ba40800000000000000
+      internalID: 5382705468746876044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_57
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 117
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 532e28a21319aa1c0800000000000000
+      internalID: -4491618037996002763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_58
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 117
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 288614eb393a54600800000000000000
+      internalID: 451947192568080514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_59
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 70
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06b11adaabdbe1010800000000000000
+      internalID: 1161574363382750048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_60
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 70
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ca63a974ae43cf50800000000000000
+      internalID: 6900445522384087746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_61
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 70
+        width: 37
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b6c32fd2ee8370a0800000000000000
+      internalID: -6885002300261939534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_62
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 70
+        width: 37
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9b37fc57bcc3c3a0800000000000000
+      internalID: -6646243537157932130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_63
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 70
+        width: 37
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4903ee4f9f9f8f7e0800000000000000
+      internalID: -1731359204772532076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_64
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 70
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7c64f7248f9a2940800000000000000
+      internalID: 5272201703745416318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_65
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 70
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14670b7e45ba1f160800000000000000
+      internalID: 7057610472218981953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_66
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 70
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a97fcc2cbe4b8fb0800000000000000
+      internalID: -4644532020589921887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_67
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 70
+        width: 38
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0e54fd99bf212f40800000000000000
+      internalID: 5701891077493251599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_68
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 72
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2479ecc059b519730800000000000000
+      internalID: 4004082239432202050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_69
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 73
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f201d2413c81f8f10800000000000000
+      internalID: 2274063562981576751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_70
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 73
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8228213692bd4d500800000000000000
+      internalID: 420201636054598184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_71
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 73
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1995339deabaddcb0800000000000000
+      internalID: -4837521657269364335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_72
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 73
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25619771f86105120800000000000000
+      internalID: 2400443405218420306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_73
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 73
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 063e6bd6a5c0821d0800000000000000
+      internalID: -3375434338186894496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_74
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 72
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afe9848738bee5690800000000000000
+      internalID: -7611387370318291206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_75
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 73
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0658462a684b5850800000000000000
+      internalID: 6366762118964336140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_76
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 71
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eda53d7893d2f5c0800000000000000
+      internalID: -4183048451984609818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_77
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 73
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f43f70a8dd665140800000000000000
+      internalID: 4708071237635486963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_78
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 73
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 514da4d2cab85b1a0800000000000000
+      internalID: -6794370891208010731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_79
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 73
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ed6edd3bc37f0360800000000000000
+      internalID: 7138051251159068132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_80
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 73
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a1d581442225860800000000000000
+      internalID: 7517108403896654352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_81
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 45
+        width: 61
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 724cb8aa65d5eb5c0800000000000000
+      internalID: -4197815175852866521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_82
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 47
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71f7d7dbde7a44990800000000000000
+      internalID: -7402607247962046697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_83
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 47
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 564f6de66eab9abf0800000000000000
+      internalID: -312513200260713371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_84
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 47
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e468a6dfba10dfd0800000000000000
+      internalID: -2319324396853369623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_85
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 47
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1064a319ac2526a80800000000000000
+      internalID: -8475120518784465407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_86
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 47
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bc7bc8eb1f6727b0800000000000000
+      internalID: -5249104675016573774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_87
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 4
+        width: 207
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb6829e51743bad0800000000000000
+      internalID: -2687726393178428491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_88
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 52
+        width: 124
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbcb6ddfbeace6800800000000000000
+      internalID: 607646114666429631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_89
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 54
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abc8c06d52fbc4a50800000000000000
+      internalID: 6506785730869365946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_90
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 54
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3ddbe59ea45f0820800000000000000
+      internalID: 2886618994984082747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_91
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 54
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dff6d49de454b0650800000000000000
+      internalID: 6200125516961116157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_92
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 54
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6826736a1bc7b8470800000000000000
+      internalID: 8397943032602124934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_93
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 54
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 439fa63149be28320800000000000000
+      internalID: 2558866559513327924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_94
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 54
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f3ebc58a8e2aa590800000000000000
+      internalID: -7662260643532381198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_95
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 54
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed157f334a9e16ba0800000000000000
+      internalID: -6097335529027186210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_96
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 54
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fd1e95aaac5b5d40800000000000000
+      internalID: 5574150851793919475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_97
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 54
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fe2c339f0f3d2b60800000000000000
+      internalID: 7722898272137522935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_98
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 54
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a550019ba7a4acd60800000000000000
+      internalID: 7911217586380997978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_99
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 54
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0e9f09ff55b7a750800000000000000
+      internalID: 6316216426215480847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_100
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 18
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 331a79065565e4900800000000000000
+      internalID: 670568319217541427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_101
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 18
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 565a5a91714559520800000000000000
+      internalID: 2708163209124488549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_102
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 19
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52499cc0d004e83d0800000000000000
+      internalID: -3202551860220554203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_103
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 19
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa6e233a98cd4e990800000000000000
+      internalID: -7357513407509895505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_104
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 19
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c04c60d1954a7860800000000000000
+      internalID: 7528406219672535238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_105
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 19
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a253b17f37f2ce00800000000000000
+      internalID: 1063684313875436196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_106
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 19
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ea2e2ad89da00530800000000000000
+      internalID: 3819243356017273572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_107
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 19
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b712b21c240784170800000000000000
+      internalID: 8162897756620005755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_108
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 8
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2909c9b4f805847f0800000000000000
+      internalID: -628163571639086958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_109
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 8
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81166846354559140800000000000000
+      internalID: 4725776101140750616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_110
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 8
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b8ef320b0df57490800000000000000
+      internalID: -7749009360096859977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_111
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 8
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ed55418bffbad990800000000000000
+      internalID: -7360359554057151001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_112
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 8
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b38681706bfb51a0800000000000000
+      internalID: -6819580819082411080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_113
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 8
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02a26faca2a0519d0800000000000000
+      internalID: -2804324014058231264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_114
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 8
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a07520ea7be507b80800000000000000
+      internalID: -8399109162054559990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_115
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 8
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aacdffc7a7b080d0800000000000000
+      internalID: -3422533785424639321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_116
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 8
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae13c7b1923b0d860800000000000000
+      internalID: 7552733564236476906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_117
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 8
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c7992cf1750e4830800000000000000
+      internalID: 4057186301427423174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_118
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 8
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7450571162b21ee00800000000000000
+      internalID: 1072185628792522055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Custom Edited - Kirby Customs - Rolling Turtle_0: -5162847623264230700
+      Custom Edited - Kirby Customs - Rolling Turtle_1: 3388580296479579004
+      Custom Edited - Kirby Customs - Rolling Turtle_10: 5007569942257127302
+      Custom Edited - Kirby Customs - Rolling Turtle_100: 670568319217541427
+      Custom Edited - Kirby Customs - Rolling Turtle_101: 2708163209124488549
+      Custom Edited - Kirby Customs - Rolling Turtle_102: -3202551860220554203
+      Custom Edited - Kirby Customs - Rolling Turtle_103: -7357513407509895505
+      Custom Edited - Kirby Customs - Rolling Turtle_104: 7528406219672535238
+      Custom Edited - Kirby Customs - Rolling Turtle_105: 1063684313875436196
+      Custom Edited - Kirby Customs - Rolling Turtle_106: 3819243356017273572
+      Custom Edited - Kirby Customs - Rolling Turtle_107: 8162897756620005755
+      Custom Edited - Kirby Customs - Rolling Turtle_108: -628163571639086958
+      Custom Edited - Kirby Customs - Rolling Turtle_109: 4725776101140750616
+      Custom Edited - Kirby Customs - Rolling Turtle_11: -5690848538347139305
+      Custom Edited - Kirby Customs - Rolling Turtle_110: -7749009360096859977
+      Custom Edited - Kirby Customs - Rolling Turtle_111: -7360359554057151001
+      Custom Edited - Kirby Customs - Rolling Turtle_112: -6819580819082411080
+      Custom Edited - Kirby Customs - Rolling Turtle_113: -2804324014058231264
+      Custom Edited - Kirby Customs - Rolling Turtle_114: -8399109162054559990
+      Custom Edited - Kirby Customs - Rolling Turtle_115: -3422533785424639321
+      Custom Edited - Kirby Customs - Rolling Turtle_116: 7552733564236476906
+      Custom Edited - Kirby Customs - Rolling Turtle_117: 4057186301427423174
+      Custom Edited - Kirby Customs - Rolling Turtle_118: 1072185628792522055
+      Custom Edited - Kirby Customs - Rolling Turtle_12: 8193717093541705443
+      Custom Edited - Kirby Customs - Rolling Turtle_13: 829898514888204086
+      Custom Edited - Kirby Customs - Rolling Turtle_14: -139974197645500572
+      Custom Edited - Kirby Customs - Rolling Turtle_15: -1258708919109489401
+      Custom Edited - Kirby Customs - Rolling Turtle_16: 6507015996138522070
+      Custom Edited - Kirby Customs - Rolling Turtle_17: -4732533370983177758
+      Custom Edited - Kirby Customs - Rolling Turtle_18: 5963460853143893159
+      Custom Edited - Kirby Customs - Rolling Turtle_19: 3248594362682900755
+      Custom Edited - Kirby Customs - Rolling Turtle_2: 1883991635748462305
+      Custom Edited - Kirby Customs - Rolling Turtle_20: -2982687481120139890
+      Custom Edited - Kirby Customs - Rolling Turtle_21: 2892636548728950929
+      Custom Edited - Kirby Customs - Rolling Turtle_22: -3162683457048266539
+      Custom Edited - Kirby Customs - Rolling Turtle_23: -8455803456101573610
+      Custom Edited - Kirby Customs - Rolling Turtle_24: -358690013988540611
+      Custom Edited - Kirby Customs - Rolling Turtle_25: -4200840275633374778
+      Custom Edited - Kirby Customs - Rolling Turtle_26: 1041936434741056568
+      Custom Edited - Kirby Customs - Rolling Turtle_27: 4411180638324886229
+      Custom Edited - Kirby Customs - Rolling Turtle_28: -2774182466746008360
+      Custom Edited - Kirby Customs - Rolling Turtle_29: -3905165070558771672
+      Custom Edited - Kirby Customs - Rolling Turtle_3: -8979592096497392029
+      Custom Edited - Kirby Customs - Rolling Turtle_30: -6963401641408856012
+      Custom Edited - Kirby Customs - Rolling Turtle_31: 6397101096878770960
+      Custom Edited - Kirby Customs - Rolling Turtle_32: 849738820320984852
+      Custom Edited - Kirby Customs - Rolling Turtle_33: -2285589013093153240
+      Custom Edited - Kirby Customs - Rolling Turtle_34: -4773304872532149585
+      Custom Edited - Kirby Customs - Rolling Turtle_35: -1403478753870276105
+      Custom Edited - Kirby Customs - Rolling Turtle_36: 7690651064241215473
+      Custom Edited - Kirby Customs - Rolling Turtle_37: -3863912559039518541
+      Custom Edited - Kirby Customs - Rolling Turtle_38: -2300415700804925468
+      Custom Edited - Kirby Customs - Rolling Turtle_39: 76967156825285691
+      Custom Edited - Kirby Customs - Rolling Turtle_4: -2748841379298872618
+      Custom Edited - Kirby Customs - Rolling Turtle_40: -4546892216900729300
+      Custom Edited - Kirby Customs - Rolling Turtle_41: 1690623103898866685
+      Custom Edited - Kirby Customs - Rolling Turtle_42: -3531359969435895883
+      Custom Edited - Kirby Customs - Rolling Turtle_43: 270385746455811049
+      Custom Edited - Kirby Customs - Rolling Turtle_44: -4229772627365938055
+      Custom Edited - Kirby Customs - Rolling Turtle_45: 6932658012511599280
+      Custom Edited - Kirby Customs - Rolling Turtle_46: -5472486364240997845
+      Custom Edited - Kirby Customs - Rolling Turtle_47: 7100287247242101242
+      Custom Edited - Kirby Customs - Rolling Turtle_48: 6845507676545039912
+      Custom Edited - Kirby Customs - Rolling Turtle_49: -1691978863094652377
+      Custom Edited - Kirby Customs - Rolling Turtle_5: -8156830219494067491
+      Custom Edited - Kirby Customs - Rolling Turtle_50: 7377393897307060865
+      Custom Edited - Kirby Customs - Rolling Turtle_51: -4637959607926072723
+      Custom Edited - Kirby Customs - Rolling Turtle_52: 1484315146527696158
+      Custom Edited - Kirby Customs - Rolling Turtle_53: -5443762562726201408
+      Custom Edited - Kirby Customs - Rolling Turtle_54: -1724473886807429334
+      Custom Edited - Kirby Customs - Rolling Turtle_55: 8218253168006032791
+      Custom Edited - Kirby Customs - Rolling Turtle_56: 5382705468746876044
+      Custom Edited - Kirby Customs - Rolling Turtle_57: -4491618037996002763
+      Custom Edited - Kirby Customs - Rolling Turtle_58: 451947192568080514
+      Custom Edited - Kirby Customs - Rolling Turtle_59: 1161574363382750048
+      Custom Edited - Kirby Customs - Rolling Turtle_6: -2845585931473260915
+      Custom Edited - Kirby Customs - Rolling Turtle_60: 6900445522384087746
+      Custom Edited - Kirby Customs - Rolling Turtle_61: -6885002300261939534
+      Custom Edited - Kirby Customs - Rolling Turtle_62: -6646243537157932130
+      Custom Edited - Kirby Customs - Rolling Turtle_63: -1731359204772532076
+      Custom Edited - Kirby Customs - Rolling Turtle_64: 5272201703745416318
+      Custom Edited - Kirby Customs - Rolling Turtle_65: 7057610472218981953
+      Custom Edited - Kirby Customs - Rolling Turtle_66: -4644532020589921887
+      Custom Edited - Kirby Customs - Rolling Turtle_67: 5701891077493251599
+      Custom Edited - Kirby Customs - Rolling Turtle_68: 4004082239432202050
+      Custom Edited - Kirby Customs - Rolling Turtle_69: 2274063562981576751
+      Custom Edited - Kirby Customs - Rolling Turtle_7: 3372902214796725777
+      Custom Edited - Kirby Customs - Rolling Turtle_70: 420201636054598184
+      Custom Edited - Kirby Customs - Rolling Turtle_71: -4837521657269364335
+      Custom Edited - Kirby Customs - Rolling Turtle_72: 2400443405218420306
+      Custom Edited - Kirby Customs - Rolling Turtle_73: -3375434338186894496
+      Custom Edited - Kirby Customs - Rolling Turtle_74: -7611387370318291206
+      Custom Edited - Kirby Customs - Rolling Turtle_75: 6366762118964336140
+      Custom Edited - Kirby Customs - Rolling Turtle_76: -4183048451984609818
+      Custom Edited - Kirby Customs - Rolling Turtle_77: 4708071237635486963
+      Custom Edited - Kirby Customs - Rolling Turtle_78: -6794370891208010731
+      Custom Edited - Kirby Customs - Rolling Turtle_79: 7138051251159068132
+      Custom Edited - Kirby Customs - Rolling Turtle_8: -6940462933237412135
+      Custom Edited - Kirby Customs - Rolling Turtle_80: 7517108403896654352
+      Custom Edited - Kirby Customs - Rolling Turtle_81: -4197815175852866521
+      Custom Edited - Kirby Customs - Rolling Turtle_82: -7402607247962046697
+      Custom Edited - Kirby Customs - Rolling Turtle_83: -312513200260713371
+      Custom Edited - Kirby Customs - Rolling Turtle_84: -2319324396853369623
+      Custom Edited - Kirby Customs - Rolling Turtle_85: -8475120518784465407
+      Custom Edited - Kirby Customs - Rolling Turtle_86: -5249104675016573774
+      Custom Edited - Kirby Customs - Rolling Turtle_87: -2687726393178428491
+      Custom Edited - Kirby Customs - Rolling Turtle_88: 607646114666429631
+      Custom Edited - Kirby Customs - Rolling Turtle_89: 6506785730869365946
+      Custom Edited - Kirby Customs - Rolling Turtle_9: 7229151624018160635
+      Custom Edited - Kirby Customs - Rolling Turtle_90: 2886618994984082747
+      Custom Edited - Kirby Customs - Rolling Turtle_91: 6200125516961116157
+      Custom Edited - Kirby Customs - Rolling Turtle_92: 8397943032602124934
+      Custom Edited - Kirby Customs - Rolling Turtle_93: 2558866559513327924
+      Custom Edited - Kirby Customs - Rolling Turtle_94: -7662260643532381198
+      Custom Edited - Kirby Customs - Rolling Turtle_95: -6097335529027186210
+      Custom Edited - Kirby Customs - Rolling Turtle_96: 5574150851793919475
+      Custom Edited - Kirby Customs - Rolling Turtle_97: 7722898272137522935
+      Custom Edited - Kirby Customs - Rolling Turtle_98: 7911217586380997978
+      Custom Edited - Kirby Customs - Rolling Turtle_99: 6316216426215480847
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
