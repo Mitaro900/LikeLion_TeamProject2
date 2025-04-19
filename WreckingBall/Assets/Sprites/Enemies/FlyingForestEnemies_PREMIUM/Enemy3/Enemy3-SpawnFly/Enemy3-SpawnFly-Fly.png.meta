@@ -273,7 +273,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Enemy3-SpawnFly-Fly_0: -1475761274713856745
+      Enemy3-SpawnFly-Fly_1: -6535511251399892177
+      Enemy3-SpawnFly-Fly_2: -6122442989463176262
+      Enemy3-SpawnFly-Fly_3: -40776340066438925
+      Enemy3-SpawnFly-Fly_4: -4589431328172830069
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

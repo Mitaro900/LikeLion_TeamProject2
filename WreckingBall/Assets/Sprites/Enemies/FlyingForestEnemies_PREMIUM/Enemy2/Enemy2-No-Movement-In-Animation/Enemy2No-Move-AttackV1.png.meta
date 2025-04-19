@@ -598,7 +598,25 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Enemy2No-Move-AttackV1_0: -6121056470024620543
+      Enemy2No-Move-AttackV1_1: -5891631482168011726
+      Enemy2No-Move-AttackV1_10: -2297945557562586977
+      Enemy2No-Move-AttackV1_11: 7573243951910760256
+      Enemy2No-Move-AttackV1_12: -7560160358166957250
+      Enemy2No-Move-AttackV1_13: 8743847942315491341
+      Enemy2No-Move-AttackV1_14: 9079469591286005426
+      Enemy2No-Move-AttackV1_15: 4912652601524636411
+      Enemy2No-Move-AttackV1_16: -5883736102529538707
+      Enemy2No-Move-AttackV1_17: -4446717106756689363
+      Enemy2No-Move-AttackV1_2: 3290268829548025759
+      Enemy2No-Move-AttackV1_3: -7668524966919292286
+      Enemy2No-Move-AttackV1_4: 4165843440545727149
+      Enemy2No-Move-AttackV1_5: -3776026669001732007
+      Enemy2No-Move-AttackV1_6: -983986665750323346
+      Enemy2No-Move-AttackV1_7: -2930623310787166960
+      Enemy2No-Move-AttackV1_8: -4840120101441364373
+      Enemy2No-Move-AttackV1_9: 8892629684003126346
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

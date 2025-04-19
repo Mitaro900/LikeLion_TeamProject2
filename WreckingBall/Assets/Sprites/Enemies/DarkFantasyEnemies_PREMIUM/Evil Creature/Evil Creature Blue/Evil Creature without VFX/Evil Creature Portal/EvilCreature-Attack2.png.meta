@@ -623,7 +623,26 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EvilCreature-Attack2_0: -6059557895580682283
+      EvilCreature-Attack2_1: -1185036011578659735
+      EvilCreature-Attack2_10: -6478007287612648267
+      EvilCreature-Attack2_11: 6239961503716371623
+      EvilCreature-Attack2_12: -8504148198562138897
+      EvilCreature-Attack2_13: 3420695863923901637
+      EvilCreature-Attack2_14: 466562642302087233
+      EvilCreature-Attack2_15: -2699692930804118556
+      EvilCreature-Attack2_16: 7029230224218996838
+      EvilCreature-Attack2_17: -8966105053281521190
+      EvilCreature-Attack2_18: -7401169667587014558
+      EvilCreature-Attack2_2: 7738153325526415538
+      EvilCreature-Attack2_3: 942012827511926190
+      EvilCreature-Attack2_4: 8208910933095000610
+      EvilCreature-Attack2_5: 2688046666484978415
+      EvilCreature-Attack2_6: -1447996114926314006
+      EvilCreature-Attack2_7: -4586362629569653492
+      EvilCreature-Attack2_8: -6680693001897667729
+      EvilCreature-Attack2_9: 8420913683253711639
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

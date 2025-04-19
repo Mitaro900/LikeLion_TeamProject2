@@ -748,7 +748,31 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Enemy3-SpawnFly-Die_0: 6370119707849736677
+      Enemy3-SpawnFly-Die_1: 5148782628377805702
+      Enemy3-SpawnFly-Die_10: -5625262661886052098
+      Enemy3-SpawnFly-Die_11: 5757750541986222188
+      Enemy3-SpawnFly-Die_12: -8260596440542073466
+      Enemy3-SpawnFly-Die_13: -1444169825239664328
+      Enemy3-SpawnFly-Die_14: -7953953592557181394
+      Enemy3-SpawnFly-Die_15: 4236860577489278907
+      Enemy3-SpawnFly-Die_16: -1617778221693885879
+      Enemy3-SpawnFly-Die_17: 5551399874294593761
+      Enemy3-SpawnFly-Die_18: -4104659580501806198
+      Enemy3-SpawnFly-Die_19: 7509791130426111308
+      Enemy3-SpawnFly-Die_2: -7012707302736169617
+      Enemy3-SpawnFly-Die_20: -8608189013071896510
+      Enemy3-SpawnFly-Die_21: 650115070566161946
+      Enemy3-SpawnFly-Die_22: 4347142967909203389
+      Enemy3-SpawnFly-Die_23: -2246261636279545234
+      Enemy3-SpawnFly-Die_3: 7602926837897562217
+      Enemy3-SpawnFly-Die_4: 8342969761412443367
+      Enemy3-SpawnFly-Die_5: 694371041060084179
+      Enemy3-SpawnFly-Die_6: -5331658624579005932
+      Enemy3-SpawnFly-Die_7: -1991401654265955524
+      Enemy3-SpawnFly-Die_8: 773118974879656036
+      Enemy3-SpawnFly-Die_9: -4952636488288253063
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

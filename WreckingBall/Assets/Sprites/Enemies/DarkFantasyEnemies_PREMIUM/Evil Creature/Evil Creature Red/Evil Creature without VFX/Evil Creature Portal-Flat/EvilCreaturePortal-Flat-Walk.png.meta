@@ -398,7 +398,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EvilCreaturePortal-Flat-Walk_0: 4602933625239882578
+      EvilCreaturePortal-Flat-Walk_1: 5013547600203708017
+      EvilCreaturePortal-Flat-Walk_2: 1174612814301410892
+      EvilCreaturePortal-Flat-Walk_3: 2153001563001665950
+      EvilCreaturePortal-Flat-Walk_4: 1700215658489946943
+      EvilCreaturePortal-Flat-Walk_5: -2780877188476312995
+      EvilCreaturePortal-Flat-Walk_6: 5067005270284336028
+      EvilCreaturePortal-Flat-Walk_7: -5636685932319802510
+      EvilCreaturePortal-Flat-Walk_8: 7959290114172301587
+      EvilCreaturePortal-Flat-Walk_9: -290215413921802095
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

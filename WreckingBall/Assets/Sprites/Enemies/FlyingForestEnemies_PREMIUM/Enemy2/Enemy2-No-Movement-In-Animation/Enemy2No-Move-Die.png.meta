@@ -398,7 +398,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Enemy2No-Move-Die_0: -8718607491813106158
+      Enemy2No-Move-Die_1: 8653248832147825796
+      Enemy2No-Move-Die_2: -78558038038605266
+      Enemy2No-Move-Die_3: -53022079039851519
+      Enemy2No-Move-Die_4: 4484856063793581152
+      Enemy2No-Move-Die_5: -6311663425632341107
+      Enemy2No-Move-Die_6: -1378739465070158158
+      Enemy2No-Move-Die_7: 4492972235584787875
+      Enemy2No-Move-Die_8: 7682807001334309291
+      Enemy2No-Move-Die_9: -2354942103570865760
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -598,7 +598,25 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bush_Monster-Attack_0: -3451225387367657513
+      Bush_Monster-Attack_1: -8953650431809870263
+      Bush_Monster-Attack_10: -8188556738804056767
+      Bush_Monster-Attack_11: -5266491900394959004
+      Bush_Monster-Attack_12: -8329005890826793801
+      Bush_Monster-Attack_13: -7609926740752957078
+      Bush_Monster-Attack_14: -5090948927843884083
+      Bush_Monster-Attack_15: 734732421822476902
+      Bush_Monster-Attack_16: 7848348986443309818
+      Bush_Monster-Attack_17: -1884902439672067222
+      Bush_Monster-Attack_2: 4050669051200622587
+      Bush_Monster-Attack_3: 6900126639789411564
+      Bush_Monster-Attack_4: -2456259215802692050
+      Bush_Monster-Attack_5: -8864096362006887936
+      Bush_Monster-Attack_6: -8363562525813143461
+      Bush_Monster-Attack_7: 4086472753502745492
+      Bush_Monster-Attack_8: -2420022678355240379
+      Bush_Monster-Attack_9: -8140980553682241667
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

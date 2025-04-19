@@ -698,7 +698,29 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Enemy1No-Move-DieV2_0: 7566629065056963101
+      Enemy1No-Move-DieV2_1: 323354119866734961
+      Enemy1No-Move-DieV2_10: 3414794921770979856
+      Enemy1No-Move-DieV2_11: -6332225727223726719
+      Enemy1No-Move-DieV2_12: -568240648075916414
+      Enemy1No-Move-DieV2_13: 3604887401071233327
+      Enemy1No-Move-DieV2_14: 5961627371303348339
+      Enemy1No-Move-DieV2_15: 3083694707300672591
+      Enemy1No-Move-DieV2_16: -576442119150221920
+      Enemy1No-Move-DieV2_17: 7618696936265557400
+      Enemy1No-Move-DieV2_18: -6436521186917497324
+      Enemy1No-Move-DieV2_19: -8788624752211582597
+      Enemy1No-Move-DieV2_2: -3850011234964056115
+      Enemy1No-Move-DieV2_20: 5488676036405909514
+      Enemy1No-Move-DieV2_21: -5321266343415238126
+      Enemy1No-Move-DieV2_3: 8699896096503224673
+      Enemy1No-Move-DieV2_4: 1058425381523673757
+      Enemy1No-Move-DieV2_5: -7298848947109931822
+      Enemy1No-Move-DieV2_6: 3234521981247853462
+      Enemy1No-Move-DieV2_7: -1174994009516578486
+      Enemy1No-Move-DieV2_8: 1468952476153052934
+      Enemy1No-Move-DieV2_9: -8109556397724583334
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

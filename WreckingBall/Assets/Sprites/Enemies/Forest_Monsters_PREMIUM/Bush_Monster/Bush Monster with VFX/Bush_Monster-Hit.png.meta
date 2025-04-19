@@ -248,7 +248,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bush_Monster-Hit_0: -2024189812032062788
+      Bush_Monster-Hit_1: -3968436514730417583
+      Bush_Monster-Hit_2: 2902768957236547589
+      Bush_Monster-Hit_3: -4539387850629882646
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

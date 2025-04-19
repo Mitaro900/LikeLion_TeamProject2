@@ -248,7 +248,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Enemy1No-Move-Hit-NoVFX_0: -7597157412479297960
+      Enemy1No-Move-Hit-NoVFX_1: 3254766096301351914
+      Enemy1No-Move-Hit-NoVFX_2: 4482071812697357074
+      Enemy1No-Move-Hit-NoVFX_3: 2089477002641969898
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

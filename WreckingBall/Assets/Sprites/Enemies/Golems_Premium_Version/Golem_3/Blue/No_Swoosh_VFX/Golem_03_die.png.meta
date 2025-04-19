@@ -773,7 +773,32 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Golem_03_die_0: 325178068797302617
+      Golem_03_die_1: 3210017076834089731
+      Golem_03_die_10: -7017365325627111513
+      Golem_03_die_11: 1532694703073246409
+      Golem_03_die_12: 5068892081454182965
+      Golem_03_die_13: 4033910026969769598
+      Golem_03_die_14: -8183822852813698362
+      Golem_03_die_15: 6101091591202546947
+      Golem_03_die_16: 3636457506572950845
+      Golem_03_die_17: -1461636767855175496
+      Golem_03_die_18: -6466084816643738226
+      Golem_03_die_19: -2669466534197900125
+      Golem_03_die_2: -8858088522030621085
+      Golem_03_die_20: -7945133496639753523
+      Golem_03_die_21: 3682387665775546716
+      Golem_03_die_22: 6327749762099954534
+      Golem_03_die_23: -1972042316616226632
+      Golem_03_die_24: -3211264487457435510
+      Golem_03_die_3: 1879261473664248850
+      Golem_03_die_4: 3149858042652861632
+      Golem_03_die_5: -5216961035277631648
+      Golem_03_die_6: 6038854162352821860
+      Golem_03_die_7: -8459089856256894290
+      Golem_03_die_8: 2431057250524912428
+      Golem_03_die_9: -7918333341351401172
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

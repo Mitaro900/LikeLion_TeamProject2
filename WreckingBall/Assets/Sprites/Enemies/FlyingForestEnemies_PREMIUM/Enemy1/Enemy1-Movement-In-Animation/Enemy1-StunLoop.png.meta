@@ -523,7 +523,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Enemy1-StunLoop_0: -2194846316078228121
+      Enemy1-StunLoop_1: -2288626885147894604
+      Enemy1-StunLoop_10: -5132180094739086746
+      Enemy1-StunLoop_11: -1927466400876378963
+      Enemy1-StunLoop_12: -4164126959629091002
+      Enemy1-StunLoop_13: -1207582771744351510
+      Enemy1-StunLoop_14: 3103419803122779768
+      Enemy1-StunLoop_2: -3385961438876667205
+      Enemy1-StunLoop_3: 3834783219701820451
+      Enemy1-StunLoop_4: 3032282658590986853
+      Enemy1-StunLoop_5: 8514367732078799616
+      Enemy1-StunLoop_6: 3335996344525419422
+      Enemy1-StunLoop_7: -2633574861540719195
+      Enemy1-StunLoop_8: 5445118538271772015
+      Enemy1-StunLoop_9: -8593311787124153805
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

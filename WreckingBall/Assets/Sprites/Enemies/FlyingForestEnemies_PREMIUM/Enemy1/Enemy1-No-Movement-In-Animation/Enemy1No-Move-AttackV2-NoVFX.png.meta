@@ -473,7 +473,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Enemy1No-Move-AttackV2-NoVFX_0: -8441519158863796254
+      Enemy1No-Move-AttackV2-NoVFX_1: -7181780253129234418
+      Enemy1No-Move-AttackV2-NoVFX_10: 7415202687963158895
+      Enemy1No-Move-AttackV2-NoVFX_11: -4785457019486222597
+      Enemy1No-Move-AttackV2-NoVFX_12: -2400157161508847047
+      Enemy1No-Move-AttackV2-NoVFX_2: 7485770209243871360
+      Enemy1No-Move-AttackV2-NoVFX_3: 6672735183045787985
+      Enemy1No-Move-AttackV2-NoVFX_4: 792055210394757878
+      Enemy1No-Move-AttackV2-NoVFX_5: -1152912669516982645
+      Enemy1No-Move-AttackV2-NoVFX_6: -4021339964018267847
+      Enemy1No-Move-AttackV2-NoVFX_7: 5232054887257152522
+      Enemy1No-Move-AttackV2-NoVFX_8: 2026771051733620691
+      Enemy1No-Move-AttackV2-NoVFX_9: -944078767041781117
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

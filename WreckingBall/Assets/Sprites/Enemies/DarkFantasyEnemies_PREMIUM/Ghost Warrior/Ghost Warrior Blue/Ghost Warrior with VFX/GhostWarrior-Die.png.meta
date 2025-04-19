@@ -1073,7 +1073,44 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GhostWarrior-Die_0: -147330882186229615
+      GhostWarrior-Die_1: 4566465634806638144
+      GhostWarrior-Die_10: 7084656984575809771
+      GhostWarrior-Die_11: 6237602388466948601
+      GhostWarrior-Die_12: 3915020140562645427
+      GhostWarrior-Die_13: -6116603724953407556
+      GhostWarrior-Die_14: -1646998019238370414
+      GhostWarrior-Die_15: -314321299072643541
+      GhostWarrior-Die_16: 119546413710721161
+      GhostWarrior-Die_17: -7716690734935170291
+      GhostWarrior-Die_18: -3523010943769304274
+      GhostWarrior-Die_19: 176971381392900500
+      GhostWarrior-Die_2: -2773303377839683843
+      GhostWarrior-Die_20: -7894771776187085625
+      GhostWarrior-Die_21: 8517518853079260069
+      GhostWarrior-Die_22: 7205861100116172299
+      GhostWarrior-Die_23: 6944054499137758286
+      GhostWarrior-Die_24: 302937159608365591
+      GhostWarrior-Die_25: -7593352566925985109
+      GhostWarrior-Die_26: 8124587376195595330
+      GhostWarrior-Die_27: -5403608158745695850
+      GhostWarrior-Die_28: 2836822397161591556
+      GhostWarrior-Die_29: -2137312012301037657
+      GhostWarrior-Die_3: 6209390770156339073
+      GhostWarrior-Die_30: 2473556789582308893
+      GhostWarrior-Die_31: -4604129347735018177
+      GhostWarrior-Die_32: -181327985363503953
+      GhostWarrior-Die_33: 498053513063066224
+      GhostWarrior-Die_34: -1226127234171670039
+      GhostWarrior-Die_35: 1458039936528253799
+      GhostWarrior-Die_36: -2675897358857617735
+      GhostWarrior-Die_4: 1859639591880080844
+      GhostWarrior-Die_5: -8698804008585672562
+      GhostWarrior-Die_6: -7746986334153813531
+      GhostWarrior-Die_7: -3846034043628754147
+      GhostWarrior-Die_8: 8979794358698142467
+      GhostWarrior-Die_9: 5703254132802192630
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

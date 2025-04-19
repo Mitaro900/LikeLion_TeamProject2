@@ -823,7 +823,34 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Green_Slime-Die_Ground_0: -952973605294978292
+      Green_Slime-Die_Ground_1: -5362912606735738326
+      Green_Slime-Die_Ground_10: -276882961165340787
+      Green_Slime-Die_Ground_11: -2806464399387625999
+      Green_Slime-Die_Ground_12: -3269777222402304862
+      Green_Slime-Die_Ground_13: 9033676779204849710
+      Green_Slime-Die_Ground_14: -3899619275172090843
+      Green_Slime-Die_Ground_15: -2663191345207347356
+      Green_Slime-Die_Ground_16: -3388157545748058830
+      Green_Slime-Die_Ground_17: 1039735703746215179
+      Green_Slime-Die_Ground_18: 1261212472865928677
+      Green_Slime-Die_Ground_19: 3261351267640012399
+      Green_Slime-Die_Ground_2: 8331278299132158914
+      Green_Slime-Die_Ground_20: 6318157030918414808
+      Green_Slime-Die_Ground_21: 499165174418985411
+      Green_Slime-Die_Ground_22: -1350955688753940025
+      Green_Slime-Die_Ground_23: 5835003264083344691
+      Green_Slime-Die_Ground_24: 7493638587942390393
+      Green_Slime-Die_Ground_25: -1662337757823344965
+      Green_Slime-Die_Ground_26: -7237870385339322744
+      Green_Slime-Die_Ground_3: -8928850915596479016
+      Green_Slime-Die_Ground_4: -6368137046234666013
+      Green_Slime-Die_Ground_5: -2499540047938941239
+      Green_Slime-Die_Ground_6: 7482277662537925707
+      Green_Slime-Die_Ground_7: 6879849421310924430
+      Green_Slime-Die_Ground_8: 7692052936668776097
+      Green_Slime-Die_Ground_9: 7479918264047563655
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

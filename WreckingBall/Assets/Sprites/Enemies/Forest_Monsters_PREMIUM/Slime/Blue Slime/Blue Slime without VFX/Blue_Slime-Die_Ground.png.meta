@@ -823,7 +823,34 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Blue_Slime-Die_Ground_0: 3599524391503019294
+      Blue_Slime-Die_Ground_1: -2190526051933085016
+      Blue_Slime-Die_Ground_10: -1330328986569216075
+      Blue_Slime-Die_Ground_11: 2244071953065394038
+      Blue_Slime-Die_Ground_12: -6763377742438820700
+      Blue_Slime-Die_Ground_13: -8639946696101745775
+      Blue_Slime-Die_Ground_14: -4787871243822750406
+      Blue_Slime-Die_Ground_15: 3868369681874174132
+      Blue_Slime-Die_Ground_16: 7376695189786383498
+      Blue_Slime-Die_Ground_17: -7682201385644381128
+      Blue_Slime-Die_Ground_18: 5227117681230984981
+      Blue_Slime-Die_Ground_19: -8081157205921940400
+      Blue_Slime-Die_Ground_2: 4830474090185594056
+      Blue_Slime-Die_Ground_20: 7431795798015086020
+      Blue_Slime-Die_Ground_21: 4488353251942219394
+      Blue_Slime-Die_Ground_22: 903239488951195056
+      Blue_Slime-Die_Ground_23: -5076961468100913525
+      Blue_Slime-Die_Ground_24: -5190822069250951350
+      Blue_Slime-Die_Ground_25: -2572162929251397433
+      Blue_Slime-Die_Ground_26: -1835558016388222632
+      Blue_Slime-Die_Ground_3: -3913093794538185221
+      Blue_Slime-Die_Ground_4: -5008723044218867036
+      Blue_Slime-Die_Ground_5: 2966019823236777031
+      Blue_Slime-Die_Ground_6: 4011953840372592960
+      Blue_Slime-Die_Ground_7: -1942498369006765109
+      Blue_Slime-Die_Ground_8: 1810077655323261595
+      Blue_Slime-Die_Ground_9: 5309691257361222270
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

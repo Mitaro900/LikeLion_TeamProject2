@@ -348,7 +348,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EvilCreature-Idle_0: 3110895524745113593
+      EvilCreature-Idle_1: 1517085962491004173
+      EvilCreature-Idle_2: -372429306514628739
+      EvilCreature-Idle_3: -7434145456321356974
+      EvilCreature-Idle_4: 5353965671722127453
+      EvilCreature-Idle_5: -7126813933154701215
+      EvilCreature-Idle_6: -7030504046054117790
+      EvilCreature-Idle_7: 927146007406071745
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

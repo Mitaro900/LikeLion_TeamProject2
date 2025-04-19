@@ -348,7 +348,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bush_Monster-Idle_0: 4244254892401091979
+      Bush_Monster-Idle_1: -3302036745981624465
+      Bush_Monster-Idle_2: 5236302823379579409
+      Bush_Monster-Idle_3: -7443257766087047716
+      Bush_Monster-Idle_4: -3705458107462305173
+      Bush_Monster-Idle_5: 4829299541967323566
+      Bush_Monster-Idle_6: -7193264253347217899
+      Bush_Monster-Idle_7: -885096060820534977
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

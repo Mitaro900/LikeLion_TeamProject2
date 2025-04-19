@@ -348,7 +348,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GhostWarrior-Hurt_0: 1178090970924527902
+      GhostWarrior-Hurt_1: 7854393607344222841
+      GhostWarrior-Hurt_2: -8835659132783430508
+      GhostWarrior-Hurt_3: 5206038489690398607
+      GhostWarrior-Hurt_4: -6446780134189747257
+      GhostWarrior-Hurt_5: -6208825828738527308
+      GhostWarrior-Hurt_6: -920229446445312810
+      GhostWarrior-Hurt_7: -846230203907079726
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

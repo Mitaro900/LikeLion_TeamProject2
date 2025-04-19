@@ -498,7 +498,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Enemy3No-Move-Spawn_0: 8670963135747166106
+      Enemy3No-Move-Spawn_1: -5504746054322886590
+      Enemy3No-Move-Spawn_10: -1194689524348098303
+      Enemy3No-Move-Spawn_11: -4821841558117236616
+      Enemy3No-Move-Spawn_12: -4342869622280187571
+      Enemy3No-Move-Spawn_13: -8257150297575748770
+      Enemy3No-Move-Spawn_2: -3558999986506593734
+      Enemy3No-Move-Spawn_3: 4124139498366898602
+      Enemy3No-Move-Spawn_4: 1630401257949217591
+      Enemy3No-Move-Spawn_5: 7170503655547067356
+      Enemy3No-Move-Spawn_6: 5121558077250712227
+      Enemy3No-Move-Spawn_7: -6098108790141808837
+      Enemy3No-Move-Spawn_8: 1358247981780696526
+      Enemy3No-Move-Spawn_9: 6271431909291198622
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

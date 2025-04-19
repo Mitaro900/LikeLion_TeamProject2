@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bush_Monster-AttackTimeFrame_0: 7362323244895610548
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
