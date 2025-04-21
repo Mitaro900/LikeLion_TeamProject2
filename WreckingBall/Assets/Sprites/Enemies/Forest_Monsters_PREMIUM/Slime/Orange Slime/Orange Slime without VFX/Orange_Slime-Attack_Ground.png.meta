@@ -448,7 +448,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Orange_Slime-Attack_Ground_0: 2396221359672983455
+      Orange_Slime-Attack_Ground_1: 7496477649100716772
+      Orange_Slime-Attack_Ground_10: 7016633650833363435
+      Orange_Slime-Attack_Ground_11: -6604722498422877448
+      Orange_Slime-Attack_Ground_2: 2842799731569411367
+      Orange_Slime-Attack_Ground_3: -8366659613801389983
+      Orange_Slime-Attack_Ground_4: 8792872889605074144
+      Orange_Slime-Attack_Ground_5: -6026541938595144059
+      Orange_Slime-Attack_Ground_6: -379663166557356784
+      Orange_Slime-Attack_Ground_7: -3046254072159798120
+      Orange_Slime-Attack_Ground_8: -7263130197673340857
+      Orange_Slime-Attack_Ground_9: 7756965582014235993
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

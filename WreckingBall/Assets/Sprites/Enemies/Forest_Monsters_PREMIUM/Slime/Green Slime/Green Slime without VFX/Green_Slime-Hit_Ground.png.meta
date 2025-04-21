@@ -248,7 +248,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Green_Slime-Hit_Ground_0: 3064024125075245239
+      Green_Slime-Hit_Ground_1: 921488369853833364
+      Green_Slime-Hit_Ground_2: 5329736242928846273
+      Green_Slime-Hit_Ground_3: -8919649396953084272
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

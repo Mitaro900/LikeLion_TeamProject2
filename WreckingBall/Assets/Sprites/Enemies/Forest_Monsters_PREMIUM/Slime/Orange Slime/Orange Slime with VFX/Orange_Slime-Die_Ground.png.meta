@@ -823,7 +823,34 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Orange_Slime-Die_Ground_0: 3795158464865459440
+      Orange_Slime-Die_Ground_1: 3936326055376879161
+      Orange_Slime-Die_Ground_10: 1817604351023504679
+      Orange_Slime-Die_Ground_11: 6325803156193196796
+      Orange_Slime-Die_Ground_12: 2560025726907062166
+      Orange_Slime-Die_Ground_13: 3646255233497065427
+      Orange_Slime-Die_Ground_14: 3192754461495701648
+      Orange_Slime-Die_Ground_15: -8148427331461020387
+      Orange_Slime-Die_Ground_16: 2688948144498737185
+      Orange_Slime-Die_Ground_17: 1194006290839506633
+      Orange_Slime-Die_Ground_18: 3758337961449646314
+      Orange_Slime-Die_Ground_19: 1327114193445015918
+      Orange_Slime-Die_Ground_2: -5985408568278880753
+      Orange_Slime-Die_Ground_20: 5737718474103112380
+      Orange_Slime-Die_Ground_21: -8035868943717705953
+      Orange_Slime-Die_Ground_22: 7531719433852516755
+      Orange_Slime-Die_Ground_23: 7863886625899286499
+      Orange_Slime-Die_Ground_24: 7285513745738182281
+      Orange_Slime-Die_Ground_25: -3226801850786431746
+      Orange_Slime-Die_Ground_26: 3174776510093364654
+      Orange_Slime-Die_Ground_3: 6452316574434174746
+      Orange_Slime-Die_Ground_4: -5235970480161895039
+      Orange_Slime-Die_Ground_5: 818332143031683451
+      Orange_Slime-Die_Ground_6: 6966834880455534038
+      Orange_Slime-Die_Ground_7: 3345509950411098300
+      Orange_Slime-Die_Ground_8: 8642266088399210813
+      Orange_Slime-Die_Ground_9: -8343327178141390866
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

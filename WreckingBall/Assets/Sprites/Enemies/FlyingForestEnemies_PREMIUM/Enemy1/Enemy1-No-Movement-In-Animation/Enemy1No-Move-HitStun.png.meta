@@ -698,7 +698,29 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Enemy1No-Move-HitStun_0: 6613375405436778870
+      Enemy1No-Move-HitStun_1: 6343622690710711308
+      Enemy1No-Move-HitStun_10: 4848233717911074411
+      Enemy1No-Move-HitStun_11: 5858047565913748461
+      Enemy1No-Move-HitStun_12: -2330407236720956753
+      Enemy1No-Move-HitStun_13: 5173239964395988887
+      Enemy1No-Move-HitStun_14: -1233035812707851984
+      Enemy1No-Move-HitStun_15: 402253385528131009
+      Enemy1No-Move-HitStun_16: 577300704647544930
+      Enemy1No-Move-HitStun_17: -8092780085561613489
+      Enemy1No-Move-HitStun_18: -8455517217178126099
+      Enemy1No-Move-HitStun_19: -622599569122193545
+      Enemy1No-Move-HitStun_2: 9130559593442498043
+      Enemy1No-Move-HitStun_20: -172072086599718525
+      Enemy1No-Move-HitStun_21: -7421152869740891305
+      Enemy1No-Move-HitStun_3: 2390068017603192023
+      Enemy1No-Move-HitStun_4: 4000777142292281427
+      Enemy1No-Move-HitStun_5: -1477736976304188263
+      Enemy1No-Move-HitStun_6: -1986736723509312254
+      Enemy1No-Move-HitStun_7: 864190244656363425
+      Enemy1No-Move-HitStun_8: 7289627405834646311
+      Enemy1No-Move-HitStun_9: -8053353371463413209
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

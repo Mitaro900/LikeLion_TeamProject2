@@ -298,7 +298,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Enemy1-Charge-Anticipation_0: 2444467091773013474
+      Enemy1-Charge-Anticipation_1: 8294299764583810046
+      Enemy1-Charge-Anticipation_2: -5039207766033560328
+      Enemy1-Charge-Anticipation_3: 909155353466525205
+      Enemy1-Charge-Anticipation_4: -1433237720612903448
+      Enemy1-Charge-Anticipation_5: -3579850276837540246
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

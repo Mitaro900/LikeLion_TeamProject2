@@ -423,7 +423,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Green_Slime-Run_Jump_0: -5976320023886407031
+      Green_Slime-Run_Jump_1: 6831296851405040155
+      Green_Slime-Run_Jump_10: -4700615751125263167
+      Green_Slime-Run_Jump_2: -6303799088657500583
+      Green_Slime-Run_Jump_3: 5871367348114820371
+      Green_Slime-Run_Jump_4: -1365999122217730535
+      Green_Slime-Run_Jump_5: -7628991113918018409
+      Green_Slime-Run_Jump_6: -7456189010393048647
+      Green_Slime-Run_Jump_7: 1997610886230345391
+      Green_Slime-Run_Jump_8: 299417928099781810
+      Green_Slime-Run_Jump_9: -5651382187908571918
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

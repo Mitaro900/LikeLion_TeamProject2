@@ -448,7 +448,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EvilCreature-Escape-Teleport_0: -8002571064075062721
+      EvilCreature-Escape-Teleport_1: -2306259112792585659
+      EvilCreature-Escape-Teleport_10: 6290600546457109530
+      EvilCreature-Escape-Teleport_11: 1172632482238015615
+      EvilCreature-Escape-Teleport_2: -8232751489882678246
+      EvilCreature-Escape-Teleport_3: -1823155211600671834
+      EvilCreature-Escape-Teleport_4: 1864552874825412614
+      EvilCreature-Escape-Teleport_5: 381597707447034615
+      EvilCreature-Escape-Teleport_6: -7335125307055809250
+      EvilCreature-Escape-Teleport_7: -8047945881762356813
+      EvilCreature-Escape-Teleport_8: -7748565786715603378
+      EvilCreature-Escape-Teleport_9: 3621293277354434423
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

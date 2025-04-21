@@ -548,7 +548,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GhostWarrior-IdleFly_0: 5595579332092073529
+      GhostWarrior-IdleFly_1: -2077807807858264632
+      GhostWarrior-IdleFly_10: -5829417209366674276
+      GhostWarrior-IdleFly_11: -3637580618874252269
+      GhostWarrior-IdleFly_12: -5443418235569192179
+      GhostWarrior-IdleFly_13: 4676833305555704771
+      GhostWarrior-IdleFly_14: 8516372878542645958
+      GhostWarrior-IdleFly_15: -3111855414932709308
+      GhostWarrior-IdleFly_2: -5424412762763318030
+      GhostWarrior-IdleFly_3: -5765341842756371408
+      GhostWarrior-IdleFly_4: -3901216754857728726
+      GhostWarrior-IdleFly_5: -3316415841197553680
+      GhostWarrior-IdleFly_6: -8805911190189294318
+      GhostWarrior-IdleFly_7: 8326015582227834094
+      GhostWarrior-IdleFly_8: -5080325311419248899
+      GhostWarrior-IdleFly_9: 665232425447531447
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

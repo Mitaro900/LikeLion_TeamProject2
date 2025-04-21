@@ -423,7 +423,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EvilCreaturePortal-Flat-Spawn-Teleport_0: 7048560261696322907
+      EvilCreaturePortal-Flat-Spawn-Teleport_1: 6750074401348485715
+      EvilCreaturePortal-Flat-Spawn-Teleport_10: -2501934082326809495
+      EvilCreaturePortal-Flat-Spawn-Teleport_2: 6488330821991108978
+      EvilCreaturePortal-Flat-Spawn-Teleport_3: -8822968194617654908
+      EvilCreaturePortal-Flat-Spawn-Teleport_4: 364749876635168187
+      EvilCreaturePortal-Flat-Spawn-Teleport_5: -2377449271604821068
+      EvilCreaturePortal-Flat-Spawn-Teleport_6: -138606599393625931
+      EvilCreaturePortal-Flat-Spawn-Teleport_7: 8541666833634718452
+      EvilCreaturePortal-Flat-Spawn-Teleport_8: 3652382710992279437
+      EvilCreaturePortal-Flat-Spawn-Teleport_9: -7288925137413798317
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

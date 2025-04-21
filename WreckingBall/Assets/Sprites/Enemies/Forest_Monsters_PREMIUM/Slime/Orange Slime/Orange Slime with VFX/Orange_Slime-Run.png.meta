@@ -298,7 +298,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Orange_Slime-Run_0: -8096391619047037350
+      Orange_Slime-Run_1: 5330513502860138515
+      Orange_Slime-Run_2: 4227790358559808253
+      Orange_Slime-Run_3: 8314168423198507283
+      Orange_Slime-Run_4: -2577426681424254388
+      Orange_Slime-Run_5: 4698699938379343103
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

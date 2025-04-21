@@ -273,7 +273,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EvilCreature-Hurt_0: -9020263074148474621
+      EvilCreature-Hurt_1: 7577955562670739916
+      EvilCreature-Hurt_2: 2285015337636053694
+      EvilCreature-Hurt_3: -1458091194525915922
+      EvilCreature-Hurt_4: 112167168102090612
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -448,7 +448,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GhostWarrior-Spawn_0: -5689551319602058437
+      GhostWarrior-Spawn_1: 2468266766436260555
+      GhostWarrior-Spawn_10: 3062052700071243425
+      GhostWarrior-Spawn_11: 1762926701463581746
+      GhostWarrior-Spawn_2: 3845909360004798820
+      GhostWarrior-Spawn_3: 2376817911496105230
+      GhostWarrior-Spawn_4: 4224511097575104369
+      GhostWarrior-Spawn_5: -7316139155930406519
+      GhostWarrior-Spawn_6: 2776947796214048079
+      GhostWarrior-Spawn_7: -8102803086326352466
+      GhostWarrior-Spawn_8: -7549581532778874646
+      GhostWarrior-Spawn_9: -4794206231511258681
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

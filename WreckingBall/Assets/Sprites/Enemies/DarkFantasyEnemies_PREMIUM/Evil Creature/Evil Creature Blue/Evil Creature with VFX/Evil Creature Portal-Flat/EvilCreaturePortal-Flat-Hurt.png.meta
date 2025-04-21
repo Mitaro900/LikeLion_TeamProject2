@@ -273,7 +273,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EvilCreaturePortal-Flat-Hurt_0: 5567770847247912725
+      EvilCreaturePortal-Flat-Hurt_1: 5668223111671759393
+      EvilCreaturePortal-Flat-Hurt_2: 1486148633314132077
+      EvilCreaturePortal-Flat-Hurt_3: -8869797401981109122
+      EvilCreaturePortal-Flat-Hurt_4: 1934399427269338830
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
