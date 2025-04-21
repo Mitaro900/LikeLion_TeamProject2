@@ -5,7 +5,7 @@ namespace PKR
 {
     public class Player : MonoBehaviour
     {
-        [SerializeField] private SpriteRenderer renderer;
+        [SerializeField] private SpriteRenderer sr;
         [SerializeField] private Rigidbody2D rb;
         [SerializeField] private LayerMask ropeLayer; // Ray가 충돌할 레이어
         [SerializeField] private float maxAnchorDistance = 5f;
@@ -40,7 +40,7 @@ namespace PKR
             if (moveInput.x != 0)
             {
                 facingRight = moveInput.x == 1 ? true : false;
-                renderer.flipX = !facingRight;
+                sr.flipX = !facingRight;
             }
 
 
