@@ -142,12 +142,12 @@ TextureImporter:
       name: Introl_trap3_0
       rect:
         serializedVersion: 2
-        x: 160
+        x: 0
         y: 0
-        width: 160
-        height: 160
+        width: 320
+        height: 640
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -160,33 +160,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Introl_trap3_1
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 0
-        width: 90
-        height: 151
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5106f187f1150774ab33600317795958
-      internalID: 1840647277
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 863c7f14009ce624ea953da7c7edd685
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -197,7 +175,6 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Introl_trap3_0: 7318152447668762819
-      Introl_trap3_1: 1840647277
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

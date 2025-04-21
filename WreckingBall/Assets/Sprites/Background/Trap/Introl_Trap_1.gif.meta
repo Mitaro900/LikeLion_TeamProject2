@@ -144,10 +144,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 160
+        width: 870
         height: 160
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -160,77 +160,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Introl_Trap_1_1
-      rect:
-        serializedVersion: 2
-        x: 170
-        y: 49
-        width: 130
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb5122849226d824c98ff3754cbda0bd
-      internalID: 1328969374
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Introl_Trap_1_2
-      rect:
-        serializedVersion: 2
-        x: 649
-        y: 0
-        width: 211
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7f99caaebb3dfd418b35d18bbaaed3c
-      internalID: 768745511
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Introl_Trap_1_3
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 320
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c285342e14450d499a305c1d571c7a1
-      internalID: -1714010910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 38efc98a22b4c1d4a91e8b176395e7eb
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -241,9 +175,6 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Introl_Trap_1_0: 2051170469696137236
-      Introl_Trap_1_1: 1328969374
-      Introl_Trap_1_2: 768745511
-      Introl_Trap_1_3: -1714010910
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

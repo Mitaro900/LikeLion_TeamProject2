@@ -496,9 +496,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_15
       rect:
         serializedVersion: 2
-        x: 2
+        x: 1
         y: 158
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -518,9 +518,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_16
       rect:
         serializedVersion: 2
-        x: 40
+        x: 39
         y: 158
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -540,10 +540,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_17
       rect:
         serializedVersion: 2
-        x: 78
+        x: 77
         y: 158
-        width: 37
-        height: 42
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -562,10 +562,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_18
       rect:
         serializedVersion: 2
-        x: 116
+        x: 115
         y: 158
-        width: 37
-        height: 42
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -584,10 +584,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_19
       rect:
         serializedVersion: 2
-        x: 154
+        x: 153
         y: 158
-        width: 37
-        height: 42
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -606,9 +606,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_20
       rect:
         serializedVersion: 2
-        x: 193
+        x: 192
         y: 158
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -628,9 +628,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_21
       rect:
         serializedVersion: 2
-        x: 237
+        x: 236
         y: 158
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -650,9 +650,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_22
       rect:
         serializedVersion: 2
-        x: 275
+        x: 274
         y: 158
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -672,9 +672,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_23
       rect:
         serializedVersion: 2
-        x: 313
+        x: 312
         y: 158
-        width: 38
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -694,10 +694,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_24
       rect:
         serializedVersion: 2
-        x: 352
-        y: 160
-        width: 38
-        height: 41
+        x: 351
+        y: 158
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -716,10 +716,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_25
       rect:
         serializedVersion: 2
-        x: 397
-        y: 161
-        width: 37
-        height: 37
+        x: 396
+        y: 158
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -738,10 +738,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_26
       rect:
         serializedVersion: 2
-        x: 435
-        y: 161
-        width: 37
-        height: 37
+        x: 434
+        y: 158
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -760,10 +760,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_27
       rect:
         serializedVersion: 2
-        x: 473
-        y: 161
-        width: 37
-        height: 37
+        x: 472
+        y: 158
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -782,10 +782,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_28
       rect:
         serializedVersion: 2
-        x: 511
-        y: 161
-        width: 37
-        height: 37
+        x: 510
+        y: 158
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -804,10 +804,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_29
       rect:
         serializedVersion: 2
-        x: 555
-        y: 161
-        width: 37
-        height: 37
+        x: 554
+        y: 158
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -827,9 +827,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 593
-        y: 160
+        y: 158
         width: 39
-        height: 38
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -848,10 +848,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_31
       rect:
         serializedVersion: 2
-        x: 633
-        y: 161
-        width: 37
-        height: 37
+        x: 632
+        y: 158
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -870,10 +870,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_32
       rect:
         serializedVersion: 2
-        x: 671
-        y: 159
-        width: 38
-        height: 39
+        x: 670
+        y: 158
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -892,10 +892,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_33
       rect:
         serializedVersion: 2
-        x: 710
-        y: 161
-        width: 37
-        height: 37
+        x: 709
+        y: 158
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -915,9 +915,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 748
-        y: 161
+        y: 158
         width: 39
-        height: 38
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -936,10 +936,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_35
       rect:
         serializedVersion: 2
-        x: 788
-        y: 161
-        width: 37
-        height: 37
+        x: 787
+        y: 158
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -958,10 +958,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_36
       rect:
         serializedVersion: 2
-        x: 826
-        y: 161
-        width: 38
-        height: 39
+        x: 825
+        y: 158
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -980,9 +980,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_37
       rect:
         serializedVersion: 2
-        x: 2
+        x: 1
         y: 114
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1002,9 +1002,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_38
       rect:
         serializedVersion: 2
-        x: 40
+        x: 39
         y: 114
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1024,10 +1024,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_39
       rect:
         serializedVersion: 2
-        x: 78
+        x: 77
         y: 114
-        width: 37
-        height: 42
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1046,10 +1046,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_40
       rect:
         serializedVersion: 2
-        x: 116
+        x: 115
         y: 114
-        width: 37
-        height: 42
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1068,10 +1068,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_41
       rect:
         serializedVersion: 2
-        x: 154
+        x: 153
         y: 114
-        width: 37
-        height: 42
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1090,9 +1090,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_42
       rect:
         serializedVersion: 2
-        x: 193
+        x: 192
         y: 114
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1112,9 +1112,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_43
       rect:
         serializedVersion: 2
-        x: 237
+        x: 236
         y: 114
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1134,9 +1134,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_44
       rect:
         serializedVersion: 2
-        x: 275
+        x: 274
         y: 114
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1156,9 +1156,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_45
       rect:
         serializedVersion: 2
-        x: 313
+        x: 312
         y: 114
-        width: 38
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1178,10 +1178,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_46
       rect:
         serializedVersion: 2
-        x: 352
-        y: 116
-        width: 38
-        height: 41
+        x: 351
+        y: 114
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1200,10 +1200,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_47
       rect:
         serializedVersion: 2
-        x: 397
-        y: 117
-        width: 37
-        height: 37
+        x: 396
+        y: 114
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1222,10 +1222,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_48
       rect:
         serializedVersion: 2
-        x: 435
-        y: 117
-        width: 37
-        height: 37
+        x: 434
+        y: 114
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1244,10 +1244,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_49
       rect:
         serializedVersion: 2
-        x: 473
-        y: 117
-        width: 37
-        height: 37
+        x: 472
+        y: 114
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1266,10 +1266,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_50
       rect:
         serializedVersion: 2
-        x: 511
-        y: 117
-        width: 37
-        height: 37
+        x: 510
+        y: 114
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1288,10 +1288,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_51
       rect:
         serializedVersion: 2
-        x: 555
-        y: 117
-        width: 37
-        height: 37
+        x: 554
+        y: 114
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1311,9 +1311,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 593
-        y: 116
+        y: 114
         width: 39
-        height: 38
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1332,10 +1332,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_53
       rect:
         serializedVersion: 2
-        x: 633
-        y: 117
-        width: 37
-        height: 37
+        x: 632
+        y: 114
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1354,10 +1354,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_54
       rect:
         serializedVersion: 2
-        x: 671
-        y: 115
-        width: 38
-        height: 39
+        x: 670
+        y: 114
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1376,10 +1376,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_55
       rect:
         serializedVersion: 2
-        x: 710
-        y: 117
-        width: 37
-        height: 37
+        x: 709
+        y: 114
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1399,9 +1399,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 748
-        y: 117
+        y: 114
         width: 39
-        height: 38
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1420,10 +1420,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_57
       rect:
         serializedVersion: 2
-        x: 788
-        y: 117
-        width: 37
-        height: 37
+        x: 787
+        y: 114
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1442,10 +1442,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_58
       rect:
         serializedVersion: 2
-        x: 826
-        y: 117
-        width: 38
-        height: 39
+        x: 825
+        y: 114
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1464,9 +1464,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_59
       rect:
         serializedVersion: 2
-        x: 2
+        x: 1
         y: 70
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1486,9 +1486,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_60
       rect:
         serializedVersion: 2
-        x: 40
+        x: 39
         y: 70
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1508,10 +1508,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_61
       rect:
         serializedVersion: 2
-        x: 78
+        x: 77
         y: 70
-        width: 37
-        height: 42
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1530,10 +1530,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_62
       rect:
         serializedVersion: 2
-        x: 116
+        x: 115
         y: 70
-        width: 37
-        height: 42
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1552,10 +1552,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_63
       rect:
         serializedVersion: 2
-        x: 154
+        x: 153
         y: 70
-        width: 37
-        height: 42
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1574,9 +1574,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_64
       rect:
         serializedVersion: 2
-        x: 193
+        x: 192
         y: 70
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1596,9 +1596,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_65
       rect:
         serializedVersion: 2
-        x: 237
+        x: 236
         y: 70
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1618,9 +1618,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_66
       rect:
         serializedVersion: 2
-        x: 275
+        x: 274
         y: 70
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1640,9 +1640,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_67
       rect:
         serializedVersion: 2
-        x: 313
+        x: 312
         y: 70
-        width: 38
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1662,10 +1662,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_68
       rect:
         serializedVersion: 2
-        x: 352
-        y: 72
-        width: 38
-        height: 41
+        x: 351
+        y: 70
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1684,10 +1684,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_69
       rect:
         serializedVersion: 2
-        x: 397
-        y: 73
-        width: 37
-        height: 37
+        x: 396
+        y: 70
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1706,10 +1706,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_70
       rect:
         serializedVersion: 2
-        x: 435
-        y: 73
-        width: 37
-        height: 37
+        x: 434
+        y: 70
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1728,10 +1728,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_71
       rect:
         serializedVersion: 2
-        x: 473
-        y: 73
-        width: 37
-        height: 37
+        x: 472
+        y: 70
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1750,10 +1750,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_72
       rect:
         serializedVersion: 2
-        x: 511
-        y: 73
-        width: 37
-        height: 37
+        x: 510
+        y: 70
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1772,10 +1772,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_73
       rect:
         serializedVersion: 2
-        x: 555
-        y: 73
-        width: 37
-        height: 37
+        x: 554
+        y: 70
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1795,9 +1795,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 593
-        y: 72
+        y: 70
         width: 39
-        height: 38
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1816,10 +1816,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_75
       rect:
         serializedVersion: 2
-        x: 633
-        y: 73
-        width: 37
-        height: 37
+        x: 632
+        y: 70
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1838,10 +1838,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_76
       rect:
         serializedVersion: 2
-        x: 671
-        y: 71
-        width: 38
-        height: 39
+        x: 670
+        y: 70
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1860,10 +1860,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_77
       rect:
         serializedVersion: 2
-        x: 710
-        y: 73
-        width: 37
-        height: 37
+        x: 709
+        y: 70
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1883,9 +1883,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 748
-        y: 73
+        y: 70
         width: 39
-        height: 38
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1904,10 +1904,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_79
       rect:
         serializedVersion: 2
-        x: 788
-        y: 73
-        width: 37
-        height: 37
+        x: 787
+        y: 70
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1926,10 +1926,10 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_80
       rect:
         serializedVersion: 2
-        x: 826
-        y: 73
-        width: 38
-        height: 39
+        x: 825
+        y: 70
+        width: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2121,12 +2121,34 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: Custom Edited - Kirby Customs - Rolling Turtle_108
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 8
+        width: 39
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2909c9b4f805847f0800000000000000
+      internalID: -628163571639086958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: Custom Edited - Kirby Customs - Rolling Turtle_109
       rect:
         serializedVersion: 2
-        x: 479
+        x: 478
         y: 8
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2146,9 +2168,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_110
       rect:
         serializedVersion: 2
-        x: 517
+        x: 516
         y: 8
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2168,9 +2190,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_111
       rect:
         serializedVersion: 2
-        x: 555
+        x: 554
         y: 8
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2190,9 +2212,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_112
       rect:
         serializedVersion: 2
-        x: 593
+        x: 592
         y: 8
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2212,9 +2234,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_113
       rect:
         serializedVersion: 2
-        x: 631
+        x: 630
         y: 8
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2234,9 +2256,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_114
       rect:
         serializedVersion: 2
-        x: 669
+        x: 668
         y: 8
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2256,9 +2278,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_115
       rect:
         serializedVersion: 2
-        x: 707
+        x: 706
         y: 8
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2278,9 +2300,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_116
       rect:
         serializedVersion: 2
-        x: 745
+        x: 744
         y: 8
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2300,9 +2322,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_117
       rect:
         serializedVersion: 2
-        x: 783
+        x: 782
         y: 8
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2322,9 +2344,9 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_118
       rect:
         serializedVersion: 2
-        x: 821
+        x: 820
         y: 8
-        width: 37
+        width: 39
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2344,7 +2366,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: efb15306feffc6a4bbd39cccf691d458
+    spriteID: 1923c840c089e094da6002e56747bfa5
     internalID: 0
     vertices: []
     indices: 
@@ -2377,7 +2399,6 @@ TextureImporter:
       Custom Edited - Kirby Customs - Rolling Turtle_116: 7552733564236476906
       Custom Edited - Kirby Customs - Rolling Turtle_117: 4057186301427423174
       Custom Edited - Kirby Customs - Rolling Turtle_118: 1072185628792522055
-      Custom Edited - Kirby Customs - Rolling Turtle_119: 1121517003
       Custom Edited - Kirby Customs - Rolling Turtle_12: 8193717093541705443
       Custom Edited - Kirby Customs - Rolling Turtle_13: 829898514888204086
       Custom Edited - Kirby Customs - Rolling Turtle_14: -139974197645500572
