@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20afbf1aa2ec2a041bf141e26a7ae239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sr: {fileID: 0}
+  sr: {fileID: 1584859135}
   rb: {fileID: 1584859133}
   ropeLayer:
     serializedVersion: 2
