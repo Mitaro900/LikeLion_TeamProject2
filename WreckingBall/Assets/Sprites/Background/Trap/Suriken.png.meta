@@ -162,7 +162,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 33
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -182,9 +182,9 @@ TextureImporter:
       name: Suriken_1
       rect:
         serializedVersion: 2
-        x: 31
+        x: 32
         y: 0
-        width: 34
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -248,9 +248,9 @@ TextureImporter:
       name: Suriken_4
       rect:
         serializedVersion: 2
-        x: 127
+        x: 128
         y: 0
-        width: 34
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -270,9 +270,9 @@ TextureImporter:
       name: Suriken_5
       rect:
         serializedVersion: 2
-        x: 159
+        x: 160
         y: 0
-        width: 34
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -292,9 +292,9 @@ TextureImporter:
       name: Suriken_6
       rect:
         serializedVersion: 2
-        x: 191
+        x: 192
         y: 0
-        width: 65
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -310,11 +310,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Suriken_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0235d495a37d4204086bc8882deef101
+      internalID: 513852664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: da1c1f4dd820e3a4ab9eb8ff68b2d61c
     internalID: 0
     vertices: []
     indices: 
@@ -323,7 +345,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Suriken_0: -6955790032328933191
+      Suriken_1: 6773459715169517474
+      Suriken_2: 6726424302046983146
+      Suriken_3: 1062175669879547232
+      Suriken_4: 6272456057867270974
+      Suriken_5: 5296617233920379225
+      Suriken_6: -8662503132835019991
+      Suriken_7: 513852664
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

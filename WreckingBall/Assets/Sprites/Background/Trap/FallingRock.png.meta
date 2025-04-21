@@ -217,10 +217,10 @@ TextureImporter:
       name: FallingRock_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 15
-        width: 18
-        height: 17
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,10 +239,10 @@ TextureImporter:
       name: FallingRock_1
       rect:
         serializedVersion: 2
-        x: 39
-        y: 15
-        width: 18
-        height: 17
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,10 +261,10 @@ TextureImporter:
       name: FallingRock_2
       rect:
         serializedVersion: 2
-        x: 71
-        y: 15
-        width: 18
-        height: 17
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,10 +283,10 @@ TextureImporter:
       name: FallingRock_3
       rect:
         serializedVersion: 2
-        x: 103
-        y: 15
-        width: 18
-        height: 17
+        x: 96
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,10 +305,10 @@ TextureImporter:
       name: FallingRock_4
       rect:
         serializedVersion: 2
-        x: 135
-        y: 15
-        width: 18
-        height: 17
+        x: 128
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -327,10 +327,10 @@ TextureImporter:
       name: FallingRock_5
       rect:
         serializedVersion: 2
-        x: 167
-        y: 15
-        width: 18
-        height: 17
+        x: 160
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,10 +349,10 @@ TextureImporter:
       name: FallingRock_6
       rect:
         serializedVersion: 2
-        x: 198
-        y: 22
-        width: 12
-        height: 10
+        x: 192
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,10 +371,10 @@ TextureImporter:
       name: FallingRock_7
       rect:
         serializedVersion: 2
-        x: 206
-        y: 13
-        width: 12
-        height: 12
+        x: 224
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -393,10 +393,10 @@ TextureImporter:
       name: FallingRock_8
       rect:
         serializedVersion: 2
-        x: 210
-        y: 24
-        width: 8
-        height: 8
+        x: 256
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -415,10 +415,10 @@ TextureImporter:
       name: FallingRock_9
       rect:
         serializedVersion: 2
-        x: 228
-        y: 19
-        width: 12
-        height: 10
+        x: 288
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -437,10 +437,10 @@ TextureImporter:
       name: FallingRock_10
       rect:
         serializedVersion: 2
-        x: 244
-        y: 22
-        width: 8
-        height: 8
+        x: 320
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -455,341 +455,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: FallingRock_11
-      rect:
-        serializedVersion: 2
-        x: 258
-        y: 15
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ac8a43e9525e21e40800000000000000
-      internalID: 5625810834269972682
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FallingRock_12
-      rect:
-        serializedVersion: 2
-        x: 278
-        y: 19
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 22e97220a96001dd0800000000000000
-      internalID: -2517504933169226206
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FallingRock_13
-      rect:
-        serializedVersion: 2
-        x: 311
-        y: 17
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d0d71dee88b92c470800000000000000
-      internalID: 8413458066306071821
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FallingRock_14
-      rect:
-        serializedVersion: 2
-        x: 199
-        y: 13
-        width: 8
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 85bd110e4b1fb0d30800000000000000
-      internalID: 4398875220213095256
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FallingRock_15
-      rect:
-        serializedVersion: 2
-        x: 230
-        y: 10
-        width: 8
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 76704b77624e51ab0800000000000000
-      internalID: -5037869754275854489
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FallingRock_16
-      rect:
-        serializedVersion: 2
-        x: 239
-        y: 9
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8f04cc9435d6b50e0800000000000000
-      internalID: -2280108581845188360
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FallingRock_17
-      rect:
-        serializedVersion: 2
-        x: 274
-        y: 4
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4ca6c06a76ba3a410800000000000000
-      internalID: 1487220763618208452
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FallingRock_18
-      rect:
-        serializedVersion: 2
-        x: 289
-        y: 11
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a1c445903e55b2a60800000000000000
-      internalID: 7650302825621376026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FallingRock_19
-      rect:
-        serializedVersion: 2
-        x: 321
-        y: 10
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c0239badcc9b315d0800000000000000
-      internalID: -3092924229579361780
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FallingRock_20
-      rect:
-        serializedVersion: 2
-        x: 344
-        y: 15
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b25673a833aa4d770800000000000000
-      internalID: 8634713523915023659
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FallingRock_21
-      rect:
-        serializedVersion: 2
-        x: 262
-        y: 5
-        width: 7
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 273e7de36d35a61d0800000000000000
-      internalID: -3356778392608840846
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FallingRock_22
-      rect:
-        serializedVersion: 2
-        x: 293
-        y: 1
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5256106259abe5ae0800000000000000
-      internalID: -1558603271273093851
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FallingRock_23
-      rect:
-        serializedVersion: 2
-        x: 308
-        y: 1
-        width: 9
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b2fa11ef5e39c88f0800000000000000
-      internalID: -536891639544565973
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FallingRock_24
-      rect:
-        serializedVersion: 2
-        x: 325
-        y: 0
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 032ba1067f2687320800000000000000
-      internalID: 2555901603141562928
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FallingRock_25
-      rect:
-        serializedVersion: 2
-        x: 342
-        y: 0
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 759eeff138f7d8810800000000000000
-      internalID: 1769210429780715863
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d10d65bb854173b48bbdf1690849caea
     internalID: 0
     vertices: []
     indices: 
@@ -798,7 +468,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FallingRock_0: 907180060966303384
+      FallingRock_1: 1938065099256695685
+      FallingRock_10: -8749196052890801633
+      FallingRock_2: -7603387257893191898
+      FallingRock_3: 874010686499319050
+      FallingRock_4: 2778358696420113119
+      FallingRock_5: -5723676831871702989
+      FallingRock_6: 4131660796094684121
+      FallingRock_7: 1299816117422231029
+      FallingRock_8: -294977577628213394
+      FallingRock_9: 7248077085973353854
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

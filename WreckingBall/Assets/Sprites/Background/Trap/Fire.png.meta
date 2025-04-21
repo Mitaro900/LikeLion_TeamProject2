@@ -151,9 +151,9 @@ TextureImporter:
       name: Fire_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 12
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -173,10 +173,10 @@ TextureImporter:
       name: Fire_1
       rect:
         serializedVersion: 2
-        x: 18
+        x: 16
         y: 0
-        width: 12
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,9 +195,9 @@ TextureImporter:
       name: Fire_2
       rect:
         serializedVersion: 2
-        x: 34
+        x: 32
         y: 0
-        width: 12
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -217,10 +217,10 @@ TextureImporter:
       name: Fire_3
       rect:
         serializedVersion: 2
-        x: 50
+        x: 48
         y: 0
-        width: 12
-        height: 14
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,7 +239,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a833dbcde5b52d04b852e471a154e27e
     internalID: 0
     vertices: []
     indices: 
@@ -248,7 +248,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Fire_0: 1098286324429101383
+      Fire_1: 7419590508823533442
+      Fire_2: 2333874723133794383
+      Fire_3: 6211036013863027259
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -175,10 +175,10 @@ TextureImporter:
       name: Spear_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 0
-        width: 11
-        height: 16
+        width: 16
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,10 +197,10 @@ TextureImporter:
       name: Spear_1
       rect:
         serializedVersion: 2
-        x: 19
+        x: 16
         y: 0
-        width: 11
-        height: 17
+        width: 16
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,9 +219,9 @@ TextureImporter:
       name: Spear_2
       rect:
         serializedVersion: 2
-        x: 35
+        x: 32
         y: 0
-        width: 11
+        width: 16
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -241,9 +241,9 @@ TextureImporter:
       name: Spear_3
       rect:
         serializedVersion: 2
-        x: 51
+        x: 48
         y: 0
-        width: 11
+        width: 16
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -263,9 +263,9 @@ TextureImporter:
       name: Spear_4
       rect:
         serializedVersion: 2
-        x: 67
+        x: 64
         y: 0
-        width: 11
+        width: 16
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -285,9 +285,9 @@ TextureImporter:
       name: Spear_5
       rect:
         serializedVersion: 2
-        x: 83
+        x: 80
         y: 0
-        width: 11
+        width: 16
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -307,10 +307,10 @@ TextureImporter:
       name: Spear_6
       rect:
         serializedVersion: 2
-        x: 99
+        x: 96
         y: 0
-        width: 11
-        height: 63
+        width: 16
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -329,10 +329,10 @@ TextureImporter:
       name: Spear_7
       rect:
         serializedVersion: 2
-        x: 115
+        x: 112
         y: 0
-        width: 11
-        height: 45
+        width: 16
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -351,9 +351,9 @@ TextureImporter:
       name: Spear_8
       rect:
         serializedVersion: 2
-        x: 131
+        x: 128
         y: 0
-        width: 11
+        width: 16
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -373,9 +373,9 @@ TextureImporter:
       name: Spear_9
       rect:
         serializedVersion: 2
-        x: 147
+        x: 144
         y: 0
-        width: 11
+        width: 16
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -395,9 +395,9 @@ TextureImporter:
       name: Spear_10
       rect:
         serializedVersion: 2
-        x: 163
+        x: 160
         y: 0
-        width: 11
+        width: 16
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -417,9 +417,9 @@ TextureImporter:
       name: Spear_11
       rect:
         serializedVersion: 2
-        x: 179
+        x: 176
         y: 0
-        width: 11
+        width: 16
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -439,7 +439,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 09589747f15dfb84fb9c4a2e5c9add1d
     internalID: 0
     vertices: []
     indices: 
@@ -448,7 +448,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Spear_0: 6108012597462862368
+      Spear_1: -3232016802565754395
+      Spear_10: -8452378982718362965
+      Spear_11: -5278986678097760932
+      Spear_2: 7579325349694084374
+      Spear_3: -1781326355032519099
+      Spear_4: 3407105571278021131
+      Spear_5: -2446075364717494585
+      Spear_6: 2378717860132542022
+      Spear_7: 4424080537371764689
+      Spear_8: -549505504794479726
+      Spear_9: 4987719907933409365
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

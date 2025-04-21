@@ -161,9 +161,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 4
-        width: 15
-        height: 12
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,9 +183,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 5
-        width: 15
-        height: 11
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,9 +205,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 1
-        width: 15
-        height: 15
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,9 +227,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 8
-        width: 15
-        height: 8
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,10 +248,10 @@ TextureImporter:
       name: Shooter_Arrow_Trap_4
       rect:
         serializedVersion: 2
-        x: 52
-        y: 1
-        width: 7
-        height: 9
+        x: 64
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,10 +270,10 @@ TextureImporter:
       name: Shooter_Arrow_Trap_5
       rect:
         serializedVersion: 2
-        x: 64
-        y: 8
-        width: 15
-        height: 8
+        x: 80
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -288,33 +288,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Shooter_Arrow_Trap_6
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 7
-        width: 15
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6dc9a76644c5da120800000000000000
-      internalID: 2426697223069408470
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cd3ef7265fc95194d895332583d5a524
     internalID: 0
     vertices: []
     indices: 
@@ -323,7 +301,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Shooter_Arrow_Trap_0: 5664317421379508311
+      Shooter_Arrow_Trap_1: 2664446938899218892
+      Shooter_Arrow_Trap_2: -3242719409127367225
+      Shooter_Arrow_Trap_3: 8452858929953208293
+      Shooter_Arrow_Trap_4: 9024367733721590576
+      Shooter_Arrow_Trap_5: 3996180061049761737
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

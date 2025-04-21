@@ -165,8 +165,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 23
-        height: 11
+        width: 24
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +187,8 @@ TextureImporter:
         serializedVersion: 2
         x: 24
         y: 0
-        width: 23
-        height: 10
+        width: 24
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,8 +209,8 @@ TextureImporter:
         serializedVersion: 2
         x: 48
         y: 0
-        width: 23
-        height: 9
+        width: 24
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,7 +231,7 @@ TextureImporter:
         serializedVersion: 2
         x: 72
         y: 0
-        width: 23
+        width: 24
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -253,7 +253,7 @@ TextureImporter:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 23
+        width: 24
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -275,7 +275,7 @@ TextureImporter:
         serializedVersion: 2
         x: 120
         y: 0
-        width: 23
+        width: 24
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -297,7 +297,7 @@ TextureImporter:
         serializedVersion: 2
         x: 144
         y: 0
-        width: 23
+        width: 24
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -319,8 +319,8 @@ TextureImporter:
         serializedVersion: 2
         x: 168
         y: 0
-        width: 23
-        height: 14
+        width: 24
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -339,7 +339,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 38c1f8729e400444c8645e2269096029
     internalID: 0
     vertices: []
     indices: 
@@ -348,7 +348,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Jumper_0: -4619652004778703518
+      Jumper_1: -741175538896059304
+      Jumper_2: -1619783632128612519
+      Jumper_3: 6026277252393810511
+      Jumper_4: 2235989310275029482
+      Jumper_5: -7139985909179539520
+      Jumper_6: -8581136386634661326
+      Jumper_7: 5347170662737557981
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
