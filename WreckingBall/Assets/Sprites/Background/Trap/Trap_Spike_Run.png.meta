@@ -175,12 +175,12 @@ TextureImporter:
       name: Trap_Spike_Run_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 95
-        width: 33
-        height: 27
+        x: 1
+        y: 96
+        width: 31
+        height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: Trap_Spike_Run_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 95
-        width: 33
-        height: 27
+        x: 33
+        y: 96
+        width: 31
+        height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -219,12 +219,12 @@ TextureImporter:
       name: Trap_Spike_Run_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 95
-        width: 33
-        height: 27
+        x: 65
+        y: 96
+        width: 31
+        height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -241,12 +241,12 @@ TextureImporter:
       name: Trap_Spike_Run_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 95
-        width: 32
-        height: 27
+        x: 97
+        y: 96
+        width: 31
+        height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -263,12 +263,12 @@ TextureImporter:
       name: Trap_Spike_Run_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 63
-        width: 33
-        height: 27
+        x: 1
+        y: 64
+        width: 31
+        height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -285,12 +285,12 @@ TextureImporter:
       name: Trap_Spike_Run_5
       rect:
         serializedVersion: 2
-        x: 34
-        y: 63
-        width: 28
-        height: 28
+        x: 35
+        y: 64
+        width: 26
+        height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -307,12 +307,12 @@ TextureImporter:
       name: Trap_Spike_Run_6
       rect:
         serializedVersion: 2
-        x: 66
-        y: 63
-        width: 27
-        height: 28
+        x: 67
+        y: 64
+        width: 25
+        height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -329,12 +329,12 @@ TextureImporter:
       name: Trap_Spike_Run_7
       rect:
         serializedVersion: 2
-        x: 98
-        y: 63
-        width: 24
-        height: 28
+        x: 99
+        y: 64
+        width: 22
+        height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -351,12 +351,12 @@ TextureImporter:
       name: Trap_Spike_Run_8
       rect:
         serializedVersion: 2
-        x: 2
-        y: 31
-        width: 24
-        height: 28
+        x: 3
+        y: 32
+        width: 22
+        height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -373,12 +373,12 @@ TextureImporter:
       name: Trap_Spike_Run_9
       rect:
         serializedVersion: 2
-        x: 34
-        y: 31
-        width: 24
-        height: 28
+        x: 35
+        y: 32
+        width: 22
+        height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -395,12 +395,12 @@ TextureImporter:
       name: Trap_Spike_Run_10
       rect:
         serializedVersion: 2
-        x: 66
-        y: 31
-        width: 24
-        height: 28
+        x: 67
+        y: 32
+        width: 22
+        height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -417,12 +417,12 @@ TextureImporter:
       name: Trap_Spike_Run_11
       rect:
         serializedVersion: 2
-        x: 98
-        y: 31
-        width: 24
-        height: 28
+        x: 99
+        y: 32
+        width: 22
+        height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -439,7 +439,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 08e2d80cd2eaf304f8511ff6211a1c28
     internalID: 0
     vertices: []
     indices: 
