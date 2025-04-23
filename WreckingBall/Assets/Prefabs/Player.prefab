@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4032703882290452441}
   - component: {fileID: 6968400280137975918}
   - component: {fileID: 8752022394912870679}
-  - component: {fileID: 4477520309235711853}
+  - component: {fileID: 4755054468397181234}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -235,7 +235,7 @@ DistanceJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 5
   m_MaxDistanceOnly: 0
---- !u!114 &4477520309235711853
+--- !u!114 &4755054468397181234
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -244,20 +244,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 811210994940891885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20afbf1aa2ec2a041bf141e26a7ae239, type: 3}
+  m_Script: {fileID: 11500000, guid: 6bbd55cf2d549e34f844877e238ab89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sr: {fileID: 6128538784742622092}
   rb: {fileID: 4032703882290452441}
   ropeLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
-  maxAnchorDistance: 10
+    m_Bits: 64
   distanceJoint2D: {fileID: 8752022394912870679}
   lineRenderer: {fileID: 6968400280137975918}
+  maxAnchorDistance: 5
   moveSpeed: 5
   ropeSpeed: 10
-  jumpForce: 8
+  jumpForce: 5
 --- !u!1 &4674703796817580144
 GameObject:
   m_ObjectHideFlags: 0
