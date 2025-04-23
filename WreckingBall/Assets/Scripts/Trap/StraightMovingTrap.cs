@@ -23,7 +23,7 @@ public class StraightMovingTrap : TrapBase
         base.prop = property;
     }
 
-    public override void Start()
+    protected override void Start()
     {
         base.Start();
         oriPos = transform.position;
@@ -82,16 +82,16 @@ public class StraightMovingTrap : TrapBase
     private bool IsLookPlayer()
     {
         Vector2 distance = player.transform.position - oriPos;
-        Debug.Log(new Vector2(Mathf.Abs(distance.x), Mathf.Abs(distance.y)) + " / "+new Vector2(prop.thisSize.x, prop.thisSize.y));
+        //Debug.Log(new Vector2(Mathf.Abs(distance.x), Mathf.Abs(distance.y)) + " / "+new Vector2(prop.thisSize.x, prop.thisSize.y));
         if(isHorizontalMoved)
         {
-            if(Mathf.Abs(distance.x) < prop.moveDistance && Mathf.Abs(distance.y) < Mathf.Abs(prop.thisSize.y / 2f))
+            if(Mathf.Abs(distance.x) < prop.moveDistance && Mathf.Abs(distance.y) < Mathf.Abs(prop.thisSize.y / 2f + prop.sizeOffSet.y))
                 return true;
         }
         
         if(isVerticalMoved)
         {
-            if (Mathf.Abs(distance.y) < prop.moveDistance && Mathf.Abs(distance.x) < Mathf.Abs(prop.thisSize.x / 2f))
+            if (Mathf.Abs(distance.y) < prop.moveDistance && Mathf.Abs(distance.x) < Mathf.Abs(prop.thisSize.x / 2f + prop.sizeOffSet.x))
                 return true;
         }
         
@@ -102,17 +102,17 @@ public class StraightMovingTrap : TrapBase
     {
         Vector2 v2 = player.transform.position - oriPos;
         //좌우 이동
-        if (isHorizontalMoved && Mathf.Abs(v2.x) < prop.moveDistance && Mathf.Abs(v2.y) < Mathf.Abs(prop.thisSize.y / 2f))
+        if (isHorizontalMoved && Mathf.Abs(v2.x) < prop.moveDistance && Mathf.Abs(v2.y) < Mathf.Abs(prop.thisSize.y / 2f + prop.sizeOffSet.y))
             return new Vector2(v2.x > 0f ? 1 : -1, 0);
         //상하 이동
-        else if (isVerticalMoved && Mathf.Abs(v2.y) < prop.moveDistance && Mathf.Abs(v2.x) < Mathf.Abs(prop.thisSize.x / 2f))
+        else if (isVerticalMoved && Mathf.Abs(v2.y) < prop.moveDistance && Mathf.Abs(v2.x) < Mathf.Abs(prop.thisSize.x / 2f + prop.sizeOffSet.x))
             return new Vector2(0, v2.y > 0f ? 1 : -1);
         //이동X
         else
             return Vector2.zero;
     }
 
-    public override void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision != null) Debug.Log(collision.gameObject.name);
 

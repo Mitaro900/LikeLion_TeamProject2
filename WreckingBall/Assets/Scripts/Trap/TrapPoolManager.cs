@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,21 +19,23 @@ public class TrapPoolManager : MonoBehaviour
 
     private void Start()
     {
-        foreach(var trap in traps)
+        objs = new();
+        for (int i = 0; i < traps.Count; i++)
         {
-            List<GameObject> _objs = new();
-            string _n = default;
-            for (int i=0;i<traps.Count;i++)
+            if (trapsCount.Count <= i)
+                break;
+            string _n = traps[i].name;
+            _n = _n.Replace("(Clone)", "");
+            if(!objs.ContainsKey(_n))
+                objs.Add(_n, new());
+            for (int j = 0; j < trapsCount[i]; j++)
             {
-                for (int j = 0; j < trapsCount[i]; j++)
-                {
-                    GameObject _t = Instantiate(traps[i], Vector3.zero, Quaternion.identity);
-                    _n = _t.name.Replace("Clone", "");
+                GameObject _t = Instantiate(traps[i], Vector3.zero, Quaternion.identity);
+                if (_t.activeSelf)
                     _t.SetActive(false);
-                    _objs.Add(_t);
-                }
+                objs[_n].Add(_t);
             }
-            objs.Add(_n, _objs);
+            
         }
     }
 
@@ -79,8 +82,8 @@ public class TrapPoolManager : MonoBehaviour
         if (!objs.ContainsKey(_n))
             objs.Add(_n, new() { obj });
         //미등록 오브젝트
-        else if (!objs[name].Contains(obj))
-            objs[name].Add(obj);
+        else if (!objs[_n].Contains(obj))
+            objs[_n].Add(obj);
 
         //오브젝트 꺼주기
         if(obj.activeSelf)
