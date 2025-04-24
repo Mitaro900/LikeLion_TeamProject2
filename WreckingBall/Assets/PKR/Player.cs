@@ -205,5 +205,10 @@ namespace PKR
             RaycastHit2D hit = Physics2D.Raycast(origin, Vector2.down, rayLength);
             return hit.collider != null;
         }
+
+        public void Damage()
+        {
+            Debug.Log(nameof(Player)+"."+nameof(Damage));
+        }
     }
 }
