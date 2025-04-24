@@ -86,8 +86,9 @@ public class ShootProjectileTrap : TrapBase
     private bool IsLookPlayer()
     {
         Vector2 distance = player.transform.position - transform.position;
-        //Debug.Log(new Vector2(Mathf.Abs(distance.x), Mathf.Abs(distance.y)) + " / "+new Vector2(prop.thisSize.x, prop.thisSize.y));
-        for(int i=0;i<prop.trapDir.Length;i++)
+        if(isDebug)
+        Debug.Log($"[{gameObject.name}] Distance : " + new Vector2(Mathf.Abs(distance.x), Mathf.Abs(distance.y)) + " / Size : " + new Vector2(prop.thisSize.x, prop.thisSize.y)+" / Range : "+prop.moveDistance);
+        for (int i=0;i<prop.trapDir.Length;i++)
         {
             if (prop.trapDir[i].x != 0)
             {

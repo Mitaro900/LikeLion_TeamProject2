@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class ProjectileBase : MonoBehaviour
 {
+    [SerializeField] protected bool isDebug;
     public enum ProjectileState { Idle, Running, Crushed, Destoring, None };
     [Header(nameof(ProjectileBase) + ".움직임 상태")]
     [SerializeField] protected ProjectileState state;
@@ -75,7 +76,8 @@ public class ProjectileBase : MonoBehaviour
 
     protected void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(gameObject.name+" : "+ collision.gameObject.name);
+        if(isDebug)
+            Debug.Log(gameObject.name+" Crush To : "+ collision.gameObject.name);
         if (state == ProjectileState.Destoring)
             return;
         

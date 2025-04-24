@@ -114,7 +114,7 @@ public class StraightMovingTrap : TrapBase
 
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision != null) Debug.Log(collision.gameObject.name);
+        if(isDebug&&collision != null) Debug.Log($"[{gameObject.name}] collision : " + collision.gameObject.name);
 
         base.OnTriggerEnter2D(collision);
 

@@ -37,6 +37,7 @@ public struct TrapProperty
 [System.Serializable]
 public class TrapBase : MonoBehaviour
 {
+    [SerializeField] protected bool isDebug;
     [Header(nameof(TrapBase))]
     [Tooltip("속성")]
     [SerializeField] protected TrapProperty prop;
