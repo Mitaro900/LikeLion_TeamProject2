@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class BatAttackState : EnemyState
+public class BatStunnedState : EnemyState
 {
     
-    public BatAttackState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, Enemy_Bat _enemy)
+    public BatStunnedState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, Enemy_Bat _enemy)
         : base(_enemyBase, _stateMachine, _animBoolName, _enemy)
     {
         this.enemy = _enemy;
@@ -12,22 +12,20 @@ public class BatAttackState : EnemyState
     public override void Enter()
     {
         base.Enter();
+
     }
     public override void Update()
     {
         base.Update();
-
-
-        enemy.SetZeroVelocity();
-
-        if (triggerCalled)
-            stateMachine.ChangeState(enemy.battleState);
-
+        if (stateTimer < 0)
+        {
+            stateMachine.ChangeState(enemy.dieState);
+            Debug.Log("아야");
+        }
     }
     public override void Exit()
     {
         base.Exit();
-        enemy.lastTimeAttacked = Time.time;
     }
 
     

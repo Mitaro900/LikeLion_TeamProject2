@@ -3,9 +3,10 @@ using UnityEngine;
 public class BatBattleState : EnemyState
 {
     private Transform player;
-    private Enemy_Bat enemy;
+
+    private int moveDir;
     public BatBattleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, Enemy_Bat _enemy)
-        : base(_enemyBase, _stateMachine, _animBoolName)
+        : base(_enemyBase, _stateMachine, _animBoolName, _enemy)
     {
         this.enemy = _enemy;
     }
@@ -13,6 +14,42 @@ public class BatBattleState : EnemyState
     public override void Enter()
     {
         base.Enter();
+
+        //player = PlayerManager.instance.player.transform;
+    }
+
+    public override void Update()
+    {
+        base.Update();
+
+
+        if(enemy.IsPlayerDetected())
+        {
+            stateTimer = enemy.battleTime;
+
+            if(enemy.IsPlayerDetected().distance < enemy.attackDistance)
+            {
+                //공격상태
+                if(CanAttack())
+                stateMachine.ChangeState(enemy.attackState);
+            }
+        }
+        else
+        {
+            if (stateTimer < 0 || Vector2.Distance(player.transform.position,enemy.transform.position) >10)
+                stateMachine.ChangeState(enemy.idleState);
+        }
+
+
+
+        if (player.position.x > enemy.transform.position.x)
+            moveDir = 1;
+        else if (player.position.x < enemy.transform.position.x)
+            moveDir = -1;
+
+        enemy.SetVelocity(enemy.moveSpeed * moveDir, rb.linearVelocity.y);
+
+
     }
 
     public override void Exit()
@@ -20,8 +57,20 @@ public class BatBattleState : EnemyState
         base.Exit();
     }
 
-    public override void Update()
+
+    private bool CanAttack()
     {
-        base.Update();
+        if(Time.time >= enemy.lastTimeAttacked + enemy.attackCooldown)
+        {
+            enemy.lastTimeAttacked = Time.time;
+            return true;
+        }
+
+     
+        return false;
     }
+
+
+
+   
 }
