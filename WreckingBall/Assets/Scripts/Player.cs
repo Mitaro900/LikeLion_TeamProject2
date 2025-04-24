@@ -214,4 +214,9 @@ public class Player : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(origin, Vector2.down, rayLength);
         return hit.collider != null;
     }
+
+    public void Damage()
+    {
+
+    }
 }
