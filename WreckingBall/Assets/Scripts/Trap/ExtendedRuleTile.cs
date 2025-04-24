@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 [CreateAssetMenu]
-public class CustomRuleTile : RuleTile<CustomRuleTile.Neighbor> {
+public class ExtendedRuleTile : RuleTile<ExtendedRuleTile.Neighbor> {
     public bool customField;
 
     public class Neighbor : RuleTile.TilingRule.Neighbor {
