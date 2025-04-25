@@ -249,6 +249,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sr: {fileID: 6128538784742622092}
   rb: {fileID: 4032703882290452441}
+  slideMovement:
+    <maxIterations>k__BackingField: 3
+    <surfaceSlideAngle>k__BackingField: 90
+    <gravitySlipAngle>k__BackingField: 90
+    <surfaceUp>k__BackingField: {x: 0, y: 1}
+    <surfaceAnchor>k__BackingField: {x: 0, y: -1}
+    <gravity>k__BackingField: {x: 0, y: -9.81}
+    <startPosition>k__BackingField: {x: 0, y: 0}
+    <selectedCollider>k__BackingField: {fileID: 0}
+    <layerMask>k__BackingField:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    <useLayerMask>k__BackingField: 0
+    <useStartPosition>k__BackingField: 0
+    <useNoMove>k__BackingField: 0
+    <useSimulationMove>k__BackingField: 0
+    <useAttachedTriggers>k__BackingField: 0
   ropeLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -332,8 +349,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 854587259
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 1161574363382750048, guid: 67b0f117242d7b14487d0abc84968dc4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
