@@ -6,7 +6,6 @@ public class Enemy_Bat : Enemy
     #region States
 
     public BatIdleState idleState { get; private set; }
-
     public BatMoveState moveState { get; private set; }
     public BatBattleState battleState { get; private set; }
     public BatAttackState attackState { get; private set; }
@@ -19,7 +18,6 @@ public class Enemy_Bat : Enemy
     protected override void Awake()
     {
         base.Awake();
-
 
         idleState = new BatIdleState(this, stateMachine, "Idle", this);
         moveState = new BatMoveState(this, stateMachine, "Move", this);

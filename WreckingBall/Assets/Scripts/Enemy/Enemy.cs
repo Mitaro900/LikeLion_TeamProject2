@@ -10,7 +10,6 @@ public class Enemy : EnemyEntity
     public Vector2 stunDirection;
     protected bool canBeStunned;
 
-    
 
     [Header("이동 정보")]
     public float moveSpeed;
@@ -110,7 +109,7 @@ public class Enemy : EnemyEntity
 
     public virtual void AnimationFinishTrigger() => stateMachine.currentState.AnimationFinishTrigger();
 
-    public virtual RaycastHit2D IsPlayerDetected() => Physics2D.CircleCast(playerCheck.position, 4, Vector2.down * facingDir, 50, whatIsPlayer);
+    public virtual RaycastHit2D IsPlayerDetected() => Physics2D.CircleCast(playerCheck.position, 2.5f, Vector2.down * facingDir, 25, whatIsPlayer);
 
 
     protected override void OnDrawGizmos()

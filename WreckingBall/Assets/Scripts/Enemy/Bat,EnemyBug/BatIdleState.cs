@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class BatIdleState : EnemyState
 {
+    private Enemy_Bat enemy;
     public BatIdleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, Enemy_Bat _enemy) 
-        : base(_enemyBase, _stateMachine, _animBoolName, _enemy)
+        : base(_enemyBase, _stateMachine, _animBoolName)
     {
+        this.enemy = _enemy;
     }
 
     public override void Enter()

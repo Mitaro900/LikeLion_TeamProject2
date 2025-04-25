@@ -11,10 +11,6 @@ public class EnemyEntity : MonoBehaviour
     public SpriteRenderer sr { get; private set; }
     #endregion
 
-    [Header("넉백 정보")]
-    [SerializeField] protected Vector2 knockbackDirection;
-    [SerializeField] protected float knockbackDuration;
-    protected bool isKnocked;
 
 
 
@@ -61,17 +57,7 @@ public class EnemyEntity : MonoBehaviour
     }
 
    
-    protected virtual IEnumerator HitKnockBack()
-    {
-        isKnocked = true;
 
-        rb.linearVelocity = new Vector2(knockbackDirection.x * -facingDir, knockbackDirection.y);
-
-        yield return new WaitForSeconds(knockbackDuration);
-
-        isKnocked = false;
-
-    }
 
 
 
@@ -105,7 +91,6 @@ public class EnemyEntity : MonoBehaviour
         transform.Rotate(0, 180, 0);
     }
 
-
     public virtual void FlipController(float _x)
     {
         if (_x > 0 && !facingRight)
@@ -121,16 +106,11 @@ public class EnemyEntity : MonoBehaviour
     #region 속력
     public void SetZeroVelocity()
     {
-        if (isKnocked)
-            return;
+       
         rb.linearVelocity = new Vector2(0, 0);
     }
     public void SetVelocity(float _xVelocity, float _yVelocity)
     {
-        if (isKnocked)
-            return;
-
-
         rb.linearVelocity = new Vector2(_xVelocity, _yVelocity);
         FlipController(_xVelocity);
     }
