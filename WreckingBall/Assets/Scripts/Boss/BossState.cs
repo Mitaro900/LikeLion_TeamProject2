@@ -31,8 +31,14 @@ public class BossState
         boss.anim.SetBool(animBoolName, false);
     }
 
+    public virtual void Update()
+    {
+        
+    }
+
     public virtual void AnimationFinishTrigger()
     {
         triggerCalled = true;
+        
     }
 }

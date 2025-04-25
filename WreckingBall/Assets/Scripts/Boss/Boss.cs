@@ -3,17 +3,11 @@ using UnityEngine.Events;
 
 public class Boss : EntityCollision
 {
-    public int bossPage;
-    public int bossMaxPage;
-    UnityAction<EntityAbility> pageChageEvent;
+    public int bossPage {get; private set; }
+    public int bossMaxPage {get; private set; }
+    protected UnityAction<EntityAbility> pageChageEvent;
 
-
-
-    #region States
-
-    #endregion
-
-
+    protected BossStateMachine stateMachine;
 
     public Boss(EntityAbility ability, UnityAction<EntityAbility> damageEvent, UnityAction deathEvent,
         EntityAbnormalState knockback, EntityAbnormalState invincibility, int bossPage, int bossMaxPage, UnityAction<EntityAbility> pageChageEvent)
@@ -44,6 +38,7 @@ public class Boss : EntityCollision
     protected override void Start()
     {
         base.Start();
+        stateMachine = new BossStateMachine();
     }
 
     protected override void Update()
