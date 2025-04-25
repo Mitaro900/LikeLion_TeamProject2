@@ -18,11 +18,6 @@ public class Boss_IdleState : BossState
         base.Exit();
     }
 
-    public override void AnimationFinishTrigger()
-    {
-        base.AnimationFinishTrigger();
-    }
-
     public override void Update()
     {
         base.Update();
@@ -45,11 +40,6 @@ public class WildWolf_MoveState : BossState
     public override void Exit()
     {
         base.Exit();
-    }
-
-    public override void AnimationFinishTrigger()
-    {
-        base.AnimationFinishTrigger();
     }
 
     public override void Update()
@@ -76,11 +66,6 @@ public class WildWolf_RunState : BossState
         base.Exit();
     }
 
-    public override void AnimationFinishTrigger()
-    {
-        base.AnimationFinishTrigger();
-    }
-
     public override void Update()
     {
         base.Update();
@@ -103,11 +88,6 @@ public class WildWolf_AttackState : BossState
     public override void Exit()
     {
         base.Exit();
-    }
-
-    public override void AnimationFinishTrigger()
-    {
-        base.AnimationFinishTrigger();
     }
 
     public override void Update()
@@ -134,11 +114,6 @@ public class WildWolf_DamageState : BossState
         base.Exit();
     }
 
-    public override void AnimationFinishTrigger()
-    {
-        base.AnimationFinishTrigger();
-    }
-
     public override void Update()
     {
         base.Update();
@@ -161,11 +136,6 @@ public class WildWolf_DeathState : BossState
     public override void Exit()
     {
         base.Exit();
-    }
-
-    public override void AnimationFinishTrigger()
-    {
-        base.AnimationFinishTrigger();
     }
 
     public override void Update()
@@ -192,11 +162,6 @@ public class WildWolf_FloorSlideState : BossState
         base.Exit();
     }
 
-    public override void AnimationFinishTrigger()
-    {
-        base.AnimationFinishTrigger();
-    }
-
     public override void Update()
     {
         base.Update();
@@ -219,11 +184,6 @@ public class WildWolf_JumpAttackState : BossState
     public override void Exit()
     {
         base.Exit();
-    }
-
-    public override void AnimationFinishTrigger()
-    {
-        base.AnimationFinishTrigger();
     }
 
     public override void Update()
@@ -250,11 +210,6 @@ public class WildWolf_ThrowTrapState : BossState
         base.Exit();
     }
 
-    public override void AnimationFinishTrigger()
-    {
-        base.AnimationFinishTrigger();
-    }
-
     public override void Update()
     {
         base.Update();
@@ -277,11 +232,6 @@ public class WildWolf_AerialSlideState: BossState
     public override void Exit()
     {
         base.Exit();
-    }
-
-    public override void AnimationFinishTrigger()
-    {
-        base.AnimationFinishTrigger();
     }
 
     public override void Update()
@@ -308,11 +258,6 @@ public class WildWolf_TakeDown_VAttackState: BossState
         base.Exit();
     }
 
-    public override void AnimationFinishTrigger()
-    {
-        base.AnimationFinishTrigger();
-    }
-
     public override void Update()
     {
         base.Update();
@@ -337,11 +282,6 @@ public class WildWolf_DroppingTrapState : BossState
         base.Exit();
     }
 
-    public override void AnimationFinishTrigger()
-    {
-        base.AnimationFinishTrigger();
-    }
-
     public override void Update()
     {
         base.Update();
@@ -364,11 +304,6 @@ public class WildWolf_TakeDown_DirectAttackState : BossState
     public override void Exit()
     {
         base.Exit();
-    }
-
-    public override void AnimationFinishTrigger()
-    {
-        base.AnimationFinishTrigger();
     }
 
     public override void Update()

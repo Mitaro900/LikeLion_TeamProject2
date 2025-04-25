@@ -45,4 +45,9 @@ public class Boss : EntityCollision
     {
         base.Update();
     }
+
+    protected virtual void AnimationFinishTrigger()
+    {
+        
+    }
 }
