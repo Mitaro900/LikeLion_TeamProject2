@@ -35,10 +35,4 @@ public class BossState
     {
         
     }
-
-    public virtual void AnimationFinishTrigger()
-    {
-        triggerCalled = true;
-        
-    }
 }
