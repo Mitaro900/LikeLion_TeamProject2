@@ -54,16 +54,5 @@ public class Enemy_Bug2 : Enemy
         stateMachine.ChangeState(_dieState);
     }
 
-    public void SummonMinion()
-    {
-        if (SpawnFlyPrefab != null && summonPoint != null)
-        {
-            Instantiate(SpawnFlyPrefab, summonPoint.position, Quaternion.identity);
-            Debug.Log("미니언이 소환되었습니다!");
-        }
-        else
-        {
-            Debug.LogWarning("minionPrefab 또는 summonPoint가 설정되지 않았습니다!");
-        }
-    }
+    
 }

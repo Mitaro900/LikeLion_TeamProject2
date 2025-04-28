@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Enemy_Bat : Enemy
 {
-
     #region States
 
     public BatIdleState idleState { get; private set; }

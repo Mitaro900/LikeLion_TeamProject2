@@ -16,7 +16,7 @@ public class Enemy : EnemyEntity
     public float idleTime;
     public float battleTime;
     private float defaultMoveSpeed;
-    [SerializeField] protected float fallSpeed = 2f;
+    [SerializeField] public float fallSpeed = 2f;
     private Transform playerTransform;
 
     [Header("공격 정보")]
@@ -40,19 +40,21 @@ public class Enemy : EnemyEntity
 
 
 
-
     protected override void Update()
     {
         base.Update();
 
         stateMachine.currentState.Update();
 
-        RaycastHit2D hit = IsPlayerDetected();
+        RaycastHit2D hit = IsPlayerDetected(25f);
         if (hit.collider != null)
         {
+            Debug.Log("플레이어발견");
             playerTransform = hit.transform;
-            MoveTowardPlayer();
+
         }
+
+        
     }
 
     public virtual void FreezeTime(bool _timeFrozen)
@@ -104,12 +106,13 @@ public class Enemy : EnemyEntity
         return false;
     }
 
-
+    
 
 
     public virtual void AnimationFinishTrigger() => stateMachine.currentState.AnimationFinishTrigger();
 
-    public virtual RaycastHit2D IsPlayerDetected() => Physics2D.CircleCast(playerCheck.position, 2.5f, Vector2.down * facingDir, 25, whatIsPlayer);
+    public virtual RaycastHit2D IsPlayerDetected(float distance)
+    => Physics2D.CircleCast(playerCheck.position, 2.5f, Vector2.down * facingDir, distance, whatIsPlayer);
 
 
     protected override void OnDrawGizmos()
@@ -121,13 +124,5 @@ public class Enemy : EnemyEntity
 
     }
 
-    private void MoveTowardPlayer()
-    {
-        if (playerTransform != null)
-        {
-            Vector3 targetPosition = new Vector3(playerTransform.position.x, playerTransform.position.y, transform.position.z);
-            transform.position = Vector3.Lerp(transform.position, targetPosition, fallSpeed * Time.deltaTime);
-        }
-    }
 
 }

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BatMoveState : EnemyState
 {
+    private Transform player;
     private Enemy_Bat enemy;
 
     private float waitTime;
@@ -34,7 +35,7 @@ public class BatMoveState : EnemyState
     {
         base.Update();
 
-        if (enemy.IsPlayerDetected())
+        if (enemy.IsPlayerDetected(10f))
             stateMachine.ChangeState(enemy.battleState);
 
         if (isWaiting)

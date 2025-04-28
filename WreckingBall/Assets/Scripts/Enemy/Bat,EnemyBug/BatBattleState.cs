@@ -15,30 +15,57 @@ public class BatBattleState : EnemyState
     {
         base.Enter();
 
-        //player = PlayerManager.instance.player.transform;
+        player = Player.instance.player.transform;
     }
 
     public override void Update()
     {
         base.Update();
 
-
-        if(enemy.IsPlayerDetected())
+        if (enemy.IsPlayerDetected(10f))
         {
             stateTimer = enemy.battleTime;
 
-            if(enemy.IsPlayerDetected().distance < enemy.attackDistance)
+            float distanceToPlayer = Vector2.Distance(player.position, enemy.transform.position);
+
+            if (distanceToPlayer > 0.5f)
             {
-                //공격상태
-                if(CanAttack())
-                stateMachine.ChangeState(enemy.attackState);
+                MoveTowardPlayer();
+            }
+            else
+            {
+                if (CanAttack())
+                    stateMachine.ChangeState(enemy.attackState);
             }
         }
         else
         {
-            if (stateTimer < 0 || Vector2.Distance(player.transform.position,enemy.transform.position) >10)
+            if (stateTimer < 0 || Vector2.Distance(player.transform.position, enemy.transform.position) > 10)
                 stateMachine.ChangeState(enemy.idleState);
         }
+
+        //if (enemy.IsPlayerDetected())
+        //{
+
+
+
+        //    stateTimer = enemy.battleTime;
+        //    MoveTowardPlayer();
+        //    float distanceToPlayer = Vector2.Distance(player.position, enemy.transform.position);
+
+        //    if (distanceToPlayer <= enemy.attackDistance)
+        //    {
+        //        //공격상태
+        //        if(CanAttack())
+        //        stateMachine.ChangeState(enemy.attackState);
+
+        //    }
+        //}
+        //else
+        //{
+        //    if (stateTimer < 0 || Vector2.Distance(player.transform.position,enemy.transform.position) >10)
+        //        stateMachine.ChangeState(enemy.idleState);
+        //}
 
 
 
@@ -62,15 +89,23 @@ public class BatBattleState : EnemyState
     {
         if(Time.time >= enemy.lastTimeAttacked + enemy.attackCooldown)
         {
+            enemy.SetZeroVelocity();
             enemy.lastTimeAttacked = Time.time;
             return true;
         }
 
-     
+        
         return false;
     }
 
+    private void MoveTowardPlayer()
+    {
+        if (player != null)
+        {
+            Vector3 targetPosition = new Vector3(player.position.x, player.position.y, enemy.transform.position.z);
+            enemy.transform.position = Vector3.Lerp(enemy.transform.position, targetPosition, enemy.fallSpeed * Time.deltaTime);
+        }
+    }
 
 
-   
 }

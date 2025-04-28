@@ -22,7 +22,8 @@ public class Bug2MoveState : EnemyState
     public override void Update()
     {
         base.Update();
-
+        if (enemy.IsPlayerDetected(25f))
+            stateMachine.ChangeState(enemy._battleState);
         enemy.SetVelocity(enemy.moveSpeed * enemy.facingDir, rb.linearVelocity.y);
 
         if (enemy.IsWallDetected())

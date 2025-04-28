@@ -77,6 +77,7 @@ public class EnemyEntity : MonoBehaviour
         Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDistance, wallCheck.position.y));
         Gizmos.DrawWireSphere(attackCheck.position, attackCheckRadius);
 
+        Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(playerCheck.position, playerCheckRadius);
     }
     #endregion
@@ -105,8 +106,7 @@ public class EnemyEntity : MonoBehaviour
 
     #region 속력
     public void SetZeroVelocity()
-    {
-       
+    {   
         rb.linearVelocity = new Vector2(0, 0);
     }
     public void SetVelocity(float _xVelocity, float _yVelocity)
