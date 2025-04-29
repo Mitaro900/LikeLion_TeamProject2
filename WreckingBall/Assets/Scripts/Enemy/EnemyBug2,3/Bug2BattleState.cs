@@ -25,7 +25,7 @@ public class Bug2BattleState : EnemyState
             enemy.Flip(); 
         }
 
-        if (enemy.IsPlayerDetected(25f))
+        if (enemy.IsPlayerDetected())
         {
             stateTimer = enemy.battleTime;
 
@@ -40,7 +40,7 @@ public class Bug2BattleState : EnemyState
                 enemy.Flip();
 
             // 공격 거리 안이면 공격 상태로 전환
-            if (enemy.IsPlayerDetected(25f).distance < enemy.attackDistance)
+            if (enemy.IsPlayerDetected().distance < enemy.attackDistance)
             {
                 if (CanAttack())
                     stateMachine.ChangeState(enemy._attackState);

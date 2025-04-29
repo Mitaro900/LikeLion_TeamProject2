@@ -12,13 +12,11 @@ public class EnemyEntity : MonoBehaviour
     #endregion
 
 
-
+    [Header("EnemyEntity")]
 
     [Header("충돌 정보")]
     public Transform attackCheck;
     public float attackCheckRadius;
-
-
 
     [SerializeField] protected Transform wallCheck;
     [SerializeField] protected float wallCheckDistance;
@@ -56,17 +54,6 @@ public class EnemyEntity : MonoBehaviour
         Debug.Log(gameObject.name + "데미지를 입혔다.");
     }
 
-   
-
-
-
-
-
-
-
-
-
-    #region 충돌
 
     public virtual bool IsWallDetected() => Physics2D.Raycast(wallCheck.position, Vector2.right * facingDir, wallCheckDistance, whatIsGround);
 
@@ -80,11 +67,9 @@ public class EnemyEntity : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(playerCheck.position, playerCheckRadius);
     }
-    #endregion
 
 
 
-    #region 플립
     public virtual void Flip()
     {
         facingDir = facingDir * -1;
@@ -101,10 +86,8 @@ public class EnemyEntity : MonoBehaviour
 
     }
 
-    #endregion
 
 
-    #region 속력
     public void SetZeroVelocity()
     {   
         rb.linearVelocity = new Vector2(0, 0);
@@ -114,7 +97,7 @@ public class EnemyEntity : MonoBehaviour
         rb.linearVelocity = new Vector2(_xVelocity, _yVelocity);
         FlipController(_xVelocity);
     }
-    #endregion
+
 
     public void MakeTransparent(bool _transparent)
     {

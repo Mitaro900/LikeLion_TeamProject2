@@ -14,7 +14,6 @@ public class BatBattleState : EnemyState
     public override void Enter()
     {
         base.Enter();
-
         player = Player.instance.player.transform;
     }
 
@@ -22,7 +21,7 @@ public class BatBattleState : EnemyState
     {
         base.Update();
 
-        if (enemy.IsPlayerDetected(10f))
+        if (enemy.IsPlayerDetected())
         {
             stateTimer = enemy.battleTime;
 

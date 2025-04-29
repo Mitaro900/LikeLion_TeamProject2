@@ -1,40 +1,34 @@
 using UnityEngine;
 
-public class SpawnFly : MonoBehaviour
+public class SpawnAttack : MonoBehaviour
 {
-    public float moveSpeed = 3f;
-    public float detectionRange = 10f;
-
     private Transform player;
-    private Animator anim;
-    //public int damage = 20;
-    private bool isDead = false;
+    public float detectionRange = 10f;
+    public float moveSpeed = 5f;    //미사일 속도
+    public float lifeTime = 10f; //미사일 생존 시간
+    //public int damage = 10;     //미사일 데미지
+
 
     public int facingDir { get; private set; } = 1;
     protected bool facingRight = true;
-
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
-        anim = GetComponent<Animator>();
+        Destroy(gameObject, lifeTime);  //일정 시간 후 미사일 제거     
     }
+
+    
 
     void Update()
     {
-        if (isDead || player == null)
-            return;
-
         float distance = Vector2.Distance(transform.position, player.position);
-
         if (distance <= detectionRange)
         {
             Vector2 direction = (player.position - transform.position).normalized;
             transform.position += (Vector3)direction * moveSpeed * Time.deltaTime;
-
             FlipController(direction.x);
         }
     }
-
     public virtual void Flip()
     {
         facingDir = facingDir * -1;
@@ -50,23 +44,14 @@ public class SpawnFly : MonoBehaviour
             Flip();
 
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (isDead)
-            return;
-        if (collision.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             Debug.Log("플레이어랑 충돌!");
-            isDead = true;
-            anim.SetTrigger("Die");
-
+            Destroy(gameObject);
             // collision.GetComponent<Player>().TakeDamage(damage);
         }
-        
-    }
-    public void DestroySelf()
-    {
-        Destroy(gameObject);
+
     }
 }

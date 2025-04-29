@@ -35,7 +35,7 @@ public class BatMoveState : EnemyState
     {
         base.Update();
 
-        if (enemy.IsPlayerDetected(10f))
+        if (enemy.IsPlayerDetected())
             stateMachine.ChangeState(enemy.battleState);
 
         if (isWaiting)
