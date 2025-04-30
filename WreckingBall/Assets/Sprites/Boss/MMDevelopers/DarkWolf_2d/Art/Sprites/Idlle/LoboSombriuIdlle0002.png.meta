@@ -5,7 +5,7 @@ AssetOrigin:
   productId: 284086
   packageName: Dark Wolf 2d Animation
   packageVersion: 1.0
-  assetPath: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Idlle/LoboSombriuIdlle0002.png
+  assetPath: Assets/Sprites/Boss/MMDevelopers/DarkWolf_2d/Art/Sprites/Idlle/LoboSombriuIdlle0002.png
   uploadId: 733738
 TextureImporter:
   internalIDToNameTable: []
