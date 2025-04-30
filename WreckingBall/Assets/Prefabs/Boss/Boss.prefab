@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 4911203833568755443}
   - component: {fileID: 2533002551154494169}
   - component: {fileID: 595430397624355761}
+  - component: {fileID: 3924171977995649461}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -232,10 +233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f6c02b69359b345bd31b02d2cc28af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ability:
-    hp: 10
-    moveSpeed: 7
-    jumpPower: 10
   knockbackState:
     direction: {x: 0, y: 0}
     duration: 0.5
@@ -253,6 +250,45 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
+  facingDir: -1
+  ability:
+    hp: 10
+    moveSpeed: 5
+    jumpPower: 10
+  bossPage: 1
+  bossMaxPage: 2
+  isGiveDamagedAction: 0
+  controller: {fileID: 0}
+  trapsPrefab: []
+  throwPos: {fileID: 0}
+  dropPos: {fileID: 0}
+--- !u!114 &3924171977995649461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2533250395704109011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f9f1a2e62424e4fbaf020945bb0ccb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patternMaxCooldown:
+  - Key: Page1_Pattern1
+    Value: 0
+  - Key: Page1_Pattern2
+    Value: 0
+  - Key: Page1_Pattern3
+    Value: 0
+  - Key: Page2_Pattern1
+    Value: 0
+  - Key: Page2_Pattern2
+    Value: 0
+  - Key: Page2_Pattern3
+    Value: 0
+  - Key: Page2_Pattern4
+    Value: 0
 --- !u!1 &3985212576742787356
 GameObject:
   m_ObjectHideFlags: 0

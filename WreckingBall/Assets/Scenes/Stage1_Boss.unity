@@ -2978,7 +2978,7 @@ Transform:
   m_GameObject: {fileID: 1202031023}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.6099997, z: -10}
+  m_LocalPosition: {x: -10.750009, y: 3.61, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23782,7 +23782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2764954132568546618, guid: 52d3876c26c172b4a8f503c754022946, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -10.75
       objectReference: {fileID: 0}
     - target: {fileID: 2764954132568546618, guid: 52d3876c26c172b4a8f503c754022946, type: 3}
       propertyPath: m_LocalPosition.y
@@ -23920,7 +23920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9b4405032cddf14c98ad82976316a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trapsCount: 0a000000
+  trapsCount: 00000000
   traps:
   - {fileID: 7310145201735308372, guid: aeca4c4ce19e73043be1cc0397187d8d, type: 3}
   - {fileID: 5504650138646513341, guid: bbe40f0abc257ef43af992e9d7072512, type: 3}
@@ -24031,7 +24031,7 @@ Transform:
   m_GameObject: {fileID: 1637149631}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -10.75, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25206,6 +25206,34 @@ PrefabInstance:
     - target: {fileID: 2533250395704109011, guid: 3a6a83290ee0cd0409e4e453c6259629, type: 3}
       propertyPath: m_Name
       value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 3924171977995649461, guid: 3a6a83290ee0cd0409e4e453c6259629, type: 3}
+      propertyPath: patternMaxCooldown.Array.data[0].Value
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3924171977995649461, guid: 3a6a83290ee0cd0409e4e453c6259629, type: 3}
+      propertyPath: patternMaxCooldown.Array.data[1].Value
+      value: 9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3924171977995649461, guid: 3a6a83290ee0cd0409e4e453c6259629, type: 3}
+      propertyPath: patternMaxCooldown.Array.data[2].Value
+      value: 9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3924171977995649461, guid: 3a6a83290ee0cd0409e4e453c6259629, type: 3}
+      propertyPath: patternMaxCooldown.Array.data[3].Value
+      value: 9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3924171977995649461, guid: 3a6a83290ee0cd0409e4e453c6259629, type: 3}
+      propertyPath: patternMaxCooldown.Array.data[4].Value
+      value: 9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3924171977995649461, guid: 3a6a83290ee0cd0409e4e453c6259629, type: 3}
+      propertyPath: patternMaxCooldown.Array.data[5].Value
+      value: 9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3924171977995649461, guid: 3a6a83290ee0cd0409e4e453c6259629, type: 3}
+      propertyPath: patternMaxCooldown.Array.data[6].Value
+      value: 9999999
       objectReference: {fileID: 0}
     - target: {fileID: 5142485906437201834, guid: 3a6a83290ee0cd0409e4e453c6259629, type: 3}
       propertyPath: m_LocalPosition.x

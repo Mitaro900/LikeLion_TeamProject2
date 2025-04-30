@@ -1,41 +1,7 @@
 using UnityEngine;
-using UnityEngine.Events;
-
-/// <summary> 상태이상 </summary>
-[System.Serializable]
-public struct EntityAbnormalState
-{
-    public Vector2 direction;
-    public float duration;
-    public bool isChecked;
-    public EntityAbnormalState(Vector2 direction, float duration, bool isChecked)
-    {
-        this.direction = direction;
-        this.duration = duration;
-        this.isChecked = isChecked;
-    }
-}
-
-/// <summary> 능력치 </summary>
-[System.Serializable]
-public struct EntityAbility
-{
-    public int hp;
-    public float moveSpeed;
-    public float jumpPower;
-
-    public EntityAbility(int hp, float moveSpeed, float jumpPower)
-    {
-        this.hp = hp;
-        this.moveSpeed = moveSpeed;
-        this.jumpPower = jumpPower;
-    }
-}
 
 public class EntityCollision : MonoBehaviour
 {
-    [Header(nameof(EntityCollision) + ".능력치")]
-    public EntityAbility ability;
 
     #region Components
     public Animator anim { get; private set; }
@@ -62,28 +28,17 @@ public class EntityCollision : MonoBehaviour
     [SerializeField] protected float wallCheckDistance;
     [SerializeField] protected LayerMask whatIsGround;
 
-    public int facingDir { get; private set; } = 1;
+    [SerializeField] protected int facingDir = 1;
     protected bool facingRight = true;
-
-    #region Event
-    public UnityAction<EntityAbility> damageEvent;
-    public UnityAction deathEvent;
-    #endregion
-
-    public EntityCollision(EntityAbility ability, UnityAction<EntityAbility> damageEvent, UnityAction deathEvent)
-    {
-        this.ability = ability;
-        this.damageEvent = damageEvent;
-        this.deathEvent = deathEvent;
-    }
 
     protected virtual void Awake()
     {
-
+        Debug.Log(nameof(EntityCollision) + " " + nameof(Awake));
     }
 
     protected virtual void Start()
     {
+        Debug.Log(nameof(EntityCollision) + " " + nameof(Start));
         sr = GetComponentInChildren<SpriteRenderer>();
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -98,22 +53,16 @@ public class EntityCollision : MonoBehaviour
         }
     }
 
-    public virtual void Damage()
-    {
-        ability.hp--;
-        if(ability.hp <= 0)
-        {
-            deathEvent?.Invoke();
-        }
-        else
-        {
-            damageEvent?.Invoke(ability);
-        }
-    }
-
     #region 충돌
     public virtual bool IsGroundDetected() => Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);
     public virtual bool IsWallDetected() => Physics2D.Raycast(wallCheck.position, Vector2.right * facingDir, wallCheckDistance, whatIsGround);
+    public virtual int GetFacingDir() => facingDir;
+
+    public virtual Collider2D[] AttackCheck()
+    {
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackCheck.position, attackCheckRadius, whatIsGround);
+        return hitEnemies;
+    }
 
 
     protected virtual void OnDrawGizmos()
@@ -151,12 +100,18 @@ public class EntityCollision : MonoBehaviour
 
         rb.linearVelocity = new Vector2(0, 0);
     }
-    public void SetVelocity(float _xVelocity, float _yVelocity)
+    public void SetVelocity(float _xVelocity = 0, float _yVelocity = 0)
     {
         if (knockbackState.isChecked) return;
 
-
-        rb.linearVelocity = new Vector2(_xVelocity, _yVelocity);
+        if(_xVelocity != 0 && _yVelocity != 0)
+            rb.linearVelocity = new Vector2(_xVelocity, _yVelocity);
+        else if(_xVelocity != 0)
+            rb.linearVelocityX = _xVelocity;
+        else if (_yVelocity != 0)
+            rb.linearVelocityY = _yVelocity;
+        else
+            SetZeroVelocity();
         FlipController(_xVelocity);
     }
     #endregion
