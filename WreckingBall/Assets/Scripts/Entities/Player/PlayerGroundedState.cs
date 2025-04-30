@@ -15,15 +15,21 @@ public class PlayerGroundedState : PlayerState
     {
         base.Update();
 
-
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            stateMachine.ChangeState(player.dashState);
+            return;
+        }
 
         if (!player.IsGroundDetected())
         {
             stateMachine.ChangeState(player.fallState);
+            return;
         }
         else if (Input.GetKeyDown(KeyCode.Z))
         {
             stateMachine.ChangeState(player.jumpState);
+            return;
         }
     }
 

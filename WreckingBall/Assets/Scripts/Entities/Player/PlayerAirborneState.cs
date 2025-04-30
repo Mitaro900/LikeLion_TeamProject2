@@ -15,10 +15,7 @@ public class PlayerAirborneState : PlayerState
     {
         base.Update();
 
-        if (xInput != 0)
-        {
-            player.SetVelocity(xInput * player.MoveSpeed * 0.8f, rb.linearVelocityY);
-        }
+        player.SetVelocity(xInput * player.MoveSpeed, rb.linearVelocityY);
     }
 
     public override void Exit()

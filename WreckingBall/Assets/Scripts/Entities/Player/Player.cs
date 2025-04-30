@@ -13,9 +13,12 @@ public class Player : Entity
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float ropeSpeed = 10f;
     [SerializeField] private float jumpForce = 5f;
+    [SerializeField] private float maxSpeed = 50f;
+
     public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
     public float RopeSpeed { get => ropeSpeed; set => ropeSpeed = value; }
     public float JumpForce { get => jumpForce; set => jumpForce = value; }
+    public float MaxSpeed { get => maxSpeed; set => maxSpeed = value; }
 
     private bool jumpKeyPressed = false; //점프키.z.
     private bool accelKeyPressed = false; //가속키.left shift
@@ -30,6 +33,7 @@ public class Player : Entity
     public PlayerMoveState moveState { get; private set; }
     public PlayerJumpState jumpState { get; private set; }
     public PlayerFallState fallState { get; private set; }
+    public PlayerDashState dashState { get; private set; }
     #endregion
 
     protected override void Awake()
@@ -42,6 +46,7 @@ public class Player : Entity
         moveState = new PlayerMoveState(this, stateMachine, "Move", this);
         jumpState = new PlayerJumpState(this, stateMachine, "Jump", this);
         fallState = new PlayerFallState(this, stateMachine, "Jump", this);
+        dashState = new PlayerDashState(this, stateMachine, "Dash", this);
     }
 
     protected override void Start()

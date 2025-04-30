@@ -18,6 +18,7 @@ public class PlayerFallState : PlayerAirborneState
         if (player.IsGroundDetected())
         {
             stateMachine.ChangeState(player.idleState);
+            return;
         }
     }
 
