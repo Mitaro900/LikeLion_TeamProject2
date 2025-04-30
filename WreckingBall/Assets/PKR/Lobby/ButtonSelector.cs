@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class ButtonSelector : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 {
+    [SerializeField] Color selectedColor = Color.magenta;
+    [SerializeField] Color deSelectedColor= Color.white;
     public Action onClicked;
     public Action onSelected;
     private TextMeshProUGUI text;
@@ -18,7 +20,7 @@ public class ButtonSelector : MonoBehaviour, IPointerEnterHandler, IPointerClick
 
     public void SetSelected(bool isSelected)
     {
-        text.color = isSelected ? Color.magenta : Color.white;
+        text.color = isSelected ? selectedColor : deSelectedColor;
     }
 
     public void SetClickEffect()
@@ -28,8 +30,8 @@ public class ButtonSelector : MonoBehaviour, IPointerEnterHandler, IPointerClick
 
     IEnumerator flickerCo()
     {
-        Color magenta = Color.magenta;
-        Color white = Color.white;
+        Color magenta = selectedColor;
+        Color white = deSelectedColor;
 
         text.color = white;
         yield return new WaitForSeconds(0.1f);
