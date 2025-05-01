@@ -16,6 +16,11 @@ public class PlayerAirborneState : PlayerState
         base.Update();
 
         player.SetVelocity(xInput * player.MoveSpeed, rb.linearVelocityY);
+
+        if (player.isAchored)
+        {
+            player.stateMachine.ChangeState(player.anchoredState);
+        }
     }
 
     public override void Exit()

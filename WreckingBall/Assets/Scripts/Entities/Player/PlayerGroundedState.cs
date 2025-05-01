@@ -21,15 +21,19 @@ public class PlayerGroundedState : PlayerState
             return;
         }
 
+        if (player.isAchored)
+        {
+            player.stateMachine.ChangeState(player.anchoredState);
+            return;
+        }
+
         if (!player.IsGroundDetected())
         {
             stateMachine.ChangeState(player.fallState);
-            return;
         }
         else if (Input.GetKeyDown(KeyCode.Z))
         {
             stateMachine.ChangeState(player.jumpState);
-            return;
         }
     }
 
