@@ -12,7 +12,6 @@ public class Enemy : EnemyEntity
 
 
     [Header("이동 정보")]
-    
     public float moveSpeed;
     public float idleTime;
     public float battleTime;
@@ -35,13 +34,9 @@ public class Enemy : EnemyEntity
     protected override void Awake()
     {
         base.Awake();
-
         stateMachine = new EnemyStateMachine();
-
         defaultMoveSpeed = moveSpeed;
     }
-
-
 
 
 
@@ -56,9 +51,7 @@ public class Enemy : EnemyEntity
         {
             Debug.Log("플레이어발견");
             playerTransform = hit.transform;
-
         }
-
         
     }
 
@@ -79,9 +72,7 @@ public class Enemy : EnemyEntity
     protected virtual IEnumerator FreezeTimerFor(float _seconds)
     {
         FreezeTime(true);
-
         yield return new WaitForSeconds(_seconds);
-
         FreezeTime(false);
     }
 

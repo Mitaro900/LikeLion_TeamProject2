@@ -35,7 +35,6 @@ public class Bug2AttackState : EnemyState
     private IEnumerator SummonDelayCoroutine()
     {
         yield return new WaitForSeconds(summonDelay);
-
         Summon();
     }
 
@@ -43,12 +42,12 @@ public class Bug2AttackState : EnemyState
     {
         if (enemy.SpawnFlyPrefab != null && enemy.summonPoint != null)
         {
-            GameObject clone = Object.Instantiate(enemy.SpawnFlyPrefab, enemy.summonPoint.position, Quaternion.identity);
-            // 필요하면 clone으로 추가 설정 가능
+            GameObject go = Object.Instantiate(enemy.SpawnFlyPrefab, enemy.summonPoint.position, Quaternion.identity);
+
         }
         else
         {
-            Debug.LogWarning("SpawnFlyPrefab이나 summonPoint가 비어있습니다.");
+            Debug.LogWarning("소환몬스터 비어있음");
         }
     }
 }

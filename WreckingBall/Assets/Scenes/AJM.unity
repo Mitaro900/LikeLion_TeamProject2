@@ -854,9 +854,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3387925852764622736, guid: aa54397bac4e89b4f8bc48e75d6f3fc0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.17
+      objectReference: {fileID: 0}
     - target: {fileID: 5640071028459983914, guid: aa54397bac4e89b4f8bc48e75d6f3fc0, type: 3}
       propertyPath: m_Name
       value: EnemyBug3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640071028459983914, guid: aa54397bac4e89b4f8bc48e75d6f3fc0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -874,6 +882,10 @@ PrefabInstance:
     - target: {fileID: 2713947211444112745, guid: cd470101305e2e142943f71b82343477, type: 3}
       propertyPath: m_Name
       value: GhostWarrior
+      objectReference: {fileID: 0}
+    - target: {fileID: 2713947211444112745, guid: cd470101305e2e142943f71b82343477, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7476213679691814143, guid: cd470101305e2e142943f71b82343477, type: 3}
       propertyPath: m_LocalPosition.x
@@ -915,6 +927,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8225917103112037139, guid: cd470101305e2e142943f71b82343477, type: 3}
+      propertyPath: attackCheckRadius
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -931,6 +947,10 @@ PrefabInstance:
     - target: {fileID: 5638047563559390784, guid: f5d5eaa7e1b10774abaf66e5d3f9cb90, type: 3}
       propertyPath: m_Name
       value: EnemyBug
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638047563559390784, guid: f5d5eaa7e1b10774abaf66e5d3f9cb90, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7525752294764647028, guid: f5d5eaa7e1b10774abaf66e5d3f9cb90, type: 3}
       propertyPath: m_LocalPosition.x
@@ -988,6 +1008,10 @@ PrefabInstance:
     - target: {fileID: 1590975165654727761, guid: ce23f10cd1e444246bcfcecbd78cc835, type: 3}
       propertyPath: m_Name
       value: EnemyBug2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1590975165654727761, guid: ce23f10cd1e444246bcfcecbd78cc835, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7059537209218969947, guid: ce23f10cd1e444246bcfcecbd78cc835, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1085,6 +1109,10 @@ PrefabInstance:
     - target: {fileID: 4766006462131387380, guid: 10c787febb53abb4ea75f7e715d75bdc, type: 3}
       propertyPath: m_Name
       value: Bat
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766006462131387380, guid: 10c787febb53abb4ea75f7e715d75bdc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

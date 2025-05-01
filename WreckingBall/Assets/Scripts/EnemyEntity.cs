@@ -21,7 +21,6 @@ public class EnemyEntity : MonoBehaviour
     [SerializeField] protected Transform wallCheck;
     [SerializeField] protected float wallCheckDistance;
     [SerializeField] protected LayerMask whatIsGround;
-
     [SerializeField] protected Transform playerCheck;
     public float playerCheckRadius;
 
@@ -50,7 +49,6 @@ public class EnemyEntity : MonoBehaviour
 
     public virtual void Damage()
     {
-        StartCoroutine("HitKnockBack");
         Debug.Log(gameObject.name + "데미지를 입혔다.");
     }
 
@@ -60,7 +58,6 @@ public class EnemyEntity : MonoBehaviour
 
     protected virtual void OnDrawGizmos()
     {
-
         Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDistance, wallCheck.position.y));
         Gizmos.DrawWireSphere(attackCheck.position, attackCheckRadius);
 
@@ -83,10 +80,7 @@ public class EnemyEntity : MonoBehaviour
             Flip();
         else if (_x < 0 && facingRight)
             Flip();
-
     }
-
-
 
     public void SetZeroVelocity()
     {   
@@ -96,14 +90,5 @@ public class EnemyEntity : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(_xVelocity, _yVelocity);
         FlipController(_xVelocity);
-    }
-
-
-    public void MakeTransparent(bool _transparent)
-    {
-        if (_transparent)
-            sr.color = Color.clear;
-        else
-            sr.color = Color.white;
     }
 }

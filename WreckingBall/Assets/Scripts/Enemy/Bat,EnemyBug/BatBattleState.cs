@@ -43,39 +43,12 @@ public class BatBattleState : EnemyState
                 stateMachine.ChangeState(enemy.idleState);
         }
 
-        //if (enemy.IsPlayerDetected())
-        //{
-
-
-
-        //    stateTimer = enemy.battleTime;
-        //    MoveTowardPlayer();
-        //    float distanceToPlayer = Vector2.Distance(player.position, enemy.transform.position);
-
-        //    if (distanceToPlayer <= enemy.attackDistance)
-        //    {
-        //        //공격상태
-        //        if(CanAttack())
-        //        stateMachine.ChangeState(enemy.attackState);
-
-        //    }
-        //}
-        //else
-        //{
-        //    if (stateTimer < 0 || Vector2.Distance(player.transform.position,enemy.transform.position) >10)
-        //        stateMachine.ChangeState(enemy.idleState);
-        //}
-
-
-
         if (player.position.x > enemy.transform.position.x)
             moveDir = 1;
         else if (player.position.x < enemy.transform.position.x)
             moveDir = -1;
 
         enemy.SetVelocity(enemy.moveSpeed * moveDir, rb.linearVelocity.y);
-
-
     }
 
     public override void Exit()
@@ -92,8 +65,6 @@ public class BatBattleState : EnemyState
             enemy.lastTimeAttacked = Time.time;
             return true;
         }
-
-        
         return false;
     }
 
