@@ -15,14 +15,19 @@ public class Bug2AttackState : EnemyState
     public override void Enter()
     {
         base.Enter();
-        enemy.SetZeroVelocity();
         enemy.StartCoroutine(SummonDelayCoroutine());
+        enemy.moveSpeed += 1f;
+        enemy.radius += 6f;
+        enemy.playerCheckRadius += 6f;
     }
 
     public override void Exit()
     {
         base.Exit();
         enemy.lastTimeAttacked = Time.time;
+        enemy.moveSpeed -= 1f;
+        enemy.radius -= 6f;
+        enemy.playerCheckRadius -= 6f;
     }
 
     public override void Update()
@@ -30,6 +35,7 @@ public class Bug2AttackState : EnemyState
         base.Update();
         if (triggerCalled)
             stateMachine.ChangeState(enemy._battleState);
+        enemy.SetZeroVelocity();
     }
 
     private IEnumerator SummonDelayCoroutine()

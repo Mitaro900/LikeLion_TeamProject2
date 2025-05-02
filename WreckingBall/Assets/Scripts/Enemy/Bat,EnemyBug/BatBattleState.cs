@@ -15,6 +15,9 @@ public class BatBattleState : EnemyState
     {
         base.Enter();
         player = Player.instance.player.transform;
+        enemy.moveSpeed += 2f;
+        enemy.radius += 3f;
+        enemy.playerCheckRadius += 3f;
     }
 
     public override void Update()
@@ -27,7 +30,7 @@ public class BatBattleState : EnemyState
 
             float distanceToPlayer = Vector2.Distance(player.position, enemy.transform.position);
 
-            if (distanceToPlayer > 0.5f)
+            if (distanceToPlayer > 0.8f)
             {
                 MoveTowardPlayer();
             }
@@ -54,6 +57,9 @@ public class BatBattleState : EnemyState
     public override void Exit()
     {
         base.Exit();
+        enemy.moveSpeed -= 2f;
+        enemy.radius -= 3f;
+        enemy.playerCheckRadius -= 3f;
     }
 
 

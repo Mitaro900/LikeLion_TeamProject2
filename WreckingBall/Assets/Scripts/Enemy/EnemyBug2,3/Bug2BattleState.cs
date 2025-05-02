@@ -15,53 +15,47 @@ public class Bug2BattleState : EnemyState
     {
         base.Enter();
         player = Player.instance.player.transform;
-        
+        enemy.moveSpeed += 1f;
+        enemy.radius += 6f;
+        enemy.playerCheckRadius += 6f;
+
     }
     public override void Update()
     {
         base.Update();
-        if (enemy.IsWallDetected())
-        {
-            enemy.Flip(); 
-        }
-
         if (enemy.IsPlayerDetected())
         {
             stateTimer = enemy.battleTime;
 
-            // 플레이어가 감지되었으면
-            enemy.SetZeroVelocity(); // 멈추고
-
-            // X축 방향으로만 바라보기
-            float direction = player.position.x - enemy.transform.position.x;
-            if (direction > 0 && enemy.facingDir < 0)
-                enemy.Flip();
-            else if (direction < 0 && enemy.facingDir > 0)
-                enemy.Flip();
-
-            // 공격 거리 안이면 공격 상태로 전환
             if (enemy.IsPlayerDetected().distance < enemy.attackDistance)
             {
+                //공격상태
                 if (CanAttack())
                     stateMachine.ChangeState(enemy._attackState);
             }
         }
         else
         {
-            // 플레이어가 감지 안되면 이동 재개
-            enemy.SetVelocity(enemy.moveSpeed * enemy.facingDir, rb.linearVelocity.y);
-
-            // 너무 멀어지면 idle 상태로 전환
-            if (Vector2.Distance(player.position, enemy.transform.position) > 10f)
-            {
+            if (stateTimer < 0 || Vector2.Distance(player.transform.position, enemy.transform.position) > 7)
                 stateMachine.ChangeState(enemy._idleState);
-            }
         }
+
+
+
+        if (player.position.x > enemy.transform.position.x)
+            moveDir = 1;
+        else if (player.position.x < enemy.transform.position.x)
+            moveDir = -1;
+
+        enemy.SetVelocity(enemy.moveSpeed * moveDir, rb.linearVelocity.y);
     }
 
     public override void Exit()
     {
         base.Exit();
+        enemy.moveSpeed -= 1f;
+        enemy.radius -= 6f;
+        enemy.playerCheckRadius -= 6f;
     }
 
 

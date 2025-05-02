@@ -12,6 +12,9 @@ public class BatAttackState : EnemyState
     public override void Enter()
     {
         base.Enter();
+        enemy.moveSpeed += 2f;
+        enemy.radius += 3f;
+        enemy.playerCheckRadius += 3f;
     }
     public override void Update()
     {
@@ -28,6 +31,9 @@ public class BatAttackState : EnemyState
     {
         base.Exit();
         enemy.lastTimeAttacked = Time.time;
+        enemy.moveSpeed -= 2f;
+        enemy.radius -= 3f;
+        enemy.playerCheckRadius -= 3f;
     }
 
     
