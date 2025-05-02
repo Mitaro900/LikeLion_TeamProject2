@@ -493,345 +493,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_0
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 202
-        width: 66
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4d2add9c071e958b0800000000000000
-      internalID: -5162847623264230700
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_1
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 204
-        width: 7
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c7b9d8083d7a60f20800000000000000
-      internalID: 3388580296479579004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_2
-      rect:
-        serializedVersion: 2
-        x: 25
-        y: 204
-        width: 12
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1ee18903968452a10800000000000000
-      internalID: 1883991635748462305
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_3
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 204
-        width: 7
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3662e5c6094126380800000000000000
-      internalID: -8979592096497392029
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_4
-      rect:
-        serializedVersion: 2
-        x: 43
-        y: 204
-        width: 7
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6d2fefa54572ad9d0800000000000000
-      internalID: -2748841379298872618
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_5
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 204
-        width: 6
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dd272e1d12e1dce80800000000000000
-      internalID: -8156830219494067491
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_6
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 204
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d8eefa00ca27288d0800000000000000
-      internalID: -2845585931473260915
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_7
-      rect:
-        serializedVersion: 2
-        x: 236
-        y: 202
-        width: 84
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 11e4617a1b4fece20800000000000000
-      internalID: 3372902214796725777
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_8
-      rect:
-        serializedVersion: 2
-        x: 236
-        y: 204
-        width: 9
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9de4e9ffbb58eaf90800000000000000
-      internalID: -6940462933237412135
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_9
-      rect:
-        serializedVersion: 2
-        x: 285
-        y: 204
-        width: 9
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bfb6a01b91b135460800000000000000
-      internalID: 7229151624018160635
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_10
-      rect:
-        serializedVersion: 2
-        x: 293
-        y: 204
-        width: 7
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 68fc82cc4567e7540800000000000000
-      internalID: 5007569942257127302
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_11
-      rect:
-        serializedVersion: 2
-        x: 397
-        y: 202
-        width: 52
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 71f8441e76b0601b0800000000000000
-      internalID: -5690848538347139305
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_12
-      rect:
-        serializedVersion: 2
-        x: 397
-        y: 204
-        width: 8
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3e6799ec84ee5b170800000000000000
-      internalID: 8193717093541705443
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_13
-      rect:
-        serializedVersion: 2
-        x: 555
-        y: 202
-        width: 43
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 63f19836d44648b00800000000000000
-      internalID: 829898514888204086
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_14
-      rect:
-        serializedVersion: 2
-        x: 555
-        y: 204
-        width: 9
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 46f9e977536be0ef0800000000000000
-      internalID: -139974197645500572
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Custom Edited - Kirby Customs - Rolling Turtle_15
       rect:
         serializedVersion: 2
-        x: 2
+        x: 1
         y: 158
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -848,12 +518,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_16
       rect:
         serializedVersion: 2
-        x: 40
+        x: 39
         y: 158
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -870,12 +540,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_17
       rect:
         serializedVersion: 2
-        x: 78
+        x: 77
         y: 158
-        width: 37
-        height: 42
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -892,12 +562,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_18
       rect:
         serializedVersion: 2
-        x: 116
+        x: 115
         y: 158
-        width: 37
-        height: 42
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -914,12 +584,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_19
       rect:
         serializedVersion: 2
-        x: 154
+        x: 153
         y: 158
-        width: 37
-        height: 42
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -936,12 +606,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_20
       rect:
         serializedVersion: 2
-        x: 193
+        x: 192
         y: 158
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -958,12 +628,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_21
       rect:
         serializedVersion: 2
-        x: 237
+        x: 236
         y: 158
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -980,12 +650,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_22
       rect:
         serializedVersion: 2
-        x: 275
+        x: 274
         y: 158
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1002,12 +672,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_23
       rect:
         serializedVersion: 2
-        x: 313
+        x: 312
         y: 158
-        width: 38
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1024,12 +694,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_24
       rect:
         serializedVersion: 2
-        x: 352
-        y: 160
-        width: 38
-        height: 41
+        x: 351
+        y: 158
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1046,12 +716,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_25
       rect:
         serializedVersion: 2
-        x: 397
-        y: 161
-        width: 37
-        height: 37
+        x: 396
+        y: 158
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1068,12 +738,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_26
       rect:
         serializedVersion: 2
-        x: 435
-        y: 161
-        width: 37
-        height: 37
+        x: 434
+        y: 158
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1090,12 +760,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_27
       rect:
         serializedVersion: 2
-        x: 473
-        y: 161
-        width: 37
-        height: 37
+        x: 472
+        y: 158
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1112,12 +782,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_28
       rect:
         serializedVersion: 2
-        x: 511
-        y: 161
-        width: 37
-        height: 37
+        x: 510
+        y: 158
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1134,12 +804,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_29
       rect:
         serializedVersion: 2
-        x: 555
-        y: 161
-        width: 37
-        height: 37
+        x: 554
+        y: 158
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1157,11 +827,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 593
-        y: 160
+        y: 158
         width: 39
-        height: 38
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1178,12 +848,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_31
       rect:
         serializedVersion: 2
-        x: 633
-        y: 161
-        width: 37
-        height: 37
+        x: 632
+        y: 158
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1200,12 +870,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_32
       rect:
         serializedVersion: 2
-        x: 671
-        y: 159
-        width: 38
-        height: 39
+        x: 670
+        y: 158
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1222,12 +892,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_33
       rect:
         serializedVersion: 2
-        x: 710
-        y: 161
-        width: 37
-        height: 37
+        x: 709
+        y: 158
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1245,11 +915,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 748
-        y: 161
+        y: 158
         width: 39
-        height: 38
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1266,12 +936,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_35
       rect:
         serializedVersion: 2
-        x: 788
-        y: 161
-        width: 37
-        height: 37
+        x: 787
+        y: 158
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1288,12 +958,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_36
       rect:
         serializedVersion: 2
-        x: 826
-        y: 161
-        width: 38
-        height: 39
+        x: 825
+        y: 158
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1310,12 +980,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_37
       rect:
         serializedVersion: 2
-        x: 2
+        x: 1
         y: 114
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1332,12 +1002,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_38
       rect:
         serializedVersion: 2
-        x: 40
+        x: 39
         y: 114
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1354,12 +1024,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_39
       rect:
         serializedVersion: 2
-        x: 78
+        x: 77
         y: 114
-        width: 37
-        height: 42
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1376,12 +1046,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_40
       rect:
         serializedVersion: 2
-        x: 116
+        x: 115
         y: 114
-        width: 37
-        height: 42
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1398,12 +1068,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_41
       rect:
         serializedVersion: 2
-        x: 154
+        x: 153
         y: 114
-        width: 37
-        height: 42
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1420,12 +1090,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_42
       rect:
         serializedVersion: 2
-        x: 193
+        x: 192
         y: 114
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1442,12 +1112,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_43
       rect:
         serializedVersion: 2
-        x: 237
+        x: 236
         y: 114
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1464,12 +1134,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_44
       rect:
         serializedVersion: 2
-        x: 275
+        x: 274
         y: 114
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1486,12 +1156,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_45
       rect:
         serializedVersion: 2
-        x: 313
+        x: 312
         y: 114
-        width: 38
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1508,12 +1178,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_46
       rect:
         serializedVersion: 2
-        x: 352
-        y: 116
-        width: 38
-        height: 41
+        x: 351
+        y: 114
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1530,12 +1200,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_47
       rect:
         serializedVersion: 2
-        x: 397
-        y: 117
-        width: 37
-        height: 37
+        x: 396
+        y: 114
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1552,12 +1222,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_48
       rect:
         serializedVersion: 2
-        x: 435
-        y: 117
-        width: 37
-        height: 37
+        x: 434
+        y: 114
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1574,12 +1244,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_49
       rect:
         serializedVersion: 2
-        x: 473
-        y: 117
-        width: 37
-        height: 37
+        x: 472
+        y: 114
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1596,12 +1266,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_50
       rect:
         serializedVersion: 2
-        x: 511
-        y: 117
-        width: 37
-        height: 37
+        x: 510
+        y: 114
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1618,12 +1288,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_51
       rect:
         serializedVersion: 2
-        x: 555
-        y: 117
-        width: 37
-        height: 37
+        x: 554
+        y: 114
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1641,11 +1311,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 593
-        y: 116
+        y: 114
         width: 39
-        height: 38
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1662,12 +1332,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_53
       rect:
         serializedVersion: 2
-        x: 633
-        y: 117
-        width: 37
-        height: 37
+        x: 632
+        y: 114
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1684,12 +1354,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_54
       rect:
         serializedVersion: 2
-        x: 671
-        y: 115
-        width: 38
-        height: 39
+        x: 670
+        y: 114
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1706,12 +1376,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_55
       rect:
         serializedVersion: 2
-        x: 710
-        y: 117
-        width: 37
-        height: 37
+        x: 709
+        y: 114
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1729,11 +1399,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 748
-        y: 117
+        y: 114
         width: 39
-        height: 38
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1750,12 +1420,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_57
       rect:
         serializedVersion: 2
-        x: 788
-        y: 117
-        width: 37
-        height: 37
+        x: 787
+        y: 114
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1772,12 +1442,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_58
       rect:
         serializedVersion: 2
-        x: 826
-        y: 117
-        width: 38
-        height: 39
+        x: 825
+        y: 114
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1794,12 +1464,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_59
       rect:
         serializedVersion: 2
-        x: 2
+        x: 1
         y: 70
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1816,12 +1486,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_60
       rect:
         serializedVersion: 2
-        x: 40
+        x: 39
         y: 70
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1838,12 +1508,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_61
       rect:
         serializedVersion: 2
-        x: 78
+        x: 77
         y: 70
-        width: 37
-        height: 42
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1860,12 +1530,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_62
       rect:
         serializedVersion: 2
-        x: 116
+        x: 115
         y: 70
-        width: 37
-        height: 42
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1882,12 +1552,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_63
       rect:
         serializedVersion: 2
-        x: 154
+        x: 153
         y: 70
-        width: 37
-        height: 42
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1904,12 +1574,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_64
       rect:
         serializedVersion: 2
-        x: 193
+        x: 192
         y: 70
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1926,12 +1596,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_65
       rect:
         serializedVersion: 2
-        x: 237
+        x: 236
         y: 70
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1948,12 +1618,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_66
       rect:
         serializedVersion: 2
-        x: 275
+        x: 274
         y: 70
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1970,12 +1640,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_67
       rect:
         serializedVersion: 2
-        x: 313
+        x: 312
         y: 70
-        width: 38
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1992,12 +1662,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_68
       rect:
         serializedVersion: 2
-        x: 352
-        y: 72
-        width: 38
-        height: 41
+        x: 351
+        y: 70
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2014,12 +1684,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_69
       rect:
         serializedVersion: 2
-        x: 397
-        y: 73
-        width: 37
-        height: 37
+        x: 396
+        y: 70
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2036,12 +1706,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_70
       rect:
         serializedVersion: 2
-        x: 435
-        y: 73
-        width: 37
-        height: 37
+        x: 434
+        y: 70
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2058,12 +1728,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_71
       rect:
         serializedVersion: 2
-        x: 473
-        y: 73
-        width: 37
-        height: 37
+        x: 472
+        y: 70
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2080,12 +1750,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_72
       rect:
         serializedVersion: 2
-        x: 511
-        y: 73
-        width: 37
-        height: 37
+        x: 510
+        y: 70
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2102,12 +1772,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_73
       rect:
         serializedVersion: 2
-        x: 555
-        y: 73
-        width: 37
-        height: 37
+        x: 554
+        y: 70
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2125,11 +1795,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 593
-        y: 72
+        y: 70
         width: 39
-        height: 38
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2146,12 +1816,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_75
       rect:
         serializedVersion: 2
-        x: 633
-        y: 73
-        width: 37
-        height: 37
+        x: 632
+        y: 70
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2168,12 +1838,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_76
       rect:
         serializedVersion: 2
-        x: 671
-        y: 71
-        width: 38
-        height: 39
+        x: 670
+        y: 70
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2190,12 +1860,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_77
       rect:
         serializedVersion: 2
-        x: 710
-        y: 73
-        width: 37
-        height: 37
+        x: 709
+        y: 70
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2213,11 +1883,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 748
-        y: 73
+        y: 70
         width: 39
-        height: 38
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2234,12 +1904,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_79
       rect:
         serializedVersion: 2
-        x: 788
-        y: 73
-        width: 37
-        height: 37
+        x: 787
+        y: 70
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2256,12 +1926,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_80
       rect:
         serializedVersion: 2
-        x: 826
-        y: 73
-        width: 38
-        height: 39
+        x: 825
+        y: 70
+        width: 39
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2275,424 +1945,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_81
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 45
-        width: 61
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 724cb8aa65d5eb5c0800000000000000
-      internalID: -4197815175852866521
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_82
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 47
-        width: 10
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 71f7d7dbde7a44990800000000000000
-      internalID: -7402607247962046697
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_83
-      rect:
-        serializedVersion: 2
-        x: 26
-        y: 47
-        width: 9
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 564f6de66eab9abf0800000000000000
-      internalID: -312513200260713371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_84
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 47
-        width: 7
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9e468a6dfba10dfd0800000000000000
-      internalID: -2319324396853369623
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_85
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 47
-        width: 10
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1064a319ac2526a80800000000000000
-      internalID: -8475120518784465407
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_86
-      rect:
-        serializedVersion: 2
-        x: 51
-        y: 47
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2bc7bc8eb1f6727b0800000000000000
-      internalID: -5249104675016573774
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_87
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 4
-        width: 207
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5bb6829e51743bad0800000000000000
-      internalID: -2687726393178428491
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_88
-      rect:
-        serializedVersion: 2
-        x: 440
-        y: 52
-        width: 124
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fbcb6ddfbeace6800800000000000000
-      internalID: 607646114666429631
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_89
-      rect:
-        serializedVersion: 2
-        x: 450
-        y: 54
-        width: 7
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: abc8c06d52fbc4a50800000000000000
-      internalID: 6506785730869365946
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_90
-      rect:
-        serializedVersion: 2
-        x: 457
-        y: 54
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b3ddbe59ea45f0820800000000000000
-      internalID: 2886618994984082747
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_91
-      rect:
-        serializedVersion: 2
-        x: 470
-        y: 54
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dff6d49de454b0650800000000000000
-      internalID: 6200125516961116157
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_92
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 54
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6826736a1bc7b8470800000000000000
-      internalID: 8397943032602124934
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_93
-      rect:
-        serializedVersion: 2
-        x: 491
-        y: 54
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 439fa63149be28320800000000000000
-      internalID: 2558866559513327924
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_94
-      rect:
-        serializedVersion: 2
-        x: 502
-        y: 54
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2f3ebc58a8e2aa590800000000000000
-      internalID: -7662260643532381198
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_95
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 54
-        width: 7
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ed157f334a9e16ba0800000000000000
-      internalID: -6097335529027186210
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_96
-      rect:
-        serializedVersion: 2
-        x: 522
-        y: 54
-        width: 8
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3fd1e95aaac5b5d40800000000000000
-      internalID: 5574150851793919475
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_97
-      rect:
-        serializedVersion: 2
-        x: 530
-        y: 54
-        width: 10
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7fe2c339f0f3d2b60800000000000000
-      internalID: 7722898272137522935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_98
-      rect:
-        serializedVersion: 2
-        x: 540
-        y: 54
-        width: 14
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a550019ba7a4acd60800000000000000
-      internalID: 7911217586380997978
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Kirby Customs - Rolling Turtle_99
-      rect:
-        serializedVersion: 2
-        x: 553
-        y: 54
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f0e9f09ff55b7a750800000000000000
-      internalID: 6316216426215480847
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Custom Edited - Kirby Customs - Rolling Turtle_100
       rect:
         serializedVersion: 2
@@ -2701,7 +1953,7 @@ TextureImporter:
         width: 26
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2723,7 +1975,7 @@ TextureImporter:
         width: 26
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2745,7 +1997,7 @@ TextureImporter:
         width: 26
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2767,7 +2019,7 @@ TextureImporter:
         width: 26
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2789,7 +2041,7 @@ TextureImporter:
         width: 26
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2811,7 +2063,7 @@ TextureImporter:
         width: 26
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2833,7 +2085,7 @@ TextureImporter:
         width: 26
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2855,7 +2107,7 @@ TextureImporter:
         width: 26
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2872,12 +2124,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_108
       rect:
         serializedVersion: 2
-        x: 441
+        x: 440
         y: 8
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2894,12 +2146,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_109
       rect:
         serializedVersion: 2
-        x: 479
+        x: 478
         y: 8
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2916,12 +2168,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_110
       rect:
         serializedVersion: 2
-        x: 517
+        x: 516
         y: 8
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2938,12 +2190,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_111
       rect:
         serializedVersion: 2
-        x: 555
+        x: 554
         y: 8
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2960,12 +2212,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_112
       rect:
         serializedVersion: 2
-        x: 593
+        x: 592
         y: 8
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2982,12 +2234,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_113
       rect:
         serializedVersion: 2
-        x: 631
+        x: 630
         y: 8
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3004,12 +2256,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_114
       rect:
         serializedVersion: 2
-        x: 669
+        x: 668
         y: 8
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3026,12 +2278,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_115
       rect:
         serializedVersion: 2
-        x: 707
+        x: 706
         y: 8
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3048,12 +2300,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_116
       rect:
         serializedVersion: 2
-        x: 745
+        x: 744
         y: 8
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3070,12 +2322,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_117
       rect:
         serializedVersion: 2
-        x: 783
+        x: 782
         y: 8
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3092,12 +2344,12 @@ TextureImporter:
       name: Custom Edited - Kirby Customs - Rolling Turtle_118
       rect:
         serializedVersion: 2
-        x: 821
+        x: 820
         y: 8
-        width: 37
+        width: 39
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3114,7 +2366,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1923c840c089e094da6002e56747bfa5
     internalID: 0
     vertices: []
     indices: 
