@@ -53,7 +53,7 @@ public class Bug2AttackState : EnemyState
         }
         else
         {
-            Debug.LogWarning("소환몬스터 비어있음");
+            Debug.LogWarning("소환몬스터 없음");
         }
     }
 }
