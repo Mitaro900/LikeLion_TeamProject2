@@ -3030,9 +3030,9 @@ GameObject:
   - component: {fileID: 1226323979}
   - component: {fileID: 1226323978}
   - component: {fileID: 1226323982}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23780,6 +23780,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 811210994940891885, guid: 52d3876c26c172b4a8f503c754022946, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 811210994940891885, guid: 52d3876c26c172b4a8f503c754022946, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2764954132568546618, guid: 52d3876c26c172b4a8f503c754022946, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.75
@@ -23819,6 +23827,10 @@ PrefabInstance:
     - target: {fileID: 2764954132568546618, guid: 52d3876c26c172b4a8f503c754022946, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674703796817580144, guid: 52d3876c26c172b4a8f503c754022946, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

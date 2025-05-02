@@ -176,11 +176,6 @@ public class WildWolf : Boss
         base.AddState(state);
     }
 
-    public override Collider2D[] AttackCheck()
-    {
-        return base.AttackCheck();
-    }
-
     public override void GiveDamagePoint()
     {
         base.GiveDamagePoint();
@@ -201,7 +196,7 @@ public class WildWolf : Boss
     protected override void AnimationFinishTrigger()
     {
         base.AnimationFinishTrigger();
-        controller.NextAction();
+        //controller.NextAction();
     }
     #endregion
 }

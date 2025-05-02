@@ -46,10 +46,10 @@ public class Boss : EntityCollision
     [SerializeField] protected bool isGiveDamagedAction = false;
 
     public BossStateMachine stateMachine;
-    public BossState idleState;
-    public BossState attackState;
-    public BossState damageState;
-    public BossState moveState;
+    public Boss_IdleState idleState;
+    public Boss_AttackState attackState;
+    public Boss_DamageState damageState;
+    public Boss_MoveState moveState;
     public Boss_DeathState deathState;
     public List<BossState> states { get; protected set; }
 
@@ -60,7 +60,6 @@ public class Boss : EntityCollision
         EntityAbnormalState knockback, EntityAbnormalState invincibility, int bossPage, int bossMaxPage, UnityAction<EntityAbility> pageChageEvent)
         
     {
-        Debug.Log(nameof(Boss) + " Set");
         this.ability = ability;
         this.damageEvent = damageEvent;
         this.deathEvent = deathEvent;
@@ -72,9 +71,12 @@ public class Boss : EntityCollision
         this.pageChageEvent = pageChageEvent;
     }
 
-    public virtual int GetBossPage() => bossPage;
-    public virtual int GetBossMaxPage() => bossMaxPage;
-    public virtual EntityAbility GetAbility() => ability;
+    public int GetBossPage() => bossPage;
+    public int GetBossMaxPage() => bossMaxPage;
+    public EntityAbility GetAbility() => ability;
+
+    public bool IsGiveDamagedAction() => isGiveDamagedAction;
+    public void InitGiveDamagedAction() => isGiveDamagedAction = false;
 
     public virtual void Damage()
     {
@@ -89,13 +91,11 @@ public class Boss : EntityCollision
     protected override void Awake()
     {
         base.Awake();
-        Debug.Log(nameof(Boss) + " " + nameof(Awake));
     }
 
     protected override void Start()
     {
         base.Start();
-        Debug.Log(nameof(EntityCollision) + " " + nameof(Start));
         stateMachine = new BossStateMachine();
 
         idleState = new Boss_IdleState(stateMachine, this, "Idle");
@@ -113,16 +113,17 @@ public class Boss : EntityCollision
     protected override void Update()
     {
         base.Update();
-        isGiveDamagedAction = IsInvoking(nameof(GiveDamagePoint));
         stateMachine.currentState?.Update();
 
-        Debug.Log(nameof(Boss)+" "+nameof(Update) + $" damaged : {isGiveDamagedAction}");
-        Debug.Log(nameof(Boss) + " " + nameof(Update) + " statemachine : " + (stateMachine.currentState != null ? $"{stateMachine.currentState.nowAnimName} / {stateMachine.currentState.animBoolName}" : "null"));
+        //Debug.Log(nameof(Boss)+" "+nameof(Update) + $" damaged : {isGiveDamagedAction}");
+        //Debug.Log(nameof(Boss) + " " + nameof(Update) + " statemachine : " + (stateMachine.currentState != null ? $"{stateMachine.currentState.nowAnimName} / {stateMachine.currentState.animBoolName}" : "null"));
     }
 
     protected virtual void AnimationFinishTrigger()
     {
         stateMachine.currentState?.AnimationFinishTrigger();
+        if(isGiveDamagedAction)
+            isGiveDamagedAction = false;
     }
 
     public virtual void AddState(BossState state)
@@ -152,6 +153,7 @@ public class Boss : EntityCollision
 
     public virtual void GiveDamagePoint()
     {
+        isGiveDamagedAction = AttackCheck() != null;
         Debug.Log($"{nameof(GiveDamagePoint)} : {isGiveDamagedAction}");
     }
 }

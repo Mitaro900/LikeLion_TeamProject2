@@ -13,6 +13,8 @@ public class BossState
     protected float stateTime;
     public float cooldownTime { get; protected set; }
     protected bool triggerCalled;
+    protected bool isPlayerInRange;
+    protected bool isWallDetected;
 
     public BossState(BossStateMachine stateMachine, Boss boss, string animBoolName, float cooldown = 0f)
     {
@@ -27,6 +29,7 @@ public class BossState
         if(isAnimPlay)
             boss.anim.SetBool(animBoolName, true);
         rb = boss.GetComponent<Rigidbody2D>();
+        boss.SetZeroVelocity();
         triggerCalled = false;
     }
 
@@ -40,11 +43,28 @@ public class BossState
     {
         nowAnimName = boss.anim.GetCurrentAnimatorClipInfo(0).Length > 0 ? boss.anim.GetCurrentAnimatorClipInfo(0)[0].clip.name : "null";
         //Debug.Log(nameof(nowAnimName) + " " + nowAnimName);
+        isPlayerInRange = boss.AttackCheck();
     }
 
     public virtual void AnimationFinishTrigger()
     {
-        
+        //Debug.Log(nameof(BossState) + " " + nameof(AnimationFinishTrigger)+" "+nameof(stateMachine.currentState)+" "+stateMachine.currentState.ToString()+" : "+stateMachine.currentState.animBoolName+" / "+stateMachine.currentState.nowAnimName);
+        isWallDetected = boss.IsWallDetected();
+    }
+
+    public virtual void SkipAnimation(string oldAnimName, string newAnimName = null)
+    {
+        boss.anim.SetBool(oldAnimName, false);
+        boss.anim.SetTrigger("Skip");
+        boss.anim.SetTrigger("Skip");
+        if(newAnimName != null)
+            boss.anim.SetBool(newAnimName, true);
+    }
+
+    public override string ToString()
+    {
+        //return base.ToString();
+        return this.GetType().Name;
     }
 }
 
@@ -59,6 +79,7 @@ public class Boss_IdleState : BossState
     public override void Enter(bool isAnimPlay = true)
     {
         base.Enter(isAnimPlay);
+        boss.SetZeroVelocity();
     }
 
     public override void Exit(bool isAnimPlay = true)
@@ -70,11 +91,17 @@ public class Boss_IdleState : BossState
     {
         base.Update();
     }
+
+    public override void AnimationFinishTrigger()
+    {
+        base.AnimationFinishTrigger();
+    }
 }
 
 /// <summary> 이동 애니메이션 </summary>
 public class Boss_MoveState : BossState
 {
+    protected bool canMove = true;
     public Boss_MoveState(BossStateMachine stateMachine, Boss boss, string animBoolName) : base(stateMachine, boss, animBoolName)
     {
 
@@ -88,18 +115,24 @@ public class Boss_MoveState : BossState
     public override void Exit(bool isAnimPlay = true)
     {
         base.Exit(isAnimPlay);
-        
+        Debug.Log(nameof(Boss_MoveState) + " " + nameof(Exit));
+        boss.SetZeroVelocity();
         stateMachine.ChangeState(boss.idleState);
     }
 
     public override void Update()
     {
         base.Update();
-        rb.linearVelocityX = boss.GetFacingDir() * boss.GetAbility().moveSpeed * Time.deltaTime;
-        if (boss.IsWallDetected() || !boss.IsGroundDetected())
-        {
+        if(canMove)
+            boss.SetVelocity(boss.GetFacingDir() * boss.GetAbility().moveSpeed, 0);
+    }
+
+    public override void AnimationFinishTrigger()
+    {
+        base.AnimationFinishTrigger();
+        if (isWallDetected)
             boss.Flip();
-        }
+        
     }
 }
 
@@ -125,6 +158,11 @@ public class Boss_DamageState : BossState
     {
         base.Update();
     }
+
+    public override void AnimationFinishTrigger()
+    {
+        base.AnimationFinishTrigger();
+    }
 }
 
 /// <summary> 죽음 애니메이션 </summary>
@@ -148,6 +186,11 @@ public class Boss_DeathState : BossState
     public override void Update()
     {
         base.Update();
+    }
+
+    public override void AnimationFinishTrigger()
+    {
+        base.AnimationFinishTrigger();
     }
 }
 
@@ -173,5 +216,10 @@ public class Boss_AttackState : BossState
     public override void Update()
     {
         base.Update();
+    }
+
+    public override void AnimationFinishTrigger()
+    {
+        base.AnimationFinishTrigger();
     }
 }

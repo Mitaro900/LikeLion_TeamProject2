@@ -1,3 +1,4 @@
+using PKR;
 using UnityEngine;
 
 public class EntityCollision : MonoBehaviour
@@ -27,6 +28,7 @@ public class EntityCollision : MonoBehaviour
     [SerializeField] protected Transform wallCheck;
     [SerializeField] protected float wallCheckDistance;
     [SerializeField] protected LayerMask whatIsGround;
+    [SerializeField] protected LayerMask whatIsPlayer;
 
     [SerializeField] protected int facingDir = 1;
     protected bool facingRight = true;
@@ -54,22 +56,32 @@ public class EntityCollision : MonoBehaviour
     }
 
     #region 충돌
-    public virtual bool IsGroundDetected() => Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);
+    public virtual bool IsGroundDetected() => Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsPlayer);
     public virtual bool IsWallDetected() => Physics2D.Raycast(wallCheck.position, Vector2.right * facingDir, wallCheckDistance, whatIsGround);
     public virtual int GetFacingDir() => facingDir;
 
-    public virtual Collider2D[] AttackCheck()
+    public virtual Collider2D AttackCheck()
     {
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackCheck.position, attackCheckRadius, whatIsGround);
-        return hitEnemies;
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackCheck.position, attackCheckRadius, whatIsPlayer);
+        foreach(Collider2D c in hitEnemies)
+        {
+            if (gameObject.tag != "Player" && c.gameObject.tag == "Player" 
+                || gameObject.tag == "Player" && c.gameObject.tag != "Ground")
+                return c;
+            
+        }
+        return null;
     }
 
 
     protected virtual void OnDrawGizmos()
     {
-        Gizmos.DrawLine(groundCheck.position, new Vector3(groundCheck.position.x, groundCheck.position.y - groundCheckDistance));
-        Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDistance, wallCheck.position.y));
-        Gizmos.DrawWireSphere(attackCheck.position, attackCheckRadius);
+        if(groundCheck != null)
+            Gizmos.DrawLine(groundCheck.position, new Vector3(groundCheck.position.x, groundCheck.position.y - groundCheckDistance));
+        if (wallCheck != null)
+            Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDistance, wallCheck.position.y));
+        if(attackCheck != null)
+            Gizmos.DrawWireSphere(attackCheck.position, attackCheckRadius);
     }
     #endregion
 

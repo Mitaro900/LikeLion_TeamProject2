@@ -249,7 +249,10 @@ MonoBehaviour:
   wallCheckDistance: 1.67
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 256
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 128
   facingDir: -1
   ability:
     hp: 10

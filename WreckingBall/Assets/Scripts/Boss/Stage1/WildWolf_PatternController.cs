@@ -38,8 +38,12 @@ public class WildWolf_PatternController : MonoBehaviour
 
     public void NextAction(bool isIgnore = false)
     {
-        Debug.Log($"{isPatternStart} / {isPatternEnd}");
-        if (isIgnore && isPatternStart || !isPatternEnd)
+        Debug.Log($"[{patternName}] start: {isPatternStart} / end: {isPatternEnd} / index: {patternIndex} | ignore: {isIgnore}");
+        if(isIgnore)
+            PatternInit(patternName);
+        
+
+        if (isPatternStart && !isPatternEnd)
             return;
 
         string mathod = GetNextPattern();
