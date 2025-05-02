@@ -1,0 +1,40 @@
+using UnityEngine;
+
+public class BatAttackState : EnemyState
+{
+    private Enemy_Bat enemy;
+    public BatAttackState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, Enemy_Bat _enemy)
+        : base(_enemyBase, _stateMachine, _animBoolName)
+    {
+        this.enemy = _enemy;
+    }
+
+    public override void Enter()
+    {
+        base.Enter();
+        enemy.moveSpeed += 2f;
+        enemy.radius += 3f;
+        enemy.playerCheckRadius += 3f;
+    }
+    public override void Update()
+    {
+        base.Update();
+
+
+        enemy.SetZeroVelocity();
+
+        if (triggerCalled)
+            stateMachine.ChangeState(enemy.battleState);
+
+    }
+    public override void Exit()
+    {
+        base.Exit();
+        enemy.lastTimeAttacked = Time.time;
+        enemy.moveSpeed -= 2f;
+        enemy.radius -= 3f;
+        enemy.playerCheckRadius -= 3f;
+    }
+
+    
+}

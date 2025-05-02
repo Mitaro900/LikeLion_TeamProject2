@@ -76,7 +76,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -90,7 +90,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -181,10 +181,10 @@ TextureImporter:
       name: GhostWarrior-Attack1_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 16
-        width: 16
-        height: 34
+        x: 0
+        y: 0
+        width: 100
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,10 +203,10 @@ TextureImporter:
       name: GhostWarrior-Attack1_1
       rect:
         serializedVersion: 2
-        x: 41
-        y: 9
-        width: 30
-        height: 42
+        x: 100
+        y: 0
+        width: 100
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,10 +225,10 @@ TextureImporter:
       name: GhostWarrior-Attack1_2
       rect:
         serializedVersion: 2
-        x: 136
-        y: 9
-        width: 35
-        height: 44
+        x: 200
+        y: 0
+        width: 100
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,10 +247,10 @@ TextureImporter:
       name: GhostWarrior-Attack1_3
       rect:
         serializedVersion: 2
-        x: 245
-        y: 9
-        width: 29
-        height: 42
+        x: 300
+        y: 0
+        width: 100
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,10 +269,10 @@ TextureImporter:
       name: GhostWarrior-Attack1_4
       rect:
         serializedVersion: 2
-        x: 347
-        y: 9
-        width: 29
-        height: 42
+        x: 400
+        y: 0
+        width: 100
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,10 +291,10 @@ TextureImporter:
       name: GhostWarrior-Attack1_5
       rect:
         serializedVersion: 2
-        x: 402
-        y: 23
-        width: 35
-        height: 16
+        x: 500
+        y: 0
+        width: 100
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,10 +313,10 @@ TextureImporter:
       name: GhostWarrior-Attack1_6
       rect:
         serializedVersion: 2
-        x: 434
-        y: 15
-        width: 43
-        height: 36
+        x: 600
+        y: 0
+        width: 100
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -335,10 +335,10 @@ TextureImporter:
       name: GhostWarrior-Attack1_7
       rect:
         serializedVersion: 2
-        x: 500
-        y: 16
-        width: 87
-        height: 35
+        x: 700
+        y: 0
+        width: 100
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,10 +357,10 @@ TextureImporter:
       name: GhostWarrior-Attack1_8
       rect:
         serializedVersion: 2
-        x: 626
-        y: 16
-        width: 61
-        height: 35
+        x: 800
+        y: 0
+        width: 100
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,10 +379,10 @@ TextureImporter:
       name: GhostWarrior-Attack1_9
       rect:
         serializedVersion: 2
-        x: 725
-        y: 16
-        width: 61
-        height: 35
+        x: 900
+        y: 0
+        width: 100
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -401,10 +401,10 @@ TextureImporter:
       name: GhostWarrior-Attack1_10
       rect:
         serializedVersion: 2
-        x: 830
-        y: 14
-        width: 53
-        height: 37
+        x: 1000
+        y: 0
+        width: 100
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -419,77 +419,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: GhostWarrior-Attack1_11
-      rect:
-        serializedVersion: 2
-        x: 938
-        y: 9
-        width: 31
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b006fd4fabe6dc9f0800000000000000
-      internalID: -446579038788558837
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GhostWarrior-Attack1_12
-      rect:
-        serializedVersion: 2
-        x: 1027
-        y: 16
-        width: 16
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b3024ab90cdd485f0800000000000000
-      internalID: -755235018176716741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GhostWarrior-Attack1_13
-      rect:
-        serializedVersion: 2
-        x: 1041
-        y: 9
-        width: 30
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 23fe4ea5b068565b0800000000000000
-      internalID: -5375743196869103822
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 98c5fdea6241e8943bf4cec968e91305
     internalID: 0
     vertices: []
     indices: 
@@ -502,9 +436,6 @@ TextureImporter:
       GhostWarrior-Attack1_0: 9207864301734568319
       GhostWarrior-Attack1_1: 6612342481769816342
       GhostWarrior-Attack1_10: 7054471644735520072
-      GhostWarrior-Attack1_11: -446579038788558837
-      GhostWarrior-Attack1_12: -755235018176716741
-      GhostWarrior-Attack1_13: -5375743196869103822
       GhostWarrior-Attack1_2: 6729246689648251494
       GhostWarrior-Attack1_3: -3140271105171241126
       GhostWarrior-Attack1_4: -1893387739154433167
