@@ -25,7 +25,7 @@ public class PlayerDashState : PlayerState
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.Z) && player.IsGroundDetected())
+        if(Input.GetKeyDown(KeyCode.Z) && (player.IsGroundDetected() || player.isAchored))
         {
             rb.gravityScale = 1.0f;
             rb.linearVelocity = new Vector2(rb.linearVelocityX, player.JumpForce);
