@@ -42,7 +42,19 @@ public class PlayerDashState : PlayerState
             finalSpeed = player.MaxSpeed;
         }
 
-        player.SetVelocity(finalSpeed * player.facingDir, rb.linearVelocityY);
+        if (player.IsGroundDetected())
+        {
+
+        }
+
+        if (player.isAchored)
+        {
+            player.RopeAction(finalSpeed);
+        }
+        else
+        {
+            player.SetVelocity(finalSpeed * player.facingDir, rb.linearVelocityY);
+        }
     }
 
     public override void Exit()

@@ -113,36 +113,15 @@ public class Player : Entity
         }
     }
 
-    private void FixedUpdate()
+    public void RopeAction(float _speed)
     {
-        //if (distanceJoint2D.enabled) // 매달려 있을 때 처리
-        //{
-        //    if (stateMachine.currentState.xInput != 0)
-        //    {
-        //        //캐릭터시선기준 AddForce.
-        //        float swingForce = 5f;
-        //        Vector2 anchorToPlayer = (Vector2)transform.position - distanceJoint2D.connectedAnchor;
-        //        Vector2 tangent = new Vector2(-anchorToPlayer.y, anchorToPlayer.x).normalized;
-        //        rb.AddForce(tangent * moveInput.x * swingForce, ForceMode2D.Force);
+        //캐릭터시선기준 AddForce.
+        Vector2 anchorToPlayer = (Vector2)transform.position - distanceJoint2D.connectedAnchor;
+        Vector2 tangent = new Vector2(-anchorToPlayer.y, anchorToPlayer.x).normalized;
+        rb.AddForce(tangent * facingDir * _speed, ForceMode2D.Force);
 
-        //        //스크린기준 AddForce.
-        //        //rb.AddForce(new Vector2(moveInput.x * swingForce, 0), ForceMode2D.Force);
-        //    }
-
-        //    // LeftShift 키를 눌렀을 때 순간 가속
-        //    if (accelKeyPressed)
-        //    {
-        //        float swingForce = 10f;
-        //        Vector2 anchorToPlayer = (Vector2)transform.position - distanceJoint2D.connectedAnchor;
-        //        Vector2 tangent = new Vector2(-anchorToPlayer.y, anchorToPlayer.x).normalized;
-        //        int dir = facingRight ? 1 : -1; //오른쪽보고있으면 1
-        //        rb.AddForce(tangent * dir * swingForce, ForceMode2D.Impulse);
-        //    }
-        //}
-        //else //일반이동 처리.
-        //{
-        //    //rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
-        //}
+        //스크린기준 AddForce.
+        //rb.AddForce(new Vector2(moveInput.x * swingForce, 0), ForceMode2D.Force);
     }
 
     private void StartSwing(Vector2 anchorPoint)
@@ -225,5 +204,23 @@ public class Player : Entity
     public void Damage()
     {
 
+    }
+
+    public override bool IsGroundDetected()
+    {
+        RaycastHit2D raycastHit = Physics2D.BoxCast(cd.bounds.center, cd.bounds.size - new Vector3(0.01f, 0.01f, 0f), 0f, Vector2.down, groundCheckDistance, whatIsGround);
+        Color rayColor;
+        if (raycastHit.collider != null)
+        {
+            rayColor = Color.green;
+        }
+        else
+        {
+            rayColor = Color.red;
+        }
+        Debug.DrawRay(cd.bounds.center + new Vector3(cd.bounds.extents.x, 0), Vector2.down * (cd.bounds.extents.y + groundCheckDistance), rayColor);
+        Debug.DrawRay(cd.bounds.center - new Vector3(cd.bounds.extents.x, 0), Vector2.down * (cd.bounds.extents.y + groundCheckDistance), rayColor);
+        Debug.DrawRay(cd.bounds.center - new Vector3(cd.bounds.extents.x, cd.bounds.extents.y + groundCheckDistance), Vector2.right * (cd.bounds.extents.x * 2), rayColor);
+        return raycastHit.collider != null;
     }
 }

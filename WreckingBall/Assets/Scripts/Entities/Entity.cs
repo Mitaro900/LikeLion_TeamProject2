@@ -10,14 +10,14 @@ public class Entity : MonoBehaviour
     public BoxCollider2D cd { get; private set; }
     #endregion
 
-    [SerializeField] private Rigidbody2D.SlideMovement slideMovement = new();
+    [SerializeField] protected Rigidbody2D.SlideMovement slideMovement = new();
 
     [Header("충돌 정보")]
-    [SerializeField] private Transform groundCheck; // 바닥 체크 위치
-    [SerializeField] private float groundCheckDistance = 0.1f; // 바닥 체크 거리
-    [SerializeField] private Transform wallCheck; // 벽 체크 위치
-    [SerializeField] private float wallCheckDistance = 0.1f; // 벽 체크 거리
-    [SerializeField] private LayerMask whatIsGround; // 바닥 레이어
+    [SerializeField] protected Transform groundCheck; // 바닥 체크 위치
+    [SerializeField] protected float groundCheckDistance = 0.1f; // 바닥 체크 거리
+    [SerializeField] protected Transform wallCheck; // 벽 체크 위치
+    [SerializeField] protected float wallCheckDistance = 0.1f; // 벽 체크 거리
+    [SerializeField] protected LayerMask whatIsGround; // 바닥 레이어
 
     public float facingDir { get; private set; } = 1f;
     protected bool facingRight = true; // 기본값은 오른쪽
@@ -41,7 +41,7 @@ public class Entity : MonoBehaviour
     }
 
     #region 충돌
-    public bool IsGroundDetected() => Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);
+    public virtual bool IsGroundDetected() => Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);
     public bool IsWallDetected() => Physics2D.Raycast(wallCheck.position, Vector2.right * facingDir, wallCheckDistance, whatIsGround);
 
     protected virtual void OnDrawGizmos()
