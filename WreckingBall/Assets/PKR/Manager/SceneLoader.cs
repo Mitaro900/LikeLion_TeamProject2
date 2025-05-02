@@ -14,7 +14,23 @@ public class SceneLoader : SingletonComponent<SceneLoader>
     private int sceneStart = Animator.StringToHash("sceneStart");
     private int sceneEnd = Animator.StringToHash("sceneEnd");
 
+    #region singleton
+
     protected override void AwakeInstance()
+    {
+        Initialize();
+    }
+
+    void OnEnable()
+    {
+        if (Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
+
+    protected override bool InitInstance()
     {
         var loader = Resources.Load<GameObject>("SceneLoader");
         GameObject go = GameObject.Instantiate(loader);
@@ -24,19 +40,18 @@ public class SceneLoader : SingletonComponent<SceneLoader>
         anim = GetComponentInChildren<Animator>();
         canvas = GetComponentInChildren<Canvas>();
         canvas.gameObject.SetActive(false);
-        
+
         //로비씬에서는 Fade애님을 보여주지 않음
         anim.Play(sceneStart, 0, 1f);
-    }
-
-    protected override bool InitInstance()
-    {
         return true;
     }
 
     protected override void ReleaseInstance()
     {
+        Destroy(gameObject);
     }
+
+    #endregion
 
     public void LoadScene(string loadSceneName)
     {
@@ -56,12 +71,12 @@ public class SceneLoader : SingletonComponent<SceneLoader>
     {
         isLoading = true;
         canvas.gameObject.SetActive(true);
-        
+
         anim.Play(sceneEnd, 0, 0f);
         AsyncOperation asyncLoad = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName);
         asyncLoad.allowSceneActivation = false;
         yield return null;
-        
+
         var info = anim.GetCurrentAnimatorStateInfo(0);
         while (info.normalizedTime < 1f)
         {
@@ -77,14 +92,14 @@ public class SceneLoader : SingletonComponent<SceneLoader>
         asyncLoad.allowSceneActivation = true;
         anim.Play(sceneStart, 0, 0f);
         yield return null;
-        
+
         info = anim.GetCurrentAnimatorStateInfo(0);
         while (info.normalizedTime < 1f)
         {
             yield return null;
             info = anim.GetCurrentAnimatorStateInfo(0);
         }
-        
+
         canvas.gameObject.SetActive(false);
         isLoading = false;
     }

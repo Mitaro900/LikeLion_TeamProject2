@@ -12,6 +12,8 @@ public class LobbyController : MonoBehaviour
     [SerializeField] private ButtonSelector settingsBtn;
     [SerializeField] private ButtonSelector gameExitBtn;
 
+    [SerializeField] private SettingUI settingUI;
+
     private enum MenuType
     {
         GameStart,
@@ -45,6 +47,7 @@ public class LobbyController : MonoBehaviour
 
     private void Update()
     {
+        if (settingUI.isActiveAndEnabled) return;
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             if (curMenu == MenuType.GameStart) return;
@@ -55,7 +58,7 @@ public class LobbyController : MonoBehaviour
             if (curMenu == MenuType.GameExit) return;
             SelectMenu((MenuType)((int)curMenu + 1));
         }
-        else if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        else if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
         {
             ClickMenu(curMenu);
         }
@@ -98,7 +101,7 @@ public class LobbyController : MonoBehaviour
         if (isStarted) return;
         isStarted = true;
         menuDict[curMenu].SetClickEffect();
-        
+
         print("StartGame");
         SceneLoader.Instance.LoadScene("Tutorial");
     }
@@ -106,6 +109,7 @@ public class LobbyController : MonoBehaviour
     private void OpenSettings()
     {
         print("OpenSettings");
+        settingUI.gameObject.SetActive(true);
     }
 
 
