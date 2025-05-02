@@ -14,7 +14,7 @@ public class Bug2BattleState : EnemyState
     public override void Enter()
     {
         base.Enter();
-        player = Player.instance.player.transform;
+        player = Playertest.instance.player.transform;
         enemy.moveSpeed += 1f;
         enemy.radius += 6f;
         enemy.playerCheckRadius += 6f;
