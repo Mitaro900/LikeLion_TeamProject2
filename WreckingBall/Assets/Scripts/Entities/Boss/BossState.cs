@@ -36,7 +36,9 @@ public class BossState
     public virtual void Exit(bool isAnimPlay = true)
     {
         if (isAnimPlay)
+        {
             boss.anim.SetBool(animBoolName, false);
+        }
     }
 
     public virtual void Update()
@@ -55,8 +57,8 @@ public class BossState
     public virtual void SkipAnimation(string oldAnimName, string newAnimName = null)
     {
         boss.anim.SetBool(oldAnimName, false);
-        boss.anim.SetTrigger("Skip");
-        boss.anim.SetTrigger("Skip");
+        //boss.anim.SetTrigger("Skip");
+        //boss.anim.SetTrigger("Skip");
         if(newAnimName != null)
             boss.anim.SetBool(newAnimName, true);
     }

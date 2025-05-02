@@ -256,7 +256,7 @@ MonoBehaviour:
   facingDir: -1
   ability:
     hp: 10
-    moveSpeed: 5
+    moveSpeed: 8
     jumpPower: 10
   bossPage: 1
   bossMaxPage: 2

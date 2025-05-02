@@ -74,8 +74,8 @@ public class WildWolf_RunAttackState : Boss_MoveState
         {
             canMove = false;
             //stateMachine.ChangeState(wolf.idleState);
-            if(nowAnimName.Contains("Attack"))
-                wolf.anim.SetBool("Attack", false);
+            //if(nowAnimName.Contains("Attack"))
+            //    wolf.anim.SetTrigger("Skip");
             Exit(true);
             
             //wolf.controller.NextAction(true);
