@@ -13,12 +13,16 @@ public class Player : Entity
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float ropeSpeed = 10f;
     [SerializeField] private float jumpForce = 8f;
-    [SerializeField] private float maxSpeed = 50f;
+    [SerializeField] private float acceleration = 7f;
+    [SerializeField] private float dashSpeedThereshold = 15f;
+    [SerializeField] private float maxSpeed = 25f;
 
-    public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
-    public float RopeSpeed { get => ropeSpeed; set => ropeSpeed = value; }
-    public float JumpForce { get => jumpForce; set => jumpForce = value; }
-    public float MaxSpeed { get => maxSpeed; set => maxSpeed = value; }
+    public float MoveSpeed { get => moveSpeed; }
+    public float RopeSpeed { get => ropeSpeed; }
+    public float JumpForce { get => jumpForce; }
+    public float Acceleration { get => acceleration; }
+    public float DashSpeedThereshold { get => dashSpeedThereshold; }
+    public float MaxSpeed { get => maxSpeed; }
 
     private Coroutine ropeCo = null;
     private bool ropeAnimating = false;
@@ -33,6 +37,7 @@ public class Player : Entity
     public PlayerJumpState jumpState { get; private set; }
     public PlayerFallState fallState { get; private set; }
     public PlayerDashState dashState { get; private set; }
+    public PlayerTurnState turnState { get; private set; }
     public PlayerAnchoredState anchoredState { get; private set; }
     #endregion
 
@@ -47,6 +52,7 @@ public class Player : Entity
         jumpState = new PlayerJumpState(this, stateMachine, "Jump", this);
         fallState = new PlayerFallState(this, stateMachine, "Jump", this);
         dashState = new PlayerDashState(this, stateMachine, "Dash", this);
+        turnState = new PlayerTurnState(this, stateMachine, "Dash", this);
         anchoredState = new PlayerAnchoredState(this, stateMachine, "Anchored", this);
     }
 

@@ -12,14 +12,21 @@ public class PlayerDashState : PlayerState
     {
         base.Enter();
 
-        finalSpeed = player.MoveSpeed;
+        if(player.stateMachine.previousState == player.turnState)
+        {
+            finalSpeed = player.DashSpeedThereshold;
+        }
+        else
+        {
+            finalSpeed = player.MoveSpeed;
+        }
     }
 
     public override void Update()
     {
         base.Update();
 
-        if(Input.GetKeyUp(KeyCode.LeftShift) || player.IsWallDetected())
+        if(!Input.GetKey(KeyCode.LeftShift) || player.IsWallDetected())
         {
             stateMachine.ChangeState(player.idleState);
             return;
@@ -35,16 +42,19 @@ public class PlayerDashState : PlayerState
             rb.gravityScale = 2.5f;
         }
         
-        finalSpeed += player.MoveSpeed * Time.deltaTime;
+        finalSpeed += player.Acceleration * Time.deltaTime;
 
         if (finalSpeed > player.MaxSpeed)
         {
             finalSpeed = player.MaxSpeed;
         }
 
-        if (player.IsGroundDetected())
+        if (player.IsGroundDetected() && finalSpeed >= player.DashSpeedThereshold)
         {
-
+            if((xInput > 0 && !player.facingRight) || (xInput < 0 && player.facingRight))
+            {
+                player.stateMachine.ChangeState(player.turnState);
+            }
         }
 
         if (player.isAchored)

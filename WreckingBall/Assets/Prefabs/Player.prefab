@@ -282,7 +282,9 @@ MonoBehaviour:
   moveSpeed: 5
   ropeSpeed: 10
   jumpForce: 8
-  maxSpeed: 50
+  acceleration: 7
+  dashSpeedThereshold: 15
+  maxSpeed: 25
 --- !u!1 &3645396174606679076
 GameObject:
   m_ObjectHideFlags: 0

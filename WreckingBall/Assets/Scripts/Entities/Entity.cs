@@ -20,7 +20,7 @@ public class Entity : MonoBehaviour
     [SerializeField] protected LayerMask whatIsGround; // 바닥 레이어
 
     public float facingDir { get; private set; } = 1f;
-    protected bool facingRight = true; // 기본값은 오른쪽
+    public bool facingRight { get; private set; } = true; // 기본값은 오른쪽
 
     protected virtual void Awake()
     {
