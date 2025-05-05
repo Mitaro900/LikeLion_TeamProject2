@@ -44,6 +44,7 @@ public class Boss : EntityCollision
     protected UnityAction<EntityAbility> pageChageEvent;
 
     [SerializeField] protected bool isGiveDamagedAction = false;
+    public Vector3 oriPos { get; protected set; }
 
     public BossStateMachine stateMachine;
     public Boss_IdleState idleState;
@@ -55,6 +56,9 @@ public class Boss : EntityCollision
 
     protected UnityAction<EntityAbility> damageEvent;
     protected UnityAction deathEvent;
+    protected UnityAction<bool> onBecameVisibleEvent;
+
+    [SerializeField] protected Collider2D bg;
 
     public Boss(EntityAbility ability, UnityAction<EntityAbility> damageEvent, UnityAction deathEvent,
         EntityAbnormalState knockback, EntityAbnormalState invincibility, int bossPage, int bossMaxPage, UnityAction<EntityAbility> pageChageEvent)
@@ -78,20 +82,8 @@ public class Boss : EntityCollision
     public bool IsGiveDamagedAction() => isGiveDamagedAction;
     public void InitGiveDamagedAction() => isGiveDamagedAction = false;
 
-    public virtual void Damage()
-    {
-        damageEvent?.Invoke(ability);
-    }
+    public virtual void Damage() => damageEvent?.Invoke(ability);
 
-    public override void FlipController(float _x)
-    {
-        base.FlipController(_x);
-    }
-
-    protected override void Awake()
-    {
-        base.Awake();
-    }
 
     protected override void Start()
     {
@@ -108,6 +100,8 @@ public class Boss : EntityCollision
         AddState(damageState);
         deathState = new Boss_DeathState(stateMachine, this, "Death");
         AddState(deathState);
+
+        oriPos = transform.position;
     }
 
     protected override void Update()
@@ -151,9 +145,51 @@ public class Boss : EntityCollision
         return null;
     }
 
-    public virtual void GiveDamagePoint()
+    public virtual void GiveDamagePoint() => isGiveDamagedAction = AttackCheck() != null;
+
+    public void AddVisibleEvent(UnityAction<bool> onBecameVisibleEvent)
     {
-        isGiveDamagedAction = AttackCheck() != null;
-        Debug.Log($"{nameof(GiveDamagePoint)} : {isGiveDamagedAction}");
+        if (this.onBecameVisibleEvent == null)
+            this.onBecameVisibleEvent = onBecameVisibleEvent;
+        else
+            this.onBecameVisibleEvent += onBecameVisibleEvent;
     }
+
+    public void RemoveVisibleEvent(UnityAction<bool> onBecameVisibleEvent)
+    {
+        if(this.onBecameVisibleEvent == null)
+            return;
+        else
+            this.onBecameVisibleEvent -= onBecameVisibleEvent;
+    }
+
+    //private void OnBecameVisible() => onBecameVisibleEvent?.Invoke(true);
+
+    //private void OnBecameInvisible() => onBecameVisibleEvent?.Invoke(false);
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (bg != null && collision == bg)
+            onBecameVisibleEvent?.Invoke(false);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (bg != null && collision == bg)
+            onBecameVisibleEvent?.Invoke(true);
+    }
+
+    public override Collider2D AttackCheck() => base.AttackCheck();
+
+    public override void Flip() => base.Flip();
+
+    public override bool IsGroundDetected() => base.IsGroundDetected();
+
+    public override bool IsWallDetected() => base.IsWallDetected();
+
+    public override int GetFacingDir() => base.GetFacingDir();
+
+    protected override void OnDrawGizmos() => base.OnDrawGizmos();
+
+    public override string ToString() => base.ToString();
 }

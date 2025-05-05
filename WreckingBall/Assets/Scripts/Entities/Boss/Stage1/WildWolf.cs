@@ -67,29 +67,11 @@ public class WildWolf : Boss
         };
     }
 
-    protected override void Awake()
-    {
-        base.Awake();
-        Debug.Log(nameof(WildWolf) + " " + nameof(Awake));
-    }
 
     protected override void Start()
     {
         base.Start();
-        Debug.Log(nameof(WildWolf) + " " + nameof(Start));
 
-        //idleState = new Boss_IdleState(stateMachine, this, "Idle");
-        //AddState(idleState);
-        //moveState = new Boss_MoveState(stateMachine, this, "Move", this);
-        //AddState(moveState);
-        //runState = new WildWolf_RunState(stateMachine, this, "Run", this);
-        //AddState(runState);
-        //attackState = new Boss_AttackState(stateMachine, this, "Attack", this);
-        //AddState(attackState);
-        //damageState = new Boss_DamageState(stateMachine, this, "Damage");
-        //AddState(damageState);
-        //deathState = new Boss_DeathState(stateMachine, this, "Death");
-        //AddState(deathState);
         runAttackState = new WildWolf_RunAttackState(stateMachine, this, "RunAttack", this);
         AddState(runAttackState);
 
@@ -138,65 +120,29 @@ public class WildWolf : Boss
 
         player = FindFirstObjectByType<Player>();
 
-        controller.NextAction();
+        //controller.NextAction();
     }
 
-    protected override void Update()
-    {
-        base.Update();
-    }
+    protected override void Update() => base.Update();
 
-    public override void Damage()
-    {
-        base.Damage();
-    }
+    public override void Damage() => base.Damage();
 
-    public override void Flip()
-    {
-        base.Flip();
-    }
+    public override void Flip() => base.Flip();
 
-    public override void FlipController(float _x)
-    {
-        base.FlipController(_x);
-    }
+    public override bool IsGroundDetected() => base.IsGroundDetected();
 
-    public override bool IsGroundDetected()
-    {
-        return base.IsGroundDetected();
-    }
+    public override bool IsWallDetected() => base.IsWallDetected();
 
-    public override bool IsWallDetected()
-    {
-        return base.IsWallDetected();
-    }
+    public override void AddState(BossState state) => base.AddState(state);
 
-    public override void AddState(BossState state)
-    {
-        base.AddState(state);
-    }
+    public override void GiveDamagePoint() => base.GiveDamagePoint();
 
-    public override void GiveDamagePoint()
-    {
-        base.GiveDamagePoint();
-    }
+    public override void RemoveState(BossState state) => base.RemoveState(state);
 
-    public override void RemoveState(BossState state)
-    {
-        base.RemoveState(state);
-    }
-
-    protected override void OnDrawGizmos()
-    {
-        base.OnDrawGizmos();
-    }
+    protected override void OnDrawGizmos() => base.OnDrawGizmos();
     #endregion
 
     #region 특수 메서드
-    protected override void AnimationFinishTrigger()
-    {
-        base.AnimationFinishTrigger();
-        //controller.NextAction();
-    }
+    protected override void AnimationFinishTrigger() => base.AnimationFinishTrigger();
     #endregion
 }
