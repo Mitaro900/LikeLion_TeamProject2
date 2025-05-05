@@ -1,35 +1,43 @@
+using PKR;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UIElements;
 
 public class WildWolf : Boss
 {
+    public Player player { get; private set; }
+
+
     #region States
 
-    [Header(nameof(WildWolf) + ".공동상태")]
-    Boss_IdleState idleState;
-    WildWolf_MoveState moveState;
-    WildWolf_RunState runState;
-    WildWolf_AttackState attackState;
-    WildWolf_DamageState damageState;
-    WildWolf_DeathState deathState;
+    //[Header(nameof(WildWolf) + ".공동상태")]
+    public WildWolf_RunState runState;
+    public WildWolf_RunAttackState runAttackState;
 
-    [Header(nameof(WildWolf) + ".1페이즈상태")]
-    WildWolf_ThrowTrapState throwTrapState;
-    WildWolf_FloorSlideState floorSlideState;
-    WildWolf_JumpAttackState jumpAttackState; //통통 튕기기 공격 / 1.2페이즈 같은 공격
+    //[Header(nameof(WildWolf) + ".1페이즈상태")]
+    public WildWolf_ThrowTrapState throwTrapState;
+    public WildWolf_FloorSlideState floorSlideState;
+    public WildWolf_JumpAttackState jumpAttackState; //통통 튕기기 공격 / 1.2페이즈 같은 공격
 
-    [Header(nameof(WildWolf) + ".2페이즈상태")]
-    WildWolf_AerialSlideState aerialSlideState;
-    WildWolf_TakeDown_VAttackState vattackState;
-    WildWolf_TakeDown_DirectAttackState directAttackState;
-    WildWolf_DroppingTrapState droppingTrapState;
+    //[Header(nameof(WildWolf) + ".2페이즈상태")]
+    public WildWolf_AerialSlideState aerialSlideState;
+    public WildWolf_TakeDown_VAttackState vattackState;
+    public WildWolf_TakeDown_DirectAttackState directAttackState;
+    public WildWolf_DroppingTrapState droppingTrapState;
+
+    [HideInInspector] public WildWolf_PatternController controller;
 
     #endregion
 
     #region Traps
-    List<TrapBase> throwTraps = new();
-    List<TrapBase> droppingTraps = new();
+    [Header(nameof(WildWolf) + ".함정")]
+    [SerializeField] private List<StringIntPair> trapsPrefab;
+    private List<TrapBase> throwTraps = new();
+    private List<TrapBase> droppingTraps = new();
+    [SerializeField] private Transform throwPos;
+    [SerializeField] private Transform dropPos;
     #endregion
 
 
@@ -37,33 +45,100 @@ public class WildWolf : Boss
 
     public WildWolf(EntityAbility ability, UnityAction<EntityAbility> damageEvent, UnityAction deathEvent, EntityAbnormalState knockback, EntityAbnormalState invincibility, int bossPage, int bossMaxPage, UnityAction<EntityAbility> pageChageEvent) : base(ability, damageEvent, deathEvent, knockback, invincibility, bossPage, bossMaxPage, pageChageEvent)
     {
-
+        Debug.Log(nameof(WildWolf) + " Set");
+        base.bossPage = bossPage;
+        base.bossMaxPage = bossMaxPage;
+        base.damageEvent = damageEvent;
+        base.damageEvent += (_ab) =>
+        {
+            if (_ab.hp <= 0)
+            {
+                if (bossPage == bossMaxPage)
+                {
+                    deathEvent?.Invoke();
+                }
+                else
+                {
+                    pageChageEvent?.Invoke(_ab);
+                    bossPage++;
+                }
+            }
+            controller.NextAction(true);
+        };
     }
 
     protected override void Awake()
     {
         base.Awake();
+        Debug.Log(nameof(WildWolf) + " " + nameof(Awake));
     }
 
     protected override void Start()
     {
         base.Start();
+        Debug.Log(nameof(WildWolf) + " " + nameof(Start));
 
-        idleState = new Boss_IdleState(stateMachine, this, "Idle");
-        moveState = new WildWolf_MoveState(stateMachine, this, "Move");
-        runState = new WildWolf_RunState(stateMachine, this, "Run");
-        attackState = new WildWolf_AttackState(stateMachine, this, "Attack");
-        damageState = new WildWolf_DamageState(stateMachine, this, "Damage");
-        deathState = new WildWolf_DeathState(stateMachine, this, "Death");
+        //idleState = new Boss_IdleState(stateMachine, this, "Idle");
+        //AddState(idleState);
+        //moveState = new Boss_MoveState(stateMachine, this, "Move", this);
+        //AddState(moveState);
+        //runState = new WildWolf_RunState(stateMachine, this, "Run", this);
+        //AddState(runState);
+        //attackState = new Boss_AttackState(stateMachine, this, "Attack", this);
+        //AddState(attackState);
+        //damageState = new Boss_DamageState(stateMachine, this, "Damage");
+        //AddState(damageState);
+        //deathState = new Boss_DeathState(stateMachine, this, "Death");
+        //AddState(deathState);
+        runAttackState = new WildWolf_RunAttackState(stateMachine, this, "RunAttack", this);
+        AddState(runAttackState);
 
-        throwTrapState = new WildWolf_ThrowTrapState(stateMachine, this, "ThrowTrap");
-        floorSlideState = new WildWolf_FloorSlideState(stateMachine, this, "FloorSlide");
-        jumpAttackState = new WildWolf_JumpAttackState(stateMachine, this, "JumpAttack");
+        throwTrapState = new WildWolf_ThrowTrapState(stateMachine, this, "ThrowTrap", this);
+        AddState(throwTrapState);
+        floorSlideState = new WildWolf_FloorSlideState(stateMachine, this, "FloorSlide", this);
+        AddState(floorSlideState);
+        jumpAttackState = new WildWolf_JumpAttackState(stateMachine, this, "JumpAttack", this);
+        AddState(jumpAttackState);
 
-        aerialSlideState = new WildWolf_AerialSlideState(stateMachine, this, "AerialSlide");
-        vattackState = new WildWolf_TakeDown_VAttackState(stateMachine, this, "TakeDown_VAttack");
-        directAttackState = new WildWolf_TakeDown_DirectAttackState(stateMachine, this, "TakeDown_DirectAttack");
-        droppingTrapState = new WildWolf_DroppingTrapState(stateMachine, this, "DroppingTrap");
+        aerialSlideState = new WildWolf_AerialSlideState(stateMachine, this, "AerialSlide", this);
+        AddState(aerialSlideState);
+        vattackState = new WildWolf_TakeDown_VAttackState(stateMachine, this, "TakeDown_VAttack", this);
+        AddState(vattackState);
+        directAttackState = new WildWolf_TakeDown_DirectAttackState(stateMachine, this, "TakeDown_DirectAttack", this);
+        AddState(directAttackState);
+        droppingTrapState = new WildWolf_DroppingTrapState(stateMachine, this, "DroppingTrap", this);
+        AddState(droppingTrapState);
+
+        controller = GetComponent<WildWolf_PatternController>();
+        controller.Initialize(this);
+
+        if (TrapPoolManager.instance != null)
+        {
+            TrapPoolManager pool = TrapPoolManager.instance;
+            throwTraps = new();
+            droppingTraps = new();
+            for (int i = 0; i < trapsPrefab.Count; i++)
+            {
+                List<GameObject> gos = pool.Call(trapsPrefab[i].Key, Vector3.zero, trapsPrefab[i].Value);
+                if (gos != null)
+                {
+                    for (int j = 0; j < gos.Count; j++)
+                    {
+                        TrapBase trap = gos[j].GetComponent<TrapBase>();
+                        if(trap.name.Contains("ThrowTrap"))
+                            throwTraps.Add(trap);
+                        else if(trap.name.Contains("DroppingTrap"))
+                            droppingTraps.Add(trap);
+                        else
+                            Debug.LogError("트랩 이름이 잘못되었습니다.");
+                    }
+                }
+            }
+        }
+
+        player = FindFirstObjectByType<Player>();
+
+        controller.NextAction();
     }
 
     protected override void Update()
@@ -96,6 +171,21 @@ public class WildWolf : Boss
         return base.IsWallDetected();
     }
 
+    public override void AddState(BossState state)
+    {
+        base.AddState(state);
+    }
+
+    public override void GiveDamagePoint()
+    {
+        base.GiveDamagePoint();
+    }
+
+    public override void RemoveState(BossState state)
+    {
+        base.RemoveState(state);
+    }
+
     protected override void OnDrawGizmos()
     {
         base.OnDrawGizmos();
@@ -103,6 +193,10 @@ public class WildWolf : Boss
     #endregion
 
     #region 특수 메서드
-
+    protected override void AnimationFinishTrigger()
+    {
+        base.AnimationFinishTrigger();
+        //controller.NextAction();
+    }
     #endregion
 }
