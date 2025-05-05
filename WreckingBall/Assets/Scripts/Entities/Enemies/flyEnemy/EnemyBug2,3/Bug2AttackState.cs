@@ -17,8 +17,8 @@ public class Bug2AttackState : EnemyState
         base.Enter();
         enemy.StartCoroutine(SummonDelayCoroutine());
         enemy.moveSpeed += 1f;
-        enemy.radius += 6f;
-        enemy.playerCheckRadius += 6f;
+        enemy.Radius += 6f;
+        enemy.PlayerCheckRadius += 6f;
     }
 
     public override void Exit()
@@ -26,8 +26,8 @@ public class Bug2AttackState : EnemyState
         base.Exit();
         enemy.lastTimeAttacked = Time.time;
         enemy.moveSpeed -= 1f;
-        enemy.radius -= 6f;
-        enemy.playerCheckRadius -= 6f;
+        enemy.Radius -= 6f;
+        enemy.PlayerCheckRadius -= 6f;
     }
 
     public override void Update()

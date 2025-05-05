@@ -3,31 +3,44 @@ using UnityEngine;
 
 public class Player : Entity
 {
-    [SerializeField] private DistanceJoint2D distanceJoint2D;
-    [SerializeField] private LineRenderer lineRenderer;
-
-    [SerializeField] private LayerMask ropeLayer; // Ray가 충돌할 레이어
-    [SerializeField] private float maxAnchorDistance = 8f;
-
     [Header("이동 정보")]
     [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float ropeSpeed = 10f;
-    [SerializeField] private float jumpForce = 8f;
-    [SerializeField] private float acceleration = 7f;
-    [SerializeField] private float dashSpeedThereshold = 15f;
-    [SerializeField] private float maxSpeed = 25f;
-
     public float MoveSpeed { get => moveSpeed; }
-    public float RopeSpeed { get => ropeSpeed; }
+    
+    [SerializeField] private float jumpForce = 8f;
     public float JumpForce { get => jumpForce; }
+    
+    [SerializeField] private float acceleration = 7f;
     public float Acceleration { get => acceleration; }
+    
+    [SerializeField] private float dashSpeedThereshold = 15f;
     public float DashSpeedThereshold { get => dashSpeedThereshold; }
+    
+    [SerializeField] private float maxSpeed = 25f;
     public float MaxSpeed { get => maxSpeed; }
+
+    [Header("중력 정보")]
+    [SerializeField] private float defaultGravityScale = 2.5f;
+    public float DefaultGravityScale { get => defaultGravityScale; }
+
+    [SerializeField] private float jumpGravityScale = 1.0f;
+    public float JumpGravityScale { get => jumpGravityScale; }
+
+    [Header("로프 정보")]
+    [SerializeField] private DistanceJoint2D distanceJoint2D;
+    [SerializeField] private LineRenderer lineRenderer;
+    [SerializeField] private float ropeSpeed = 10f;
+    public float RopeSpeed { get => ropeSpeed; }
+    
+    [SerializeField] private LayerMask whatIsRopeable;
+    [SerializeField] private float maxAnchorDistance = 8f;
 
     private Coroutine ropeCo = null;
     private bool ropeAnimating = false;
 
-    public bool isAchored { get => distanceJoint2D.enabled; set => distanceJoint2D.enabled = value; } // 물체에 매달려 있는지 여부
+    public bool IsAchored { get => distanceJoint2D.enabled; set => distanceJoint2D.enabled = value; } // 물체에 매달려 있는지 여부
+    private bool isBusy = false;
+    public bool IsBusy { get => isBusy; set => isBusy = value; }
 
     #region States
     public StateMachine stateMachine { get; private set; }
@@ -39,6 +52,8 @@ public class Player : Entity
     public PlayerDashState dashState { get; private set; }
     public PlayerTurnState turnState { get; private set; }
     public PlayerAnchoredState anchoredState { get; private set; }
+    public PlayerGrabState grabState { get; private set; }
+    public PlayerBodyslamState bodyslamState { get; private set; }
     #endregion
 
     protected override void Awake()
@@ -54,6 +69,8 @@ public class Player : Entity
         dashState = new PlayerDashState(this, stateMachine, "Dash", this);
         turnState = new PlayerTurnState(this, stateMachine, "Dash", this);
         anchoredState = new PlayerAnchoredState(this, stateMachine, "Anchored", this);
+        grabState = new PlayerGrabState(this, stateMachine, "Anchored", this);
+        bodyslamState = new PlayerBodyslamState(this, stateMachine, "Bodyslam", this);
     }
 
     protected override void Start()
@@ -79,7 +96,7 @@ public class Player : Entity
             ReleaseRope();
         }
 
-        if (Input.GetKeyDown(KeyCode.X) && !ropeAnimating)
+        if (Input.GetKeyDown(KeyCode.X) && !ropeAnimating && !IsBusy)
         {
             LaunchRope();
         }
@@ -98,10 +115,9 @@ public class Player : Entity
     {
         //바라보는 방향으로 45도 방향.
         Vector3 dir = Vector3.zero;
-        if (facingRight) dir = new Vector3(1, 1, 0).normalized;
-        else dir = new Vector3(-1, 1, 0).normalized;
+        dir = new Vector3(facingDir, 1, 0).normalized;
 
-        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, dir, maxAnchorDistance, ropeLayer);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, dir, maxAnchorDistance, whatIsRopeable);
         bool find = false;
         foreach (var hit in hits)
         {
@@ -144,7 +160,7 @@ public class Player : Entity
         lineRenderer.positionCount = 0; // 라인 렌더러 초기화
     }
 
-    IEnumerator ThrowRopeAnimFail(Vector2 targetPos)
+    private IEnumerator ThrowRopeAnimFail(Vector2 targetPos)
     {
         ropeAnimating = true;
         lineRenderer.positionCount = 2;
@@ -178,7 +194,7 @@ public class Player : Entity
         ropeAnimating = false;
     }
 
-    IEnumerator ThrowRopeAnimSuccess(Vector2 targetPos)
+    private IEnumerator ThrowRopeAnimSuccess(Vector2 targetPos)
     {
         ropeAnimating = true;
         lineRenderer.positionCount = 2;
@@ -205,11 +221,6 @@ public class Player : Entity
             lineRenderer.SetPosition(0, transform.position);
             yield return null;
         }
-    }
-
-    public void Damage()
-    {
-
     }
 
     public override bool IsGroundDetected()

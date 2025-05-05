@@ -1,15 +1,13 @@
 using System.Collections;
 using UnityEngine;
 
-public class Enemy : EnemyEntity
+public class Enemy : Entity
 {
-    [SerializeField] protected LayerMask whatIsPlayer;
     [Header("Enemy")]
     [Header("스턴 정보")]
     public float stunDuration;
     public Vector2 stunDirection;
     protected bool canBeStunned;
-
 
     [Header("이동 정보")]
     public float moveSpeed;
@@ -20,12 +18,30 @@ public class Enemy : EnemyEntity
     
     private Transform playerTransform;
     [Header("플레이어 탐지 정보")]
-    public float distance;
-    public float radius;
+    [SerializeField] protected Transform playerCheck;
+    [SerializeField] protected float playerCheckRadius;
+    public float PlayerCheckRadius { get => playerCheckRadius; set => playerCheckRadius = value; }
+
+    [SerializeField] protected LayerMask whatIsPlayer;
+    [SerializeField] protected float distance;
+    public float Distance { get => distance; set => distance = value; }
+    
+    [SerializeField] protected float radius;
+    public float Radius { get => radius; set => radius = value; }
 
     [Header("공격 정보")]
-    public float attackDistance;
-    public float attackCooldown;
+    [SerializeField] protected Transform attackCheck;
+    public Transform AttackCheck { get => attackCheck; }
+
+    [SerializeField] protected float attackCheckRadius;
+    public float AttackCheckRadius { get => attackCheckRadius; }
+
+    [SerializeField] protected float attackDistance;
+    public float AttackDistance { get => attackDistance; }
+
+    [SerializeField] protected float attackCooldown;
+    public float AttackCooldown { get => attackCooldown; }
+
     [HideInInspector] public float lastTimeAttacked;
 
 
@@ -37,8 +53,6 @@ public class Enemy : EnemyEntity
         stateMachine = new EnemyStateMachine();
         defaultMoveSpeed = moveSpeed;
     }
-
-
 
     protected override void Update()
     {
@@ -108,7 +122,7 @@ public class Enemy : EnemyEntity
     public virtual void AnimationFinishTrigger() => stateMachine.currentState.AnimationFinishTrigger();
 
     public virtual RaycastHit2D IsPlayerDetected()
-    => Physics2D.CircleCast(playerCheck.position, radius, Vector2.down * facingDir, distance, whatIsPlayer);
+    => Physics2D.CircleCast(playerCheck.position, Radius, Vector2.down * facingDir, Distance, whatIsPlayer);
 
 
     protected override void OnDrawGizmos()
@@ -116,9 +130,6 @@ public class Enemy : EnemyEntity
         base.OnDrawGizmos();
 
         Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + attackDistance * facingDir, transform.position.y));
-
+        Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + AttackDistance * facingDir, transform.position.y));
     }
-
-
 }

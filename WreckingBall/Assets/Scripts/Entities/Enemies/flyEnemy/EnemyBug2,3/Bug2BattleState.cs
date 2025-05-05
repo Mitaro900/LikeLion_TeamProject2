@@ -16,8 +16,8 @@ public class Bug2BattleState : EnemyState
         base.Enter();
         player = Playertest.instance.player.transform;
         enemy.moveSpeed += 1f;
-        enemy.radius += 6f;
-        enemy.playerCheckRadius += 6f;
+        enemy.Radius += 6f;
+        enemy.PlayerCheckRadius += 6f;
 
     }
     public override void Update()
@@ -27,7 +27,7 @@ public class Bug2BattleState : EnemyState
         {
             stateTimer = enemy.battleTime;
 
-            if (enemy.IsPlayerDetected().distance < enemy.attackDistance)
+            if (enemy.IsPlayerDetected().distance < enemy.AttackDistance)
             {
                 //공격상태
                 if (CanAttack())
@@ -54,14 +54,14 @@ public class Bug2BattleState : EnemyState
     {
         base.Exit();
         enemy.moveSpeed -= 1f;
-        enemy.radius -= 6f;
-        enemy.playerCheckRadius -= 6f;
+        enemy.Radius -= 6f;
+        enemy.PlayerCheckRadius -= 6f;
     }
 
 
     private bool CanAttack()
     {
-        if (Time.time >= enemy.lastTimeAttacked + enemy.attackCooldown)
+        if (Time.time >= enemy.lastTimeAttacked + enemy.AttackCooldown)
         {
             enemy.lastTimeAttacked = Time.time;
             return true;

@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerTurnState : PlayerState
 {
     private float currentTime;
-    private float finalSpeed;
+    private float finalXSpeed;
 
     public PlayerTurnState(Entity entity, StateMachine stateMachine, string animBoolName, Player player) : base(entity, stateMachine, animBoolName, player)
     {
@@ -15,17 +15,17 @@ public class PlayerTurnState : PlayerState
 
         stateTimer = 0.85f;
         currentTime = 0f;
-        finalSpeed = player.DashSpeedThereshold;
+        finalXSpeed = player.DashSpeedThereshold;
     }
 
     public override void Update()
     {
         base.Update();
 
-        player.SetVelocity(finalSpeed * player.facingDir, rb.linearVelocityY);
+        player.SetVelocity(finalXSpeed * player.facingDir, rb.linearVelocityY);
 
         currentTime += Time.deltaTime;
-        finalSpeed = Mathf.Lerp(finalSpeed, 0f, currentTime / 2);
+        finalXSpeed = Mathf.Lerp(finalXSpeed, 0f, currentTime / 2);
 
         if (stateTimer <= 0)
         {

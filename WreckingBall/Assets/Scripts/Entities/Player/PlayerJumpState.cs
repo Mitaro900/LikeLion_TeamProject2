@@ -10,7 +10,7 @@ public class PlayerJumpState : PlayerAirborneState
     {
         base.Enter();
 
-        rb.gravityScale = 1.0f;
+        rb.gravityScale = player.JumpGravityScale;
         rb.linearVelocity = new Vector2(rb.linearVelocityX, player.JumpForce);
     }
 
@@ -20,7 +20,7 @@ public class PlayerJumpState : PlayerAirborneState
 
         if (Input.GetKeyUp(KeyCode.Z))
         {
-            rb.gravityScale = 2.5f;
+            rb.gravityScale = player.DefaultGravityScale;
         }
 
         if (rb.linearVelocityY < 0)
@@ -33,6 +33,6 @@ public class PlayerJumpState : PlayerAirborneState
     public override void Exit()
     {
         base.Exit();
-        rb.gravityScale = 2.5f;
+        rb.gravityScale = player.DefaultGravityScale;
     }
 }

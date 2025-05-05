@@ -273,18 +273,20 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
-  distanceJoint2D: {fileID: 8752022394912870679}
-  lineRenderer: {fileID: 6968400280137975918}
-  ropeLayer:
-    serializedVersion: 2
-    m_Bits: 72
-  maxAnchorDistance: 8
   moveSpeed: 5
-  ropeSpeed: 10
   jumpForce: 8
   acceleration: 7
   dashSpeedThereshold: 15
   maxSpeed: 25
+  defaultGravityScale: 2.5
+  jumpGravityScale: 1
+  distanceJoint2D: {fileID: 8752022394912870679}
+  lineRenderer: {fileID: 6968400280137975918}
+  ropeSpeed: 10
+  whatIsRopeable:
+    serializedVersion: 2
+    m_Bits: 328
+  maxAnchorDistance: 8
 --- !u!1 &3645396174606679076
 GameObject:
   m_ObjectHideFlags: 0

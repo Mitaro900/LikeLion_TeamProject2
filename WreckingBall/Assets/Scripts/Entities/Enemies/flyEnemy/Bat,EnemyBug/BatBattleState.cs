@@ -16,8 +16,8 @@ public class BatBattleState : EnemyState
         base.Enter();
         player = Playertest.instance.player.transform;
         enemy.moveSpeed += 2f;
-        enemy.radius += 3f;
-        enemy.playerCheckRadius += 3f;
+        enemy.Radius += 3f;
+        enemy.PlayerCheckRadius += 3f;
     }
 
     public override void Update()
@@ -58,14 +58,14 @@ public class BatBattleState : EnemyState
     {
         base.Exit();
         enemy.moveSpeed -= 2f;
-        enemy.radius -= 3f;
-        enemy.playerCheckRadius -= 3f;
+        enemy.Radius -= 3f;
+        enemy.PlayerCheckRadius -= 3f;
     }
 
 
     private bool CanAttack()
     {
-        if(Time.time >= enemy.lastTimeAttacked + enemy.attackCooldown)
+        if(Time.time >= enemy.lastTimeAttacked + enemy.AttackCooldown)
         {
             enemy.SetZeroVelocity();
             enemy.lastTimeAttacked = Time.time;

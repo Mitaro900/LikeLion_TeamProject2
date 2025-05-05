@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerDashState : PlayerState
 {
-    private float finalSpeed;
+    private float finalXSpeed;
 
     public PlayerDashState(Entity entity, StateMachine stateMachine, string animBoolName, Player player) : base(entity, stateMachine, animBoolName, player)
     {
@@ -14,11 +14,11 @@ public class PlayerDashState : PlayerState
 
         if(player.stateMachine.previousState == player.turnState)
         {
-            finalSpeed = player.DashSpeedThereshold;
+            finalXSpeed = player.DashSpeedThereshold;
         }
         else
         {
-            finalSpeed = player.MoveSpeed;
+            finalXSpeed = player.MoveSpeed;
         }
     }
 
@@ -32,24 +32,24 @@ public class PlayerDashState : PlayerState
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.Z) && (player.IsGroundDetected() || player.isAchored))
+        if(Input.GetKeyDown(KeyCode.Z) && (player.IsGroundDetected() || player.IsAchored))
         {
-            rb.gravityScale = 1.0f;
+            rb.gravityScale = player.JumpGravityScale;
             rb.linearVelocity = new Vector2(rb.linearVelocityX, player.JumpForce);
         }
         else if (Input.GetKeyUp(KeyCode.Z))
         {
-            rb.gravityScale = 2.5f;
+            rb.gravityScale = player.DefaultGravityScale;
         }
         
-        finalSpeed += player.Acceleration * Time.deltaTime;
+        finalXSpeed += player.Acceleration * Time.deltaTime;
 
-        if (finalSpeed > player.MaxSpeed)
+        if (finalXSpeed > player.MaxSpeed)
         {
-            finalSpeed = player.MaxSpeed;
+            finalXSpeed = player.MaxSpeed;
         }
 
-        if (player.IsGroundDetected() && finalSpeed >= player.DashSpeedThereshold)
+        if (player.IsGroundDetected() && finalXSpeed >= player.DashSpeedThereshold)
         {
             if((xInput > 0 && !player.facingRight) || (xInput < 0 && player.facingRight))
             {
@@ -57,13 +57,13 @@ public class PlayerDashState : PlayerState
             }
         }
 
-        if (player.isAchored)
+        if (player.IsAchored)
         {
-            player.RopeAction(finalSpeed);
+            player.RopeAction(finalXSpeed);
         }
         else
         {
-            player.SetVelocity(finalSpeed * player.facingDir, rb.linearVelocityY);
+            player.SetVelocity(finalXSpeed * player.facingDir, rb.linearVelocityY);
         }
     }
 
@@ -71,6 +71,6 @@ public class PlayerDashState : PlayerState
     {
         base.Exit();
 
-        rb.gravityScale = 2.5f;
+        rb.gravityScale = player.DefaultGravityScale;
     }
 }
