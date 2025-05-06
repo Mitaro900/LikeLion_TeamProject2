@@ -21,7 +21,7 @@ public class PlayerGroundedState : PlayerState
             return;
         }
 
-        if (player.IsAchored)
+        if (player.IsAnchored)
         {
             player.stateMachine.ChangeState(player.anchoredState);
             return;

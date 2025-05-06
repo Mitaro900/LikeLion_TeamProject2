@@ -22,7 +22,7 @@ public class PlayerAirborneState : PlayerState
             player.stateMachine.ChangeState(player.bodyslamState);
         }
 
-        if (player.IsAchored)
+        if (player.IsAnchored)
         {
             player.stateMachine.ChangeState(player.anchoredState);
         }

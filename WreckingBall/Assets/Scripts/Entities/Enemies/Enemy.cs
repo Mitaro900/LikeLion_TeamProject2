@@ -58,7 +58,7 @@ public class Enemy : Entity
     {
         base.Update();
 
-        stateMachine.currentState.Update();
+        //stateMachine.currentState.Update();
 
         RaycastHit2D hit = IsPlayerDetected();
         if (hit.collider != null)

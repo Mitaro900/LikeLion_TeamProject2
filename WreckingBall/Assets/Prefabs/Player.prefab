@@ -157,7 +157,9 @@ LineRenderer:
   m_SortingLayerID: 325042895
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Positions: []
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.1
@@ -280,13 +282,13 @@ MonoBehaviour:
   maxSpeed: 25
   defaultGravityScale: 2.5
   jumpGravityScale: 1
-  distanceJoint2D: {fileID: 8752022394912870679}
+  distanceJoint: {fileID: 8752022394912870679}
   lineRenderer: {fileID: 6968400280137975918}
   ropeSpeed: 10
+  maxRopeDistance: 8
   whatIsRopeable:
     serializedVersion: 2
     m_Bits: 328
-  maxAnchorDistance: 8
 --- !u!1 &3645396174606679076
 GameObject:
   m_ObjectHideFlags: 0

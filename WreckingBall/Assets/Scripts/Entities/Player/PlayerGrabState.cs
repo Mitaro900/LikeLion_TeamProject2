@@ -17,7 +17,7 @@ public class PlayerGrabState : PlayerState
     {
         base.Update();
 
-        if (Input.GetKeyDown(KeyCode.Z) && (player.IsGroundDetected() || player.IsAchored))
+        if (Input.GetKeyDown(KeyCode.Z) && (player.IsGroundDetected() || player.IsAnchored))
         {
             rb.gravityScale = player.JumpGravityScale;
             rb.linearVelocity = new Vector2(rb.linearVelocityX, player.JumpForce);

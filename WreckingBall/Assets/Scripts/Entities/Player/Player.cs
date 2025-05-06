@@ -27,20 +27,18 @@ public class Player : Entity
     public float JumpGravityScale { get => jumpGravityScale; }
 
     [Header("로프 정보")]
-    [SerializeField] private DistanceJoint2D distanceJoint2D;
+    [SerializeField] private DistanceJoint2D distanceJoint;
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private float ropeSpeed = 10f;
     public float RopeSpeed { get => ropeSpeed; }
-    
+
+    [SerializeField] private float maxRopeDistance = 8f;
     [SerializeField] private LayerMask whatIsRopeable;
-    [SerializeField] private float maxAnchorDistance = 8f;
 
     private Coroutine ropeCo = null;
-    private bool ropeAnimating = false;
+    private bool isRopeActive = false;
 
-    public bool IsAchored { get => distanceJoint2D.enabled; set => distanceJoint2D.enabled = value; } // 물체에 매달려 있는지 여부
-    private bool isBusy = false;
-    public bool IsBusy { get => isBusy; set => isBusy = value; }
+    public bool IsAnchored { get => distanceJoint.enabled; set => distanceJoint.enabled = value; } // 물체에 매달려 있는지 여부
 
     #region States
     public StateMachine stateMachine { get; private set; }
@@ -77,9 +75,9 @@ public class Player : Entity
     {
         base.Start();
 
-        distanceJoint2D = GetComponent<DistanceJoint2D>();
+        distanceJoint = GetComponent<DistanceJoint2D>();
         lineRenderer = GetComponent<LineRenderer>();
-        distanceJoint2D.enabled = false; // 초기에는 비활성화
+        distanceJoint.enabled = false; // 초기에는 비활성화
         lineRenderer.positionCount = 0; // 라인 렌더러 초기화
 
         stateMachine.Initialize(idleState);
@@ -96,17 +94,19 @@ public class Player : Entity
             ReleaseRope();
         }
 
-        if (Input.GetKeyDown(KeyCode.X) && !ropeAnimating && !IsBusy)
+        if (Input.GetKeyDown(KeyCode.X))
         {
-            LaunchRope();
+            if (!isRopeActive && !IsBusy)
+                LaunchRope();
+            else if (IsAnchored)
+                ReleaseRope();
         }
     }
 
     public void ReleaseRope()
     {
-        if (ropeAnimating)
+        if (isRopeActive)
         {
-            if (ropeCo != null) StopCoroutine(ropeCo);
             StopSwing();
         }
     }
@@ -117,28 +117,39 @@ public class Player : Entity
         Vector3 dir = Vector3.zero;
         dir = new Vector3(facingDir, 1, 0).normalized;
 
-        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, dir, maxAnchorDistance, whatIsRopeable);
-        bool find = false;
+        Vector2 endPos = transform.position + dir.normalized * maxRopeDistance;
+
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, dir, maxRopeDistance, whatIsRopeable);
         foreach (var hit in hits)
         {
             if (hit.collider == null) continue;
             if (hit.collider.gameObject == this.gameObject) continue;
-            find = true;
-            ropeCo = StartCoroutine(ThrowRopeAnimSuccess(hit.point));
-            break;
+            if (hit.collider.CompareTag("Ropeable"))
+            {
+                ropeCo = StartCoroutine(AnchorRope(hit.point));
+                return;
+            }
+            else if(hit.collider.CompareTag("Enemy"))
+            {
+                // 적과 충돌 시 처리
+                // 예: 적에게 데미지 주기, 적을 밀어내기 등
+                // hit.collider.GetComponent<Enemy>().TakeDamage(damage);
+                return;
+            }
+            else if (hit.collider.CompareTag("Ground"))
+            {
+                endPos = hit.point;
+                break;
+            }
         }
 
-        if (!find)
-        {
-            Vector2 endPos = transform.position + dir.normalized * maxAnchorDistance;
-            ropeCo = StartCoroutine(ThrowRopeAnimFail(endPos));
-        }
+        ropeCo = StartCoroutine(ReturnRope(endPos));
     }
 
     public void RopeAction(float _speed)
     {
         //캐릭터시선기준 AddForce.
-        Vector2 anchorToPlayer = (Vector2)transform.position - distanceJoint2D.connectedAnchor;
+        Vector2 anchorToPlayer = (Vector2)transform.position - distanceJoint.connectedAnchor;
         Vector2 tangent = new Vector2(-anchorToPlayer.y, anchorToPlayer.x).normalized;
         rb.AddForce(tangent * facingDir * _speed, ForceMode2D.Force);
 
@@ -146,27 +157,29 @@ public class Player : Entity
         //rb.AddForce(new Vector2(moveInput.x * swingForce, 0), ForceMode2D.Force);
     }
 
-    private void StartSwing(Vector2 anchorPoint)
+    public void StartSwing(Vector2 anchorPoint)
     {
-        distanceJoint2D.autoConfigureConnectedAnchor = false;
-        distanceJoint2D.connectedAnchor = anchorPoint;
-        distanceJoint2D.enabled = true;
+        distanceJoint.autoConfigureConnectedAnchor = false;
+        distanceJoint.connectedAnchor = anchorPoint;
+        distanceJoint.enabled = true;
     }
 
     private void StopSwing()
     {
-        distanceJoint2D.enabled = false;
-        ropeAnimating = false;
+        if (ropeCo != null) StopCoroutine(ropeCo);
+
+        distanceJoint.enabled = false;
+        isRopeActive = false;
         lineRenderer.positionCount = 0; // 라인 렌더러 초기화
     }
 
-    private IEnumerator ThrowRopeAnimFail(Vector2 targetPos)
+    private IEnumerator ReturnRope(Vector2 targetPos)
     {
-        ropeAnimating = true;
+        isRopeActive = true;
         lineRenderer.positionCount = 2;
         Vector2 startPos = transform.position;
         lineRenderer.SetPosition(0, startPos);
-        lineRenderer.SetPosition(1, startPos);
+        lineRenderer.SetPosition(1, targetPos);
 
         float progress = 0f;
         while (progress < 1f)
@@ -191,16 +204,15 @@ public class Player : Entity
         }
 
         lineRenderer.positionCount = 0;
-        ropeAnimating = false;
+        isRopeActive = false;
     }
 
-    private IEnumerator ThrowRopeAnimSuccess(Vector2 targetPos)
+    private IEnumerator AnchorRope(Vector2 targetPos)
     {
-        ropeAnimating = true;
+        isRopeActive = true;
         lineRenderer.positionCount = 2;
         lineRenderer.SetPosition(0, transform.position);
         lineRenderer.SetPosition(1, transform.position);
-
 
         float progress = 0f;
         while (progress < 1f)
@@ -219,6 +231,7 @@ public class Player : Entity
         while (true)
         {
             lineRenderer.SetPosition(0, transform.position);
+            lineRenderer.SetPosition(1, targetPos);
             yield return null;
         }
     }

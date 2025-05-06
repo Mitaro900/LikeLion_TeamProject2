@@ -22,6 +22,9 @@ public class Entity : MonoBehaviour
     public float facingDir { get; private set; } = 1f;
     public bool facingRight { get; private set; } = true; // 기본값은 오른쪽
 
+    private bool isBusy = false;
+    public bool IsBusy { get => isBusy; set => isBusy = value; }
+
     protected virtual void Awake()
     {
 

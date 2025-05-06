@@ -12,6 +12,8 @@ public class PlayerDashState : PlayerState
     {
         base.Enter();
 
+        stateTimer = 0.5f;
+
         if(player.stateMachine.previousState == player.turnState)
         {
             finalXSpeed = player.DashSpeedThereshold;
@@ -32,7 +34,7 @@ public class PlayerDashState : PlayerState
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.Z) && (player.IsGroundDetected() || player.IsAchored))
+        if(Input.GetKeyDown(KeyCode.Z) && (player.IsGroundDetected() || player.IsAnchored))
         {
             rb.gravityScale = player.JumpGravityScale;
             rb.linearVelocity = new Vector2(rb.linearVelocityX, player.JumpForce);
@@ -49,7 +51,7 @@ public class PlayerDashState : PlayerState
             finalXSpeed = player.MaxSpeed;
         }
 
-        if (player.IsGroundDetected() && finalXSpeed >= player.DashSpeedThereshold)
+        if (player.IsGroundDetected() && finalXSpeed >= player.DashSpeedThereshold && stateTimer <= 0)
         {
             if((xInput > 0 && !player.facingRight) || (xInput < 0 && player.facingRight))
             {
@@ -57,7 +59,7 @@ public class PlayerDashState : PlayerState
             }
         }
 
-        if (player.IsAchored)
+        if (player.IsAnchored)
         {
             player.RopeAction(finalXSpeed);
         }
