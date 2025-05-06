@@ -1,7 +1,6 @@
 using DG.Tweening;
 using PKR;
 using System.Collections.Generic;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -49,24 +48,11 @@ public class WildWolf : Boss
         base.bossPage = bossPage;
         base.bossMaxPage = bossMaxPage;
         base.damageEvent = damageEvent;
-        base.damageEvent += (_ab) =>
+        base.pageChageEvent = pageChageEvent;
+        base.pageChageEvent += (ab) =>
         {
-            //if (_ab.hp <= 0)
-            //{
-            //    if (bossPage == bossMaxPage)
-            //    {
-            //        deathEvent?.Invoke();
-            //    }
-            //    else
-            //    {
-            //        pageChageEvent?.Invoke(_ab);
-            //        bossPage++;
-            //        if(sr.color != Color.red)
-            //            sr.DOColor(Color.red, 0.5f);
-            //        ability.moveSpeed += 0.5f;
-            //    }
-            //}
-            controller.NextAction(true);
+            if (sr.color == Color.white)
+                sr.DOColor(Color.red, 0.5f);
         };
     }
 

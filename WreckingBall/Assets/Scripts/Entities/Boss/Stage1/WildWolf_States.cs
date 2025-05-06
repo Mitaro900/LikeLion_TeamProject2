@@ -1,7 +1,6 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary> 달리기+공격 애니메이션 </summary>
@@ -493,7 +492,8 @@ public class WildWolf_TakeDown_DirectAttackState : Boss_AttackState
 
     public override void Enter(bool isAnimPlay = true)
     {
-        base.Enter();
+        animBoolName = "Attack";
+        base.Enter(true);
         animIndex = 0;
         wallPos = new Vector2(FindWall() + boss.transform.position.x, boss.transform.position.y);
     }
