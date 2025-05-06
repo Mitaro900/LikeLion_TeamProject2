@@ -1,9 +1,9 @@
+using DG.Tweening;
 using PKR;
 using System.Collections.Generic;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UIElements;
 
 public class WildWolf : Boss
 {
@@ -36,8 +36,8 @@ public class WildWolf : Boss
     [SerializeField] private List<StringIntPair> trapsPrefab;
     private List<TrapBase> throwTraps = new();
     private List<TrapBase> droppingTraps = new();
-    [SerializeField] private Transform throwPos;
-    [SerializeField] private Transform dropPos;
+    public Transform throwPos;
+    public Transform dropPos;
     #endregion
 
 
@@ -51,18 +51,21 @@ public class WildWolf : Boss
         base.damageEvent = damageEvent;
         base.damageEvent += (_ab) =>
         {
-            if (_ab.hp <= 0)
-            {
-                if (bossPage == bossMaxPage)
-                {
-                    deathEvent?.Invoke();
-                }
-                else
-                {
-                    pageChageEvent?.Invoke(_ab);
-                    bossPage++;
-                }
-            }
+            //if (_ab.hp <= 0)
+            //{
+            //    if (bossPage == bossMaxPage)
+            //    {
+            //        deathEvent?.Invoke();
+            //    }
+            //    else
+            //    {
+            //        pageChageEvent?.Invoke(_ab);
+            //        bossPage++;
+            //        if(sr.color != Color.red)
+            //            sr.DOColor(Color.red, 0.5f);
+            //        ability.moveSpeed += 0.5f;
+            //    }
+            //}
             controller.NextAction(true);
         };
     }
@@ -75,18 +78,18 @@ public class WildWolf : Boss
         runAttackState = new WildWolf_RunAttackState(stateMachine, this, "RunAttack", this);
         AddState(runAttackState);
 
-        throwTrapState = new WildWolf_ThrowTrapState(stateMachine, this, "ThrowTrap", this);
+        throwTrapState = new WildWolf_ThrowTrapState(stateMachine, this, "ThrowTrap", this, trapsPrefab[0].Key, trapsPrefab[0].Value);
         AddState(throwTrapState);
-        floorSlideState = new WildWolf_FloorSlideState(stateMachine, this, "FloorSlide", this);
+        floorSlideState = new WildWolf_FloorSlideState(stateMachine, this, "FloorSlide", this, Random.Range(2, 2));
         AddState(floorSlideState);
-        jumpAttackState = new WildWolf_JumpAttackState(stateMachine, this, "JumpAttack", this);
+        jumpAttackState = new WildWolf_JumpAttackState(stateMachine, this, "JumpAttack", this, Random.Range(4, 2));
         AddState(jumpAttackState);
 
         aerialSlideState = new WildWolf_AerialSlideState(stateMachine, this, "AerialSlide", this);
         AddState(aerialSlideState);
         vattackState = new WildWolf_TakeDown_VAttackState(stateMachine, this, "TakeDown_VAttack", this);
         AddState(vattackState);
-        directAttackState = new WildWolf_TakeDown_DirectAttackState(stateMachine, this, "TakeDown_DirectAttack", this);
+        directAttackState = new WildWolf_TakeDown_DirectAttackState(stateMachine, this, "TakeDown_DirectAttack", this, 3);
         AddState(directAttackState);
         droppingTrapState = new WildWolf_DroppingTrapState(stateMachine, this, "DroppingTrap", this);
         AddState(droppingTrapState);

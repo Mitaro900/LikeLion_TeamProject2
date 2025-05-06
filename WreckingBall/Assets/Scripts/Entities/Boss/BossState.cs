@@ -123,7 +123,7 @@ public class Boss_MoveState : BossState
         base.Update();
         if (canMove)
             boss.SetVelocity(boss.GetFacingDir() * boss.GetAbility().moveSpeed * moveBoost, 0);
-        Debug.Log(nameof(Boss_MoveState) + " " + nameof(Update) + $" moveSpeed : {boss.GetAbility().moveSpeed} / {nameof(moveBoost)} : {moveBoost}");
+        //Debug.Log(nameof(Boss_MoveState) + " " + nameof(Update) + $" moveSpeed : {boss.GetAbility().moveSpeed} / {nameof(moveBoost)} : {moveBoost}");
     }
 
     public override void AnimationFinishTrigger()

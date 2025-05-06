@@ -23,12 +23,14 @@ public struct EntityAbnormalState
 public struct EntityAbility
 {
     public int hp;
+    public int maxHp;
     public float moveSpeed;
     public float jumpPower;
 
-    public EntityAbility(int hp, float moveSpeed, float jumpPower)
+    public EntityAbility(int hp, int maxHp, float moveSpeed, float jumpPower)
     {
         this.hp = hp;
+        this.maxHp = maxHp;
         this.moveSpeed = moveSpeed;
         this.jumpPower = jumpPower;
     }
@@ -82,7 +84,24 @@ public class Boss : EntityCollision
     public bool IsGiveDamagedAction() => isGiveDamagedAction;
     public void InitGiveDamagedAction() => isGiveDamagedAction = false;
 
-    public virtual void Damage() => damageEvent?.Invoke(ability);
+    public virtual void Damage()
+    {
+        if(ability.hp <= 0)
+        {
+            if(bossPage >= bossMaxPage)
+                deathEvent?.Invoke();
+            
+            else
+            {
+                bossPage++;
+                ability.hp = ability.maxHp;
+                pageChageEvent?.Invoke(ability);
+            }
+            
+        }
+        else
+            damageEvent?.Invoke(ability);
+    }
 
 
     protected override void Start()

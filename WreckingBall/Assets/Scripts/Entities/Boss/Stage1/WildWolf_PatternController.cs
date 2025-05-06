@@ -68,26 +68,40 @@ public class WildWolf_PatternController : MonoBehaviour
         switch(wolf.GetBossPage())
         {
             case 1:
-                //bool is1Cool_2 = IsPatternCooldown(nameof(Page1_Pattern2));
-                //bool is1Cool_3 = IsPatternCooldown(nameof(Page1_Pattern3));
-                //if(!is1Cool_2)
-                    return nameof(Page1_Pattern2);
-                //else if(!is1Cool_3)
-                //    return nameof(Page1_Pattern3);
-                //else
-                    //return nameof(Page1_Pattern1);
-                
+                List<string> actions = new();
+                if(IsPatternCooldown(nameof(Page1_Pattern2)) == false)
+                    actions.Add(nameof(Page1_Pattern2));
+                if(IsPatternCooldown(nameof(Page1_Pattern3)) == false)
+                    actions.Add(nameof(Page1_Pattern3));
+                if (actions.Count == 0 || IsPatternCooldown(nameof(Page1_Pattern1)) == false)
+                {
+                    if(IsPatternCooldown(nameof(Page1_Pattern1)))
+                    {
+                        int index = patternCooldown.FindIndex(i => i.Key == nameof(Page1_Pattern1));
+                        if (index != -1)
+                            patternCooldown[index].Value = 0;
+                        else
+                            patternCooldown.Add(new(nameof(Page1_Pattern1), 0f));
+                    }
+                    else if(actions.Count == 0)
+                        return nameof(Page1_Pattern1);
+
+                    actions.Add(nameof(Page1_Pattern1));
+                }
+
+                return actions[Random.Range(0, actions.Count)];
+
             case 2:
-                bool is2Cool_1 = IsPatternCooldown(nameof(Page2_Pattern1));
-                bool is2Cool_2 = IsPatternCooldown(nameof(Page2_Pattern2));
-                bool is2Cool_3 = IsPatternCooldown(nameof(Page2_Pattern3));
-                if(!is2Cool_1)
-                    return nameof(Page2_Pattern1);
-                else if(!is2Cool_2)
-                    return nameof(Page2_Pattern2);
-                else if(!is2Cool_3)
-                    return nameof(Page2_Pattern3);
-                else
+                //bool is2Cool_1 = IsPatternCooldown(nameof(Page2_Pattern1));
+                //bool is2Cool_2 = IsPatternCooldown(nameof(Page2_Pattern2));
+                //bool is2Cool_3 = IsPatternCooldown(nameof(Page2_Pattern3));
+                //if(!is2Cool_1)
+                //    return nameof(Page2_Pattern1);
+                //else if(!is2Cool_2)
+                //    return nameof(Page2_Pattern2);
+                //else if(!is2Cool_3)
+                //    return nameof(Page2_Pattern3);
+                //else
                     return nameof(Page2_Pattern4);
         }
         return null;
@@ -139,42 +153,45 @@ public class WildWolf_PatternController : MonoBehaviour
     /// </summary>
     public void Page1_Pattern1()
     {
-        //Debug.Log(nameof(WildWolf_PatternController) + " " + nameof(Page1_Pattern1)+ " Call");
         string _n = nameof(Page1_Pattern1);
         if (patternName != _n && isPatternStart && !isPatternEnd)
             return;
-        //Debug.Log(nameof(WildWolf_PatternController) + " " + nameof(Page1_Pattern1) + " Start");
-        if (isPatternStart || !isPatternEnd)
-        {
-            patternIndex++;
-            if(patternIndex > 5)
-            {
-                PatternInit(_n);
-            }
-            else
-            {
-                if(wolf.stateMachine.currentState != wolf.runAttackState)
-                    wolf.stateMachine.ChangeState(wolf.runAttackState);
-            }
-        }
-        else
-        {
-            wolf.stateMachine.ChangeState(wolf.runAttackState);
-            patternName = _n;
-            patternIndex = 0;
-            isPatternEnd = false;
-            isPatternStart = true;
-            if(wolf.stateMachine.currentState.animBoolName.Contains("Run"))
-            {
-                patternIndex++;
-            }
-            else
-            {
-                wolf.stateMachine.ChangeState(wolf.runState);
-            }
-            
-        }
-        
+        patternName = _n;
+        patternIndex = 0;
+        isPatternEnd = false;
+        isPatternStart = true;
+        wolf.stateMachine.ChangeState(wolf.runAttackState);
+        //if (isPatternStart || !isPatternEnd)
+        //{
+        //    patternIndex++;
+        //    if(patternIndex > 5)
+        //    {
+        //        PatternInit(_n);
+        //    }
+        //    else
+        //    {
+        //        if(wolf.stateMachine.currentState != wolf.runAttackState)
+        //            wolf.stateMachine.ChangeState(wolf.runAttackState);
+        //    }
+        //}
+        //else
+        //{
+        //    wolf.stateMachine.ChangeState(wolf.runAttackState);
+        //    patternName = _n;
+        //    patternIndex = 0;
+        //    isPatternEnd = false;
+        //    isPatternStart = true;
+        //    if(wolf.stateMachine.currentState.animBoolName.Contains("Run"))
+        //    {
+        //        patternIndex++;
+        //    }
+        //    else
+        //    {
+        //        wolf.stateMachine.ChangeState(wolf.runState);
+        //    }
+
+        //}
+
     }
 
     /// <summary> ,
@@ -185,7 +202,7 @@ public class WildWolf_PatternController : MonoBehaviour
     /// </summary>
     public void Page1_Pattern2()
     {
-        string _n = nameof(Page1_Pattern1);
+        string _n = nameof(Page1_Pattern2);
         if (patternName != _n && isPatternStart && !isPatternEnd)
             return;
 
@@ -193,7 +210,6 @@ public class WildWolf_PatternController : MonoBehaviour
         patternIndex = 0;
         isPatternEnd = false;
         isPatternStart = true;
-        wolf.floorSlideState.SetAttackCount(Random.Range(2, 2));
         wolf.stateMachine.ChangeState(wolf.floorSlideState);
     }
 
@@ -203,7 +219,11 @@ public class WildWolf_PatternController : MonoBehaviour
     /// </summary>
     public void Page1_Pattern3()
     {
-        patternName = "Page1_Pattern3";
+        string _n = nameof(Page1_Pattern3);
+        if (patternName != _n && isPatternStart && !isPatternEnd)
+            return;
+
+        patternName = _n;
         patternIndex = 0;
         isPatternEnd = false;
         isPatternStart = true;
@@ -272,7 +292,11 @@ public class WildWolf_PatternController : MonoBehaviour
     /// </summary>
     public void Page2_Pattern4()
     {
-        patternName = "Page2_Pattern4";
+        string _n = nameof(Page2_Pattern4);
+        if (patternName != _n && isPatternStart && !isPatternEnd)
+            return;
+
+        patternName = _n;
         patternIndex = 0;
         isPatternEnd = false;
         isPatternStart = true;

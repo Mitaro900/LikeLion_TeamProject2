@@ -1,3 +1,7 @@
+using DG.Tweening;
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary> 달리기+공격 애니메이션 </summary>
@@ -133,9 +137,10 @@ public class WildWolf_FloorSlideState : Boss_MoveState
     private Collider2D collider;
     private WildWolf wolf;
 
-    public WildWolf_FloorSlideState(BossStateMachine stateMachine, Boss boss, string animBoolName, WildWolf wolf) : base(stateMachine, boss, animBoolName)
+    public WildWolf_FloorSlideState(BossStateMachine stateMachine, Boss boss, string animBoolName, WildWolf wolf, int count) : base(stateMachine, boss, animBoolName)
     {
         this.wolf = wolf;
+        maxAttackCount = count;
     }
 
     public override void Enter(bool isAnimPlay = true)
@@ -217,6 +222,7 @@ public class WildWolf_FloorSlideState : Boss_MoveState
 
             if(pos == boss.oriPos)
             {
+                Debug.Log("끝");
                 boss.Flip();
                 stateMachine.ChangeState(wolf.idleState);
             }
@@ -243,20 +249,20 @@ public class WildWolf_FloorSlideState : Boss_MoveState
         if (attackCount >= maxAttackCount)
             isReturnning = true;
     }
-
-    public void SetAttackCount(int count)
-    {
-        maxAttackCount = count;
-    }
 }
 
 /// <summary> 통통 튕기기 공격 </summary>
 public class WildWolf_JumpAttackState : Boss_AttackState
 {
+    public int attackCount { get; protected set; } = 0;
+    public int maxAttackCount { get; protected set; } = 1;
+    private bool isPlayerAttacked = false;
+
     private WildWolf wolf;
-    public WildWolf_JumpAttackState(BossStateMachine stateMachine, Boss boss, string animBoolName, WildWolf wolf) : base(stateMachine, boss, animBoolName)
+    public WildWolf_JumpAttackState(BossStateMachine stateMachine, Boss boss, string animBoolName, WildWolf wolf, int count) : base(stateMachine, boss, animBoolName)
     {
         this.wolf = wolf;
+        maxAttackCount = count;
     }
 
     public override void Enter(bool isAnimPlay = true)
@@ -272,6 +278,24 @@ public class WildWolf_JumpAttackState : Boss_AttackState
     public override void Update()
     {
         base.Update();
+
+        //공격하는 부분
+        if (boss.AttackCheck() != null && boss.IsGiveDamagedAction())
+        {
+            //임시 무적
+            if (!isPlayerAttacked)
+            {
+                Debug.Log("Player.Damage");
+                wolf.player.Damage();
+                Rigidbody2D _rb = wolf.player.GetComponent<Rigidbody2D>();
+                _rb.AddForce(Vector2.up, ForceMode2D.Impulse);
+
+                isPlayerAttacked = true;
+            }
+
+        }
+        else if (boss.IsGiveDamagedAction() == false && isPlayerAttacked)
+            isPlayerAttacked = false;
     }
 
     public override void AnimationFinishTrigger()
@@ -283,15 +307,33 @@ public class WildWolf_JumpAttackState : Boss_AttackState
 /// <summary> 트랩 던지기 공격 </summary>
 public class WildWolf_ThrowTrapState : BossState
 {
+    protected TrapPoolManager pool;
+
+    protected float throwCooldown = 1f;
+    protected float throwDelay = 0f;
+    protected int throwCount = 0;
+    protected int maxThrowCount = 1;
+    protected string throwName;
+
+    protected Coroutine throwCoroutine = null;
+
     private WildWolf wolf;
-    public WildWolf_ThrowTrapState(BossStateMachine stateMachine, Boss boss, string animBoolName, WildWolf wolf) : base(stateMachine, boss, animBoolName)
+    public WildWolf_ThrowTrapState(BossStateMachine stateMachine, Boss boss, string animBoolName, WildWolf wolf, string throwName, int throwCount) : base(stateMachine, boss, animBoolName)
     {
         this.wolf = wolf;
+        this.throwName = throwName;
+        this.maxThrowCount = throwCount;
     }
 
     public override void Enter(bool isAnimPlay = true)
     {
         base.Enter();
+        if(pool == null)
+            pool = GameObject.FindFirstObjectByType<TrapPoolManager>();
+
+        throwDelay = 0;
+        boss.anim.SetBool("NextThrow", false);
+        throwCoroutine = null;
     }
 
     public override void Exit(bool isAnimPlay = true)
@@ -299,14 +341,41 @@ public class WildWolf_ThrowTrapState : BossState
         base.Exit(isAnimPlay);
     }
 
-    public override void Update()
-    {
-        base.Update();
-    }
-
     public override void AnimationFinishTrigger()
     {
         base.AnimationFinishTrigger();
+        if(nowAnimName.Contains("Ready") && throwCoroutine == null)
+            throwCoroutine = wolf.StartCoroutine(this.ThrowTrapCoroutine());
+    }
+
+    public IEnumerator ThrowTrapCoroutine()
+    {
+        WaitForSeconds wait = new(throwCooldown);
+        if (pool != null)
+        {
+            List<GameObject> _traps = pool.Call(throwName, wolf.throwPos.position, maxThrowCount);
+
+            for (int i = 0; i < _traps.Count; i++)
+            {
+                GameObject _trap = _traps[i];
+                _trap.SetActive(true);
+
+                boss.anim.SetBool("NextThrow", i + 1 < _traps.Count);
+                boss.anim.SetTrigger("Throw");
+
+                //Debug.Log(nameof(WildWolf_ThrowTrapState) + " " + nameof(ThrowTrapCoroutine) + $" Throw Call : {_trap.name}", _trap);
+
+                _trap.transform.DOJump(wolf.player.transform.position, 10f, 1, 1f).SetEase(Ease.Linear).OnComplete(() =>
+                {
+                    //TrapBase trap = _trap.GetComponent<TrapBase>();
+                    _trap.SetActive(false);
+                });
+                
+                yield return wait;
+            }
+        }
+
+        stateMachine.ChangeState(wolf.idleState);
     }
 }
 
@@ -403,15 +472,30 @@ public class WildWolf_DroppingTrapState : BossState
 /// <summary> 벽에서 대각으로 내려찍기 공격 </summary>
 public class WildWolf_TakeDown_DirectAttackState : Boss_AttackState
 {
+    //인덱스0 : 벽찾기
+    private bool isWallArrived = false;
+    private Vector2 wallPos = Vector2.zero;
+    private Vector2 directPos = Vector2.zero;
+
+    private int animIndex = 0;
+    private int attackCount = 0;
+    private int maxAttackCount = 1;
+
+    private bool isPlayerAttacked = false;
+
     private WildWolf wolf;
-    public WildWolf_TakeDown_DirectAttackState(BossStateMachine stateMachine, Boss boss, string animBoolName, WildWolf wolf) : base(stateMachine, boss, animBoolName)
+    public WildWolf_TakeDown_DirectAttackState(BossStateMachine stateMachine, Boss boss, string animBoolName, WildWolf wolf, int attackCount) : base(stateMachine, boss, animBoolName)
     {
         this.wolf = wolf;
+        isWallArrived = false;
+        this.maxAttackCount = attackCount;
     }
 
     public override void Enter(bool isAnimPlay = true)
     {
         base.Enter();
+        animIndex = 0;
+        wallPos = new Vector2(FindWall() + boss.transform.position.x, boss.transform.position.y);
     }
 
     public override void Exit(bool isAnimPlay = true)
@@ -422,10 +506,116 @@ public class WildWolf_TakeDown_DirectAttackState : Boss_AttackState
     public override void Update()
     {
         base.Update();
+
+        //공격하는 부분
+        if (boss.AttackCheck() != null && boss.IsGiveDamagedAction())
+        {
+            //임시 무적
+            if (!isPlayerAttacked)
+            {
+                Debug.Log("Player.Damage");
+                wolf.player.Damage();
+                Rigidbody2D _rb = wolf.player.GetComponent<Rigidbody2D>();
+                _rb.AddForce(Vector2.up, ForceMode2D.Impulse);
+                isPlayerAttacked = true;
+            }
+        }
+        else if (boss.IsGiveDamagedAction() == false && isPlayerAttacked)
+            isPlayerAttacked = false;
+
+
+
+        //이동하는 부분
+        switch (animIndex)
+        {
+            //벽으로 이동
+            case 0:
+                if (directPos != Vector2.zero)
+                    directPos = Vector2.zero;
+
+                if (isWallArrived)
+                    animIndex++;
+                else
+                {
+                    int dir = wallPos.x > 0 ? 1 : -1;
+                    if(boss.GetFacingDir() != dir)
+                        boss.Flip();
+                    boss.SetVelocity(boss.GetAbility().moveSpeed * dir);
+                    if (Vector2.Distance(boss.transform.position, wallPos) <= 10f)
+                    {
+                        isWallArrived = true;
+                        animIndex++;
+                        boss.SetZeroVelocity();
+                    }
+                }
+
+                break;
+            //벽 오르기
+            case 1:
+                if (directPos != Vector2.zero)
+                    directPos = Vector2.zero;
+                if (rb.gravityScale != 0)
+                    rb.gravityScale = 0;
+
+                if (boss.IsGroundDetected())
+                    boss.StartCoroutine(ClimbWall());
+
+                break;
+            //벽에서 내려찍기
+            case 2:
+                if (rb.gravityScale != 1)
+                    rb.gravityScale = 1;
+
+                //땅에 도착했는지 체크
+                if (boss.IsGroundDetected())
+                {
+                    animIndex = 0;
+                    attackCount++;
+                    if(attackCount >= maxAttackCount)
+                        stateMachine.ChangeState(wolf.idleState);
+                    else
+                    {
+                        isWallArrived = false;
+                        wallPos = new Vector2(FindWall() + boss.transform.position.x, boss.transform.position.y);
+                    }
+                }
+                //땅에 아직 도착 안했을경우
+                else
+                {
+                    if(directPos != Vector2.zero)
+                    {
+                        boss.transform.DOMove(directPos, 0.5f).SetEase(Ease.Linear);
+                        directPos = Vector2.zero;
+                    }
+                }
+                break;
+        }
+
     }
 
-    public override void AnimationFinishTrigger()
+    private float FindWall()
     {
-        base.AnimationFinishTrigger();
+        float left = 0f, right = 0f;
+        while(Physics2D.Raycast(boss.transform.position, Vector2.left, left, LayerMask.GetMask("Ground")) == false)
+            left += 0.1f;
+        while (Physics2D.Raycast(boss.transform.position, Vector2.right, right, LayerMask.GetMask("Ground")) == false)
+            right += 0.1f;
+
+        return left < right ? -left : right;
+    }
+
+    public IEnumerator ClimbWall()
+    {
+        float climbTime = Random.Range(1f, 3f);
+        WaitForFixedUpdate wait = new();
+        while(climbTime > 0f)
+        {
+            climbTime -= Time.fixedDeltaTime;
+            boss.SetVelocity(0, boss.GetAbility().moveSpeed);
+            yield return wait;
+        }
+
+        directPos = new Vector2(wolf.player.transform.position.x, boss.oriPos.y);
+        animIndex++;
     }
 }
