@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using PKR;
+using PKR.Lobby;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -11,8 +13,6 @@ public class LobbyController : MonoBehaviour
     [SerializeField] private ButtonSelector gameStartBtn;
     [SerializeField] private ButtonSelector settingsBtn;
     [SerializeField] private ButtonSelector gameExitBtn;
-
-    [SerializeField] private SettingUI settingUI;
 
     private enum MenuType
     {
@@ -47,7 +47,7 @@ public class LobbyController : MonoBehaviour
 
     private void Update()
     {
-        if (settingUI.isActiveAndEnabled) return;
+        if (activeSettingUI) return;
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             if (curMenu == MenuType.GameStart) return;
@@ -106,10 +106,17 @@ public class LobbyController : MonoBehaviour
         SceneLoader.Instance.LoadScene("Tutorial");
     }
 
+    private bool activeSettingUI = false;
     private void OpenSettings()
     {
         print("OpenSettings");
-        settingUI.gameObject.SetActive(true);
+        activeSettingUI = true;
+        var ui = UIManager.Instance.OpenUI<SettingUI>();
+        var trigger = ui.AddComponent<OnDestroyTrigger>();
+        trigger.onDestroy += () =>
+        {
+            activeSettingUI = false;
+        };
     }
 
 
