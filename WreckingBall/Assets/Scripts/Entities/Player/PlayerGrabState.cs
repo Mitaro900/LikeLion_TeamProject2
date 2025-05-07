@@ -17,6 +17,13 @@ public class PlayerGrabState : PlayerState
     {
         base.Update();
 
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            player.ThrowObject(xInput, yInput);
+            player.stateMachine.ChangeState(player.idleState);
+            return;
+        }
+
         if (Input.GetKeyDown(KeyCode.Z) && (player.IsGroundDetected() || player.IsAnchored))
         {
             rb.gravityScale = player.JumpGravityScale;

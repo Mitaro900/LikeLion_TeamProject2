@@ -46,6 +46,14 @@ public class PlayerState : State
         {
             yInput = 0f;
         }
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            if (!player.IsRopeActive && !player.IsBusy)
+                player.LaunchRope(xInput, yInput);
+            else if (player.IsAnchored)
+                player.ReleaseRope();
+        }
     }
 
     public override void Exit()

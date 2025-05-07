@@ -12,7 +12,7 @@ public class BossStateMachine
 
     public void ChangeState(BossState newState)
     {
-        Debug.Log(nameof(BossStateMachine) + " " + nameof(ChangeState) + " " + (currentState != null ? currentState.animBoolName : null) + " " + (newState != null ? newState.animBoolName : null));
+        Debug.Log(nameof(BossStateMachine) + " " + nameof(ChangeState) + " " + (currentState != null ? currentState.animBoolName.ToString() : "null") + " " + (newState != null ? newState.animBoolName.ToString() : "null"));
         currentState?.Exit();
         currentState = newState;
         currentState.Enter();

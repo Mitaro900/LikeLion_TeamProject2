@@ -36,6 +36,7 @@ public class PlayerDashState : PlayerState
 
         if(Input.GetKeyDown(KeyCode.Z) && (player.IsGroundDetected() || player.IsAnchored))
         {
+            player.ReleaseRope();
             rb.gravityScale = player.JumpGravityScale;
             rb.linearVelocity = new Vector2(rb.linearVelocityX, player.JumpForce);
         }

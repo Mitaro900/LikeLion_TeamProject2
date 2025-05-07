@@ -76,8 +76,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1327849649
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: -6955790032328933191, guid: 4daa9506c3010454499a8cb1258e3524, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15af020a1a14baa498f272c3fc3aae73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDebug: 0
   prop:
     state: 01000000
     trapDir: []
@@ -167,5 +168,6 @@ MonoBehaviour:
     returnSpeed: 0
     moveDistance: 0
     thisSize: {x: 3.2, y: 3.2}
+    sizeOffSet: {x: 0, y: 0}
   isActive: 1
   gizmoColor: {r: 1, g: 1, b: 0, a: 1}

@@ -31,16 +31,9 @@ public class EntityCollision : MonoBehaviour
     [SerializeField] protected LayerMask whatIsPlayer;
 
     [SerializeField] protected int facingDir = 1;
-    protected bool facingRight = true;
-
-    protected virtual void Awake()
-    {
-        Debug.Log(nameof(EntityCollision) + " " + nameof(Awake));
-    }
 
     protected virtual void Start()
     {
-        Debug.Log(nameof(EntityCollision) + " " + nameof(Start));
         sr = GetComponentInChildren<SpriteRenderer>();
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -56,7 +49,9 @@ public class EntityCollision : MonoBehaviour
     }
 
     #region 충돌
-    public virtual bool IsGroundDetected() => Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsPlayer);
+    public virtual bool IsGroundDetected() => Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);
+
+    public virtual bool IsCeilingDetected() => Physics2D.Raycast(transform.position, Vector2.up, groundCheckDistance, whatIsGround);
     public virtual bool IsWallDetected() => Physics2D.Raycast(wallCheck.position, Vector2.right * facingDir, wallCheckDistance, whatIsGround);
     public virtual int GetFacingDir() => facingDir;
 
@@ -89,18 +84,9 @@ public class EntityCollision : MonoBehaviour
     public virtual void Flip()
     {
         facingDir = facingDir * -1;
-        facingRight = !facingRight;
-        transform.Rotate(0, 180, 0);
-    }
-
-
-    public virtual void FlipController(float _x)
-    {
-        if (_x > 0 && !facingRight)
-            Flip();
-        else if (_x < 0 && facingRight)
-            Flip();
-
+        //transform.Rotate(0, 180, 0);
+        sr.flipX = !sr.flipX;
+        Debug.Log(nameof(EntityCollision) + " " + nameof(Flip) + $"facingDir : {facingDir}");
     }
 
     #endregion
@@ -124,7 +110,6 @@ public class EntityCollision : MonoBehaviour
             rb.linearVelocityY = _yVelocity;
         else
             SetZeroVelocity();
-        FlipController(_xVelocity);
     }
     #endregion
 }

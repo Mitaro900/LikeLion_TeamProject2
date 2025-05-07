@@ -1,9 +1,8 @@
+using DG.Tweening;
 using PKR;
 using System.Collections.Generic;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UIElements;
 
 public class WildWolf : Boss
 {
@@ -36,12 +35,11 @@ public class WildWolf : Boss
     [SerializeField] private List<StringIntPair> trapsPrefab;
     private List<TrapBase> throwTraps = new();
     private List<TrapBase> droppingTraps = new();
-    [SerializeField] private Transform throwPos;
-    [SerializeField] private Transform dropPos;
+    public Transform throwPos;
+    public Transform dropPos;
     #endregion
 
 
-    #region 상속 메서드
 
     public WildWolf(EntityAbility ability, UnityAction<EntityAbility> damageEvent, UnityAction deathEvent, EntityAbnormalState knockback, EntityAbnormalState invincibility, int bossPage, int bossMaxPage, UnityAction<EntityAbility> pageChageEvent) : base(ability, damageEvent, deathEvent, knockback, invincibility, bossPage, bossMaxPage, pageChageEvent)
     {
@@ -49,64 +47,41 @@ public class WildWolf : Boss
         base.bossPage = bossPage;
         base.bossMaxPage = bossMaxPage;
         base.damageEvent = damageEvent;
-        base.damageEvent += (_ab) =>
+        base.damageEvent += (ab) =>
         {
-            if (_ab.hp <= 0)
-            {
-                if (bossPage == bossMaxPage)
-                {
-                    deathEvent?.Invoke();
-                }
-                else
-                {
-                    pageChageEvent?.Invoke(_ab);
-                    bossPage++;
-                }
-            }
             controller.NextAction(true);
+        };
+        base.deathEvent = deathEvent;
+        base.pageChageEvent = pageChageEvent;
+        base.pageChageEvent += (ab) =>
+        {
+            if (sr.color == Color.white)
+                sr.DOColor(Color.red, 0.5f);
         };
     }
 
-    protected override void Awake()
-    {
-        base.Awake();
-        Debug.Log(nameof(WildWolf) + " " + nameof(Awake));
-    }
 
     protected override void Start()
     {
         base.Start();
-        Debug.Log(nameof(WildWolf) + " " + nameof(Start));
 
-        //idleState = new Boss_IdleState(stateMachine, this, "Idle");
-        //AddState(idleState);
-        //moveState = new Boss_MoveState(stateMachine, this, "Move", this);
-        //AddState(moveState);
-        //runState = new WildWolf_RunState(stateMachine, this, "Run", this);
-        //AddState(runState);
-        //attackState = new Boss_AttackState(stateMachine, this, "Attack", this);
-        //AddState(attackState);
-        //damageState = new Boss_DamageState(stateMachine, this, "Damage");
-        //AddState(damageState);
-        //deathState = new Boss_DeathState(stateMachine, this, "Death");
-        //AddState(deathState);
         runAttackState = new WildWolf_RunAttackState(stateMachine, this, "RunAttack", this);
         AddState(runAttackState);
 
-        throwTrapState = new WildWolf_ThrowTrapState(stateMachine, this, "ThrowTrap", this);
+        throwTrapState = new WildWolf_ThrowTrapState(stateMachine, this, "ThrowTrap", this, trapsPrefab[0].Key, trapsPrefab[0].Value);
         AddState(throwTrapState);
-        floorSlideState = new WildWolf_FloorSlideState(stateMachine, this, "FloorSlide", this);
+        floorSlideState = new WildWolf_FloorSlideState(stateMachine, this, "FloorSlide", this, Random.Range(2, 4));
         AddState(floorSlideState);
-        jumpAttackState = new WildWolf_JumpAttackState(stateMachine, this, "JumpAttack", this);
+        jumpAttackState = new WildWolf_JumpAttackState(stateMachine, this, "JumpAttack", this, Random.Range(4, 6));
         AddState(jumpAttackState);
 
-        aerialSlideState = new WildWolf_AerialSlideState(stateMachine, this, "AerialSlide", this);
+        aerialSlideState = new WildWolf_AerialSlideState(stateMachine, this, "AerialSlide", this, Random.Range(3, 6));
         AddState(aerialSlideState);
-        vattackState = new WildWolf_TakeDown_VAttackState(stateMachine, this, "TakeDown_VAttack", this);
+        vattackState = new WildWolf_TakeDown_VAttackState(stateMachine, this, "TakeDown_VAttack", this, Random.Range(3, 5));
         AddState(vattackState);
-        directAttackState = new WildWolf_TakeDown_DirectAttackState(stateMachine, this, "TakeDown_DirectAttack", this);
+        directAttackState = new WildWolf_TakeDown_DirectAttackState(stateMachine, this, "TakeDown_DirectAttack", this, 3);
         AddState(directAttackState);
-        droppingTrapState = new WildWolf_DroppingTrapState(stateMachine, this, "DroppingTrap", this);
+        droppingTrapState = new WildWolf_DroppingTrapState(stateMachine, this, "DroppingTrap", this, trapsPrefab[1].Key, trapsPrefab[1].Value);
         AddState(droppingTrapState);
 
         controller = GetComponent<WildWolf_PatternController>();
@@ -138,65 +113,18 @@ public class WildWolf : Boss
 
         player = FindFirstObjectByType<Player>();
 
-        controller.NextAction();
-    }
-
-    protected override void Update()
-    {
-        base.Update();
-    }
-
-    public override void Damage()
-    {
-        base.Damage();
-    }
-
-    public override void Flip()
-    {
-        base.Flip();
-    }
-
-    public override void FlipController(float _x)
-    {
-        base.FlipController(_x);
-    }
-
-    public override bool IsGroundDetected()
-    {
-        return base.IsGroundDetected();
-    }
-
-    public override bool IsWallDetected()
-    {
-        return base.IsWallDetected();
-    }
-
-    public override void AddState(BossState state)
-    {
-        base.AddState(state);
-    }
-
-    public override void GiveDamagePoint()
-    {
-        base.GiveDamagePoint();
-    }
-
-    public override void RemoveState(BossState state)
-    {
-        base.RemoveState(state);
-    }
-
-    protected override void OnDrawGizmos()
-    {
-        base.OnDrawGizmos();
-    }
-    #endregion
-
-    #region 특수 메서드
-    protected override void AnimationFinishTrigger()
-    {
-        base.AnimationFinishTrigger();
         //controller.NextAction();
     }
-    #endregion
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player"))
+        {
+            Player player = collision.GetComponent<Player>();
+            if (player.facingDir != facingDir)
+                Damage();
+        }
+    }
+
 }

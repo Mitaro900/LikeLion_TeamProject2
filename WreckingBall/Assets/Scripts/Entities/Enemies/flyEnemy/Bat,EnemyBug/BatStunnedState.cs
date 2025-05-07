@@ -12,7 +12,6 @@ public class BatStunnedState : State
     public override void Enter()
     {
         base.Enter();
-
     }
     public override void Update()
     {
@@ -26,7 +25,5 @@ public class BatStunnedState : State
     public override void Exit()
     {
         base.Exit();
-    }
-
-    
+    }    
 }
