@@ -262,8 +262,8 @@ MonoBehaviour:
     <selectedCollider>k__BackingField: {fileID: 0}
     <layerMask>k__BackingField:
       serializedVersion: 2
-      m_Bits: 8
-    <useLayerMask>k__BackingField: 1
+      m_Bits: 0
+    <useLayerMask>k__BackingField: 0
     <useStartPosition>k__BackingField: 0
     <useNoMove>k__BackingField: 0
     <useSimulationMove>k__BackingField: 0
