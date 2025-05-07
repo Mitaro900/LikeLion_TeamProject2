@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BossState
 {
@@ -12,8 +13,6 @@ public class BossState
 
     protected float stateTime;
     public float cooldownTime { get; protected set; }
-    protected bool triggerCalled;
-    protected bool isPlayerInRange;
     protected bool isWallDetected;
 
     public BossState(BossStateMachine stateMachine, Boss boss, string animBoolName, float cooldown = 0f)
@@ -28,24 +27,20 @@ public class BossState
     {
         if(isAnimPlay)
             boss.anim.SetBool(animBoolName, true);
-        rb = boss.GetComponent<Rigidbody2D>();
-        boss.SetZeroVelocity();
-        triggerCalled = false;
+        if(rb == null)
+            rb = boss.GetComponent<Rigidbody2D>();
     }
 
     public virtual void Exit(bool isAnimPlay = true)
     {
         if (isAnimPlay)
-        {
             boss.anim.SetBool(animBoolName, false);
-        }
+        
     }
 
     public virtual void Update()
     {
         nowAnimName = boss.anim.GetCurrentAnimatorClipInfo(0).Length > 0 ? boss.anim.GetCurrentAnimatorClipInfo(0)[0].clip.name : "null";
-        //Debug.Log(nameof(nowAnimName) + " " + nowAnimName);
-        isPlayerInRange = boss.AttackCheck();
     }
 
     public virtual void AnimationFinishTrigger()
@@ -56,11 +51,10 @@ public class BossState
 
     public virtual void SkipAnimation(string oldAnimName, string newAnimName = null)
     {
-        boss.anim.SetBool(oldAnimName, false);
-        //boss.anim.SetTrigger("Skip");
-        //boss.anim.SetTrigger("Skip");
         if(newAnimName != null)
             boss.anim.SetBool(newAnimName, true);
+        boss.anim.SetBool(oldAnimName, false);
+        
     }
 
     public override string ToString()
@@ -68,6 +62,7 @@ public class BossState
         //return base.ToString();
         return this.GetType().Name;
     }
+
 }
 
 /// <summary> 가만히 서있는 애니메이션 </summary>
@@ -104,6 +99,7 @@ public class Boss_IdleState : BossState
 public class Boss_MoveState : BossState
 {
     protected bool canMove = true;
+    protected float moveBoost = 1f;
     public Boss_MoveState(BossStateMachine stateMachine, Boss boss, string animBoolName) : base(stateMachine, boss, animBoolName)
     {
 
@@ -112,21 +108,22 @@ public class Boss_MoveState : BossState
     public override void Enter(bool isAnimPlay = true)
     {
         base.Enter(isAnimPlay);
+        canMove = true;
     }
 
     public override void Exit(bool isAnimPlay = true)
     {
-        base.Exit(isAnimPlay);
-        Debug.Log(nameof(Boss_MoveState) + " " + nameof(Exit));
+        canMove = false;
         boss.SetZeroVelocity();
-        stateMachine.ChangeState(boss.idleState);
+        base.Exit(isAnimPlay);
     }
 
     public override void Update()
     {
         base.Update();
-        if(canMove)
-            boss.SetVelocity(boss.GetFacingDir() * boss.GetAbility().moveSpeed, 0);
+        if (canMove)
+            boss.SetVelocity(boss.GetFacingDir() * boss.GetAbility().moveSpeed * moveBoost, 0);
+        //Debug.Log(nameof(Boss_MoveState) + " " + nameof(Update) + $" moveSpeed : {boss.GetAbility().moveSpeed} / {nameof(moveBoost)} : {moveBoost}");
     }
 
     public override void AnimationFinishTrigger()

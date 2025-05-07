@@ -23,12 +23,14 @@ public struct EntityAbnormalState
 public struct EntityAbility
 {
     public int hp;
+    public int maxHp;
     public float moveSpeed;
     public float jumpPower;
 
-    public EntityAbility(int hp, float moveSpeed, float jumpPower)
+    public EntityAbility(int hp, int maxHp, float moveSpeed, float jumpPower)
     {
         this.hp = hp;
+        this.maxHp = maxHp;
         this.moveSpeed = moveSpeed;
         this.jumpPower = jumpPower;
     }
@@ -44,6 +46,7 @@ public class Boss : EntityCollision
     protected UnityAction<EntityAbility> pageChageEvent;
 
     [SerializeField] protected bool isGiveDamagedAction = false;
+    public Vector3 oriPos { get; protected set; }
 
     public BossStateMachine stateMachine;
     public Boss_IdleState idleState;
@@ -55,6 +58,9 @@ public class Boss : EntityCollision
 
     protected UnityAction<EntityAbility> damageEvent;
     protected UnityAction deathEvent;
+    protected UnityAction<bool> onBecameVisibleEvent;
+
+    [SerializeField] protected Collider2D bg;
 
     public Boss(EntityAbility ability, UnityAction<EntityAbility> damageEvent, UnityAction deathEvent,
         EntityAbnormalState knockback, EntityAbnormalState invincibility, int bossPage, int bossMaxPage, UnityAction<EntityAbility> pageChageEvent)
@@ -80,18 +86,23 @@ public class Boss : EntityCollision
 
     public virtual void Damage()
     {
-        damageEvent?.Invoke(ability);
+        if(ability.hp <= 0)
+        {
+            if(bossPage >= bossMaxPage)
+                deathEvent?.Invoke();
+            
+            else
+            {
+                bossPage++;
+                ability.hp = ability.maxHp;
+                pageChageEvent?.Invoke(ability);
+            }
+            
+        }
+        else
+            damageEvent?.Invoke(ability);
     }
 
-    public override void FlipController(float _x)
-    {
-        base.FlipController(_x);
-    }
-
-    protected override void Awake()
-    {
-        base.Awake();
-    }
 
     protected override void Start()
     {
@@ -108,6 +119,8 @@ public class Boss : EntityCollision
         AddState(damageState);
         deathState = new Boss_DeathState(stateMachine, this, "Death");
         AddState(deathState);
+
+        oriPos = transform.position;
     }
 
     protected override void Update()
@@ -151,9 +164,37 @@ public class Boss : EntityCollision
         return null;
     }
 
-    public virtual void GiveDamagePoint()
+    public virtual void GiveDamagePoint() => isGiveDamagedAction = AttackCheck() != null;
+
+    public void AddVisibleEvent(UnityAction<bool> onBecameVisibleEvent)
     {
-        isGiveDamagedAction = AttackCheck() != null;
-        Debug.Log($"{nameof(GiveDamagePoint)} : {isGiveDamagedAction}");
+        if (this.onBecameVisibleEvent == null)
+            this.onBecameVisibleEvent = onBecameVisibleEvent;
+        else
+            this.onBecameVisibleEvent += onBecameVisibleEvent;
+    }
+
+    public void RemoveVisibleEvent(UnityAction<bool> onBecameVisibleEvent)
+    {
+        if(this.onBecameVisibleEvent == null)
+            return;
+        else
+            this.onBecameVisibleEvent -= onBecameVisibleEvent;
+    }
+
+    //private void OnBecameVisible() => onBecameVisibleEvent?.Invoke(true);
+
+    //private void OnBecameInvisible() => onBecameVisibleEvent?.Invoke(false);
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (bg != null && collision == bg)
+            onBecameVisibleEvent?.Invoke(false);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (bg != null && collision == bg)
+            onBecameVisibleEvent?.Invoke(true);
     }
 }
