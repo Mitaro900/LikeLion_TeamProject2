@@ -1,313 +1,334 @@
 using UnityEngine;
 
-/// <summary> 가만히 서있는 애니메이션 </summary>
-public class Boss_IdleState : BossState
+/// <summary> 달리기+공격 애니메이션 </summary>
+public class WildWolf_RunAttackState : Boss_MoveState
 {
-    public Boss_IdleState(BossStateMachine stateMachine, Boss boss, string animBoolName) : base(stateMachine, boss, animBoolName)
+    private WildWolf wolf;
+    private bool isPlayerAttacked = false;
+    public WildWolf_RunAttackState(BossStateMachine stateMachine, Boss boss, string animBoolName, WildWolf wolf) : base(stateMachine, boss, animBoolName)
     {
-
+        this.wolf = wolf;
     }
 
-    public override void Enter()
+    public override void Enter(bool isAnimPlay = true)
     {
-        base.Enter();
+        animBoolName = "Run";
+        base.Enter(true);
+        canMove = true;
+        //boss.anim.SetBool(animBoolName, true);
+        //rb.AddForce(Vector2.right * boss.GetFacingDir() * boss.GetAbility().moveSpeed);
+        isPlayerAttacked = false;
     }
 
-    public override void Exit()
+    public override void Exit(bool isAnimPlay = true)
     {
-        base.Exit();
+        base.Exit(isAnimPlay);
     }
 
     public override void Update()
     {
         base.Update();
+        //wolf.SetVelocity(wolf.GetFacingDir() * wolf.GetAbility().moveSpeed, 0);
+
+        //Debug.Log(nameof(WildWolf_RunAttackState) + " " + nameof(Update) + $" now : {nowAnimName} / default : {animBoolName}");
+
+        if (isPlayerInRange)
+        {
+            if (nowAnimName.Contains("Attack"))
+            {
+                if (!isPlayerAttacked)
+                {
+                    Debug.Log("Player.Damage");
+                    wolf.player.Damage();
+                    Rigidbody2D _rb = wolf.player.GetComponent<Rigidbody2D>();
+                    _rb.AddForce(Vector2.up * 5f, ForceMode2D.Impulse);
+
+
+                    //SkipAnimation("Attack", "Run");
+                    isPlayerAttacked = true;
+
+                }
+                
+            }
+            else if(nowAnimName.Contains("Run"))
+            {
+                SkipAnimation("Run", "Attack");
+            }
+
+        }
+        else if(nowAnimName.Contains("Attack"))
+        {
+            SkipAnimation("Attack", "Run");
+        }
+
+        //Debug.Log(nameof(WildWolf_RunAttackState)+" "+nameof(Update)+" wolf.rb.linearVelocity : "+ wolf.rb.linearVelocity.ToString());
+    }
+
+    public override void AnimationFinishTrigger()
+    {
+        base.AnimationFinishTrigger();
+
+        Debug.Log(nameof(isWallDetected)+" : "+ isWallDetected +" / "+nameof(isPlayerInRange)+" : "+isPlayerInRange);
+
+        if (isWallDetected)
+        {
+            canMove = false;
+            //stateMachine.ChangeState(wolf.idleState);
+            //if(nowAnimName.Contains("Attack"))
+            //    wolf.anim.SetTrigger("Skip");
+            Exit(true);
+            
+            //wolf.controller.NextAction(true);
+        }
+        else if (isPlayerInRange && nowAnimName.Contains("Run"))
+        {
+            SkipAnimation("Run", "Attack");
+        }
+        else if(!isPlayerInRange && nowAnimName.Contains("Attack"))
+        {
+            SkipAnimation("Attack", "Run");
+        }
     }
 }
 
-/// <summary> 이동 애니메이션 </summary>
-public class WildWolf_MoveState : BossState
-{
-    public WildWolf_MoveState(BossStateMachine stateMachine, Boss boss, string animBoolName) : base(stateMachine, boss, animBoolName)
-    {
-
-    }
-
-    public override void Enter()
-    {
-        base.Enter();
-    }
-
-    public override void Exit()
-    {
-        base.Exit();
-    }
-
-    public override void Update()
-    {
-        base.Update();
-    }
-}
 
 /// <summary> 달리기 애니메이션 </summary>
-public class WildWolf_RunState : BossState
+public class WildWolf_RunState : Boss_MoveState
 {
-    public WildWolf_RunState(BossStateMachine stateMachine, Boss boss, string animBoolName) : base(stateMachine, boss, animBoolName)
+    private WildWolf wolf;
+    public WildWolf_RunState(BossStateMachine stateMachine, Boss boss, string animBoolName, WildWolf wolf) : base(stateMachine, boss, animBoolName)
     {
-
+        this.wolf = wolf;
     }
 
-    public override void Enter()
+    public override void Enter(bool isAnimPlay = true)
     {
-        base.Enter();
+        base.Enter(false);
+        boss.anim.SetBool("Run", true);
     }
 
-    public override void Exit()
+    public override void Exit(bool isAnimPlay = true)
     {
-        base.Exit();
+        base.Exit(isAnimPlay);
     }
 
     public override void Update()
     {
         base.Update();
     }
-}
 
-/// <summary> 공격 애니메이션 </summary>
-public class WildWolf_AttackState : BossState
-{
-    public WildWolf_AttackState(BossStateMachine stateMachine, Boss boss, string animBoolName) : base(stateMachine, boss, animBoolName)
+    public override void AnimationFinishTrigger()
     {
-
-    }
-
-    public override void Enter()
-    {
-        base.Enter();
-    }
-
-    public override void Exit()
-    {
-        base.Exit();
-    }
-
-    public override void Update()
-    {
-        base.Update();
-    }
-}
-
-/// <summary> 피해 입음 애니메이션 </summary>
-public class WildWolf_DamageState : BossState
-{
-    public WildWolf_DamageState(BossStateMachine stateMachine, Boss boss, string animBoolName) : base(stateMachine, boss, animBoolName)
-    {
-
-    }
-
-    public override void Enter()
-    {
-        base.Enter();
-    }
-
-    public override void Exit()
-    {
-        base.Exit();
-    }
-
-    public override void Update()
-    {
-        base.Update();
-    }
-}
-
-/// <summary> 죽음 애니메이션 </summary>
-public class WildWolf_DeathState : BossState
-{
-    public WildWolf_DeathState(BossStateMachine stateMachine, Boss boss, string animBoolName) : base(stateMachine, boss, animBoolName)
-    {
-
-    }
-
-    public override void Enter()
-    {
-        base.Enter();
-    }
-
-    public override void Exit()
-    {
-        base.Exit();
-    }
-
-    public override void Update()
-    {
-        base.Update();
+        base.AnimationFinishTrigger();
     }
 }
 
 /// <summary> 바닥 쓸기 공격 </summary>
-public class WildWolf_FloorSlideState : BossState
+public class WildWolf_FloorSlideState : Boss_AttackState
 {
-    public WildWolf_FloorSlideState(BossStateMachine stateMachine, Boss boss, string animBoolName) : base(stateMachine, boss, animBoolName)
+    private WildWolf wolf;
+    public WildWolf_FloorSlideState(BossStateMachine stateMachine, Boss boss, string animBoolName, WildWolf wolf) : base(stateMachine, boss, animBoolName)
     {
-
+        this.wolf = wolf;
     }
 
-    public override void Enter()
+    public override void Enter(bool isAnimPlay = true)
     {
         base.Enter();
     }
 
-    public override void Exit()
+    public override void Exit(bool isAnimPlay = true)
     {
-        base.Exit();
+        base.Exit(isAnimPlay);
     }
 
     public override void Update()
     {
         base.Update();
+    }
+
+    public override void AnimationFinishTrigger()
+    {
+        base.AnimationFinishTrigger();
     }
 }
 
 /// <summary> 통통 튕기기 공격 </summary>
-public class WildWolf_JumpAttackState : BossState
+public class WildWolf_JumpAttackState : Boss_AttackState
 {
-    public WildWolf_JumpAttackState(BossStateMachine stateMachine, Boss boss, string animBoolName) : base(stateMachine, boss, animBoolName)
+    private WildWolf wolf;
+    public WildWolf_JumpAttackState(BossStateMachine stateMachine, Boss boss, string animBoolName, WildWolf wolf) : base(stateMachine, boss, animBoolName)
     {
-
+        this.wolf = wolf;
     }
 
-    public override void Enter()
+    public override void Enter(bool isAnimPlay = true)
     {
         base.Enter();
     }
 
-    public override void Exit()
+    public override void Exit(bool isAnimPlay = true)
     {
-        base.Exit();
+        base.Exit(isAnimPlay);
     }
 
     public override void Update()
     {
         base.Update();
+    }
+
+    public override void AnimationFinishTrigger()
+    {
+        base.AnimationFinishTrigger();
     }
 }
 
 /// <summary> 트랩 던지기 공격 </summary>
 public class WildWolf_ThrowTrapState : BossState
 {
-    public WildWolf_ThrowTrapState(BossStateMachine stateMachine, Boss boss, string animBoolName) : base(stateMachine, boss, animBoolName)
+    private WildWolf wolf;
+    public WildWolf_ThrowTrapState(BossStateMachine stateMachine, Boss boss, string animBoolName, WildWolf wolf) : base(stateMachine, boss, animBoolName)
     {
-
+        this.wolf = wolf;
     }
 
-    public override void Enter()
+    public override void Enter(bool isAnimPlay = true)
     {
         base.Enter();
     }
 
-    public override void Exit()
+    public override void Exit(bool isAnimPlay = true)
     {
-        base.Exit();
+        base.Exit(isAnimPlay);
     }
 
     public override void Update()
     {
         base.Update();
+    }
+
+    public override void AnimationFinishTrigger()
+    {
+        base.AnimationFinishTrigger();
     }
 }
 
 /// <summary> 공중 쓸기 공격 </summary>
-public class WildWolf_AerialSlideState: BossState
+public class WildWolf_AerialSlideState: Boss_AttackState
 {
-    public WildWolf_AerialSlideState(BossStateMachine stateMachine, Boss boss, string animBoolName) : base(stateMachine, boss, animBoolName)
+    private WildWolf wolf;
+    public WildWolf_AerialSlideState(BossStateMachine stateMachine, Boss boss, string animBoolName, WildWolf wolf) : base(stateMachine, boss, animBoolName)
     {
-
+        this.wolf = wolf;
     }
 
-    public override void Enter()
+    public override void Enter(bool isAnimPlay = true)
     {
         base.Enter();
     }
 
-    public override void Exit()
+    public override void Exit(bool isAnimPlay = true)
     {
-        base.Exit();
+        base.Exit(isAnimPlay);
     }
 
     public override void Update()
     {
         base.Update();
+    }
+
+    public override void AnimationFinishTrigger()
+    {
+        base.AnimationFinishTrigger();
     }
 }
 
 /// <summary> 역V 찍기 공격 </summary>
-public class WildWolf_TakeDown_VAttackState: BossState
+public class WildWolf_TakeDown_VAttackState: Boss_AttackState
 {
-    public WildWolf_TakeDown_VAttackState(BossStateMachine stateMachine, Boss boss, string animBoolName) : base(stateMachine, boss, animBoolName)
+    private WildWolf wolf;
+    public WildWolf_TakeDown_VAttackState(BossStateMachine stateMachine, Boss boss, string animBoolName, WildWolf wolf) : base(stateMachine, boss, animBoolName)
     {
-
+        this.wolf = wolf;
     }
 
-    public override void Enter()
+    public override void Enter(bool isAnimPlay = true)
     {
         base.Enter();
     }
 
-    public override void Exit()
+    public override void Exit(bool isAnimPlay = true)
     {
-        base.Exit();
+        base.Exit(isAnimPlay);
     }
 
     public override void Update()
     {
         base.Update();
+    }
+
+    public override void AnimationFinishTrigger()
+    {
+        base.AnimationFinishTrigger();
     }
 }
 
 /// <summary> 트랩 떨어뜨리기 공격 </summary>
 public class WildWolf_DroppingTrapState : BossState
 {
-    public WildWolf_DroppingTrapState(BossStateMachine stateMachine, Boss boss, string animBoolName) : base(stateMachine, boss, animBoolName)
+    private WildWolf wolf;
+    public WildWolf_DroppingTrapState(BossStateMachine stateMachine, Boss boss, string animBoolName, WildWolf wolf) : base(stateMachine, boss, animBoolName)
     {
-
+        this.wolf = wolf;
     }
 
-    public override void Enter()
+    public override void Enter(bool isAnimPlay = true)
     {
         base.Enter();
     }
 
-    public override void Exit()
+    public override void Exit(bool isAnimPlay = true)
     {
-        base.Exit();
+        base.Exit(isAnimPlay);
     }
 
     public override void Update()
     {
         base.Update();
+    }
+
+    public override void AnimationFinishTrigger()
+    {
+        base.AnimationFinishTrigger();
     }
 }
 
 /// <summary> 벽에서 대각으로 내려찍기 공격 </summary>
-public class WildWolf_TakeDown_DirectAttackState : BossState
+public class WildWolf_TakeDown_DirectAttackState : Boss_AttackState
 {
-    public WildWolf_TakeDown_DirectAttackState(BossStateMachine stateMachine, Boss boss, string animBoolName) : base(stateMachine, boss, animBoolName)
+    private WildWolf wolf;
+    public WildWolf_TakeDown_DirectAttackState(BossStateMachine stateMachine, Boss boss, string animBoolName, WildWolf wolf) : base(stateMachine, boss, animBoolName)
     {
-
+        this.wolf = wolf;
     }
 
-    public override void Enter()
+    public override void Enter(bool isAnimPlay = true)
     {
         base.Enter();
     }
 
-    public override void Exit()
+    public override void Exit(bool isAnimPlay = true)
     {
-        base.Exit();
+        base.Exit(isAnimPlay);
     }
 
     public override void Update()
     {
         base.Update();
+    }
+
+    public override void AnimationFinishTrigger()
+    {
+        base.AnimationFinishTrigger();
     }
 }

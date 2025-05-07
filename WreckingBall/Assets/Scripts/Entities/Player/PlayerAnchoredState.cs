@@ -21,7 +21,7 @@ public class PlayerAnchoredState : PlayerState
             return;
         }
 
-        if (!player.isAchored)
+        if (!player.IsAnchored)
         {
             stateMachine.ChangeState(player.idleState);
             return;

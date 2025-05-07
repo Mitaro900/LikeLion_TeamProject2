@@ -17,7 +17,12 @@ public class PlayerAirborneState : PlayerState
 
         player.SetVelocity(xInput * player.MoveSpeed, rb.linearVelocityY);
 
-        if (player.isAchored)
+        if (Input.GetKeyDown(KeyCode.Z) && Input.GetKey(KeyCode.DownArrow))
+        {
+            player.stateMachine.ChangeState(player.bodyslamState);
+        }
+
+        if (player.IsAnchored)
         {
             player.stateMachine.ChangeState(player.anchoredState);
         }

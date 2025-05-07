@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerDashState : PlayerState
 {
-    private float finalSpeed;
+    private float finalXSpeed;
 
     public PlayerDashState(Entity entity, StateMachine stateMachine, string animBoolName, Player player) : base(entity, stateMachine, animBoolName, player)
     {
@@ -12,43 +12,67 @@ public class PlayerDashState : PlayerState
     {
         base.Enter();
 
-        finalSpeed = player.MoveSpeed;
+        stateTimer = 0.5f;
+
+        if(player.stateMachine.previousState == player.turnState)
+        {
+            finalXSpeed = player.DashSpeedThereshold;
+        }
+        else
+        {
+            finalXSpeed = player.MoveSpeed;
+        }
     }
 
     public override void Update()
     {
         base.Update();
 
-        if(Input.GetKeyUp(KeyCode.LeftShift) || player.IsWallDetected())
+        if(!Input.GetKey(KeyCode.LeftShift) || player.IsWallDetected())
         {
             stateMachine.ChangeState(player.idleState);
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.Z) && player.IsGroundDetected())
+        if(Input.GetKeyDown(KeyCode.Z) && (player.IsGroundDetected() || player.IsAnchored))
         {
-            rb.gravityScale = 1.0f;
+            rb.gravityScale = player.JumpGravityScale;
             rb.linearVelocity = new Vector2(rb.linearVelocityX, player.JumpForce);
         }
         else if (Input.GetKeyUp(KeyCode.Z))
         {
-            rb.gravityScale = 2.5f;
+            rb.gravityScale = player.DefaultGravityScale;
         }
         
-        finalSpeed += player.MoveSpeed * Time.deltaTime;
+        finalXSpeed += player.Acceleration * Time.deltaTime;
 
-        if (finalSpeed > player.MaxSpeed)
+        if (finalXSpeed > player.MaxSpeed)
         {
-            finalSpeed = player.MaxSpeed;
+            finalXSpeed = player.MaxSpeed;
         }
 
-        player.SetVelocity(finalSpeed * player.facingDir, rb.linearVelocityY);
+        if (player.IsGroundDetected() && finalXSpeed >= player.DashSpeedThereshold && stateTimer <= 0)
+        {
+            if((xInput > 0 && !player.facingRight) || (xInput < 0 && player.facingRight))
+            {
+                player.stateMachine.ChangeState(player.turnState);
+            }
+        }
+
+        if (player.IsAnchored)
+        {
+            player.RopeAction(finalXSpeed);
+        }
+        else
+        {
+            player.SetVelocity(finalXSpeed * player.facingDir, rb.linearVelocityY);
+        }
     }
 
     public override void Exit()
     {
         base.Exit();
 
-        rb.gravityScale = 2.5f;
+        rb.gravityScale = player.DefaultGravityScale;
     }
 }

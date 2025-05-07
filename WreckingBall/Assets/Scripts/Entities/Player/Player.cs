@@ -3,27 +3,42 @@ using UnityEngine;
 
 public class Player : Entity
 {
-    [SerializeField] private DistanceJoint2D distanceJoint2D;
-    [SerializeField] private LineRenderer lineRenderer;
-
-    [SerializeField] private LayerMask ropeLayer; // Ray가 충돌할 레이어
-    [SerializeField] private float maxAnchorDistance = 8f;
-
     [Header("이동 정보")]
     [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float ropeSpeed = 10f;
+    public float MoveSpeed { get => moveSpeed; }
+    
     [SerializeField] private float jumpForce = 8f;
-    [SerializeField] private float maxSpeed = 50f;
+    public float JumpForce { get => jumpForce; }
+    
+    [SerializeField] private float acceleration = 7f;
+    public float Acceleration { get => acceleration; }
+    
+    [SerializeField] private float dashSpeedThereshold = 15f;
+    public float DashSpeedThereshold { get => dashSpeedThereshold; }
+    
+    [SerializeField] private float maxSpeed = 25f;
+    public float MaxSpeed { get => maxSpeed; }
 
-    public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
-    public float RopeSpeed { get => ropeSpeed; set => ropeSpeed = value; }
-    public float JumpForce { get => jumpForce; set => jumpForce = value; }
-    public float MaxSpeed { get => maxSpeed; set => maxSpeed = value; }
+    [Header("중력 정보")]
+    [SerializeField] private float defaultGravityScale = 2.5f;
+    public float DefaultGravityScale { get => defaultGravityScale; }
+
+    [SerializeField] private float jumpGravityScale = 1.0f;
+    public float JumpGravityScale { get => jumpGravityScale; }
+
+    [Header("로프 정보")]
+    [SerializeField] private DistanceJoint2D distanceJoint;
+    [SerializeField] private LineRenderer lineRenderer;
+    [SerializeField] private float ropeSpeed = 10f;
+    public float RopeSpeed { get => ropeSpeed; }
+
+    [SerializeField] private float maxRopeDistance = 8f;
+    [SerializeField] private LayerMask whatIsRopeable;
 
     private Coroutine ropeCo = null;
-    private bool ropeAnimating = false;
+    private bool isRopeActive = false;
 
-    public bool isAchored { get => distanceJoint2D.enabled; set => distanceJoint2D.enabled = value; } // 물체에 매달려 있는지 여부
+    public bool IsAnchored { get => distanceJoint.enabled; set => distanceJoint.enabled = value; } // 물체에 매달려 있는지 여부
 
     #region States
     public StateMachine stateMachine { get; private set; }
@@ -33,7 +48,10 @@ public class Player : Entity
     public PlayerJumpState jumpState { get; private set; }
     public PlayerFallState fallState { get; private set; }
     public PlayerDashState dashState { get; private set; }
+    public PlayerTurnState turnState { get; private set; }
     public PlayerAnchoredState anchoredState { get; private set; }
+    public PlayerGrabState grabState { get; private set; }
+    public PlayerBodyslamState bodyslamState { get; private set; }
     #endregion
 
     protected override void Awake()
@@ -47,16 +65,19 @@ public class Player : Entity
         jumpState = new PlayerJumpState(this, stateMachine, "Jump", this);
         fallState = new PlayerFallState(this, stateMachine, "Jump", this);
         dashState = new PlayerDashState(this, stateMachine, "Dash", this);
+        turnState = new PlayerTurnState(this, stateMachine, "Dash", this);
         anchoredState = new PlayerAnchoredState(this, stateMachine, "Anchored", this);
+        grabState = new PlayerGrabState(this, stateMachine, "Anchored", this);
+        bodyslamState = new PlayerBodyslamState(this, stateMachine, "Bodyslam", this);
     }
 
     protected override void Start()
     {
         base.Start();
 
-        distanceJoint2D = GetComponent<DistanceJoint2D>();
+        distanceJoint = GetComponent<DistanceJoint2D>();
         lineRenderer = GetComponent<LineRenderer>();
-        distanceJoint2D.enabled = false; // 초기에는 비활성화
+        distanceJoint.enabled = false; // 초기에는 비활성화
         lineRenderer.positionCount = 0; // 라인 렌더러 초기화
 
         stateMachine.Initialize(idleState);
@@ -73,17 +94,19 @@ public class Player : Entity
             ReleaseRope();
         }
 
-        if (Input.GetKeyDown(KeyCode.X) && !ropeAnimating)
+        if (Input.GetKeyDown(KeyCode.X))
         {
-            LaunchRope();
+            if (!isRopeActive && !IsBusy)
+                LaunchRope();
+            else if (IsAnchored)
+                ReleaseRope();
         }
     }
 
     public void ReleaseRope()
     {
-        if (ropeAnimating)
+        if (isRopeActive)
         {
-            if (ropeCo != null) StopCoroutine(ropeCo);
             StopSwing();
         }
     }
@@ -92,80 +115,71 @@ public class Player : Entity
     {
         //바라보는 방향으로 45도 방향.
         Vector3 dir = Vector3.zero;
-        if (facingRight) dir = new Vector3(1, 1, 0).normalized;
-        else dir = new Vector3(-1, 1, 0).normalized;
+        dir = new Vector3(facingDir, 1, 0).normalized;
 
-        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, dir, maxAnchorDistance, ropeLayer);
-        bool find = false;
+        Vector2 endPos = transform.position + dir.normalized * maxRopeDistance;
+
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, dir, maxRopeDistance, whatIsRopeable);
         foreach (var hit in hits)
         {
             if (hit.collider == null) continue;
             if (hit.collider.gameObject == this.gameObject) continue;
-            find = true;
-            ropeCo = StartCoroutine(ThrowRopeAnimSuccess(hit.point));
-            break;
+            if (hit.collider.CompareTag("Ropeable"))
+            {
+                ropeCo = StartCoroutine(AnchorRope(hit.point));
+                return;
+            }
+            else if(hit.collider.CompareTag("Enemy"))
+            {
+                // 적과 충돌 시 처리
+                // 예: 적에게 데미지 주기, 적을 밀어내기 등
+                // hit.collider.GetComponent<Enemy>().TakeDamage(damage);
+                return;
+            }
+            else if (hit.collider.CompareTag("Ground"))
+            {
+                endPos = hit.point;
+                break;
+            }
         }
 
-        if (!find)
-        {
-            Vector2 endPos = transform.position + dir.normalized * maxAnchorDistance;
-            ropeCo = StartCoroutine(ThrowRopeAnimFail(endPos));
-        }
+        ropeCo = StartCoroutine(ReturnRope(endPos));
     }
 
-    private void FixedUpdate()
+    public void RopeAction(float _speed)
     {
-        //if (distanceJoint2D.enabled) // 매달려 있을 때 처리
-        //{
-        //    if (stateMachine.currentState.xInput != 0)
-        //    {
-        //        //캐릭터시선기준 AddForce.
-        //        float swingForce = 5f;
-        //        Vector2 anchorToPlayer = (Vector2)transform.position - distanceJoint2D.connectedAnchor;
-        //        Vector2 tangent = new Vector2(-anchorToPlayer.y, anchorToPlayer.x).normalized;
-        //        rb.AddForce(tangent * moveInput.x * swingForce, ForceMode2D.Force);
+        //캐릭터시선기준 AddForce.
+        Vector2 anchorToPlayer = (Vector2)transform.position - distanceJoint.connectedAnchor;
+        Vector2 tangent = new Vector2(-anchorToPlayer.y, anchorToPlayer.x).normalized;
+        rb.AddForce(tangent * facingDir * _speed, ForceMode2D.Force);
 
-        //        //스크린기준 AddForce.
-        //        //rb.AddForce(new Vector2(moveInput.x * swingForce, 0), ForceMode2D.Force);
-        //    }
-
-        //    // LeftShift 키를 눌렀을 때 순간 가속
-        //    if (accelKeyPressed)
-        //    {
-        //        float swingForce = 10f;
-        //        Vector2 anchorToPlayer = (Vector2)transform.position - distanceJoint2D.connectedAnchor;
-        //        Vector2 tangent = new Vector2(-anchorToPlayer.y, anchorToPlayer.x).normalized;
-        //        int dir = facingRight ? 1 : -1; //오른쪽보고있으면 1
-        //        rb.AddForce(tangent * dir * swingForce, ForceMode2D.Impulse);
-        //    }
-        //}
-        //else //일반이동 처리.
-        //{
-        //    //rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
-        //}
+        //스크린기준 AddForce.
+        //rb.AddForce(new Vector2(moveInput.x * swingForce, 0), ForceMode2D.Force);
     }
 
-    private void StartSwing(Vector2 anchorPoint)
+    public void StartSwing(Vector2 anchorPoint)
     {
-        distanceJoint2D.autoConfigureConnectedAnchor = false;
-        distanceJoint2D.connectedAnchor = anchorPoint;
-        distanceJoint2D.enabled = true;
+        distanceJoint.autoConfigureConnectedAnchor = false;
+        distanceJoint.connectedAnchor = anchorPoint;
+        distanceJoint.enabled = true;
     }
 
     private void StopSwing()
     {
-        distanceJoint2D.enabled = false;
-        ropeAnimating = false;
+        if (ropeCo != null) StopCoroutine(ropeCo);
+
+        distanceJoint.enabled = false;
+        isRopeActive = false;
         lineRenderer.positionCount = 0; // 라인 렌더러 초기화
     }
 
-    IEnumerator ThrowRopeAnimFail(Vector2 targetPos)
+    private IEnumerator ReturnRope(Vector2 targetPos)
     {
-        ropeAnimating = true;
+        isRopeActive = true;
         lineRenderer.positionCount = 2;
         Vector2 startPos = transform.position;
         lineRenderer.SetPosition(0, startPos);
-        lineRenderer.SetPosition(1, startPos);
+        lineRenderer.SetPosition(1, targetPos);
 
         float progress = 0f;
         while (progress < 1f)
@@ -190,16 +204,15 @@ public class Player : Entity
         }
 
         lineRenderer.positionCount = 0;
-        ropeAnimating = false;
+        isRopeActive = false;
     }
 
-    IEnumerator ThrowRopeAnimSuccess(Vector2 targetPos)
+    private IEnumerator AnchorRope(Vector2 targetPos)
     {
-        ropeAnimating = true;
+        isRopeActive = true;
         lineRenderer.positionCount = 2;
         lineRenderer.SetPosition(0, transform.position);
         lineRenderer.SetPosition(1, transform.position);
-
 
         float progress = 0f;
         while (progress < 1f)
@@ -218,12 +231,26 @@ public class Player : Entity
         while (true)
         {
             lineRenderer.SetPosition(0, transform.position);
+            lineRenderer.SetPosition(1, targetPos);
             yield return null;
         }
     }
 
-    public void Damage()
+    public override bool IsGroundDetected()
     {
-
+        RaycastHit2D raycastHit = Physics2D.BoxCast(cd.bounds.center, cd.bounds.size - new Vector3(0.01f, 0.01f, 0f), 0f, Vector2.down, groundCheckDistance, whatIsGround);
+        Color rayColor;
+        if (raycastHit.collider != null)
+        {
+            rayColor = Color.green;
+        }
+        else
+        {
+            rayColor = Color.red;
+        }
+        Debug.DrawRay(cd.bounds.center + new Vector3(cd.bounds.extents.x, 0), Vector2.down * (cd.bounds.extents.y + groundCheckDistance), rayColor);
+        Debug.DrawRay(cd.bounds.center - new Vector3(cd.bounds.extents.x, 0), Vector2.down * (cd.bounds.extents.y + groundCheckDistance), rayColor);
+        Debug.DrawRay(cd.bounds.center - new Vector3(cd.bounds.extents.x, cd.bounds.extents.y + groundCheckDistance), Vector2.right * (cd.bounds.extents.x * 2), rayColor);
+        return raycastHit.collider != null;
     }
 }
