@@ -44,13 +44,12 @@ public class Enemy : Entity
 
     [HideInInspector] public float lastTimeAttacked;
 
-
-    public EnemyStateMachine stateMachine { get; private set; }
+    public StateMachine stateMachine { get; private set; }
 
     protected override void Awake()
     {
         base.Awake();
-        stateMachine = new EnemyStateMachine();
+        stateMachine = new StateMachine();
         defaultMoveSpeed = moveSpeed;
     }
 
@@ -58,7 +57,7 @@ public class Enemy : Entity
     {
         base.Update();
 
-        //stateMachine.currentState.Update();
+        stateMachine.currentState.Update();
 
         RaycastHit2D hit = IsPlayerDetected();
         if (hit.collider != null)
@@ -66,7 +65,6 @@ public class Enemy : Entity
             Debug.Log("플레이어발견");
             playerTransform = hit.transform;
         }
-        
     }
 
     public virtual void FreezeTime(bool _timeFrozen)

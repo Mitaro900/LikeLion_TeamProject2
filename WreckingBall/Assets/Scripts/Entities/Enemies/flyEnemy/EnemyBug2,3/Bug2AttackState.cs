@@ -1,14 +1,14 @@
 using UnityEngine;
 using System.Collections;
 
-public class Bug2AttackState : EnemyState
+public class Bug2AttackState : State
 {
     private Enemy_Bug2 enemy;
     private float summonDelay = 0.8f;
-    public Bug2AttackState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, Enemy_Bug2 _enemy)
-        : base(_enemyBase, _stateMachine, _animBoolName)
+
+    public Bug2AttackState(Entity entity, StateMachine stateMachine, string animBoolName, Enemy_Bug2 enemy) : base(entity, stateMachine, animBoolName)
     {
-        this.enemy = _enemy;
+        this.enemy = enemy;
     }
 
 

@@ -1,14 +1,14 @@
 using UnityEngine;
 
-public class BatBattleState : EnemyState
+public class BatBattleState : State
 {
     private Transform player;
     private Enemy_Bat enemy;
     private int moveDir;
-    public BatBattleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, Enemy_Bat _enemy)
-        : base(_enemyBase, _stateMachine, _animBoolName)
+
+    public BatBattleState(Entity entity, StateMachine stateMachine, string animBoolName, Enemy_Bat enemy) : base(entity, stateMachine, animBoolName)
     {
-        this.enemy = _enemy;
+        this.enemy = enemy;
     }
 
     public override void Enter()

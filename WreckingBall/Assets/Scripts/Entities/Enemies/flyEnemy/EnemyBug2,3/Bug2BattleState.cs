@@ -1,14 +1,14 @@
 using UnityEngine;
 
-public class Bug2BattleState : EnemyState
+public class Bug2BattleState : State
 {
     private Transform player;
     private Enemy_Bug2 enemy;
     private int moveDir;
-    public Bug2BattleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, Enemy_Bug2 _enemy)
-        : base(_enemyBase, _stateMachine, _animBoolName)
+
+    public Bug2BattleState(Entity entity, StateMachine stateMachine, string animBoolName, Enemy_Bug2 enemy) : base(entity, stateMachine, animBoolName)
     {
-        this.enemy = _enemy;
+        this.enemy = enemy;
     }
 
     public override void Enter()

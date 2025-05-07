@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BatMoveState : EnemyState
+public class BatMoveState : State
 {
     private Transform player;
     private Enemy_Bat enemy;
@@ -12,10 +12,9 @@ public class BatMoveState : EnemyState
     private float randomFlipChance = 0.4f;
     private float randomStopChance = 0.4f;
 
-    public BatMoveState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, Enemy_Bat _enemy) 
-        : base(_enemyBase, _stateMachine, _animBoolName)
+    public BatMoveState(Entity entity, StateMachine stateMachine, string animBoolName, Enemy_Bat enemy) : base(entity, stateMachine, animBoolName)
     {
-        this.enemy = _enemy;
+        this.enemy = enemy;
     }
 
     public override void Enter()

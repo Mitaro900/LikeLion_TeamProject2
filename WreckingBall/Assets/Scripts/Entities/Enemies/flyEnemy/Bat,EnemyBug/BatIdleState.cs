@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class BatIdleState : EnemyState
+public class BatIdleState : State
 {
     private Enemy_Bat enemy;
-    public BatIdleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, Enemy_Bat _enemy) 
-        : base(_enemyBase, _stateMachine, _animBoolName)
+
+    public BatIdleState(Entity entity, StateMachine stateMachine, string animBoolName, Enemy_Bat enemy) : base(entity, stateMachine, animBoolName)
     {
-        this.enemy = _enemy;
+        this.enemy = enemy;
     }
 
     public override void Enter()
