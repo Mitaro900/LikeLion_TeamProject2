@@ -29934,18 +29934,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
-    - target: {fileID: 3924171977995649461, guid: 3a6a83290ee0cd0409e4e453c6259629, type: 3}
-      propertyPath: patternMaxCooldown.Array.data[0].Value
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3924171977995649461, guid: 3a6a83290ee0cd0409e4e453c6259629, type: 3}
-      propertyPath: patternMaxCooldown.Array.data[1].Value
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3924171977995649461, guid: 3a6a83290ee0cd0409e4e453c6259629, type: 3}
-      propertyPath: patternMaxCooldown.Array.data[2].Value
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 5142485906437201834, guid: 3a6a83290ee0cd0409e4e453c6259629, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12

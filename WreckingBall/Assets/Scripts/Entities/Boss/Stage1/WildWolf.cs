@@ -40,7 +40,6 @@ public class WildWolf : Boss
     #endregion
 
 
-    #region 상속 메서드
 
     public WildWolf(EntityAbility ability, UnityAction<EntityAbility> damageEvent, UnityAction deathEvent, EntityAbnormalState knockback, EntityAbnormalState invincibility, int bossPage, int bossMaxPage, UnityAction<EntityAbility> pageChageEvent) : base(ability, damageEvent, deathEvent, knockback, invincibility, bossPage, bossMaxPage, pageChageEvent)
     {
@@ -48,6 +47,11 @@ public class WildWolf : Boss
         base.bossPage = bossPage;
         base.bossMaxPage = bossMaxPage;
         base.damageEvent = damageEvent;
+        base.damageEvent += (ab) =>
+        {
+            controller.NextAction(true);
+        };
+        base.deathEvent = deathEvent;
         base.pageChageEvent = pageChageEvent;
         base.pageChageEvent += (ab) =>
         {
@@ -66,18 +70,18 @@ public class WildWolf : Boss
 
         throwTrapState = new WildWolf_ThrowTrapState(stateMachine, this, "ThrowTrap", this, trapsPrefab[0].Key, trapsPrefab[0].Value);
         AddState(throwTrapState);
-        floorSlideState = new WildWolf_FloorSlideState(stateMachine, this, "FloorSlide", this, Random.Range(2, 2));
+        floorSlideState = new WildWolf_FloorSlideState(stateMachine, this, "FloorSlide", this, Random.Range(2, 4));
         AddState(floorSlideState);
-        jumpAttackState = new WildWolf_JumpAttackState(stateMachine, this, "JumpAttack", this, Random.Range(4, 2));
+        jumpAttackState = new WildWolf_JumpAttackState(stateMachine, this, "JumpAttack", this, Random.Range(4, 6));
         AddState(jumpAttackState);
 
-        aerialSlideState = new WildWolf_AerialSlideState(stateMachine, this, "AerialSlide", this);
+        aerialSlideState = new WildWolf_AerialSlideState(stateMachine, this, "AerialSlide", this, Random.Range(3, 6));
         AddState(aerialSlideState);
-        vattackState = new WildWolf_TakeDown_VAttackState(stateMachine, this, "TakeDown_VAttack", this);
+        vattackState = new WildWolf_TakeDown_VAttackState(stateMachine, this, "TakeDown_VAttack", this, Random.Range(3, 5));
         AddState(vattackState);
         directAttackState = new WildWolf_TakeDown_DirectAttackState(stateMachine, this, "TakeDown_DirectAttack", this, 3);
         AddState(directAttackState);
-        droppingTrapState = new WildWolf_DroppingTrapState(stateMachine, this, "DroppingTrap", this);
+        droppingTrapState = new WildWolf_DroppingTrapState(stateMachine, this, "DroppingTrap", this, trapsPrefab[1].Key, trapsPrefab[1].Value);
         AddState(droppingTrapState);
 
         controller = GetComponent<WildWolf_PatternController>();
@@ -112,26 +116,15 @@ public class WildWolf : Boss
         //controller.NextAction();
     }
 
-    protected override void Update() => base.Update();
 
-    public override void Damage() => base.Damage();
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player"))
+        {
+            Player player = collision.GetComponent<Player>();
+            if (player.facingDir != facingDir)
+                Damage();
+        }
+    }
 
-    public override void Flip() => base.Flip();
-
-    public override bool IsGroundDetected() => base.IsGroundDetected();
-
-    public override bool IsWallDetected() => base.IsWallDetected();
-
-    public override void AddState(BossState state) => base.AddState(state);
-
-    public override void GiveDamagePoint() => base.GiveDamagePoint();
-
-    public override void RemoveState(BossState state) => base.RemoveState(state);
-
-    protected override void OnDrawGizmos() => base.OnDrawGizmos();
-    #endregion
-
-    #region 특수 메서드
-    protected override void AnimationFinishTrigger() => base.AnimationFinishTrigger();
-    #endregion
 }

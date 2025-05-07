@@ -197,18 +197,4 @@ public class Boss : EntityCollision
         if (bg != null && collision == bg)
             onBecameVisibleEvent?.Invoke(true);
     }
-
-    public override Collider2D AttackCheck() => base.AttackCheck();
-
-    public override void Flip() => base.Flip();
-
-    public override bool IsGroundDetected() => base.IsGroundDetected();
-
-    public override bool IsWallDetected() => base.IsWallDetected();
-
-    public override int GetFacingDir() => base.GetFacingDir();
-
-    protected override void OnDrawGizmos() => base.OnDrawGizmos();
-
-    public override string ToString() => base.ToString();
 }

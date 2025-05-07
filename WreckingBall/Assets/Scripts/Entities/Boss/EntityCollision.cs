@@ -49,7 +49,9 @@ public class EntityCollision : MonoBehaviour
     }
 
     #region 충돌
-    public virtual bool IsGroundDetected() => Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsPlayer);
+    public virtual bool IsGroundDetected() => Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);
+
+    public virtual bool IsCeilingDetected() => Physics2D.Raycast(transform.position, Vector2.up, groundCheckDistance, whatIsGround);
     public virtual bool IsWallDetected() => Physics2D.Raycast(wallCheck.position, Vector2.right * facingDir, wallCheckDistance, whatIsGround);
     public virtual int GetFacingDir() => facingDir;
 
