@@ -17,6 +17,7 @@ public class PlayerAnchoredState : PlayerState
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
+            player.ReleaseRope();
             stateMachine.ChangeState(player.jumpState);
             return;
         }

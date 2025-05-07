@@ -37,8 +37,11 @@ public class Player : Entity
 
     private Coroutine ropeCo = null;
     private bool isRopeActive = false;
+    public bool IsRopeActive { get => isRopeActive; set => isRopeActive = value; } // 로프가 활성화 되어 있는지 여부
 
     public bool IsAnchored { get => distanceJoint.enabled; set => distanceJoint.enabled = value; } // 물체에 매달려 있는지 여부
+    public GameObject grabbedObject { get; private set; }
+
 
     #region States
     public StateMachine stateMachine { get; private set; }
@@ -88,19 +91,6 @@ public class Player : Entity
         base.Update();
 
         stateMachine.currentState.Update();
-
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            ReleaseRope();
-        }
-
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            if (!isRopeActive && !IsBusy)
-                LaunchRope();
-            else if (IsAnchored)
-                ReleaseRope();
-        }
     }
 
     public void ReleaseRope()
@@ -111,11 +101,15 @@ public class Player : Entity
         }
     }
 
-    public void LaunchRope()
+    public void LaunchRope(float xInput, float yInput)
     {
         //바라보는 방향으로 45도 방향.
-        Vector3 dir = Vector3.zero;
-        dir = new Vector3(facingDir, 1, 0).normalized;
+        Vector3 dir = new Vector2(facingDir, 1).normalized;
+
+        if (xInput != 0 || yInput != 0)
+        {
+            dir = new Vector2(xInput, yInput).normalized;
+        }
 
         Vector2 endPos = transform.position + dir.normalized * maxRopeDistance;
 
@@ -131,9 +125,7 @@ public class Player : Entity
             }
             else if(hit.collider.CompareTag("Enemy"))
             {
-                // 적과 충돌 시 처리
-                // 예: 적에게 데미지 주기, 적을 밀어내기 등
-                // hit.collider.GetComponent<Enemy>().TakeDamage(damage);
+                ropeCo = StartCoroutine(PullEnemyRope(hit.point, hit.collider.gameObject));
                 return;
             }
             else if (hit.collider.CompareTag("Ground"))
@@ -143,7 +135,7 @@ public class Player : Entity
             }
         }
 
-        ropeCo = StartCoroutine(ReturnRope(endPos));
+        ropeCo = StartCoroutine(ThrowRope(endPos));
     }
 
     public void RopeAction(float _speed)
@@ -157,7 +149,29 @@ public class Player : Entity
         //rb.AddForce(new Vector2(moveInput.x * swingForce, 0), ForceMode2D.Force);
     }
 
-    public void StartSwing(Vector2 anchorPoint)
+    public void ThrowObject(float xInput, float yInput)
+    {
+        if (grabbedObject == null)
+            return;
+
+        grabbedObject.transform.SetParent(null);
+        Enemy enemyScript = grabbedObject.GetComponent<Enemy>();
+        enemyScript.cd.isTrigger = true;
+        enemyScript.cd.enabled = true;
+
+        Vector3 dir = Vector3.right * facingDir;
+
+        if(xInput != 0 || yInput != 0)
+        {
+            dir = new Vector2(xInput, yInput).normalized;
+        }
+
+        enemyScript.rb.linearVelocity = dir * 25f;
+
+        grabbedObject = null;
+    }
+
+    private void StartSwing(Vector2 anchorPoint)
     {
         distanceJoint.autoConfigureConnectedAnchor = false;
         distanceJoint.connectedAnchor = anchorPoint;
@@ -173,7 +187,7 @@ public class Player : Entity
         lineRenderer.positionCount = 0; // 라인 렌더러 초기화
     }
 
-    private IEnumerator ReturnRope(Vector2 targetPos)
+    private IEnumerator ThrowRope(Vector2 targetPos)
     {
         isRopeActive = true;
         lineRenderer.positionCount = 2;
@@ -234,6 +248,51 @@ public class Player : Entity
             lineRenderer.SetPosition(1, targetPos);
             yield return null;
         }
+    }
+
+    private IEnumerator PullEnemyRope(Vector2 targetPos, GameObject enemy)
+    {
+        isRopeActive = true;
+        lineRenderer.positionCount = 2;
+        Vector2 startPos = transform.position;
+        lineRenderer.SetPosition(0, startPos);
+        lineRenderer.SetPosition(1, targetPos);
+        Enemy enemyScript = enemy.GetComponent<Enemy>();
+
+        float progress = 0f;
+        while (progress < 1f)
+        {
+            startPos = transform.position;
+            progress += Time.deltaTime * ropeSpeed;
+            Vector2 curPos = Vector2.Lerp(startPos, targetPos, progress);
+            lineRenderer.SetPosition(0, startPos);
+            lineRenderer.SetPosition(1, curPos);
+            yield return null;
+        }
+
+        enemyScript.IsBusy = true;
+        enemyScript.rb.bodyType = RigidbodyType2D.Kinematic;
+        enemyScript.cd.enabled = false;
+
+        progress = 0f;
+        while (progress < 1f)
+        {
+            startPos = transform.position;
+            progress += Time.deltaTime * ropeSpeed;
+            Vector2 curPos = Vector2.Lerp(targetPos, startPos, progress);
+            lineRenderer.SetPosition(0, startPos);
+            lineRenderer.SetPosition(1, curPos);
+            enemy.transform.position = curPos;
+            yield return null;
+        }
+
+        lineRenderer.positionCount = 0;
+        isRopeActive = false;
+
+        grabbedObject = enemy;
+        grabbedObject.transform.SetParent(transform);
+        grabbedObject.transform.localPosition = new Vector2(0.5f, 0f);
+        stateMachine.ChangeState(grabState);
     }
 
     public override bool IsGroundDetected()
