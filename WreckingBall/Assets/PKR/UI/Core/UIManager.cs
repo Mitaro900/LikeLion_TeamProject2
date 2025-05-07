@@ -79,25 +79,4 @@ public class UIManager : MonoBehaviour
         GameObject.Destroy(ui.gameObject);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            UIManager.Instance.OpenUI<NormalStageUI>();
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            NormalStageUI ui = (NormalStageUI)UIManager.Instance.GetUI<NormalStageUI>();
-            ui.SetCombo(100);
-        }
-
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            UIManager.Instance.OpenUI<SettingUI>();
-        }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            UIManager.Instance.CloseUI();
-        }
-    }
 }
