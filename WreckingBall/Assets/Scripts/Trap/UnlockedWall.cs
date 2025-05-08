@@ -23,7 +23,5 @@ public class UnlockedWall : BreakableWallBase
     protected override void AnimationFinished()
     {
         base.AnimationFinished();
-        // Unlock the wall
-        gameObject.SetActive(false);
     }
 }
