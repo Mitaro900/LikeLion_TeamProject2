@@ -3,17 +3,17 @@ using UnityEngine;
 public class BreakableWallBase : MonoBehaviour
 {
     [Header(nameof(BreakableWallBase)+ ".Settings")]
-    [SerializeField] Collider2D col;
+    [SerializeField] protected Collider2D col;
     [SerializeField] protected Animator anim;
     [SerializeField] protected float breakableSpeed;
+    bool isOpenable = false;
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
         {
             Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
-            float speed = rb.linearVelocity.magnitude;
-            if (breakableSpeed <= speed && anim.enabled == false)
+            if (isOpenable && anim.enabled == false)
             {
                 col.enabled = false;
                 anim.enabled = true;
@@ -23,6 +23,11 @@ public class BreakableWallBase : MonoBehaviour
                 col.enabled = true;
             }
         }
+    }
+
+    public void SetOpenable(bool isOpen)
+    {
+        isOpenable = isOpen;
     }
 
     protected virtual void AnimationFinished()
