@@ -50,9 +50,14 @@ public class PlayerState : State
         if (Input.GetKeyDown(KeyCode.X))
         {
             if (!player.IsRopeActive && !player.IsBusy)
+            {
                 player.LaunchRope(xInput, yInput);
+            }
             else if (player.IsAnchored)
+            {
+                player.PullRope();
                 player.ReleaseRope();
+            }
         }
     }
 

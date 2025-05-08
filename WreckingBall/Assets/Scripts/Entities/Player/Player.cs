@@ -6,23 +6,22 @@ public class Player : Entity
     [Header("이동 정보")]
     [SerializeField] private float moveSpeed = 5f;
     public float MoveSpeed { get => moveSpeed; }
-    
-    [SerializeField] private float jumpForce = 8f;
+    [SerializeField] private float jumpForce = 9f;
     public float JumpForce { get => jumpForce; }
-    
     [SerializeField] private float acceleration = 7f;
     public float Acceleration { get => acceleration; }
-    
     [SerializeField] private float dashSpeedThereshold = 15f;
     public float DashSpeedThereshold { get => dashSpeedThereshold; }
-    
     [SerializeField] private float maxSpeed = 25f;
     public float MaxSpeed { get => maxSpeed; }
+    private bool isAccelerating = false;
+    public bool IsAccelerating { get => isAccelerating; set => isAccelerating = value; }
+    private bool isOverSpeedThreshold = false;
+    public bool IsOverSpeedThreshold { get => isOverSpeedThreshold; set => isOverSpeedThreshold = value; }
 
     [Header("중력 정보")]
     [SerializeField] private float defaultGravityScale = 2.5f;
     public float DefaultGravityScale { get => defaultGravityScale; }
-
     [SerializeField] private float jumpGravityScale = 1.0f;
     public float JumpGravityScale { get => jumpGravityScale; }
 
@@ -31,15 +30,16 @@ public class Player : Entity
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private float ropeSpeed = 10f;
     public float RopeSpeed { get => ropeSpeed; }
-
     [SerializeField] private float maxRopeDistance = 8f;
-    [SerializeField] private LayerMask whatIsRopeable;
 
     private Coroutine ropeCo = null;
     private bool isRopeActive = false;
     public bool IsRopeActive { get => isRopeActive; set => isRopeActive = value; } // 로프가 활성화 되어 있는지 여부
-
     public bool IsAnchored { get => distanceJoint.enabled; set => distanceJoint.enabled = value; } // 물체에 매달려 있는지 여부
+
+    private bool isBusy = false;
+    public bool IsBusy { get => isBusy; set => isBusy = value; }
+
     public GameObject grabbedObject { get; private set; }
 
 
@@ -113,7 +113,7 @@ public class Player : Entity
 
         Vector2 endPos = transform.position + dir.normalized * maxRopeDistance;
 
-        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, dir, maxRopeDistance, whatIsRopeable);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, dir, maxRopeDistance);
         foreach (var hit in hits)
         {
             if (hit.collider == null) continue;
@@ -147,6 +147,13 @@ public class Player : Entity
 
         //스크린기준 AddForce.
         //rb.AddForce(new Vector2(moveInput.x * swingForce, 0), ForceMode2D.Force);
+    }
+
+    public void PullRope()
+    {
+        Vector2 anchorToPlayer = (Vector2)transform.position - distanceJoint.connectedAnchor;
+        anchorToPlayer.Normalize();
+        rb.AddForce(anchorToPlayer * jumpForce, ForceMode2D.Impulse);
     }
 
     public void ThrowObject(float xInput, float yInput)
@@ -270,7 +277,7 @@ public class Player : Entity
             yield return null;
         }
 
-        enemyScript.IsBusy = true;
+        enemyScript.IsGrabbed = true;
         enemyScript.rb.bodyType = RigidbodyType2D.Kinematic;
         enemyScript.cd.enabled = false;
 

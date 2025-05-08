@@ -1,32 +1,47 @@
+using PKR;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BreakableWallBase : MonoBehaviour
 {
-    [Header(nameof(BreakableWallBase)+ ".Settings")]
-    [SerializeField] Collider2D col;
-    [SerializeField] protected Animator anim;
-    [SerializeField] protected float breakableSpeed;
+    [Header(nameof(BreakableWallBase) + ".Settings")]
+    private Animator anim;
+    [SerializeField] protected UnityEvent onHit;
+    [SerializeField] protected bool isHardened;
 
-    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    private void Start()
     {
-        if(collision.CompareTag("Player"))
+        anim = GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+        if((PlayerManager.Instance.player.IsAccelerating && !isHardened) || (PlayerManager.Instance.player.IsOverSpeedThreshold && isHardened))
         {
-            Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
-            float speed = rb.linearVelocity.magnitude;
-            if (breakableSpeed <= speed && anim.enabled == false)
+            gameObject.layer = LayerMask.NameToLayer("Default");
+        }
+        else
+        {
+            gameObject.layer = LayerMask.NameToLayer("Ground");
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Player"))
+        {
+            Player player = collision.collider.GetComponent<Player>();
+            if (((player.IsAccelerating && !isHardened) || (player.IsOverSpeedThreshold && isHardened))
+                && ((collision.contacts[0].normal.x != 0 && player.stateMachine.currentState == player.dashState) ||
+                (collision.contacts[0].normal.y < 0) && player.stateMachine.currentState == player.bodyslamState) && anim.enabled == false)
             {
-                col.enabled = false;
-                anim.enabled = true;
-            }
-            else if(col.enabled == false)
-            {
-                col.enabled = true;
+                onHit?.Invoke();
             }
         }
     }
 
     protected virtual void AnimationFinished()
     {
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }

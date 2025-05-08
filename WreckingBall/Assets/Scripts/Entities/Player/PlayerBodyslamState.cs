@@ -14,6 +14,7 @@ public class PlayerBodyslamState : PlayerState
         base.Enter();
 
         player.IsBusy = true;
+        player.IsAccelerating = true;
         rb.gravityScale = 0f;
         stateTimer = 0.5f;
         currentTime = 0f;
@@ -28,7 +29,12 @@ public class PlayerBodyslamState : PlayerState
 
         currentTime += Time.deltaTime;
 
-        finalYSpeed = Mathf.Lerp(finalYSpeed, -25f, currentTime / 2f);
+        finalYSpeed = Mathf.Lerp(finalYSpeed, -player.DashSpeedThereshold, currentTime / 2f);
+
+        if(stateTimer <= 0)
+        {
+            player.IsOverSpeedThreshold = true;
+        }
 
         if (player.IsGroundDetected())
         {
@@ -41,6 +47,8 @@ public class PlayerBodyslamState : PlayerState
         base.Exit();
 
         player.IsBusy = false;
+        player.IsAccelerating = false;
+        player.IsOverSpeedThreshold = false;
         rb.gravityScale = player.DefaultGravityScale;
     }
 }
