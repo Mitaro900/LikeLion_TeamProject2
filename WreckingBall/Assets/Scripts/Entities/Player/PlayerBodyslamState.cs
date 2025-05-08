@@ -31,7 +31,7 @@ public class PlayerBodyslamState : PlayerState
 
         finalYSpeed = Mathf.Lerp(finalYSpeed, -player.DashSpeedThereshold, currentTime / 2f);
 
-        if(Mathf.Abs(finalYSpeed) >= player.DashSpeedThereshold)
+        if(stateTimer <= 0)
         {
             player.IsOverSpeedThreshold = true;
         }
