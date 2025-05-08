@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Entity : MonoBehaviour
@@ -6,11 +7,15 @@ public class Entity : MonoBehaviour
     public Animator anim { get; private set; }
     public Rigidbody2D rb { get; private set; }
 
+    public EntityFx fx { get; private set; }
     public SpriteRenderer sr { get; private set; }
     public BoxCollider2D cd { get; private set; }
     #endregion
 
-    [SerializeField] protected Rigidbody2D.SlideMovement slideMovement = new();
+    [Header("넉백 정보")]
+    [SerializeField] protected Vector2 knockbackDirection = new Vector2(5f, 5f); // 넉백 방향
+    [SerializeField] protected float knockbackDuration = 0.5f; // 넉백 지속 시간
+    protected bool isKnocked; // 넉백 상태
 
     [Header("충돌 정보")]
     [SerializeField] protected Transform groundCheck; // 바닥 체크 위치
@@ -22,9 +27,6 @@ public class Entity : MonoBehaviour
     public float facingDir { get; private set; } = 1f;
     public bool facingRight { get; private set; } = true; // 기본값은 오른쪽
 
-    protected bool isBusy = false;
-    public bool IsBusy { get => isBusy; set => isBusy = value; }
-
     protected virtual void Awake()
     {
 
@@ -35,6 +37,7 @@ public class Entity : MonoBehaviour
         sr = GetComponentInChildren<SpriteRenderer>();
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        fx = GetComponent<EntityFx>();
         cd = GetComponent<BoxCollider2D>();
     }
 
@@ -45,7 +48,21 @@ public class Entity : MonoBehaviour
 
     public virtual void Damage()
     {
+        fx.StartCoroutine("FlashFx");
+        StartCoroutine(HitKnockback());
+    }
 
+    protected virtual IEnumerator HitKnockback()
+    {
+        isKnocked = true;
+
+        rb.linearVelocity = new Vector2(knockbackDirection.x * -facingDir, knockbackDirection.y);
+
+        yield return new WaitForSeconds(knockbackDuration);
+
+        isKnocked = false;
+
+        SetZeroVelocity();
     }
 
     #region 충돌

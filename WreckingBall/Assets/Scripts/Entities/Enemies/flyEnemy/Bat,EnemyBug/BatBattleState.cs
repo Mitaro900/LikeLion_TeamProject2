@@ -14,7 +14,7 @@ public class BatBattleState : State
     public override void Enter()
     {
         base.Enter();
-        player = Playertest.instance.player.transform;
+        player = PlayerManager.Instance.player.transform;
         enemy.moveSpeed += 2f;
         enemy.Radius += 3f;
         enemy.PlayerCheckRadius += 3f;

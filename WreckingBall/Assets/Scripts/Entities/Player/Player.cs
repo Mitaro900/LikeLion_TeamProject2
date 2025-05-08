@@ -7,7 +7,7 @@ public class Player : Entity
     [SerializeField] private float moveSpeed = 5f;
     public float MoveSpeed { get => moveSpeed; }
     
-    [SerializeField] private float jumpForce = 8f;
+    [SerializeField] private float jumpForce = 9f;
     public float JumpForce { get => jumpForce; }
     
     [SerializeField] private float acceleration = 7f;
@@ -33,13 +33,22 @@ public class Player : Entity
     public float RopeSpeed { get => ropeSpeed; }
 
     [SerializeField] private float maxRopeDistance = 8f;
-    [SerializeField] private LayerMask whatIsRopeable;
 
     private Coroutine ropeCo = null;
     private bool isRopeActive = false;
     public bool IsRopeActive { get => isRopeActive; set => isRopeActive = value; } // 로프가 활성화 되어 있는지 여부
 
     public bool IsAnchored { get => distanceJoint.enabled; set => distanceJoint.enabled = value; } // 물체에 매달려 있는지 여부
+
+    private bool isBusy = false;
+    public bool IsBusy { get => isBusy; set => isBusy = value; }
+
+    private bool isAccelerating = false;
+    public bool IsAccelerating { get => isAccelerating; set => isAccelerating = value; }
+
+    private bool isOverSpeedThreshold = false;
+    public bool IsOverSpeedThreshold { get => isOverSpeedThreshold; set => isOverSpeedThreshold = value; }
+
     public GameObject grabbedObject { get; private set; }
 
 
@@ -113,7 +122,7 @@ public class Player : Entity
 
         Vector2 endPos = transform.position + dir.normalized * maxRopeDistance;
 
-        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, dir, maxRopeDistance, whatIsRopeable);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, dir, maxRopeDistance);
         foreach (var hit in hits)
         {
             if (hit.collider == null) continue;
@@ -270,7 +279,7 @@ public class Player : Entity
             yield return null;
         }
 
-        enemyScript.IsBusy = true;
+        enemyScript.IsGrabbed = true;
         enemyScript.rb.bodyType = RigidbodyType2D.Kinematic;
         enemyScript.cd.enabled = false;
 

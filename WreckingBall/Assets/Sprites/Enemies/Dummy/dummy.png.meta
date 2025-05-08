@@ -1,82 +1,16 @@
 fileFormatVersion: 2
-guid: 0c10f28adbf312449acefa58966ed77a
+guid: ef28135fc2df094409eef3b1c460bed0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1280969639824133481
-    second: Brick1_0
+      213: -4010617647764655359
+    second: dummy_0
   - first:
-      213: 8731570197298839537
-    second: Brick1_1
+      213: 3694459544301812682
+    second: dummy_1
   - first:
-      213: 7820334699836168898
-    second: Brick1_2
-  - first:
-      213: 7231103757757355003
-    second: Brick1_3
-  - first:
-      213: 3153164785869527240
-    second: Brick1_4
-  - first:
-      213: 4267374714805785538
-    second: Brick1_5
-  - first:
-      213: -6085222249803779737
-    second: Brick1_6
-  - first:
-      213: 8080450192722410106
-    second: Brick1_7
-  - first:
-      213: 7164466702789070863
-    second: Brick1_8
-  - first:
-      213: 4112102860126117907
-    second: Brick1_9
-  - first:
-      213: 9087604804364859810
-    second: Brick1_10
-  - first:
-      213: 5854957931245842128
-    second: Brick1_11
-  - first:
-      213: 5546842797018321655
-    second: Brick1_12
-  - first:
-      213: -9207370511555963240
-    second: Brick1_13
-  - first:
-      213: 5307338722877807140
-    second: Brick1_14
-  - first:
-      213: -645622253924928898
-    second: Brick1_15
-  - first:
-      213: -9175801435454200057
-    second: Brick1_16
-  - first:
-      213: -3042075028334423438
-    second: Brick1_17
-  - first:
-      213: 2623549710866089556
-    second: Brick1_18
-  - first:
-      213: 8459588220520012255
-    second: Brick1_19
-  - first:
-      213: -1259719123116145960
-    second: Brick1_20
-  - first:
-      213: -5135494229589193996
-    second: Brick1_21
-  - first:
-      213: 5585303820047266456
-    second: Brick1_22
-  - first:
-      213: -564169394437395413
-    second: Brick1_23
-  - first:
-      213: -7552955741108047250
-    second: Brick1_24
+      213: 5645216860015622430
+    second: dummy_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -211,7 +145,29 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Brick1_0
+      name: dummy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 103331f9f7c6758c0800000000000000
+      internalID: -4010617647764655359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dummy_1
       rect:
         serializedVersion: 2
         x: 0
@@ -226,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 792f83246e4193ee0800000000000000
-      internalID: -1280969639824133481
+      spriteID: acb3927a16b554330800000000000000
+      internalID: 3694459544301812682
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Brick1_1
+      name: dummy_2
       rect:
         serializedVersion: 2
         x: 32
@@ -248,140 +204,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ff726525d4cc2970800000000000000
-      internalID: 8731570197298839537
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brick1_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2ca5560c9f8678c60800000000000000
-      internalID: 7820334699836168898
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brick1_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bf39e1f3e8a0a5460800000000000000
-      internalID: 7231103757757355003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brick1_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8c81604aaaa42cb20800000000000000
-      internalID: 3153164785869527240
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brick1_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2c39b7f81b2c83b30800000000000000
-      internalID: 4267374714805785538
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brick1_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 761742dca92fc8ba0800000000000000
-      internalID: -6085222249803779737
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brick1_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e288129c0f247d498fe65d995a40c6f
-      internalID: 8080450192722410106
+      spriteID: e19f64513d6d75e40800000000000000
+      internalID: 5645216860015622430
       vertices: []
       indices: 
       edges: []
@@ -390,7 +214,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d042b42c824630144b90e37effb4a2be
+    spriteID: c742ae4479758f048aed23a8ce224e1e
     internalID: 0
     vertices: []
     indices: 
@@ -400,14 +224,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Brick1_0: -1280969639824133481
-      Brick1_1: 8731570197298839537
-      Brick1_2: 7820334699836168898
-      Brick1_3: 7231103757757355003
-      Brick1_4: 3153164785869527240
-      Brick1_5: 4267374714805785538
-      Brick1_6: -6085222249803779737
-      Brick1_7: 8080450192722410106
+      dummy_0: -4010617647764655359
+      dummy_1: 3694459544301812682
+      dummy_2: 5645216860015622430
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

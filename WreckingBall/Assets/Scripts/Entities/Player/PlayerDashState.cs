@@ -14,6 +14,8 @@ public class PlayerDashState : PlayerState
 
         stateTimer = 0.5f;
 
+        player.IsAccelerating = true;
+
         if(player.stateMachine.previousState == player.turnState)
         {
             finalXSpeed = player.DashSpeedThereshold;
@@ -47,6 +49,11 @@ public class PlayerDashState : PlayerState
         
         finalXSpeed += player.Acceleration * Time.deltaTime;
 
+        if(Mathf.Abs(finalXSpeed) >= player.DashSpeedThereshold)
+        {
+            player.IsOverSpeedThreshold = true;
+        }
+
         if (finalXSpeed > player.MaxSpeed)
         {
             finalXSpeed = player.MaxSpeed;
@@ -74,6 +81,8 @@ public class PlayerDashState : PlayerState
     {
         base.Exit();
 
+        player.IsAccelerating = false;
+        player.IsOverSpeedThreshold = false;
         rb.gravityScale = player.DefaultGravityScale;
     }
 }

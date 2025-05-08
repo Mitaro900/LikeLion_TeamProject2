@@ -44,6 +44,9 @@ public class Enemy : Entity
 
     [HideInInspector] public float lastTimeAttacked;
 
+    protected bool isGrabbed = false;
+    public bool IsGrabbed { get => isGrabbed; set => isGrabbed = value; }
+
     public StateMachine stateMachine { get; private set; }
 
     protected override void Awake()

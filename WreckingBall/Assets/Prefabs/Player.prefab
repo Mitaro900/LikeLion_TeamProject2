@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6968400280137975918}
   - component: {fileID: 8752022394912870679}
   - component: {fileID: 4755054468397181234}
+  - component: {fileID: 61972143633549608}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -251,23 +252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bbd55cf2d549e34f844877e238ab89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slideMovement:
-    <maxIterations>k__BackingField: 3
-    <surfaceSlideAngle>k__BackingField: 90
-    <gravitySlipAngle>k__BackingField: 90
-    <surfaceUp>k__BackingField: {x: 0, y: 1}
-    <surfaceAnchor>k__BackingField: {x: 0, y: -1}
-    <gravity>k__BackingField: {x: 0, y: -9.81}
-    <startPosition>k__BackingField: {x: 0, y: 0}
-    <selectedCollider>k__BackingField: {fileID: 0}
-    <layerMask>k__BackingField:
-      serializedVersion: 2
-      m_Bits: 0
-    <useLayerMask>k__BackingField: 0
-    <useStartPosition>k__BackingField: 0
-    <useNoMove>k__BackingField: 0
-    <useSimulationMove>k__BackingField: 0
-    <useAttachedTriggers>k__BackingField: 0
+  knockbackDirection: {x: 5, y: 5}
+  knockbackDuration: 0.5
   groundCheck: {fileID: 3383297578925693230}
   groundCheckDistance: 0.1
   wallCheck: {fileID: 5843678460530972917}
@@ -276,7 +262,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   moveSpeed: 5
-  jumpForce: 8
+  jumpForce: 9
   acceleration: 7
   dashSpeedThereshold: 15
   maxSpeed: 25
@@ -286,9 +272,20 @@ MonoBehaviour:
   lineRenderer: {fileID: 6968400280137975918}
   ropeSpeed: 10
   maxRopeDistance: 8
-  whatIsRopeable:
-    serializedVersion: 2
-    m_Bits: 328
+--- !u!114 &61972143633549608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811210994940891885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0ddfd36bded95f49be9fa95c0a4e856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashDuration: 0.2
+  hitMat: {fileID: 2100000, guid: 47fcc3929921eb84db3ec8ba63abe539, type: 2}
 --- !u!1 &3645396174606679076
 GameObject:
   m_ObjectHideFlags: 0
