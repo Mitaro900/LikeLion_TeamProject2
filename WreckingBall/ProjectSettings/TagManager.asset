@@ -5,16 +5,18 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - Ropeable
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - Ropeable
   - Player
-  - Ground
+  - Enemy
   - 
   - 
   - 

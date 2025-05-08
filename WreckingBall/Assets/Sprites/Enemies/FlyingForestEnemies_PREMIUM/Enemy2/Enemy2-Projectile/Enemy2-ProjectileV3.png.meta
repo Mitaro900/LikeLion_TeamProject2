@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -66,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -157,19 +157,19 @@ TextureImporter:
       name: Enemy2-ProjectileV3_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 11
-        width: 20
-        height: 10
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d73c4aea6baca42b0800000000000000
+      spriteID: 8c33060272cce0a499e61f7d2a81709e
       internalID: -5599440300718898307
       vertices: []
       indices: 
@@ -179,19 +179,19 @@ TextureImporter:
       name: Enemy2-ProjectileV3_1
       rect:
         serializedVersion: 2
-        x: 42
-        y: 11
-        width: 23
-        height: 10
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ee44252a7860645b0800000000000000
+      spriteID: 04412045789da0346a5d805c1dc7ffb1
       internalID: -5384609124861197074
       vertices: []
       indices: 
@@ -201,19 +201,19 @@ TextureImporter:
       name: Enemy2-ProjectileV3_2
       rect:
         serializedVersion: 2
-        x: 74
-        y: 11
-        width: 21
-        height: 10
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0b6c2bcee7a8d7c70800000000000000
+      spriteID: 06cf751cb690dcd4189e84e4045242f5
       internalID: 8970478310533547696
       vertices: []
       indices: 
@@ -223,19 +223,19 @@ TextureImporter:
       name: Enemy2-ProjectileV3_3
       rect:
         serializedVersion: 2
-        x: 107
-        y: 11
-        width: 21
-        height: 10
+        x: 96
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1f1a4ea0bcdc1e270800000000000000
+      spriteID: 9df7aa3030fc3e04ba562192441a3f5c
       internalID: 8278123862028493297
       vertices: []
       indices: 
@@ -245,19 +245,19 @@ TextureImporter:
       name: Enemy2-ProjectileV3_4
       rect:
         serializedVersion: 2
-        x: 140
-        y: 11
-        width: 20
-        height: 10
+        x: 128
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 31809eeedd131d7a0800000000000000
+      spriteID: ebe2351da051a37489b5af9b0901dfab
       internalID: -6354242769977276397
       vertices: []
       indices: 
@@ -267,19 +267,19 @@ TextureImporter:
       name: Enemy2-ProjectileV3_5
       rect:
         serializedVersion: 2
-        x: 172
-        y: 11
-        width: 15
-        height: 10
+        x: 160
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ed59599a9ac7a8ee0800000000000000
+      spriteID: ff422b578b6aa6748b3717d0e1d7289d
       internalID: -1258056077760162338
       vertices: []
       indices: 
@@ -289,7 +289,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f170de0b62a20434fa69bb3d70472128
     internalID: 0
     vertices: []
     indices: 

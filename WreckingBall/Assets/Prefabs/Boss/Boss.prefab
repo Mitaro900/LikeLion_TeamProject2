@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 4911203833568755443}
   - component: {fileID: 2533002551154494169}
   - component: {fileID: 595430397624355761}
+  - component: {fileID: 3924171977995649461}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -66,6 +67,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3647324779327811694}
+  - {fileID: 6940569506936250395}
+  - {fileID: 7437408169002319483}
   - {fileID: 4113096928512209809}
   - {fileID: 5447708941573939314}
   m_Father: {fileID: 0}
@@ -111,8 +114,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1327849649
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6b0ba3ef17a62404d985ccc14f6d9c95, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -232,10 +235,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f6c02b69359b345bd31b02d2cc28af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ability:
-    hp: 10
-    moveSpeed: 7
-    jumpPower: 10
   knockbackState:
     direction: {x: 0, y: 0}
     duration: 0.5
@@ -247,12 +246,91 @@ MonoBehaviour:
   attackCheck: {fileID: 3647324779327811694}
   attackCheckRadius: 1.26
   groundCheck: {fileID: 5447708941573939314}
-  groundCheckDistance: 1.34
+  groundCheckDistance: 1.4
   wallCheck: {fileID: 4113096928512209809}
   wallCheckDistance: 1.67
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 256
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 128
+  facingDir: -1
+  ability:
+    hp: 10
+    maxHp: 10
+    moveSpeed: 8
+    jumpPower: 10
+  bossPage: 1
+  bossMaxPage: 2
+  isGiveDamagedAction: 0
+  bg: {fileID: 0}
+  controller: {fileID: 0}
+  trapsPrefab:
+  - Key: SpikeBall_0
+    Value: 10
+  - Key: Suriken_0
+    Value: 10
+  throwPos: {fileID: 6940569506936250395}
+  dropPos: {fileID: 7437408169002319483}
+--- !u!114 &3924171977995649461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2533250395704109011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f9f1a2e62424e4fbaf020945bb0ccb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patternMaxCooldown:
+  - Key: Page1_Pattern1
+    Value: 10
+  - Key: Page1_Pattern2
+    Value: 10
+  - Key: Page1_Pattern3
+    Value: 10
+  - Key: Page2_Pattern1
+    Value: 15
+  - Key: Page2_Pattern2
+    Value: 15
+  - Key: Page2_Pattern3
+    Value: 15
+  - Key: Page2_Pattern4
+    Value: 15
+--- !u!1 &3947028846296225458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6940569506936250395}
+  m_Layer: 0
+  m_Name: ThrowPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6940569506936250395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3947028846296225458}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.84, y: 0.98, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5142485906437201834}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3985212576742787356
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,6 +357,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5142485906437201834}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5431265371800908633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7437408169002319483}
+  m_Layer: 0
+  m_Name: DropPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7437408169002319483
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431265371800908633}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.84, y: 1.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
