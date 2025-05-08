@@ -38,11 +38,12 @@ public abstract class UIBase : MonoBehaviour
     protected void BindImage(Type type) { Bind<Image>(type); }
     protected void BindButton(Type type) { Bind<Button>(type); }
     protected void BindText(Type type) { Bind<TMP_Text>(type); }
+    protected void BindSlider(Type type) { Bind<Slider>(type); }
     protected GameObject GetObject(int idx) { return Get<GameObject>(idx); }
     protected Image GetImage(int idx) { return Get<Image>(idx); }
     protected Button GetButton(int idx) { return Get<Button>(idx); }
     protected TMP_Text GetText(int idx) { return Get<TMP_Text>(idx); }
-
+    protected Slider GetSlider(int idx) { return Get<Slider>(idx); }
     protected T Get<T>(int idx) where T : UnityEngine.Object
     {
         UnityEngine.Object[] objects = null;

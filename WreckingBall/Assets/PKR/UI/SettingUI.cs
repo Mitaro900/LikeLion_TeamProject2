@@ -1,13 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using PKR.Lobby;
-using Singleton.Component;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public enum FocusUIType
@@ -243,7 +239,7 @@ public class SettingUI : UIBase
     public void StartRebind(BindingManager.Action action)
     {
         var ui = UIManager.Instance.OpenUI<BindingUI>();
-        var trigger = ui.AddComponent<OnDestroyTrigger>();
+        var trigger = ui.gameObject.AddComponent<OnDestroyTrigger>();
         trigger.onDestroy += () =>
         {
             controlPanel.Init();

@@ -1,8 +1,5 @@
 using System;
 using System.Collections.Generic;
-using PKR;
-using PKR.Lobby;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -112,7 +109,7 @@ public class LobbyController : MonoBehaviour
         print("OpenSettings");
         activeSettingUI = true;
         var ui = UIManager.Instance.OpenUI<SettingUI>();
-        var trigger = ui.AddComponent<OnDestroyTrigger>();
+        var trigger = ui.gameObject.AddComponent<OnDestroyTrigger>();
         trigger.onDestroy += () =>
         {
             activeSettingUI = false;

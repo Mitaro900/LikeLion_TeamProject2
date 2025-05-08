@@ -17,12 +17,18 @@ public class NormalStageUI : UIBase
         ComboBox
     }
 
+    enum Sliders
+    {
+        Slider
+    }
+
     private int _combo;
 
     void Awake()
     {
         BindText(typeof(Texts));
         BindImage(typeof(Images));
+        BindSlider(typeof(Sliders));
 
         _score = _displayedScore = 0;
         _combo = 0;
@@ -85,14 +91,17 @@ public class NormalStageUI : UIBase
     private ComboBoxState _comboBoxState = ComboBoxState.Idle;
 
     private Coroutine comboCo;
+    private Coroutine comboCooldownCo;
     private Vector2 _comboBoxOrigin;
     private Vector2 _comboBoxTarget;
 
+   
     public void SetCombo(int value)
     {
         _combo = value;
         GetText((int)Texts.ComboText).text = $"{_combo} combo!";
-
+        if (comboCooldownCo != null) StopCoroutine(comboCooldownCo);
+        comboCooldownCo = StartCoroutine(CoolDownCo());
         // 콤보박스가 사라지거나 대기 상태이면 새로 등장 애니메이션을 실행
         if (_comboBoxState == ComboBoxState.Idle || _comboBoxState == ComboBoxState.Hiding)
         {
@@ -115,7 +124,7 @@ public class NormalStageUI : UIBase
         RectTransform rt = comboBoxImage.GetComponent<RectTransform>();
         Vector2 startPos = rt.anchoredPosition;
         Vector2 targetPos = _comboBoxTarget;
-        float duration = 0.5f;
+        float duration = 0.35f;
         float elapsedTime = 0f;
 
         while (elapsedTime < duration)
@@ -132,7 +141,7 @@ public class NormalStageUI : UIBase
     IEnumerator AdvertisementWait()
     {
         _comboBoxState = ComboBoxState.Advertising;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(6f);
         comboCo = StartCoroutine(HideComboBox());
     }
 
@@ -143,7 +152,7 @@ public class NormalStageUI : UIBase
         RectTransform rt = comboBoxImage.GetComponent<RectTransform>();
         Vector2 startPos = rt.anchoredPosition;
         Vector2 targetPos = _comboBoxOrigin;
-        float duration = 0.5f;
+        float duration = 0.35f;
         float elapsedTime = 0f;
 
         while (elapsedTime < duration)
@@ -157,6 +166,18 @@ public class NormalStageUI : UIBase
         _comboBoxState = ComboBoxState.Idle;
         comboCo = null;
     }
+    IEnumerator CoolDownCo()
+    {
+        GetSlider((int)Sliders.Slider).value = 1;
+        float duration = 6.7f;
+        float elapsedTime = 0f;
 
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            GetSlider((int)Sliders.Slider).value = 1 - (elapsedTime / duration);
+            yield return null;
+        }
+    }
     #endregion
 }
