@@ -30,12 +30,14 @@ public class Player : Entity
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private float ropeSpeed = 10f;
     public float RopeSpeed { get => ropeSpeed; }
+    [SerializeField] private float minRopeDistance = 1.25f;
     [SerializeField] private float maxRopeDistance = 8f;
 
     private Coroutine ropeCo = null;
     private bool isRopeActive = false;
     public bool IsRopeActive { get => isRopeActive; set => isRopeActive = value; } // 로프가 활성화 되어 있는지 여부
     public bool IsAnchored { get => distanceJoint.enabled; set => distanceJoint.enabled = value; } // 물체에 매달려 있는지 여부
+    public bool isPull { get; private set; }
 
     private bool isBusy = false;
     public bool IsBusy { get => isBusy; set => isBusy = value; }
@@ -97,6 +99,8 @@ public class Player : Entity
     {
         if (isRopeActive)
         {
+            isPull = false;
+            StopCoroutine("PullPlayerRope");
             StopSwing();
         }
     }
@@ -151,9 +155,8 @@ public class Player : Entity
 
     public void PullRope()
     {
-        Vector2 anchorToPlayer = (Vector2)transform.position - distanceJoint.connectedAnchor;
-        anchorToPlayer.Normalize();
-        rb.AddForce(anchorToPlayer * jumpForce, ForceMode2D.Impulse);
+        isPull = true;
+        StartCoroutine("PullPlayerRope", distanceJoint.distance);
     }
 
     public void ThrowObject(float xInput, float yInput)
@@ -162,6 +165,7 @@ public class Player : Entity
             return;
 
         grabbedObject.transform.SetParent(null);
+        grabbedObject.layer = LayerMask.NameToLayer("Default");
         Enemy enemyScript = grabbedObject.GetComponent<Enemy>();
         enemyScript.cd.isTrigger = true;
         enemyScript.cd.enabled = true;
@@ -300,6 +304,16 @@ public class Player : Entity
         grabbedObject.transform.SetParent(transform);
         grabbedObject.transform.localPosition = new Vector2(0.5f, 0f);
         stateMachine.ChangeState(grabState);
+    }
+
+    private IEnumerator PullPlayerRope(float startDistance)
+    {
+        while(distanceJoint.distance > minRopeDistance)
+        {
+            distanceJoint.distance -= Time.deltaTime * ropeSpeed;
+            yield return null;
+        }
+        distanceJoint.distance = minRopeDistance;
     }
 
     public override bool IsGroundDetected()

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4859908522559176722}
   - component: {fileID: 596662614959012445}
   - component: {fileID: 7113157477110318941}
-  - component: {fileID: 1457977549404799726}
+  - component: {fileID: 4183531220744641020}
   m_Layer: 3
   m_Name: Brick1_0
   m_TagString: Ground
@@ -158,7 +158,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1457977549404799726
+--- !u!114 &4183531220744641020
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,24 +167,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7892830320518342630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b8ffb659e1dfe844b90654aa760035b, type: 3}
+  m_Script: {fileID: 11500000, guid: c24d869892d12614e8610cea1fe02d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onHit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7113157477110318941}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 596662614959012445}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
@@ -197,6 +185,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  cd: {fileID: 7113157477110318941}
-  anim: {fileID: 596662614959012445}
+      - m_Target: {fileID: 7113157477110318941}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isHardened: 0

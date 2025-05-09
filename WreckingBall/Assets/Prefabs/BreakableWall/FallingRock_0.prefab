@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7606971561008810739}
   - component: {fileID: 9148368293517540444}
   - component: {fileID: 5466893848007687975}
-  - component: {fileID: 4152596248670325501}
   - component: {fileID: 5768346502971455668}
   m_Layer: 8
   m_Name: FallingRock_0
@@ -159,52 +158,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.7238515, y: 0.6997196}
   m_EdgeRadius: 0
---- !u!61 &4152596248670325501
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 391164302777159789}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.33579013}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 1}
-    oldSize: {x: 1.3333334, y: 1.3333334}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.85, y: 0.82614785}
-  m_EdgeRadius: 0
 --- !u!114 &5768346502971455668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b8ffb659e1dfe844b90654aa760035b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 4152596248670325501}
-  anim: {fileID: 9148368293517540444}
-  breakableSpeed: 0
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
+  isHardened: 0

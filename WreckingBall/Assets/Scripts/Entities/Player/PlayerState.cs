@@ -55,8 +55,14 @@ public class PlayerState : State
             }
             else if (player.IsAnchored)
             {
-                player.PullRope();
-                player.ReleaseRope();
+                if (player.isPull)
+                {
+                    player.ReleaseRope();
+                }
+                else
+                {
+                    player.PullRope();
+                }
             }
         }
     }

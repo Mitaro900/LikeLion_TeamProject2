@@ -1,22 +1,13 @@
-using PKR;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class BreakableWallBase : MonoBehaviour
+public class BreakableBlock : BlockBase
 {
-    [Header(nameof(BreakableWallBase) + ".Settings")]
-    private Animator anim;
-    [SerializeField] protected UnityEvent onHit;
-    [SerializeField] protected bool isHardened;
-
-    private void Start()
-    {
-        anim = GetComponent<Animator>();
-    }
+    [SerializeField] private bool isHardened;
 
     private void Update()
     {
-        if((PlayerManager.Instance.player.IsAccelerating && !isHardened) || (PlayerManager.Instance.player.IsOverSpeedThreshold && isHardened))
+        if ((PlayerManager.Instance.player.IsAccelerating && !isHardened) || (PlayerManager.Instance.player.IsOverSpeedThreshold && isHardened))
         {
             gameObject.layer = LayerMask.NameToLayer("Default");
         }
@@ -38,10 +29,5 @@ public class BreakableWallBase : MonoBehaviour
                 onHit?.Invoke();
             }
         }
-    }
-
-    protected virtual void AnimationFinished()
-    {
-        Destroy(gameObject);
     }
 }
