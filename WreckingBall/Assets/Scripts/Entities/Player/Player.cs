@@ -93,6 +93,15 @@ public class Player : Entity
         base.Update();
 
         stateMachine.currentState.Update();
+
+        if (isOverSpeedThreshold)
+        {
+            fx.InvokeRepeating("OrangeColorBlink", 0f, 0.3f);
+        }
+        else
+        {
+            fx.CancelColorChange();
+        }
     }
 
     public void ReleaseRope()

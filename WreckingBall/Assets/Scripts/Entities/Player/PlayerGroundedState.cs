@@ -15,7 +15,7 @@ public class PlayerGroundedState : PlayerState
     {
         base.Update();
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(km.GetKey(BindingManager.Action.Dash)))
         {
             stateMachine.ChangeState(player.dashState);
             return;

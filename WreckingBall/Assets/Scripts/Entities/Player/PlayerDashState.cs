@@ -30,7 +30,7 @@ public class PlayerDashState : PlayerState
     {
         base.Update();
 
-        if(!Input.GetKey(KeyCode.LeftShift) || player.IsWallDetected())
+        if(!Input.GetKey(km.GetKey(BindingManager.Action.Dash)) || player.IsWallDetected())
         {
             stateMachine.ChangeState(player.idleState);
             return;
