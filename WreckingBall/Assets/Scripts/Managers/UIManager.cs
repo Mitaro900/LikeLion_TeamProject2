@@ -48,18 +48,18 @@ public class UIManager : MonoBehaviour
         //test
         if (Input.GetKeyDown(KeyCode.A))
         {
-            var ui = (TutorialUI)UIManager.Instance.GetUI<TutorialUI>();
+            var ui = UIManager.Instance.GetUI<TutorialUI>();
             if(ui == null) ui = UIManager.Instance.OpenUI<TutorialUI>();
             
             ui.ShowText("가나다라마바사 가나다라마바사 가나다라마바사 가나다라마바사 가나다라마바사");
         }
     }
 
-    public UIBase GetUI<T>() where T : UIBase
+    public T GetUI<T>() where T : UIBase
     {
         string name = typeof(T).Name;
         if (openedDic.ContainsKey(name))
-            return openedDic[name];
+            return openedDic[name] as T;
 
         return null;
     }
