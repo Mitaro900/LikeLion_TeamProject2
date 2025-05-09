@@ -36,4 +36,18 @@ public class EntityFx : MonoBehaviour
         sr.color = currentColor;
         sr.material = originalMat;
     }
+
+    private void OrangeColorBlink()
+    {
+        if (sr.color != Color.white)
+            sr.color = Color.white;
+        else
+            sr.color = new Color(1f, 0.5f, 0f);
+    }
+
+    public void CancelColorChange()
+    {
+        CancelInvoke();
+        sr.color = Color.white;
+    }
 }

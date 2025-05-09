@@ -173,10 +173,10 @@ TextureImporter:
       name: Arrow_Double_Jump_1
       rect:
         serializedVersion: 2
-        x: 15
+        x: 16
         y: 0
-        width: 18
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,9 +195,9 @@ TextureImporter:
       name: Arrow_Double_Jump_2
       rect:
         serializedVersion: 2
-        x: 33
+        x: 32
         y: 0
-        width: 14
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -239,7 +239,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6c862d0fd5c46184aaf8a8f97cf6dec1
     internalID: 0
     vertices: []
     indices: 

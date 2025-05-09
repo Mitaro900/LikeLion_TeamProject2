@@ -17,19 +17,19 @@ public class PlayerGrabState : PlayerState
     {
         base.Update();
 
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(km.GetKey(BindingManager.Action.Hook)))
         {
             player.ThrowObject(xInput, yInput);
             player.stateMachine.ChangeState(player.idleState);
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.Z) && (player.IsGroundDetected() || player.IsAnchored))
+        if (Input.GetKeyDown(km.GetKey(BindingManager.Action.Jump)) && (player.IsGroundDetected() || player.IsAnchored))
         {
             rb.gravityScale = player.JumpGravityScale;
             rb.linearVelocity = new Vector2(rb.linearVelocityX, player.JumpForce);
         }
-        else if (Input.GetKeyUp(KeyCode.Z))
+        else if (Input.GetKeyUp(km.GetKey(BindingManager.Action.Jump)))
         {
             rb.gravityScale = player.DefaultGravityScale;
         }

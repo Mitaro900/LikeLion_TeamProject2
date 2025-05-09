@@ -30,19 +30,19 @@ public class PlayerDashState : PlayerState
     {
         base.Update();
 
-        if(!Input.GetKey(KeyCode.LeftShift) || player.IsWallDetected())
+        if(!Input.GetKey(km.GetKey(BindingManager.Action.Dash)) || player.IsWallDetected())
         {
             stateMachine.ChangeState(player.idleState);
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.Z) && (player.IsGroundDetected() || player.IsAnchored))
+        if(Input.GetKeyDown(km.GetKey(BindingManager.Action.Jump)) && (player.IsGroundDetected() || player.IsAnchored))
         {
             player.ReleaseRope();
             rb.gravityScale = player.JumpGravityScale;
             rb.linearVelocity = new Vector2(rb.linearVelocityX, player.JumpForce);
         }
-        else if (Input.GetKeyUp(KeyCode.Z))
+        else if (Input.GetKeyUp(km.GetKey(BindingManager.Action.Jump)))
         {
             rb.gravityScale = player.DefaultGravityScale;
         }

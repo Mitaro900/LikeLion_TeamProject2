@@ -15,7 +15,7 @@ public class PlayerGroundedState : PlayerState
     {
         base.Update();
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(km.GetKey(BindingManager.Action.Dash)))
         {
             stateMachine.ChangeState(player.dashState);
             return;
@@ -31,7 +31,7 @@ public class PlayerGroundedState : PlayerState
         {
             stateMachine.ChangeState(player.fallState);
         }
-        else if (Input.GetKeyDown(KeyCode.Z))
+        else if (Input.GetKeyDown(km.GetKey(BindingManager.Action.Jump)))
         {
             stateMachine.ChangeState(player.jumpState);
         }

@@ -1,5 +1,3 @@
-using PKR;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class StraightMovingTrap : TrapBase

@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerState : State
 {
     protected Player player;
+    protected BindingManager km;
 
     protected float xInput;
     protected float yInput;
@@ -15,17 +16,19 @@ public class PlayerState : State
     public override void Enter()
     {
         base.Enter();
+
+        km = BindingManager.Instance;
     }
 
     public override void Update()
     {
         base.Update();
 
-        if(Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow))
+        if(Input.GetKey(km.GetKey(BindingManager.Action.Right)) && !Input.GetKey(km.GetKey(BindingManager.Action.Left)))
         {
             xInput = 1f;
         }
-        else if (Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(km.GetKey(BindingManager.Action.Left)) && !Input.GetKey(km.GetKey(BindingManager.Action.Right)))
         {
             xInput = -1f;
         }
@@ -34,11 +37,11 @@ public class PlayerState : State
             xInput = 0f;
         }
 
-        if (Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(km.GetKey(BindingManager.Action.Up)) && !Input.GetKey(km.GetKey(BindingManager.Action.Down)))
         {
             yInput = 1f;
         }
-        else if (Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.UpArrow))
+        else if (Input.GetKey(km.GetKey(BindingManager.Action.Down)) && !Input.GetKey(km.GetKey(BindingManager.Action.Up)))
         {
             yInput = -1f;
         }
@@ -47,7 +50,7 @@ public class PlayerState : State
             yInput = 0f;
         }
 
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(km.GetKey(BindingManager.Action.Hook)))
         {
             if (!player.IsRopeActive && !player.IsBusy)
             {
@@ -55,8 +58,14 @@ public class PlayerState : State
             }
             else if (player.IsAnchored)
             {
-                player.PullRope();
-                player.ReleaseRope();
+                if (player.isPull)
+                {
+                    player.ReleaseRope();
+                }
+                else
+                {
+                    player.PullRope();
+                }
             }
         }
     }
