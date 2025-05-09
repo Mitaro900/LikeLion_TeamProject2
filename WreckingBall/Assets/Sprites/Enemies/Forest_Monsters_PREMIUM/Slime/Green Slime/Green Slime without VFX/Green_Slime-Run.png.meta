@@ -157,12 +157,12 @@ TextureImporter:
       name: Green_Slime-Run_0
       rect:
         serializedVersion: 2
-        x: 19
+        x: 18
         y: 0
-        width: 23
-        height: 21
-      alignment: 9
-      pivot: {x: 0.5, y: 0.6}
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -179,12 +179,12 @@ TextureImporter:
       name: Green_Slime-Run_1
       rect:
         serializedVersion: 2
-        x: 82
+        x: 81
         y: 0
-        width: 24
-        height: 21
-      alignment: 9
-      pivot: {x: 0.5, y: 0.6}
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -201,12 +201,12 @@ TextureImporter:
       name: Green_Slime-Run_2
       rect:
         serializedVersion: 2
-        x: 144
+        x: 143
         y: 0
-        width: 26
-        height: 21
-      alignment: 9
-      pivot: {x: 0.5, y: 0.6}
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -223,12 +223,12 @@ TextureImporter:
       name: Green_Slime-Run_3
       rect:
         serializedVersion: 2
-        x: 209
+        x: 208
         y: 0
-        width: 27
-        height: 21
-      alignment: 9
-      pivot: {x: 0.5, y: 0.6}
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -245,12 +245,12 @@ TextureImporter:
       name: Green_Slime-Run_4
       rect:
         serializedVersion: 2
-        x: 275
+        x: 274
         y: 0
-        width: 25
-        height: 21
-      alignment: 9
-      pivot: {x: 0.5, y: 0.6}
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -267,12 +267,12 @@ TextureImporter:
       name: Green_Slime-Run_5
       rect:
         serializedVersion: 2
-        x: 340
+        x: 339
         y: 0
-        width: 24
-        height: 21
-      alignment: 9
-      pivot: {x: 0.5, y: 0.6}
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -289,7 +289,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2b1090f536ae47949973b895f1b08707
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 

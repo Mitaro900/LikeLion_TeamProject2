@@ -160,12 +160,12 @@ TextureImporter:
       name: Green_Slime-Idle_0
       rect:
         serializedVersion: 2
-        x: 21
+        x: 20
         y: 0
-        width: 22
-        height: 22
-      alignment: 9
-      pivot: {x: 0.5, y: 0.6}
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -182,12 +182,12 @@ TextureImporter:
       name: Green_Slime-Idle_1
       rect:
         serializedVersion: 2
-        x: 84
+        x: 83
         y: 0
-        width: 24
-        height: 21
-      alignment: 9
-      pivot: {x: 0.5, y: 0.6}
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -204,12 +204,12 @@ TextureImporter:
       name: Green_Slime-Idle_2
       rect:
         serializedVersion: 2
-        x: 148
+        x: 147
         y: 0
-        width: 24
-        height: 19
-      alignment: 9
-      pivot: {x: 0.5, y: 0.6}
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -226,12 +226,12 @@ TextureImporter:
       name: Green_Slime-Idle_3
       rect:
         serializedVersion: 2
-        x: 212
+        x: 211
         y: 0
-        width: 24
-        height: 21
-      alignment: 9
-      pivot: {x: 0.5, y: 0.6}
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -248,12 +248,12 @@ TextureImporter:
       name: Green_Slime-Idle_4
       rect:
         serializedVersion: 2
-        x: 277
+        x: 276
         y: 0
-        width: 22
-        height: 22
-      alignment: 9
-      pivot: {x: 0.5, y: 0.6}
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -270,12 +270,12 @@ TextureImporter:
       name: Green_Slime-Idle_5
       rect:
         serializedVersion: 2
-        x: 341
+        x: 340
         y: 0
-        width: 22
-        height: 23
-      alignment: 9
-      pivot: {x: 0.5, y: 0.6}
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -292,12 +292,12 @@ TextureImporter:
       name: Green_Slime-Idle_6
       rect:
         serializedVersion: 2
-        x: 405
+        x: 404
         y: 0
-        width: 22
-        height: 23
-      alignment: 9
-      pivot: {x: 0.5, y: 0.6}
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -314,7 +314,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 01fa6d5de24fb2241b8b05f0877e1f84
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 

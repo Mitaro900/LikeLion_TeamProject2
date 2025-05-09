@@ -193,12 +193,12 @@ TextureImporter:
       name: Bush_Monster-Attack_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 19
         y: 0
-        width: 90
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        width: 51
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -215,12 +215,12 @@ TextureImporter:
       name: Bush_Monster-Attack_1
       rect:
         serializedVersion: 2
-        x: 90
+        x: 109
         y: 0
-        width: 90
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        width: 51
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -237,12 +237,12 @@ TextureImporter:
       name: Bush_Monster-Attack_2
       rect:
         serializedVersion: 2
-        x: 180
+        x: 200
         y: 0
-        width: 90
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        width: 48
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -259,12 +259,12 @@ TextureImporter:
       name: Bush_Monster-Attack_3
       rect:
         serializedVersion: 2
-        x: 270
+        x: 284
         y: 0
-        width: 90
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -281,12 +281,12 @@ TextureImporter:
       name: Bush_Monster-Attack_4
       rect:
         serializedVersion: 2
-        x: 360
+        x: 361
         y: 0
-        width: 90
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        width: 84
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -303,12 +303,12 @@ TextureImporter:
       name: Bush_Monster-Attack_5
       rect:
         serializedVersion: 2
-        x: 450
+        x: 451
         y: 0
-        width: 90
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        width: 87
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -325,12 +325,12 @@ TextureImporter:
       name: Bush_Monster-Attack_6
       rect:
         serializedVersion: 2
-        x: 540
+        x: 541
         y: 0
-        width: 90
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        width: 87
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -347,12 +347,12 @@ TextureImporter:
       name: Bush_Monster-Attack_7
       rect:
         serializedVersion: 2
-        x: 630
+        x: 631
         y: 0
-        width: 90
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        width: 87
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -369,12 +369,12 @@ TextureImporter:
       name: Bush_Monster-Attack_8
       rect:
         serializedVersion: 2
-        x: 720
+        x: 721
         y: 0
-        width: 90
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        width: 87
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -391,12 +391,12 @@ TextureImporter:
       name: Bush_Monster-Attack_9
       rect:
         serializedVersion: 2
-        x: 810
+        x: 811
         y: 0
-        width: 90
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        width: 87
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -413,12 +413,12 @@ TextureImporter:
       name: Bush_Monster-Attack_10
       rect:
         serializedVersion: 2
-        x: 900
+        x: 901
         y: 0
-        width: 90
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        width: 87
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -435,12 +435,12 @@ TextureImporter:
       name: Bush_Monster-Attack_11
       rect:
         serializedVersion: 2
-        x: 990
+        x: 991
         y: 0
-        width: 90
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        width: 87
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -457,12 +457,12 @@ TextureImporter:
       name: Bush_Monster-Attack_12
       rect:
         serializedVersion: 2
-        x: 1080
+        x: 1081
         y: 0
-        width: 90
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        width: 87
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -479,12 +479,12 @@ TextureImporter:
       name: Bush_Monster-Attack_13
       rect:
         serializedVersion: 2
-        x: 1170
+        x: 1184
         y: 0
-        width: 90
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -501,12 +501,12 @@ TextureImporter:
       name: Bush_Monster-Attack_14
       rect:
         serializedVersion: 2
-        x: 1260
+        x: 1279
         y: 0
-        width: 90
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        width: 50
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -523,12 +523,12 @@ TextureImporter:
       name: Bush_Monster-Attack_15
       rect:
         serializedVersion: 2
-        x: 1350
+        x: 1369
         y: 0
-        width: 90
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        width: 51
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -545,12 +545,12 @@ TextureImporter:
       name: Bush_Monster-Attack_16
       rect:
         serializedVersion: 2
-        x: 1440
+        x: 1459
         y: 0
-        width: 90
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        width: 51
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -567,12 +567,12 @@ TextureImporter:
       name: Bush_Monster-Attack_17
       rect:
         serializedVersion: 2
-        x: 1530
+        x: 1549
         y: 0
-        width: 90
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        width: 51
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -589,7 +589,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 851b51e0bc2240c4998b775147dd3c17
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
