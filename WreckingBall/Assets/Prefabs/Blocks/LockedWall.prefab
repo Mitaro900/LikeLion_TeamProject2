@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 325042895
+  m_SortingLayer: 3
   m_SortingOrder: 2
   m_Sprite: {fileID: 3262124323769656087, guid: e775a546dbb414f4ab35ef9dca03b1fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 65013333902560534}
   - component: {fileID: 972931603771803105}
   - component: {fileID: 4921394168870322988}
+  - component: {fileID: 7217772116989559164}
   m_Layer: 3
   m_Name: LockedWall
   m_TagString: Ground
@@ -245,3 +246,30 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 128, y: 128}
   m_EdgeRadius: 0
+--- !u!114 &7217772116989559164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6738391764825372637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18405ce1660f01943b332efeb8cc4cf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7217772116989559164}
+        m_TargetAssemblyTypeName: BlockBase, Assembly-CSharp
+        m_MethodName: AnimationFinished
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

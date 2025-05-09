@@ -76,7 +76,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -90,7 +90,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -181,10 +181,10 @@ TextureImporter:
       name: portal2_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 30
-        height: 30
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,10 +203,10 @@ TextureImporter:
       name: portal2_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 33
-        y: 1
-        width: 30
-        height: 30
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,10 +225,10 @@ TextureImporter:
       name: portal2_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 65
-        y: 1
-        width: 30
-        height: 30
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,10 +247,10 @@ TextureImporter:
       name: portal2_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 97
-        y: 1
-        width: 30
-        height: 30
+        x: 96
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,10 +269,10 @@ TextureImporter:
       name: portal2_spritesheet_4
       rect:
         serializedVersion: 2
-        x: 129
-        y: 1
-        width: 30
-        height: 30
+        x: 128
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,10 +291,10 @@ TextureImporter:
       name: portal2_spritesheet_5
       rect:
         serializedVersion: 2
-        x: 161
-        y: 1
-        width: 30
-        height: 30
+        x: 160
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,10 +313,10 @@ TextureImporter:
       name: portal2_spritesheet_6
       rect:
         serializedVersion: 2
-        x: 193
-        y: 1
-        width: 30
-        height: 30
+        x: 192
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -335,10 +335,10 @@ TextureImporter:
       name: portal2_spritesheet_7
       rect:
         serializedVersion: 2
-        x: 225
-        y: 1
-        width: 30
-        height: 30
+        x: 224
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,10 +357,10 @@ TextureImporter:
       name: portal2_spritesheet_8
       rect:
         serializedVersion: 2
-        x: 257
-        y: 1
-        width: 30
-        height: 30
+        x: 256
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,10 +379,10 @@ TextureImporter:
       name: portal2_spritesheet_9
       rect:
         serializedVersion: 2
-        x: 289
-        y: 1
-        width: 30
-        height: 30
+        x: 288
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -401,10 +401,10 @@ TextureImporter:
       name: portal2_spritesheet_10
       rect:
         serializedVersion: 2
-        x: 321
-        y: 1
-        width: 30
-        height: 30
+        x: 320
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -423,10 +423,10 @@ TextureImporter:
       name: portal2_spritesheet_11
       rect:
         serializedVersion: 2
-        x: 353
-        y: 1
-        width: 30
-        height: 30
+        x: 352
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -445,10 +445,10 @@ TextureImporter:
       name: portal2_spritesheet_12
       rect:
         serializedVersion: 2
-        x: 385
-        y: 1
-        width: 30
-        height: 30
+        x: 384
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -467,10 +467,10 @@ TextureImporter:
       name: portal2_spritesheet_13
       rect:
         serializedVersion: 2
-        x: 417
-        y: 1
-        width: 30
-        height: 30
+        x: 416
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -489,7 +489,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b9add756022b7154db840971e20896b8
     internalID: 0
     vertices: []
     indices: 
@@ -498,7 +498,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      portal2_spritesheet_0: 5523053006323921777
+      portal2_spritesheet_1: -6088627051259308308
+      portal2_spritesheet_10: 3659119242300153902
+      portal2_spritesheet_11: 7488664126269219034
+      portal2_spritesheet_12: -7482314345225353568
+      portal2_spritesheet_13: -1730767501878885506
+      portal2_spritesheet_2: 3444409514517652317
+      portal2_spritesheet_3: -2500883200522033666
+      portal2_spritesheet_4: -7313344498807343788
+      portal2_spritesheet_5: 6583238773677891514
+      portal2_spritesheet_6: 4237473123163745551
+      portal2_spritesheet_7: 721293308648882167
+      portal2_spritesheet_8: -9094682886620274659
+      portal2_spritesheet_9: -8167223343899541200
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -5,6 +5,7 @@ public class BlockBase : MonoBehaviour
 {
     protected Animator anim;
     [SerializeField] protected UnityEvent onHit;
+    public UnityEvent OnHit => onHit;
 
     protected virtual void Start()
     {

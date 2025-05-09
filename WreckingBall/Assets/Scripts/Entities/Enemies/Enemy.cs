@@ -60,6 +60,11 @@ public class Enemy : Entity
     {
         base.Update();
 
+        if(IsOutOfView() && isGrabbed)
+        {
+            Destroy(gameObject);
+        }
+
         stateMachine.currentState.Update();
 
         RaycastHit2D hit = IsPlayerDetected();
@@ -117,7 +122,14 @@ public class Enemy : Entity
         return false;
     }
 
-    
+    protected virtual bool IsOutOfView()
+    {
+        Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
+        Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
+
+        return transform.position.x < min.x || transform.position.x > max.x ||
+               transform.position.y < min.y || transform.position.y > max.y;
+    }
 
 
     public virtual void AnimationFinishTrigger() => stateMachine.currentState.AnimationFinishTrigger();
@@ -132,13 +144,5 @@ public class Enemy : Entity
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + AttackDistance * facingDir, transform.position.y));
-    }
-
-    private void OnBecameInvisible()
-    {
-        if (IsGrabbed)
-        {
-            Destroy(gameObject);
-        }
     }
 }
