@@ -17,7 +17,7 @@ public class PlayerAirborneState : PlayerState
 
         player.SetVelocity(xInput * player.MoveSpeed, rb.linearVelocityY);
 
-        if (Input.GetKeyDown(KeyCode.Z) && Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKeyDown(km.GetKey(BindingManager.Action.Jump)) && Input.GetKey(km.GetKey(BindingManager.Action.Down)))
         {
             player.stateMachine.ChangeState(player.bodyslamState);
         }

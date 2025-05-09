@@ -8,15 +8,9 @@ using UnityEngine.UI;
 public class BindingManager : SingletonComponent<BindingManager>
 {
     #region Singleton
-
     protected override void AwakeInstance()
     {
         Initialize();
-    }
-
-    private void OnEnable()
-    {
-        if (isInitialized) Destroy(gameObject);
     }
 
     protected override bool InitInstance()
@@ -30,8 +24,12 @@ public class BindingManager : SingletonComponent<BindingManager>
     {
         Destroy(gameObject);
     }
-
     #endregion
+
+    private void OnEnable()
+    {
+        if (isInitialized) Destroy(gameObject);
+    }
 
     public enum Action
     {

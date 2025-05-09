@@ -18,7 +18,7 @@ public class PlayerJumpState : PlayerAirborneState
     {
         base.Update();
 
-        if (Input.GetKeyUp(KeyCode.Z))
+        if (Input.GetKeyUp(km.GetKey(BindingManager.Action.Jump)))
         {
             rb.gravityScale = player.DefaultGravityScale;
         }
