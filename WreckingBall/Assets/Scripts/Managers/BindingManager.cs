@@ -39,6 +39,7 @@ public class BindingManager : SingletonComponent<BindingManager>
         Right,
         Jump,
         Hook,
+        Dash,
     }
 
     private Dictionary<Action, KeyCode> bindings = new Dictionary<Action, KeyCode>();
@@ -52,6 +53,7 @@ public class BindingManager : SingletonComponent<BindingManager>
         defaultBindings[Action.Right] = KeyCode.RightArrow;
         defaultBindings[Action.Jump] = KeyCode.Z;
         defaultBindings[Action.Hook] = KeyCode.X;
+        defaultBindings[Action.Dash] = KeyCode.LeftShift;
 
         foreach (var kv in defaultBindings)
             bindings[kv.Key] = kv.Value;

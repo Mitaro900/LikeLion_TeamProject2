@@ -29,6 +29,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private BossStageUI _bossStageUI;
     [SerializeField] private BindingUI _bindingUI;
     [SerializeField] private SettingUI _settingUI;
+    [SerializeField] private TutorialUI _tutorialUI;
 
     private Dictionary<string, UIBase> dic = new Dictionary<string, UIBase>();
     private Dictionary<string, UIBase> openedDic = new Dictionary<string, UIBase>();
@@ -40,13 +41,25 @@ public class UIManager : MonoBehaviour
         dic.Add($"{typeof(BossStageUI).Name}", _bossStageUI);
         dic.Add($"{typeof(BindingUI).Name}", _bindingUI);
         dic.Add($"{typeof(SettingUI).Name}", _settingUI);
+        dic.Add($"{typeof(TutorialUI).Name}", _tutorialUI);
+    }
+    private void Update()
+    {
+        //test
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            var ui = UIManager.Instance.GetUI<TutorialUI>();
+            if(ui == null) ui = UIManager.Instance.OpenUI<TutorialUI>();
+            
+            ui.ShowText("가나다라마바사 가나다라마바사 가나다라마바사 가나다라마바사 가나다라마바사");
+        }
     }
 
-    public UIBase GetUI<T>() where T : UIBase
+    public T GetUI<T>() where T : UIBase
     {
         string name = typeof(T).Name;
         if (openedDic.ContainsKey(name))
-            return openedDic[name];
+            return openedDic[name] as T;
 
         return null;
     }

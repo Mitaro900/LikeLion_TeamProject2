@@ -632,6 +632,7 @@ MonoBehaviour:
   _bossStageUI: {fileID: 7028142773944168214, guid: 8f1b50013bf41894c825c550e6daefa4, type: 3}
   _bindingUI: {fileID: 8813864718269197616, guid: 43e01aceb4fb8b94cadc1fc771f290af, type: 3}
   _settingUI: {fileID: 4368239749439416093, guid: 38e4a698be67a4244a67bd314a5e394d, type: 3}
+  _tutorialUI: {fileID: 1267871731462682581, guid: 3aab21c7b8941d745abfe7253820fdbf, type: 3}
 --- !u!114 &1011453880
 MonoBehaviour:
   m_ObjectHideFlags: 0
