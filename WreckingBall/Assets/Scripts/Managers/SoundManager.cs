@@ -10,8 +10,14 @@ public enum BgmTrack
 
 public enum SfxTrack
 {
-    Test1,
-    Test2,
+    Jump,           //점프
+    RopeStart,      //로프 발사
+    RopeSuccess,    //로프 붙음
+    Roll,           //구르는소리
+    Brake,          //가속 제동
+    Hit,            //피격음
+    BlockDestroy,   //블록 부셔지는소리
+    TakeDown,       //내려찍기
 }
 
 //PlayerPrefs에 "BGM",  "SFX"로, float 0~1f로 저장됨.

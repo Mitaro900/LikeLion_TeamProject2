@@ -594,7 +594,15 @@ MonoBehaviour:
   bgm: {fileID: 157331610}
   sfx: {fileID: 196547136}
   bgmClips: []
-  sfxClips: []
+  sfxClips:
+  - {fileID: 8300000, guid: dd9e69d37743a424fbf072180e00a123, type: 3}
+  - {fileID: 8300000, guid: a98313f03dcc3ef43b72bb856eddb3d6, type: 3}
+  - {fileID: 8300000, guid: 38662263ee69ac54aa8ae02691aa5b4f, type: 3}
+  - {fileID: 8300000, guid: fa690546d8906ec448d2419df1fe0e48, type: 3}
+  - {fileID: 8300000, guid: 6c422b4334e2b1e44bb9ecf7dc75f2d6, type: 3}
+  - {fileID: 8300000, guid: 61de0f7480b0eee4e93b5ccb337a663d, type: 3}
+  - {fileID: 8300000, guid: 52fd4ce4ce9ffee49bc6940ac6eaef1b, type: 3}
+  - {fileID: 8300000, guid: 103eb6db89eaecf40a3e4981be6cf686, type: 3}
 --- !u!1 &1011453878
 GameObject:
   m_ObjectHideFlags: 0
