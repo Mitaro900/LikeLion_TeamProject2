@@ -1,12 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using PKR.Lobby;
-using Singleton.Component;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public enum FocusUIType
@@ -17,11 +14,10 @@ public enum FocusUIType
     Binding
 }
 
-public class SettingUI : MonoBehaviour
+public class SettingUI : UIBase
 {
     [SerializeField] private VolumePanel volumePanel;
     [SerializeField] private ControlPanel controlPanel;
-    [SerializeField] private BindingUI bindingUI;
     [SerializeField] private Image closeBtnHighlight;
 
     private FocusUIType _activeFocusUI = FocusUIType.Volume;
@@ -53,7 +49,7 @@ public class SettingUI : MonoBehaviour
     private float rightArrowTime;
     void Update()
     {
-        if (bindingUI.isActiveAndEnabled) return;
+        if (activeBindingUI) return;
         // 볼륨 포커스 상태일 때, 좌우 방향키를 눌러 지속적으로 볼륨을 조절
         if (_activeFocusUI == FocusUIType.Volume)
         {
@@ -108,7 +104,7 @@ public class SettingUI : MonoBehaviour
                 }
                 else if (_activeFocusUI == FocusUIType.CloseButton)
                 {
-                    gameObject.SetActive(false);
+                    OnClickCloseBtn();
                 }
             }
         }
@@ -137,6 +133,10 @@ public class SettingUI : MonoBehaviour
         activeRow = 0;
         activeCol = 0;
         UpdateAllHighlights();
+    }
+    public void OnClickCloseBtn()
+    {
+        UIManager.Instance.CloseUI(this);
     }
 
     // 세로 이동: 경계에서 패널 간 이동
@@ -235,17 +235,19 @@ public class SettingUI : MonoBehaviour
         }
     }
 
+    private bool activeBindingUI = false;
     public void StartRebind(BindingManager.Action action)
     {
+        var ui = UIManager.Instance.OpenUI<BindingUI>();
+        var trigger = ui.gameObject.AddComponent<OnDestroyTrigger>();
+        trigger.onDestroy += () =>
+        {
+            controlPanel.Init();
+            activeBindingUI = false;
+        };
         
-        bindingUI.gameObject.SetActive(true);
-        bindingUI.StartRebind(action);
-    }
-
-    public void EndRebind()
-    {
-        bindingUI.gameObject.SetActive(false);
-        controlPanel.Init();
+        ui.StartRebind(action);
+        activeBindingUI = true;
     }
 
     public void ResetKey(BindingManager.Action action)
