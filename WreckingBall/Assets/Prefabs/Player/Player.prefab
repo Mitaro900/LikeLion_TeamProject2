@@ -271,7 +271,7 @@ MonoBehaviour:
   distanceJoint: {fileID: 8752022394912870679}
   lineRenderer: {fileID: 6968400280137975918}
   ropeSpeed: 10
-  minRopeDistance: 1.25
+  minRopeDistance: 1
   maxRopeDistance: 8
 --- !u!114 &61972143633549608
 MonoBehaviour:

@@ -12,6 +12,8 @@ public class PlayerJumpState : PlayerAirborneState
 
         rb.gravityScale = player.JumpGravityScale;
         rb.linearVelocity = new Vector2(rb.linearVelocityX, player.JumpForce);
+
+        SoundManager.Instance.PlaySFX(SfxTrack.Jump);
     }
 
     public override void Update()

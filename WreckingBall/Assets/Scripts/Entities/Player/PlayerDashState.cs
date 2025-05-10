@@ -24,13 +24,15 @@ public class PlayerDashState : PlayerState
         {
             finalXSpeed = player.MoveSpeed;
         }
+
+        SoundManager.Instance.PlaySFXRepeating(SfxTrack.Roll, 0.5f);
     }
 
     public override void Update()
     {
         base.Update();
 
-        if(!Input.GetKey(km.GetKey(BindingManager.Action.Dash)) || player.IsWallDetected())
+        if (!Input.GetKey(km.GetKey(BindingManager.Action.Dash)) || player.IsWallDetected())
         {
             stateMachine.ChangeState(player.idleState);
             return;
@@ -41,6 +43,8 @@ public class PlayerDashState : PlayerState
             player.ReleaseRope();
             rb.gravityScale = player.JumpGravityScale;
             rb.linearVelocity = new Vector2(rb.linearVelocityX, player.JumpForce);
+
+            SoundManager.Instance.PlaySFX(SfxTrack.Jump);
         }
         else if (Input.GetKeyUp(km.GetKey(BindingManager.Action.Jump)))
         {
@@ -84,5 +88,7 @@ public class PlayerDashState : PlayerState
         player.IsAccelerating = false;
         player.IsOverSpeedThreshold = false;
         rb.gravityScale = player.DefaultGravityScale;
+
+        SoundManager.Instance.StopSFX();
     }
 }

@@ -28,7 +28,8 @@ public class BindingManager : SingletonComponent<BindingManager>
 
     private void OnEnable()
     {
-        if (isInitialized) Destroy(gameObject);
+        if (Instance != this)
+            Destroy(gameObject);
     }
 
     public enum Action

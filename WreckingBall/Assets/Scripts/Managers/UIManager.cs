@@ -1,29 +1,10 @@
+using Singleton.Component;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIManager : MonoBehaviour
+public class UIManager : SingletonComponent<UIManager>
 {
-    #region Simple Singleton
-
-    public static UIManager Instance { get; private set; }
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-            Init();
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    #endregion
-
     [SerializeField] private GameObject Root;
     [SerializeField] private NormalStageUI _normalStageUI;
     [SerializeField] private BossStageUI _bossStageUI;
@@ -35,24 +16,33 @@ public class UIManager : MonoBehaviour
     private Dictionary<string, UIBase> openedDic = new Dictionary<string, UIBase>();
     private Stack<UIBase> stack = new Stack<UIBase>();
 
-    private void Init()
+    #region Singleton
+    protected override void AwakeInstance()
+    {
+        Initialize();
+    }
+
+    protected override bool InitInstance()
     {
         dic.Add($"{typeof(NormalStageUI).Name}", _normalStageUI);
         dic.Add($"{typeof(BossStageUI).Name}", _bossStageUI);
         dic.Add($"{typeof(BindingUI).Name}", _bindingUI);
         dic.Add($"{typeof(SettingUI).Name}", _settingUI);
         dic.Add($"{typeof(TutorialUI).Name}", _tutorialUI);
+
+        return true;
     }
-    private void Update()
+
+    protected override void ReleaseInstance()
     {
-        //test
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            var ui = UIManager.Instance.GetUI<TutorialUI>();
-            if(ui == null) ui = UIManager.Instance.OpenUI<TutorialUI>();
-            
-            ui.ShowText("가나다라마바사 가나다라마바사 가나다라마바사 가나다라마바사 가나다라마바사");
-        }
+        Destroy(gameObject);
+    }
+    #endregion
+
+    private void OnEnable()
+    {
+        if (Instance != this)
+            Destroy(gameObject);
     }
 
     public T GetUI<T>() where T : UIBase
@@ -91,5 +81,4 @@ public class UIManager : MonoBehaviour
         openedDic.Remove(ui.GetType().Name);
         GameObject.Destroy(ui.gameObject);
     }
-
 }

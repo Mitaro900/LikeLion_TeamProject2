@@ -27,6 +27,7 @@ public class BreakableBlock : BlockBase
                 (collision.contacts[0].normal.y < 0) && player.stateMachine.currentState == player.bodyslamState) && anim.enabled == false)
             {
                 onHit?.Invoke();
+                SoundManager.Instance.PlaySFX(SfxTrack.BlockDestroy);
             }
         }
     }
@@ -39,6 +40,7 @@ public class BreakableBlock : BlockBase
             if (enemy.IsGrabbed)
             {
                 onHit?.Invoke();
+                SoundManager.Instance.PlaySFX(SfxTrack.BlockDestroy);
             }
         }
     }

@@ -10,6 +10,7 @@ public class TargetBlock : BlockBase
             if (enemy.IsGrabbed)
             {
                 onHit?.Invoke();
+                SoundManager.Instance.PlaySFX(SfxTrack.Hit);
             }
         }
     }

@@ -50,6 +50,7 @@ public class Entity : MonoBehaviour
     {
         fx.StartCoroutine("FlashFx");
         StartCoroutine(HitKnockback());
+        SoundManager.Instance.PlaySFX(SfxTrack.Hit);
     }
 
     protected virtual IEnumerator HitKnockback()
