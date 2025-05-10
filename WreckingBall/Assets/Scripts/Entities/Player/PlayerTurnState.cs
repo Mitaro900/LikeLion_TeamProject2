@@ -16,6 +16,8 @@ public class PlayerTurnState : PlayerState
         stateTimer = 0.85f;
         currentTime = 0f;
         finalXSpeed = player.DashSpeedThereshold;
+
+        SoundManager.Instance.PlaySFX(SfxTrack.Brake);
     }
 
     public override void Update()

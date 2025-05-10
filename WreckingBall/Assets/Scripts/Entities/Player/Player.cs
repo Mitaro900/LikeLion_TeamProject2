@@ -30,7 +30,7 @@ public class Player : Entity
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private float ropeSpeed = 10f;
     public float RopeSpeed { get => ropeSpeed; }
-    [SerializeField] private float minRopeDistance = 1.25f;
+    [SerializeField] private float minRopeDistance = 1f;
     [SerializeField] private float maxRopeDistance = 8f;
 
     private Coroutine ropeCo = null;
@@ -43,7 +43,7 @@ public class Player : Entity
     public bool IsBusy { get => isBusy; set => isBusy = value; }
 
     public GameObject grabbedObject { get; private set; }
-
+    private Vector2 checkPoint;
 
     #region States
     public StateMachine stateMachine { get; private set; }
@@ -116,6 +116,8 @@ public class Player : Entity
 
     public void LaunchRope(float xInput, float yInput)
     {
+        SoundManager.Instance.PlaySFX(SfxTrack.RopeStart);
+
         //바라보는 방향으로 45도 방향.
         Vector3 dir = new Vector2(facingDir, 1).normalized;
 
@@ -172,6 +174,8 @@ public class Player : Entity
     {
         if (grabbedObject == null)
             return;
+
+        SoundManager.Instance.PlaySFX(SfxTrack.Hit);
 
         grabbedObject.transform.SetParent(null);
         grabbedObject.layer = LayerMask.NameToLayer("Default");
@@ -261,6 +265,7 @@ public class Player : Entity
         }
 
         StartSwing(targetPos);
+        SoundManager.Instance.PlaySFX(SfxTrack.RopeSuccess);
 
         while (true)
         {
@@ -294,6 +299,8 @@ public class Player : Entity
         enemyScript.rb.bodyType = RigidbodyType2D.Kinematic;
         enemyScript.cd.enabled = false;
 
+        SoundManager.Instance.PlaySFX(SfxTrack.RopeSuccess);
+
         progress = 0f;
         while (progress < 1f)
         {
@@ -323,6 +330,17 @@ public class Player : Entity
             yield return null;
         }
         distanceJoint.distance = minRopeDistance;
+    }
+
+    public void UpdateCheckPoint(Vector2 newCheckPoint)
+    {
+        checkPoint = newCheckPoint;
+    }
+
+    public void Respawn()
+    {
+        transform.position = checkPoint;
+        SetZeroVelocity();
     }
 
     public override bool IsGroundDetected()

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Singleton.Component;
 using UnityEngine;
@@ -24,25 +25,19 @@ public enum SfxTrack
 //SettingUI에서 Slider는 0~100 범위를 가짐.
 public class SoundManager : SingletonComponent<SoundManager>
 {
-    public AudioSource BGM => bgm;
-    public AudioSource SFX => sfx;
     [SerializeField] private AudioSource bgm;
+    public AudioSource BGM => bgm;
     [SerializeField] private AudioSource sfx;
+    public AudioSource SFX => sfx;
     [SerializeField] private List<AudioClip> bgmClips;
     [SerializeField] private List<AudioClip> sfxClips;
 
+    private Coroutine repeatingSfxCo = null;
+
+    #region Singleton
     protected override void AwakeInstance()
     {
         Initialize();
-    }
-
-    void OnEnable()
-    {
-        if (Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
     }
 
     protected override bool InitInstance()
@@ -60,6 +55,13 @@ public class SoundManager : SingletonComponent<SoundManager>
     {
         Destroy(gameObject);
     }
+    #endregion
+
+    private void OnEnable()
+    {
+        if (Instance != this)
+            Destroy(gameObject);
+    }
 
     public void PlayBGM(BgmTrack track)
     {
@@ -75,6 +77,26 @@ public class SoundManager : SingletonComponent<SoundManager>
     public void PlaySFX(SfxTrack track)
     {
         sfx.PlayOneShot(sfxClips[(int)track]);
+    }
+
+    public void PlaySFXRepeating(SfxTrack track, float intervalTime)
+    {
+        repeatingSfxCo = StartCoroutine(RepeatingSFX(track, intervalTime));
+    }
+
+    public void StopSFX()
+    {
+        StopCoroutine(repeatingSfxCo);
+        repeatingSfxCo = null;
+    }
+
+    private IEnumerator RepeatingSFX(SfxTrack track, float intervalTime)
+    {
+        while (true)
+        {
+            sfx.PlayOneShot(sfxClips[(int)track]);
+            yield return new WaitForSeconds(intervalTime);
+        }
     }
 
     public void SetSFXVolume(float volume)

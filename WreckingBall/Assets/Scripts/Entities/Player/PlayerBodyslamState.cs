@@ -19,6 +19,8 @@ public class PlayerBodyslamState : PlayerState
         stateTimer = 0.5f;
         currentTime = 0f;
         finalYSpeed = 0f;
+
+        SoundManager.Instance.PlaySFX(SfxTrack.Jump);
     }
 
     public override void Update()
@@ -50,5 +52,7 @@ public class PlayerBodyslamState : PlayerState
         player.IsAccelerating = false;
         player.IsOverSpeedThreshold = false;
         rb.gravityScale = player.DefaultGravityScale;
+
+        SoundManager.Instance.PlaySFX(SfxTrack.TakeDown);
     }
 }
