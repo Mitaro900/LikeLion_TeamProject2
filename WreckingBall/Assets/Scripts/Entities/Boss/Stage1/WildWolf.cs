@@ -26,6 +26,7 @@ public class WildWolf : Boss
     public WildWolf_DroppingTrapState droppingTrapState;
 
     [HideInInspector] public WildWolf_PatternController controller;
+    protected BossState nextState = null;
 
     #endregion
 
@@ -46,23 +47,31 @@ public class WildWolf : Boss
         base.bossPage = bossPage;
         base.bossMaxPage = bossMaxPage;
         base.damageEvent = damageEvent;
-        base.damageEvent += (ab) =>
-        {
-            controller.NextAction(true);
-        };
         base.deathEvent = deathEvent;
         base.pageChageEvent = pageChageEvent;
-        base.pageChageEvent += (ab) =>
-        {
-            if (sr.color == Color.white)
-                sr.DOColor(Color.red, 0.5f);
-        };
+        
     }
 
 
     protected override void Start()
     {
         base.Start();
+
+        base.damageEvent += (ab) =>
+        {
+            stateMachine.ChangeState(damageState);
+            nextState = idleState;            
+        };
+        base.deathEvent += () =>
+        {
+            controller.enabled = false;
+            stateMachine.ChangeState(deathState);
+        };
+        base.pageChageEvent += (ab) =>
+        {
+            if (sr.color == Color.white)
+                sr.DOColor(Color.red, 0.5f);
+        };
 
         runAttackState = new WildWolf_RunAttackState(stateMachine, this, "RunAttack", this);
         AddState(runAttackState);
@@ -113,6 +122,8 @@ public class WildWolf : Boss
         player = FindFirstObjectByType<Player>();
 
         //controller.NextAction();
+
+        
     }
 
 
@@ -126,4 +137,22 @@ public class WildWolf : Boss
         }
     }
 
+    protected override void Update()
+    {
+        base.Update();
+        if(Input.GetKeyDown(KeyCode.F1))
+            controller.NextAction(true);
+        if(Input.GetKeyDown(KeyCode.Backslash))
+            Damage();
+    }
+
+    protected override void AnimationFinishTrigger()
+    {
+        base.AnimationFinishTrigger();
+        if(nextState != null)
+        {
+            stateMachine.ChangeState(nextState);
+            nextState = null;
+        }
+    }
 }
