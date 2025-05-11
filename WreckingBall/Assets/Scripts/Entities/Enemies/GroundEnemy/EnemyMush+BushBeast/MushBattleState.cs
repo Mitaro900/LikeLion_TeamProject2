@@ -57,9 +57,12 @@ public class MushBattleState : State
             stateTimer = enemy.battleTime;
 
             float dist = Vector2.Distance(player.position, enemy.transform.position);
-            if (dist > 0.8f)
+            if (dist > enemy.AttackDistance)
             {
-                MoveTowardPlayer();
+                //몬스터가 플레이어를 계속 밀어서 바꿈
+                //MoveTowardPlayer();
+                int moveDir = player.position.x > enemy.transform.position.x ? 1 : -1;
+                enemy.SetVelocity(enemy.moveSpeed * moveDir, rb.linearVelocity.y);
             }
             else if (Time.time >= enemy.lastTimeAttacked + enemy.AttackCooldown)
             {

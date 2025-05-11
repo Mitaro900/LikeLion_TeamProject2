@@ -32,6 +32,13 @@ public class MushMoveState : State
         if (enemy.IsPlayerDetected())
             stateMachine.ChangeState(enemy.battleState);
 
+        if (!enemy.IsGroundDetected())
+        {
+            enemy.Flip();
+            stateMachine.ChangeState(enemy.idleState);
+            return;
+        }
+
         if (isWaiting)
         {
             waitCounter += Time.deltaTime;
