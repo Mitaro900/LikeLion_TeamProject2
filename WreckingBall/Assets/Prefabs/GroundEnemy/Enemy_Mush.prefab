@@ -236,23 +236,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2287fa5c7bfd304c936d873ec2fc22a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slideMovement:
-    <maxIterations>k__BackingField: 3
-    <surfaceSlideAngle>k__BackingField: 90
-    <gravitySlipAngle>k__BackingField: 90
-    <surfaceUp>k__BackingField: {x: 0, y: 1}
-    <surfaceAnchor>k__BackingField: {x: 0, y: -1}
-    <gravity>k__BackingField: {x: 0, y: -9.81}
-    <startPosition>k__BackingField: {x: 0, y: 0}
-    <selectedCollider>k__BackingField: {fileID: 0}
-    <layerMask>k__BackingField:
-      serializedVersion: 2
-      m_Bits: 4294967295
-    <useLayerMask>k__BackingField: 0
-    <useStartPosition>k__BackingField: 0
-    <useNoMove>k__BackingField: 0
-    <useSimulationMove>k__BackingField: 0
-    <useAttachedTriggers>k__BackingField: 0
+  knockbackDirection: {x: 5, y: 5}
+  knockbackDuration: 0.5
   groundCheck: {fileID: 7950430345989535029}
   groundCheckDistance: 0.1
   wallCheck: {fileID: 6398604310490736137}
@@ -267,12 +252,12 @@ MonoBehaviour:
   battleTime: 5
   fallSpeed: 2
   playerCheck: {fileID: 6998680847106493439}
-  playerCheckRadius: 3
+  playerCheckRadius: 7.55
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 128
-  distance: 0
-  radius: 3
+  distance: 4.15
+  radius: 14.21
   attackCheck: {fileID: 8754714915421782327}
   attackCheckRadius: 0.8
   attackDistance: 2.5

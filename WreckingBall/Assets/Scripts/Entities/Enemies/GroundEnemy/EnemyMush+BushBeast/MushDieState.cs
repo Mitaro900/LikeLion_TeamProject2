@@ -12,21 +12,25 @@ public class MushDieState : State
     public override void Enter()
     {
         base.Enter();
-        // 1) 플레이어의 자식에서 해제 (더 이상 끌려가지 않도록)
+
+        enemy.enabled = false;
+
+        foreach (var col in enemy.GetComponentsInChildren<Collider2D>())
+            col.enabled = false;
+
         enemy.transform.SetParent(null);
-        
-        // 2) 물리 완전 중지: 속도 0, Kinematic 전환
-        enemy.rb.linearVelocity = Vector2.zero;
-        enemy.rb.bodyType = RigidbodyType2D.Kinematic;
-        
-        // 3) 충돌/트리거 비활성화
-        enemy.cd.enabled = false;
-        
-        // 4) Grabbed 상태 해제 (Player 쪽에서 참고할 수 있다면)
-        // enemy.IsGrabbed = false;  // Enemy 클래스에 있으면 활성화
-        
-        // Die 애니메이션 재생
+
+        enemy.rb.bodyType = RigidbodyType2D.Dynamic;
+        enemy.SetZeroVelocity();
+
+        float knockbackHorizontal = 20f;
+        float knockbackVertical = 20f;
+        enemy.rb.linearVelocity = new Vector2(-enemy.facingDir * knockbackHorizontal, knockbackVertical);
+
         enemy.anim.SetTrigger("Die");
+
+        Object.Destroy(enemy.gameObject, 3f);
+
     }
 
     public override void Exit()
@@ -37,7 +41,6 @@ public class MushDieState : State
     public override void Update()
     {
         base.Update();
-        Object.Destroy(enemy.gameObject,0.8f);
     }
     
 }

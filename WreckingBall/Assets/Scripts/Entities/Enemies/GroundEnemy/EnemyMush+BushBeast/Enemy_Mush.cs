@@ -10,6 +10,7 @@ public class Enemy_Mush : Enemy
     public MushAttackState attackState { get; private set; }
     public MushStunnedState stunnedState { get; private set; }
     public MushDieState dieState { get; private set; }
+    public MushPanicState panicState { get; private set; }
 
     #endregion
 
@@ -26,6 +27,7 @@ public class Enemy_Mush : Enemy
         attackState = new MushAttackState(this, stateMachine, "Attack", this);
         stunnedState = new MushStunnedState(this, stateMachine, "Stun", this);
         dieState =new MushDieState(this, stateMachine, "Die", this);
+        panicState = new MushPanicState(this, stateMachine, "Panic", this);
 
     }
 
@@ -44,14 +46,30 @@ public class Enemy_Mush : Enemy
             stateMachine.ChangeState(stunnedState);
             return;
         }
-    }
 
+        // 플레이어 과속 상태 감지 → Panic
+        RaycastHit2D hit = IsPlayerDetected();
+        if (hit.collider != null)
+        {
+            var pl = hit.collider.GetComponent<Player>();
+            if (pl != null && pl.IsOverSpeedThreshold
+                && stateMachine.currentState != panicState)
+            {
+                stateMachine.ChangeState(panicState);
+                return;
+            }
+        }
+    }
     public override RaycastHit2D IsPlayerDetected()
     {
-        RaycastHit2D hit = Physics2D.CircleCast(playerCheck.position, Radius, Vector2.right * facingDir, Distance, whatIsPlayer);
+        RaycastHit2D hit = Physics2D.CircleCast(playerCheck.position, PlayerCheckRadius, Vector2.right * facingDir, Distance, whatIsPlayer);
         
         if (hit.collider != null)
         {
+            float dx = hit.collider.transform.position.x - transform.position.x;
+            if (dx * facingDir <= 0f)
+                return default;
+
             float dy = Mathf.Abs(hit.transform.position.y - transform.position.y);
             if (dy <= maxVerticalOffset)  // 예: 1.0f
             {
@@ -84,18 +102,14 @@ public class Enemy_Mush : Enemy
         // (1) 이미 Stun 상태라면 Dash/Bslam 로직 건너뛰기
         if (stateMachine.currentState == stunnedState) return;
 
-        // 1) 충돌 대상이 Player 태그인지 확인
-        if (!collision.collider.CompareTag("Player")) return;
-
         // 2) Player 컴포넌트 가져오기
         Player player = collision.collider.GetComponent<Player>();
         if (player == null) return;
 
         var currState = player.stateMachine.currentState;
-        bool isDashHit = currState == player.dashState;
+        bool isDashHit = currState == player.dashState && player.IsOverSpeedThreshold;
 
-        bool isBslamHit = currState == player.bodyslamState && player.rb.linearVelocity.y < 0f;
-
+        bool isBslamHit = currState == player.bodyslamState;
         if (isDashHit || isBslamHit)
         {
             // 5) 즉시 사망 상태로 전환
