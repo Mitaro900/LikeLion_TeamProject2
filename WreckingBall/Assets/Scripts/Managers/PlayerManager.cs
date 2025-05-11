@@ -5,9 +5,10 @@ public class PlayerManager : SingletonComponent<PlayerManager>
 {
     public Player player;
 
+    #region Singleton
     protected override void AwakeInstance()
     {
-
+        Initialize();
     }
 
     protected override bool InitInstance()
@@ -18,5 +19,12 @@ public class PlayerManager : SingletonComponent<PlayerManager>
     protected override void ReleaseInstance()
     {
         
+    }
+    #endregion Singleton
+
+    private void OnEnable()
+    {
+        if (Instance != this)
+            Destroy(gameObject);
     }
 }

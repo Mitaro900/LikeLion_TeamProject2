@@ -75,6 +75,13 @@ public class Enemy : Entity
         }
     }
 
+    public override void DamageImpact()
+    {
+        base.DamageImpact();
+
+        UIManager.Instance.GetUI<NormalStageUI>()?.AddCombo();
+    }
+
     public virtual void FreezeTime(bool _timeFrozen)
     {
         if (_timeFrozen)
@@ -137,12 +144,40 @@ public class Enemy : Entity
     public virtual RaycastHit2D IsPlayerDetected()
     => Physics2D.CircleCast(playerCheck.position, Radius, Vector2.down * facingDir, Distance, whatIsPlayer);
 
-
     protected override void OnDrawGizmos()
     {
         base.OnDrawGizmos();
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + AttackDistance * facingDir, transform.position.y));
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Player player = collision.gameObject.GetComponent<Player>();
+
+            var currState = player.stateMachine.currentState;
+            bool isDashHit = currState == player.dashState && player.IsOverSpeedThreshold;
+            bool isBslamHit = currState == player.bodyslamState && player.rb.linearVelocity.y < 0f;
+
+            if (isDashHit || isBslamHit)
+            {
+                DamageImpact();
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+            if (enemy.IsGrabbed)
+            {
+                DamageImpact();
+            }
+        }
     }
 }

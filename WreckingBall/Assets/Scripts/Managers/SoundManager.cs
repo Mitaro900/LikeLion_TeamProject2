@@ -86,8 +86,11 @@ public class SoundManager : SingletonComponent<SoundManager>
 
     public void StopSFX()
     {
-        StopCoroutine(repeatingSfxCo);
-        repeatingSfxCo = null;
+        if(repeatingSfxCo != null)
+        {
+            StopCoroutine(repeatingSfxCo);
+            repeatingSfxCo = null;
+        }
     }
 
     private IEnumerator RepeatingSFX(SfxTrack track, float intervalTime)

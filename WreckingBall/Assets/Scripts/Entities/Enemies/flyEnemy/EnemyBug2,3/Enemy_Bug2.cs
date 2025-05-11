@@ -48,9 +48,9 @@ public class Enemy_Bug2 : Enemy
         return false;
     }
 
-    public override void Damage()
+    public override void DamageImpact()
     {
-        base.Damage();
+        base.DamageImpact();
         stateMachine.ChangeState(_dieState);
     }
 

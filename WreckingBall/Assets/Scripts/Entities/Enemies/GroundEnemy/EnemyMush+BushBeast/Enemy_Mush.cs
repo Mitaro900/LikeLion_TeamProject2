@@ -72,58 +72,10 @@ public class Enemy_Mush : Enemy
         return false;
     }
 
-    public override void Damage()
+    public override void DamageImpact()
     {
-        base.Damage();
-         stateMachine.ChangeState(dieState);
+        base.DamageImpact();
+
+        stateMachine.ChangeState(dieState);
     }
-
-     // 플레이어의 Dash/Bodyslam 상태로 충돌 시 즉시 DieState 진입
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        // (1) 이미 Stun 상태라면 Dash/Bslam 로직 건너뛰기
-        if (stateMachine.currentState == stunnedState) return;
-
-        // 1) 충돌 대상이 Player 태그인지 확인
-        if (!collision.collider.CompareTag("Player")) return;
-
-        // 2) Player 컴포넌트 가져오기
-        Player player = collision.collider.GetComponent<Player>();
-        if (player == null) return;
-
-        var currState = player.stateMachine.currentState;
-        bool isDashHit = currState == player.dashState;
-
-        bool isBslamHit = currState == player.bodyslamState && player.rb.linearVelocity.y < 0f;
-
-        if (isDashHit || isBslamHit)
-        {
-            // 5) 즉시 사망 상태로 전환
-            stateMachine.ChangeState(dieState);
-        }
-    }
-
-     // Stun 상태일 때 Trigger 충돌로 사망 판정
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        // 1) Stun 상태가 아니면 무시
-        if (stateMachine.currentState != stunnedState) return;
-
-        // 2) 다른 몬스터와 부딪힌 경우 → 둘 다 Die
-        if (other.CompareTag("Enemy"))
-        {
-            var otherEnemy = other.GetComponent<Enemy_Mush>();
-            stateMachine.ChangeState(dieState);
-            if (otherEnemy != null)
-                otherEnemy.stateMachine.ChangeState(otherEnemy.dieState);
-            return;
-        }
-
-        // 3) 땅 또는 벽에 부딪힌 경우 → 자기만 Die
-        if (other.CompareTag("Ground"))
-            {
-                stateMachine.ChangeState(dieState);
-            }
-    }
-
 }

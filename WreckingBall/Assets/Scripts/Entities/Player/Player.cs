@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Player : Entity
 {
@@ -80,6 +81,8 @@ public class Player : Entity
     {
         base.Start();
 
+        PlayerManager.Instance.player = this;
+
         distanceJoint = GetComponent<DistanceJoint2D>();
         lineRenderer = GetComponent<LineRenderer>();
         distanceJoint.enabled = false; // 초기에는 비활성화
@@ -102,6 +105,13 @@ public class Player : Entity
         {
             fx.CancelColorChange();
         }
+    }
+
+    public override void DamageImpact()
+    {
+        base.DamageImpact();
+
+        GameManager.Instance.HitPenalty();
     }
 
     public void ReleaseRope()
@@ -340,7 +350,8 @@ public class Player : Entity
     public void Respawn()
     {
         transform.position = checkPoint;
-        SetZeroVelocity();
+        ReleaseRope();
+        stateMachine.ChangeState(idleState);
     }
 
     public override bool IsGroundDetected()

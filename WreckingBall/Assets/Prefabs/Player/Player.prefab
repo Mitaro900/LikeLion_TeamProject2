@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bbd55cf2d549e34f844877e238ab89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackDirection: {x: 5, y: 5}
+  knockbackDirection: {x: 10, y: 10}
   knockbackDuration: 0.5
   groundCheck: {fileID: 3383297578925693230}
   groundCheckDistance: 0.1

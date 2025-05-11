@@ -46,7 +46,7 @@ public class WildWolf_RunAttackState : Boss_MoveState
                 if (boss.IsGiveDamagedAction() && !isPlayerAttacked)
                 {
                     Debug.Log("Player.Damage");
-                    wolf.player.Damage();
+                    wolf.player.DamageImpact();
                     Rigidbody2D _rb = wolf.player.GetComponent<Rigidbody2D>();
                     _rb.AddForce(Vector2.up, ForceMode2D.Impulse);
 
@@ -185,7 +185,7 @@ public class WildWolf_FloorSlideState : Boss_MoveState
             if(!isPlayerAttacked)
             {
                 Debug.Log("Player.Damage");
-                wolf.player.Damage();
+                wolf.player.DamageImpact();
                 Rigidbody2D _rb = wolf.player.GetComponent<Rigidbody2D>();
                 _rb.AddForce(Vector2.up, ForceMode2D.Impulse);
 
@@ -285,7 +285,7 @@ public class WildWolf_JumpAttackState : Boss_AttackState
             if (!isPlayerAttacked)
             {
                 Debug.Log("Player.Damage");
-                wolf.player.Damage();
+                wolf.player.DamageImpact();
                 Rigidbody2D _rb = wolf.player.GetComponent<Rigidbody2D>();
                 _rb.AddForce(Vector2.up, ForceMode2D.Impulse);
 
@@ -435,7 +435,7 @@ public class WildWolf_AerialSlideState: Boss_AttackState
             if (!isPlayerAttacked)
             {
                 Debug.Log("Player.Damage");
-                wolf.player.Damage();
+                wolf.player.DamageImpact();
                 Rigidbody2D _rb = wolf.player.GetComponent<Rigidbody2D>();
                 _rb.AddForce(Vector2.up, ForceMode2D.Impulse);
                 isPlayerAttacked = true;
@@ -595,7 +595,7 @@ public class WildWolf_TakeDown_VAttackState: Boss_AttackState
             if (!isPlayerAttacked)
             {
                 Debug.Log("Player.Damage");
-                wolf.player.Damage();
+                wolf.player.DamageImpact();
                 Rigidbody2D _rb = wolf.player.GetComponent<Rigidbody2D>();
                 _rb.AddForce(Vector2.up, ForceMode2D.Impulse);
                 isPlayerAttacked = true;
@@ -835,7 +835,7 @@ public class WildWolf_TakeDown_DirectAttackState : Boss_AttackState
             if (!isPlayerAttacked)
             {
                 Debug.Log("Player.Damage");
-                wolf.player.Damage();
+                wolf.player.DamageImpact();
                 Rigidbody2D _rb = wolf.player.GetComponent<Rigidbody2D>();
                 _rb.AddForce(Vector2.up, ForceMode2D.Impulse);
                 isPlayerAttacked = true;

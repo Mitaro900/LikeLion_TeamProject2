@@ -194,9 +194,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5895564581988309735}
-  - component: {fileID: 8953133787625920199}
-  - component: {fileID: 1654084299193172595}
   - component: {fileID: 652804844019195696}
+  - component: {fileID: 1654084299193172595}
+  - component: {fileID: 8953133787625920199}
+  - component: {fileID: 8207922760325496740}
   m_Layer: 8
   m_Name: Enemy_Mush
   m_TagString: Enemy
@@ -224,61 +225,33 @@ Transform:
   - {fileID: 8754714915421782327}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &8953133787625920199
-MonoBehaviour:
+--- !u!50 &652804844019195696
+Rigidbody2D:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4717051123617627277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2287fa5c7bfd304c936d873ec2fc22a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slideMovement:
-    <maxIterations>k__BackingField: 3
-    <surfaceSlideAngle>k__BackingField: 90
-    <gravitySlipAngle>k__BackingField: 90
-    <surfaceUp>k__BackingField: {x: 0, y: 1}
-    <surfaceAnchor>k__BackingField: {x: 0, y: -1}
-    <gravity>k__BackingField: {x: 0, y: -9.81}
-    <startPosition>k__BackingField: {x: 0, y: 0}
-    <selectedCollider>k__BackingField: {fileID: 0}
-    <layerMask>k__BackingField:
-      serializedVersion: 2
-      m_Bits: 4294967295
-    <useLayerMask>k__BackingField: 0
-    <useStartPosition>k__BackingField: 0
-    <useNoMove>k__BackingField: 0
-    <useSimulationMove>k__BackingField: 0
-    <useAttachedTriggers>k__BackingField: 0
-  groundCheck: {fileID: 7950430345989535029}
-  groundCheckDistance: 0.1
-  wallCheck: {fileID: 6398604310490736137}
-  wallCheckDistance: 0.8
-  whatIsGround:
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 7
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 8
-  stunDuration: 0.5
-  stunDirection: {x: 0, y: 0}
-  moveSpeed: 2
-  idleTime: 0.2
-  battleTime: 5
-  fallSpeed: 2
-  playerCheck: {fileID: 6998680847106493439}
-  playerCheckRadius: 3
-  whatIsPlayer:
+    m_Bits: 0
+  m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 128
-  distance: 0
-  radius: 3
-  attackCheck: {fileID: 8754714915421782327}
-  attackCheckRadius: 0.8
-  attackDistance: 2.5
-  attackCooldown: 1.5
-  lastTimeAttacked: 0
-  maxVerticalOffset: 1
+    m_Bits: 0
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!61 &1654084299193172595
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -325,33 +298,60 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1.2126508}
   m_EdgeRadius: 0
---- !u!50 &652804844019195696
-Rigidbody2D:
-  serializedVersion: 5
+--- !u!114 &8953133787625920199
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4717051123617627277}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 7
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2287fa5c7bfd304c936d873ec2fc22a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbackDirection: {x: 10, y: 10}
+  knockbackDuration: 0.5
+  groundCheck: {fileID: 7950430345989535029}
+  groundCheckDistance: 0.1
+  wallCheck: {fileID: 6398604310490736137}
+  wallCheckDistance: 0.8
+  whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
+    m_Bits: 8
+  stunDuration: 0.5
+  stunDirection: {x: 0, y: 0}
+  moveSpeed: 2
+  idleTime: 0.2
+  battleTime: 5
+  fallSpeed: 2
+  playerCheck: {fileID: 6998680847106493439}
+  playerCheckRadius: 3
+  whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 1
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 4
+    m_Bits: 128
+  distance: 0
+  radius: 3
+  attackCheck: {fileID: 8754714915421782327}
+  attackCheckRadius: 0.8
+  attackDistance: 2.5
+  attackCooldown: 1.5
+  lastTimeAttacked: 0
+  maxVerticalOffset: 1
+--- !u!114 &8207922760325496740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4717051123617627277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0ddfd36bded95f49be9fa95c0a4e856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashDuration: 0.2
+  hitMat: {fileID: 2100000, guid: 47fcc3929921eb84db3ec8ba63abe539, type: 2}
 --- !u!1 &7631381149914553285
 GameObject:
   m_ObjectHideFlags: 0

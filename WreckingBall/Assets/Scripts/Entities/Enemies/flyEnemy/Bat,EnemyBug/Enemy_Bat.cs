@@ -50,9 +50,9 @@ public class Enemy_Bat : Enemy
         return false;
     }
 
-    public override void Damage()
+    public override void DamageImpact()
     {
-        base.Damage();
+        base.DamageImpact();
          stateMachine.ChangeState(dieState);
     }
 

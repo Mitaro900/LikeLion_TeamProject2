@@ -13,9 +13,9 @@ public class Entity : MonoBehaviour
     #endregion
 
     [Header("넉백 정보")]
-    [SerializeField] protected Vector2 knockbackDirection = new Vector2(5f, 5f); // 넉백 방향
+    [SerializeField] protected Vector2 knockbackDirection = new Vector2(10f, 10f); // 넉백 방향
     [SerializeField] protected float knockbackDuration = 0.5f; // 넉백 지속 시간
-    protected bool isKnocked; // 넉백 상태
+    public bool isKnocked { get; private set; } // 넉백 상태
 
     [Header("충돌 정보")]
     [SerializeField] protected Transform groundCheck; // 바닥 체크 위치
@@ -46,9 +46,9 @@ public class Entity : MonoBehaviour
 
     }
 
-    public virtual void Damage()
+    public virtual void DamageImpact()
     {
-        fx.StartCoroutine("FlashFx");
+        fx.StartCoroutine("FlashFX");
         StartCoroutine(HitKnockback());
         SoundManager.Instance.PlaySFX(SfxTrack.Hit);
     }
@@ -62,8 +62,6 @@ public class Entity : MonoBehaviour
         yield return new WaitForSeconds(knockbackDuration);
 
         isKnocked = false;
-
-        SetZeroVelocity();
     }
 
     #region 충돌
