@@ -86,14 +86,16 @@ public class Boss : EntityCollision
 
     public virtual void Damage()
     {
-        if(ability.hp <= 0)
+        ability.hp -= 1;
+        Debug.Log(nameof(Boss) + " " + nameof(Damage) + $" {ability.hp} / {ability.maxHp}");
+        if (ability.hp <= 0)
         {
             if(bossPage >= bossMaxPage)
                 deathEvent?.Invoke();
             
             else
             {
-                bossPage++;
+                bossPage+=1;
                 ability.hp = ability.maxHp;
                 pageChageEvent?.Invoke(ability);
             }
@@ -101,6 +103,7 @@ public class Boss : EntityCollision
         }
         else
             damageEvent?.Invoke(ability);
+        
     }
 
 
@@ -108,6 +111,12 @@ public class Boss : EntityCollision
     {
         base.Start();
         stateMachine = new BossStateMachine();
+
+        this.damageEvent += (ab) =>
+        {
+            Debug.Log("hp : "+ab.hp);
+            stateMachine.ChangeState(damageState);
+        };
 
         idleState = new Boss_IdleState(stateMachine, this, "Idle");
         AddState(idleState);
@@ -121,6 +130,8 @@ public class Boss : EntityCollision
         AddState(deathState);
 
         oriPos = transform.position;
+
+        
     }
 
     protected override void Update()
