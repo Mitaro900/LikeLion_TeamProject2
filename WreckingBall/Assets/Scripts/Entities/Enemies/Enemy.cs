@@ -5,8 +5,10 @@ public class Enemy : Entity
 {
     [Header("Enemy")]
     [Header("스턴 정보")]
-    public float stunDuration;
-    public Vector2 stunDirection;
+    [SerializeField] private float stunDuration = 3f;
+    public float StunDuration { get => stunDuration; }
+    [SerializeField] private Vector2 stunDirection;
+    public Vector2 StunDirection { get => stunDirection; }
     protected bool canBeStunned;
 
     [Header("이동 정보")]
@@ -46,12 +48,20 @@ public class Enemy : Entity
 
     protected bool isGrabbed = false;
     public bool IsGrabbed { get => isGrabbed; set => isGrabbed = value; }
+    protected bool isThrowing = false;
+    public bool IsThrowing { get => isThrowing; set => isThrowing = value; }
+    protected bool isDead = false;
+    public bool IsDead { get => isDead; set => isDead = value; }
 
-    public StateMachine stateMachine { get; private set; }
+    public StateMachine stateMachine { get; protected set; }
+    public State idleState { get; protected set; }
+    public EnemyStunnedState stunnedState { get; protected set; }
+    public EnemyDeadState deadState { get; protected set; }
 
     protected override void Awake()
     {
         base.Awake();
+
         stateMachine = new StateMachine();
         defaultMoveSpeed = moveSpeed;
     }
@@ -60,7 +70,12 @@ public class Enemy : Entity
     {
         base.Update();
 
-        if(IsOutOfView() && isGrabbed)
+        if (isGrabbed)
+        {
+            stateMachine.ChangeState(stunnedState);
+        }
+
+        if(IsOutOfView() && (isThrowing || isDead))
         {
             Destroy(gameObject);
         }
@@ -70,7 +85,6 @@ public class Enemy : Entity
         RaycastHit2D hit = IsPlayerDetected();
         if (hit.collider != null)
         {
-            Debug.Log("플레이어발견");
             playerTransform = hit.transform;
         }
     }
@@ -103,14 +117,11 @@ public class Enemy : Entity
         FreezeTime(false);
     }
 
-
-
     #region Counter Attack Window
     public virtual void OpenCounterAttackWindow()
     {
         canBeStunned = true;
     }
-
 
     public virtual void CloseCounterAttackWindow()
     {
@@ -137,7 +148,6 @@ public class Enemy : Entity
         return transform.position.x < min.x || transform.position.x > max.x ||
                transform.position.y < min.y || transform.position.y > max.y;
     }
-
 
     public virtual void AnimationFinishTrigger() => stateMachine.currentState.AnimationFinishTrigger();
 
@@ -174,7 +184,7 @@ public class Enemy : Entity
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-            if (enemy.IsGrabbed)
+            if (enemy.IsThrowing)
             {
                 DamageImpact();
             }

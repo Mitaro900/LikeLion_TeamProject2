@@ -3,14 +3,9 @@ using UnityEngine;
 public class Enemy_Mush : Enemy
 {
     #region States
-
-    public MushIdleState idleState { get; private set; }
     public MushMoveState moveState { get; private set; }
     public MushBattleState battleState { get; private set; }
     public MushAttackState attackState { get; private set; }
-    public MushStunnedState stunnedState { get; private set; }
-    public MushDieState dieState { get; private set; }
-
     #endregion
 
     [Header("감지 옵션")]
@@ -24,9 +19,8 @@ public class Enemy_Mush : Enemy
         moveState = new MushMoveState(this, stateMachine, "Move", this);
         battleState = new MushBattleState(this, stateMachine, "Move", this);
         attackState = new MushAttackState(this, stateMachine, "Attack", this);
-        stunnedState = new MushStunnedState(this, stateMachine, "Stun", this);
-        dieState =new MushDieState(this, stateMachine, "Die", this);
-
+        stunnedState = new EnemyStunnedState(this, stateMachine, "Stun", this);
+        deadState = new EnemyDeadState(this, stateMachine, "Dead", this);
     }
 
     protected override void Start()
@@ -39,11 +33,6 @@ public class Enemy_Mush : Enemy
     protected override void Update()
     {
         base.Update();
-        if (IsGrabbed && stateMachine.currentState != stunnedState)
-        {
-            stateMachine.ChangeState(stunnedState);
-            return;
-        }
     }
 
     public override RaycastHit2D IsPlayerDetected()
@@ -76,6 +65,6 @@ public class Enemy_Mush : Enemy
     {
         base.DamageImpact();
 
-        stateMachine.ChangeState(dieState);
+        stateMachine.ChangeState(deadState);
     }
 }

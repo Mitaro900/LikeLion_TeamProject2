@@ -186,12 +186,15 @@ public class Player : Entity
             return;
 
         SoundManager.Instance.PlaySFX(SfxTrack.Hit);
+        UIManager.Instance.GetUI<NormalStageUI>()?.AddCombo();
 
         grabbedObject.transform.SetParent(null);
         grabbedObject.layer = LayerMask.NameToLayer("Default");
         Enemy enemyScript = grabbedObject.GetComponent<Enemy>();
         enemyScript.cd.isTrigger = true;
         enemyScript.cd.enabled = true;
+        enemyScript.IsGrabbed = false;
+        enemyScript.IsThrowing = true;
 
         Vector3 dir = Vector3.right * facingDir;
 

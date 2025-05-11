@@ -22,7 +22,6 @@ public class MushAttackState : State
     {
         base.Update();
 
-
         enemy.SetZeroVelocity();
 
         if (triggerCalled || stateTimer < 0f)
@@ -40,6 +39,4 @@ public class MushAttackState : State
         enemy.Radius -= 3f;
         enemy.PlayerCheckRadius -= 3f;
     }
-
-    
 }

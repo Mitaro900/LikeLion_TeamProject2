@@ -34,9 +34,6 @@ public class LeafrimMoveState : State
     {
         base.Update();
 
-        if (enemy.IsPlayerDetected())
-            stateMachine.ChangeState(enemy.battleState);
-
         if (isWaiting)
         {
             waitCounter += Time.deltaTime;
@@ -65,7 +62,7 @@ public class LeafrimMoveState : State
         {
             enemy.SetVelocity(enemy.moveSpeed * enemy.facingDir, rb.linearVelocity.y);
 
-            if (enemy.IsWallDetected())
+            if (enemy.IsWallDetected() || !enemy.IsGroundDetected())
             {
                 enemy.Flip();
                 stateMachine.ChangeState(enemy.idleState);
@@ -75,8 +72,5 @@ public class LeafrimMoveState : State
                 isWaiting = true;
             }
         }
-
-
-
     }
 }

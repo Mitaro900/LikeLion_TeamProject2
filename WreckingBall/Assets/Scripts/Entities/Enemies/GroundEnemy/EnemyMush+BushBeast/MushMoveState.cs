@@ -25,11 +25,6 @@ public class MushMoveState : State
         waitCounter = 0f;
     }
 
-    public override void Exit()
-    {
-        base.Exit();
-    }
-
     public override void Update()
     {
         base.Update();
@@ -75,8 +70,10 @@ public class MushMoveState : State
                 isWaiting = true;
             }
         }
+    }
 
-
-
+    public override void Exit()
+    {
+        base.Exit();
     }
 }
