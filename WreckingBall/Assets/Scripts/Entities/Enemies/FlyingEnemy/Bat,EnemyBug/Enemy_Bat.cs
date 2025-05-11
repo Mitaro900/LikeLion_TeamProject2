@@ -18,6 +18,7 @@ public class Enemy_Bat : Enemy
         battleState = new BatBattleState(this, stateMachine, "Move", this);
         attackState = new BatAttackState(this, stateMachine, "Attack", this);
         stunnedState = new EnemyStunnedState(this, stateMachine, "Stun", this);
+        panicState = new EnemyPanicState(this, stateMachine, "Stun", this);
         deadState = new EnemyDeadState(this, stateMachine, "Dead", this);
     }
 

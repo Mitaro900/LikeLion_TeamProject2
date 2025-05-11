@@ -20,6 +20,7 @@ public class Enemy_Mush : Enemy
         battleState = new MushBattleState(this, stateMachine, "Move", this);
         attackState = new MushAttackState(this, stateMachine, "Attack", this);
         stunnedState = new EnemyStunnedState(this, stateMachine, "Stun", this);
+        panicState = new EnemyPanicState(this, stateMachine, "Panic", this);
         deadState = new EnemyDeadState(this, stateMachine, "Dead", this);
     }
 
@@ -37,7 +38,7 @@ public class Enemy_Mush : Enemy
 
     public override RaycastHit2D IsPlayerDetected()
     {
-        RaycastHit2D hit = Physics2D.CircleCast(playerCheck.position, Radius, Vector2.right * facingDir, Distance, whatIsPlayer);
+        RaycastHit2D hit = Physics2D.CircleCast(playerCheck.position, playerCheckRadius, Vector2.right * facingDir, Distance, whatIsPlayer);
         
         if (hit.collider != null)
         {

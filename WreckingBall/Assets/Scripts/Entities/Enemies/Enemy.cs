@@ -56,6 +56,7 @@ public class Enemy : Entity
     public StateMachine stateMachine { get; protected set; }
     public State idleState { get; protected set; }
     public EnemyStunnedState stunnedState { get; protected set; }
+    public EnemyPanicState panicState { get; protected set; }
     public EnemyDeadState deadState { get; protected set; }
 
     protected override void Awake()
@@ -70,23 +71,29 @@ public class Enemy : Entity
     {
         base.Update();
 
-        if (isGrabbed)
-        {
-            stateMachine.ChangeState(stunnedState);
-        }
-
         if(IsOutOfView() && (isThrowing || isDead))
         {
             Destroy(gameObject);
         }
 
-        stateMachine.currentState.Update();
+        if (isGrabbed)
+        {
+            stateMachine.ChangeState(stunnedState);
+        }
 
         RaycastHit2D hit = IsPlayerDetected();
         if (hit.collider != null)
         {
             playerTransform = hit.transform;
+            var pl = hit.collider.GetComponent<Player>();
+            if (pl != null && pl.IsOverSpeedThreshold)
+            {
+                stateMachine.ChangeState(panicState);
+                return;
+            }
         }
+
+        stateMachine.currentState.Update();
     }
 
     public override void DamageImpact()
@@ -160,6 +167,7 @@ public class Enemy : Entity
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + AttackDistance * facingDir, transform.position.y));
+        Gizmos.DrawWireSphere(attackCheck.position, attackCheckRadius);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

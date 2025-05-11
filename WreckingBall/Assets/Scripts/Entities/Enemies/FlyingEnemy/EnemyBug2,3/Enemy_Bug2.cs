@@ -22,6 +22,7 @@ public class Enemy_Bug2 : Enemy
         battleState = new Bug2BattleState(this, stateMachine, "Move", this);
         attackState = new Bug2AttackState(this, stateMachine, "Attack", this);
         stunnedState = new EnemyStunnedState(this, stateMachine, "Stun", this);
+        panicState = new EnemyPanicState(this, stateMachine, "Stun", this);
         deadState = new EnemyDeadState(this, stateMachine, "Dead", this);
     }
     protected override void Start()

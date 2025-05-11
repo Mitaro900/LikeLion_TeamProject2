@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 1413603556531992368}
   - component: {fileID: 8843337468018394580}
   - component: {fileID: 7403227275679682697}
+  - component: {fileID: 8454407211658120442}
   m_Layer: 8
   m_Name: EnemyBug2
   m_TagString: Enemy
@@ -184,6 +185,20 @@ MonoBehaviour:
   lastTimeAttacked: 0
   SpawnFlyPrefab: {fileID: 6586704668097962023, guid: 1ac0ba76298540c4eb54acbdcde137d0, type: 3}
   summonPoint: {fileID: 2366290755922227990}
+--- !u!114 &8454407211658120442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590975165654727761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0ddfd36bded95f49be9fa95c0a4e856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashDuration: 0.2
+  hitMat: {fileID: 2100000, guid: 47fcc3929921eb84db3ec8ba63abe539, type: 2}
 --- !u!1 &2206673025107436279
 GameObject:
   m_ObjectHideFlags: 0

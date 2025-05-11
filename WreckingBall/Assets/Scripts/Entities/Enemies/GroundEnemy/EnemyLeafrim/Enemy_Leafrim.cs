@@ -13,6 +13,7 @@ public class Enemy_Leafrim : Enemy
         idleState = new LeafrimIdleState(this, stateMachine, "Idle", this);
         moveState = new LeafrimMoveState(this, stateMachine, "Move", this);
         stunnedState = new EnemyStunnedState(this, stateMachine, "Dead", this);
+        panicState = new EnemyPanicState(this, stateMachine, "Dead", this);
         deadState = new EnemyDeadState(this, stateMachine, "Dead", this);
     }
 

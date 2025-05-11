@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 4455740182325918065}
   - component: {fileID: 8788354596619195457}
   - component: {fileID: 939054973640054498}
+  - component: {fileID: 6019910453430731038}
   m_Layer: 8
   m_Name: EnemyBug
   m_TagString: Enemy
@@ -181,6 +182,20 @@ MonoBehaviour:
   attackDistance: 2
   attackCooldown: 1.5
   lastTimeAttacked: 0
+--- !u!114 &6019910453430731038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5638047563559390784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0ddfd36bded95f49be9fa95c0a4e856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashDuration: 0.2
+  hitMat: {fileID: 2100000, guid: 47fcc3929921eb84db3ec8ba63abe539, type: 2}
 --- !u!1 &6210736230793887120
 GameObject:
   m_ObjectHideFlags: 0
