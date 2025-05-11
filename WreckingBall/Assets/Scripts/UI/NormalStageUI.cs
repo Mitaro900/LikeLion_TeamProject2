@@ -44,6 +44,7 @@ public class NormalStageUI : UIBase
     public void AddScore(int value)
     {
         _score += value;
+        _score = Mathf.Clamp(_score, 0, int.MaxValue); // 스코어는 음수로 내려가지 않음
         GetText((int)Texts.ScoreText).text = _score.ToString();
     }
 
@@ -90,7 +91,7 @@ public class NormalStageUI : UIBase
     public void AdjustComboTimer(float seconds)
     {
         _comboTimer += seconds;
-        Mathf.Clamp(_comboTimer, 0, _comboDuration);
+        _comboTimer = Mathf.Clamp(_comboTimer, 0, _comboDuration);
     }
 
     private IEnumerator AppearComboBox()

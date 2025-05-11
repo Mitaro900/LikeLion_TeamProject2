@@ -107,11 +107,13 @@ public class ShootProjectileTrap : TrapBase
 
     private void Shoot()
     {
-        List<string> names = new();
+        List<string> names = new List<string>();
         foreach(var item in proj)
         {
             names.Add(item.Key);
         }
+
+        if (names.Count == 0) return;
 
         int index = Random.Range(0, names.Count);
         StartCoroutine(ShootProjectile(proj[names[index]], index));

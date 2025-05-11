@@ -37,7 +37,7 @@ public class BreakableBlock : BlockBase
         if (collision.CompareTag("Enemy"))
         {
             Enemy enemy = collision.GetComponent<Enemy>();
-            if (enemy.IsThrowing)
+            if (enemy.IsThrowing && !isHardened)
             {
                 onHit?.Invoke();
                 SoundManager.Instance.PlaySFX(SfxTrack.BlockDestroy);

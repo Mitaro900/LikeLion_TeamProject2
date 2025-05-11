@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7113157477110318941}
   - component: {fileID: 4183531220744641020}
   m_Layer: 3
-  m_Name: Brick1_0
+  m_Name: BreakableBrick
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
