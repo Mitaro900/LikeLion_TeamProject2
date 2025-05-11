@@ -52,6 +52,11 @@ public class WildWolf : Boss
             controller.NextAction(true);
         };
         base.deathEvent = deathEvent;
+        base.deathEvent += () =>
+        {
+            controller.enabled = false;
+            stateMachine.ChangeState(deathState);
+        };
         base.pageChageEvent = pageChageEvent;
         base.pageChageEvent += (ab) =>
         {
