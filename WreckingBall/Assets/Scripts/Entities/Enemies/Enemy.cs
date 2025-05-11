@@ -25,11 +25,8 @@ public class Enemy : Entity
     public float PlayerCheckRadius { get => playerCheckRadius; set => playerCheckRadius = value; }
 
     [SerializeField] protected LayerMask whatIsPlayer;
-    [SerializeField] protected float distance;
-    public float Distance { get => distance; set => distance = value; }
-    
-    [SerializeField] protected float radius;
-    public float Radius { get => radius; set => radius = value; }
+    [SerializeField] protected float playerCheckDistance;
+    public float PlayerCheckDistance { get => playerCheckDistance; set => playerCheckDistance = value; }
 
     [Header("공격 정보")]
     [SerializeField] protected Transform attackCheck;
@@ -76,17 +73,17 @@ public class Enemy : Entity
             Destroy(gameObject);
         }
 
-        if (isGrabbed)
+        if (isGrabbed && !isDead)
         {
             stateMachine.ChangeState(stunnedState);
         }
 
-        RaycastHit2D hit = IsPlayerDetected();
+        RaycastHit2D hit = Physics2D.Raycast(playerCheck.position, Vector3.right * facingDir, playerCheckRadius);
         if (hit.collider != null)
         {
             playerTransform = hit.transform;
             var pl = hit.collider.GetComponent<Player>();
-            if (pl != null && pl.IsOverSpeedThreshold)
+            if (pl != null && pl.IsOverSpeedThreshold && !isDead)
             {
                 stateMachine.ChangeState(panicState);
                 return;
@@ -159,7 +156,7 @@ public class Enemy : Entity
     public virtual void AnimationFinishTrigger() => stateMachine.currentState.AnimationFinishTrigger();
 
     public virtual RaycastHit2D IsPlayerDetected()
-    => Physics2D.CircleCast(playerCheck.position, Radius, Vector2.down * facingDir, Distance, whatIsPlayer);
+    => Physics2D.CircleCast(playerCheck.position, playerCheckRadius, Vector2.down * facingDir, PlayerCheckDistance, whatIsPlayer);
 
     protected override void OnDrawGizmos()
     {
@@ -167,6 +164,7 @@ public class Enemy : Entity
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + AttackDistance * facingDir, transform.position.y));
+        Gizmos.DrawWireSphere(playerCheck.position, playerCheckRadius);
         Gizmos.DrawWireSphere(attackCheck.position, attackCheckRadius);
     }
 

@@ -16,7 +16,6 @@ public class BatBattleState : State
         base.Enter();
         player = PlayerManager.Instance.player.transform;
         enemy.moveSpeed += 2f;
-        enemy.Radius += 3f;
         enemy.PlayerCheckRadius += 3f;
     }
 
@@ -58,10 +57,8 @@ public class BatBattleState : State
     {
         base.Exit();
         enemy.moveSpeed -= 2f;
-        enemy.Radius -= 3f;
         enemy.PlayerCheckRadius -= 3f;
     }
-
 
     private bool CanAttack()
     {

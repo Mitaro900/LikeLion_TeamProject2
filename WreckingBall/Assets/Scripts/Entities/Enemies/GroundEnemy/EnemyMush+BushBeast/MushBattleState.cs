@@ -43,7 +43,6 @@ public class MushBattleState : State
 
         // 4) 전투 버프 적용
         enemy.moveSpeed += 2f;
-        enemy.Radius += 3f;
         enemy.PlayerCheckRadius += 3f;
     }
 
@@ -96,7 +95,6 @@ public class MushBattleState : State
         base.Exit();
         // 전투 버프 원복
         enemy.moveSpeed -= 2f;
-        enemy.Radius -= 3f;
         enemy.PlayerCheckRadius -= 3f;
     }
 

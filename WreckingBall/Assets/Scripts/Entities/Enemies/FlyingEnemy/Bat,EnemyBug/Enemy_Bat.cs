@@ -8,7 +8,6 @@ public class Enemy_Bat : Enemy
     public BatAttackState attackState { get; private set; }
     #endregion
 
-
     protected override void Awake()
     {
         base.Awake();

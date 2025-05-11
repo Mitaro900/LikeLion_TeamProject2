@@ -30,6 +30,14 @@ public class GameManager : SingletonComponent<GameManager>
             Destroy(gameObject);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         SoundManager.Instance.StopBGM();
@@ -50,5 +58,6 @@ public class GameManager : SingletonComponent<GameManager>
     {
         UIManager.Instance.GetUI<NormalStageUI>()?.AddScore(-50);
         UIManager.Instance.GetUI<NormalStageUI>()?.AdjustComboTimer(-2.5f);
+        UIManager.Instance.GetUI<BossStageUI>()?.DamagedPlayerHp();
     }
 }

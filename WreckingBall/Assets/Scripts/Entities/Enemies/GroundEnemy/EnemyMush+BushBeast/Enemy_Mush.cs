@@ -38,7 +38,7 @@ public class Enemy_Mush : Enemy
 
     public override RaycastHit2D IsPlayerDetected()
     {
-        RaycastHit2D hit = Physics2D.CircleCast(playerCheck.position, playerCheckRadius, Vector2.right * facingDir, Distance, whatIsPlayer);
+        RaycastHit2D hit = Physics2D.CircleCast(playerCheck.position, playerCheckRadius, Vector2.right * facingDir, PlayerCheckDistance, whatIsPlayer);
         
         if (hit.collider != null)
         {

@@ -194,7 +194,7 @@ MonoBehaviour:
   wallCheckDistance: 2
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   stunDuration: 3
   stunDirection: {x: 0, y: 0}
   moveSpeed: 1.5
@@ -205,7 +205,7 @@ MonoBehaviour:
   playerCheckRadius: 3
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 128
   distance: 0
   radius: 3
   attackCheck: {fileID: 2279561575731695761}

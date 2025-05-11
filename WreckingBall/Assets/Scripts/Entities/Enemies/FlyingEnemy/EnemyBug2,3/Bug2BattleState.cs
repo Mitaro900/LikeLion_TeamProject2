@@ -16,7 +16,6 @@ public class Bug2BattleState : State
         base.Enter();
         player = PlayerManager.Instance.player.transform;
         enemy.moveSpeed += 1f;
-        enemy.Radius += 6f;
         enemy.PlayerCheckRadius += 6f;
 
     }
@@ -54,7 +53,6 @@ public class Bug2BattleState : State
     {
         base.Exit();
         enemy.moveSpeed -= 1f;
-        enemy.Radius -= 6f;
         enemy.PlayerCheckRadius -= 6f;
     }
 

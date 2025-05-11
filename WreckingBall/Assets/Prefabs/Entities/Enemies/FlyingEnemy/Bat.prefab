@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2509045425921138985}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6768630739043772702}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AttackCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,9 +74,9 @@ GameObject:
   - component: {fileID: 2823364789762173336}
   - component: {fileID: 923020882389168560}
   - component: {fileID: 8373618943249037159}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Animator
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,8 +137,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1327849649
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -955609468180279937, guid: be0c3b1e758b6d74ab1b4f6dd8eb5b62, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -197,9 +197,10 @@ GameObject:
   - component: {fileID: 2446740627833594703}
   - component: {fileID: 761561648013876441}
   - component: {fileID: 2333473081059338116}
-  m_Layer: 7
+  - component: {fileID: 4351379167100688431}
+  m_Layer: 8
   m_Name: Bat
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -280,11 +281,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.24810934}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -294,7 +295,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.7956133}
   m_EdgeRadius: 0
 --- !u!114 &2333473081059338116
 MonoBehaviour:
@@ -310,13 +311,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackDirection: {x: 0, y: 0}
   knockbackDuration: 0.5
-  groundCheck: {fileID: 0}
+  groundCheck: {fileID: 5376721463530771835}
   groundCheckDistance: 0.1
   wallCheck: {fileID: 5376721463530771835}
   wallCheckDistance: 0.8
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   stunDuration: 3
   stunDirection: {x: 0, y: 0}
   moveSpeed: 2
@@ -327,7 +328,7 @@ MonoBehaviour:
   playerCheckRadius: 3
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 128
   distance: 0
   radius: 3
   attackCheck: {fileID: 6768630739043772702}
@@ -335,6 +336,20 @@ MonoBehaviour:
   attackDistance: 2.5
   attackCooldown: 1.5
   lastTimeAttacked: 0
+--- !u!114 &4351379167100688431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4766006462131387380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0ddfd36bded95f49be9fa95c0a4e856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashDuration: 0.2
+  hitMat: {fileID: 2100000, guid: 47fcc3929921eb84db3ec8ba63abe539, type: 2}
 --- !u!1 &6867028709553555158
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,7 +359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5376721463530771835}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}

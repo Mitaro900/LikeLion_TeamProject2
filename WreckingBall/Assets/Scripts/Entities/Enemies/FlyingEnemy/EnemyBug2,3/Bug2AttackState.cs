@@ -17,7 +17,6 @@ public class Bug2AttackState : State
         base.Enter();
         enemy.StartCoroutine(SummonDelayCoroutine());
         enemy.moveSpeed += 1f;
-        enemy.Radius += 6f;
         enemy.PlayerCheckRadius += 6f;
     }
 
@@ -26,7 +25,6 @@ public class Bug2AttackState : State
         base.Exit();
         enemy.lastTimeAttacked = Time.time;
         enemy.moveSpeed -= 1f;
-        enemy.Radius -= 6f;
         enemy.PlayerCheckRadius -= 6f;
     }
 
@@ -49,7 +47,6 @@ public class Bug2AttackState : State
         if (enemy.SpawnFlyPrefab != null && enemy.summonPoint != null)
         {
             GameObject go = Object.Instantiate(enemy.SpawnFlyPrefab, enemy.summonPoint.position, Quaternion.identity);
-
         }
         else
         {
