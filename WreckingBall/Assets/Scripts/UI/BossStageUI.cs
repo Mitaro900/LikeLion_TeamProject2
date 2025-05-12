@@ -26,6 +26,9 @@ public class BossStageUI : UIBase
 
     void Awake()
     {
+        _playerHp = 6;
+        _bossHp = 6;
+
         BindImage(typeof(Images));
         _playerHpPos[0] = GetImage((int)Images.pHp0).GetComponent<RectTransform>().anchoredPosition;
         _playerHpPos[1] = GetImage((int)Images.pHp1).GetComponent<RectTransform>().anchoredPosition;
