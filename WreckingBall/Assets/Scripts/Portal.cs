@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
 {
@@ -9,7 +8,7 @@ public class Portal : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene(sceneName);
+            SceneLoader.Instance.LoadScene(sceneName);
         }
     }
 }
