@@ -8,7 +8,7 @@ public class State
     protected Rigidbody2D rb;
 
     protected bool triggerCalled;
-    private string animBoolName;
+    public string animBoolName { get; private set; }
 
     protected float stateTimer;
 

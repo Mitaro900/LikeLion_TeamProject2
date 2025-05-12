@@ -26,6 +26,9 @@ public class BossStageUI : UIBase
 
     void Awake()
     {
+        _playerHp = 6;
+        _bossHp = 6;
+
         BindImage(typeof(Images));
         _playerHpPos[0] = GetImage((int)Images.pHp0).GetComponent<RectTransform>().anchoredPosition;
         _playerHpPos[1] = GetImage((int)Images.pHp1).GetComponent<RectTransform>().anchoredPosition;
@@ -42,7 +45,7 @@ public class BossStageUI : UIBase
         _bossHpPos[5] = GetImage((int)Images.bHp5).GetComponent<RectTransform>().anchoredPosition;
     }
 
-    void DamagedPlayerHp()
+    public void DamagedPlayerHp()
     {
         _playerHp--;
         switch (_playerHp)
@@ -56,7 +59,7 @@ public class BossStageUI : UIBase
         }
     }
 
-    void DamagedBossHp()
+    public void DamagedBossHp()
     {
         _bossHp--;
         switch (_playerHp)
@@ -70,7 +73,7 @@ public class BossStageUI : UIBase
         }
     }
 
-    void SetPlayerFullHp()
+    public void SetPlayerFullHp()
     {
         _playerHp = 6;
         GetImage((int)Images.pHp0).GetComponent<RectTransform>().anchoredPosition = _playerHpPos[0];
@@ -80,7 +83,7 @@ public class BossStageUI : UIBase
         GetImage((int)Images.pHp4).GetComponent<RectTransform>().anchoredPosition = _playerHpPos[4];
         GetImage((int)Images.pHp5).GetComponent<RectTransform>().anchoredPosition = _playerHpPos[5];
     }
-    void SetBossFullHp()
+    public void SetBossFullHp()
     {
         StopAllCoroutines();
         _bossHp = 6;

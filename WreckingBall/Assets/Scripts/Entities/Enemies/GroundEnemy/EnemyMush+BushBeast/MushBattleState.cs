@@ -43,7 +43,6 @@ public class MushBattleState : State
 
         // 4) 전투 버프 적용
         enemy.moveSpeed += 2f;
-        enemy.Radius += 3f;
         enemy.PlayerCheckRadius += 3f;
     }
 
@@ -57,9 +56,12 @@ public class MushBattleState : State
             stateTimer = enemy.battleTime;
 
             float dist = Vector2.Distance(player.position, enemy.transform.position);
-            if (dist > 0.8f)
+            if (dist > enemy.AttackDistance)
             {
-                MoveTowardPlayer();
+                //몬스터가 플레이어를 계속 밀어서 바꿈
+                //MoveTowardPlayer();
+                int moveDir = player.position.x > enemy.transform.position.x ? 1 : -1;
+                enemy.SetVelocity(enemy.moveSpeed * moveDir, rb.linearVelocity.y);
             }
             else if (Time.time >= enemy.lastTimeAttacked + enemy.AttackCooldown)
             {
@@ -93,7 +95,6 @@ public class MushBattleState : State
         base.Exit();
         // 전투 버프 원복
         enemy.moveSpeed -= 2f;
-        enemy.Radius -= 3f;
         enemy.PlayerCheckRadius -= 3f;
     }
 

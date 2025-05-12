@@ -86,7 +86,7 @@ public class ProjectileBase : MonoBehaviour
         }
         else if (collision.GetComponent<Player>() != null)
         {
-            collision.GetComponent<Player>().Damage();
+            collision.GetComponent<Player>().DamageImpact();
         }
     }
 

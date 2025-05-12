@@ -46,7 +46,7 @@ public class WildWolf_RunAttackState : Boss_MoveState
                 if (boss.IsGiveDamagedAction() && !isPlayerAttacked)
                 {
                     Debug.Log("Player.Damage");
-                    wolf.player.Damage();
+                    wolf.player.DamageImpact();
                     Rigidbody2D _rb = wolf.player.GetComponent<Rigidbody2D>();
                     _rb.AddForce(Vector2.up, ForceMode2D.Impulse);
 
@@ -185,7 +185,7 @@ public class WildWolf_FloorSlideState : Boss_MoveState
             if(!isPlayerAttacked)
             {
                 Debug.Log("Player.Damage");
-                wolf.player.Damage();
+                wolf.player.DamageImpact();
                 Rigidbody2D _rb = wolf.player.GetComponent<Rigidbody2D>();
                 _rb.AddForce(Vector2.up, ForceMode2D.Impulse);
 
@@ -285,7 +285,7 @@ public class WildWolf_JumpAttackState : Boss_AttackState
             if (!isPlayerAttacked)
             {
                 Debug.Log("Player.Damage");
-                wolf.player.Damage();
+                wolf.player.DamageImpact();
                 Rigidbody2D _rb = wolf.player.GetComponent<Rigidbody2D>();
                 _rb.AddForce(Vector2.up, ForceMode2D.Impulse);
 
@@ -356,6 +356,10 @@ public class WildWolf_ThrowTrapState : BossState
 
             for (int i = 0; i < _traps.Count; i++)
             {
+                if(stateMachine.currentState != this)
+                    yield break;
+                
+
                 GameObject _trap = _traps[i];
                 _trap.SetActive(true);
 
@@ -435,7 +439,7 @@ public class WildWolf_AerialSlideState: Boss_AttackState
             if (!isPlayerAttacked)
             {
                 Debug.Log("Player.Damage");
-                wolf.player.Damage();
+                wolf.player.DamageImpact();
                 Rigidbody2D _rb = wolf.player.GetComponent<Rigidbody2D>();
                 _rb.AddForce(Vector2.up, ForceMode2D.Impulse);
                 isPlayerAttacked = true;
@@ -530,6 +534,8 @@ public class WildWolf_AerialSlideState: Boss_AttackState
         WaitForFixedUpdate wait = new();
         while (climbTime > 0f)
         {
+            if (stateMachine.currentState != this)
+                yield break;
             climbTime -= Time.fixedDeltaTime;
             boss.SetVelocity(0, boss.GetAbility().moveSpeed);
             yield return wait;
@@ -595,7 +601,7 @@ public class WildWolf_TakeDown_VAttackState: Boss_AttackState
             if (!isPlayerAttacked)
             {
                 Debug.Log("Player.Damage");
-                wolf.player.Damage();
+                wolf.player.DamageImpact();
                 Rigidbody2D _rb = wolf.player.GetComponent<Rigidbody2D>();
                 _rb.AddForce(Vector2.up, ForceMode2D.Impulse);
                 isPlayerAttacked = true;
@@ -758,6 +764,9 @@ public class WildWolf_DroppingTrapState : BossState
 
             for (int i = 0; i < _traps.Count; i++)
             {
+                if (stateMachine.currentState != this)
+                    yield break;
+
                 if (boss.transform.position.x > wolf.player.transform.position.x && boss.GetFacingDir() == 1)
                     boss.Flip();
                 else if (boss.transform.position.x < wolf.player.transform.position.x && boss.GetFacingDir() == -1)
@@ -835,7 +844,7 @@ public class WildWolf_TakeDown_DirectAttackState : Boss_AttackState
             if (!isPlayerAttacked)
             {
                 Debug.Log("Player.Damage");
-                wolf.player.Damage();
+                wolf.player.DamageImpact();
                 Rigidbody2D _rb = wolf.player.GetComponent<Rigidbody2D>();
                 _rb.AddForce(Vector2.up, ForceMode2D.Impulse);
                 isPlayerAttacked = true;
@@ -924,6 +933,9 @@ public class WildWolf_TakeDown_DirectAttackState : Boss_AttackState
         WaitForFixedUpdate wait = new();
         while(climbTime > 0f)
         {
+            if (stateMachine.currentState != this)
+                yield break;
+
             climbTime -= Time.fixedDeltaTime;
             boss.SetVelocity(0, boss.GetAbility().moveSpeed);
             yield return wait;

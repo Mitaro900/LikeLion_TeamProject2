@@ -24,7 +24,12 @@ public class PlayerState : State
     {
         base.Update();
 
-        if(Input.GetKey(km.GetKey(BindingManager.Action.Right)) && !Input.GetKey(km.GetKey(BindingManager.Action.Left)))
+        if (player.isKnocked)
+        {
+            return;
+        }
+
+        if (Input.GetKey(km.GetKey(BindingManager.Action.Right)) && !Input.GetKey(km.GetKey(BindingManager.Action.Left)))
         {
             xInput = 1f;
         }

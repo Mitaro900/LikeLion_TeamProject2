@@ -13,7 +13,6 @@ public class MushAttackState : State
     {
         base.Enter();
         enemy.moveSpeed += 2f;
-        enemy.Radius += 3f;
         enemy.PlayerCheckRadius += 3f;
 
         stateTimer = enemy.AttackCooldown;
@@ -21,7 +20,6 @@ public class MushAttackState : State
     public override void Update()
     {
         base.Update();
-
 
         enemy.SetZeroVelocity();
 
@@ -37,9 +35,6 @@ public class MushAttackState : State
         base.Exit();
         enemy.lastTimeAttacked = Time.time;
         enemy.moveSpeed -= 2f;
-        enemy.Radius -= 3f;
         enemy.PlayerCheckRadius -= 3f;
     }
-
-    
 }

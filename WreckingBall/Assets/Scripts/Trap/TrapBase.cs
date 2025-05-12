@@ -81,7 +81,7 @@ public class TrapBase : MonoBehaviour
 
                 if(isCrushed)
                 {
-                    player.Damage();
+                    player.DamageImpact();
                 }
             }
             // 함정 오브젝트와 가시가 없는 부분과 충돌했을때 부숴지는 애니메이션 재생
@@ -92,7 +92,7 @@ public class TrapBase : MonoBehaviour
             }
             else
             {
-                player.Damage();
+                player.DamageImpact();
             }
         }
     }

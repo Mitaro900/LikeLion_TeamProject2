@@ -22,15 +22,13 @@ public class NormalStageUI : UIBase
         Slider
     }
 
-    private int _combo;
-
     void Awake()
     {
         BindText(typeof(Texts));
         BindImage(typeof(Images));
         BindSlider(typeof(Sliders));
 
-        _score = _displayedScore = 0;
+        _score = 0;
         _combo = 0;
         GetText((int)Texts.ComboText).text = "0 combo!";
         GetText((int)Texts.ScoreText).text = "0";
@@ -39,40 +37,15 @@ public class NormalStageUI : UIBase
         _comboBoxTarget = _comboBoxOrigin + new Vector2(0f, -200f);
     }
 
-
     #region 스코어
 
     private int _score;
-    private int _displayedScore;
-    private float scoreSpeed = 100f;
-    private Coroutine scoreCo;
 
-    public void AnimateAddScore(int value)
+    public void AddScore(int value)
     {
         _score += value;
-        if (scoreCo == null)
-            scoreCo = StartCoroutine(AnimateScore());
-    }
-
-    public void SetScore(int value)
-    {
-        if (scoreCo == null) StopCoroutine(scoreCo);
-        _score = _displayedScore = value;
+        _score = Mathf.Clamp(_score, 0, int.MaxValue); // 스코어는 음수로 내려가지 않음
         GetText((int)Texts.ScoreText).text = _score.ToString();
-    }
-
-    IEnumerator AnimateScore()
-    {
-        while (true)
-        {
-            if (_displayedScore == _score) break;
-            int newScore = (int)Mathf.MoveTowards(_displayedScore, _score, Mathf.RoundToInt(scoreSpeed * Time.deltaTime));
-            _displayedScore = newScore;
-            GetText((int)Texts.ScoreText).text = newScore.ToString();
-            yield return null;
-        }
-
-        scoreCo = null;
     }
 
     #endregion
@@ -83,43 +56,47 @@ public class NormalStageUI : UIBase
     private enum ComboBoxState
     {
         Idle,
-        Showing,
-        Advertising,
+        Appearing,
+        Displaying,
         Hiding
     }
 
     private ComboBoxState _comboBoxState = ComboBoxState.Idle;
 
+    private int _combo;
+    private float _comboTimer;
+    private const float _comboDuration = 6.7f; // 콤보박스가 사라지기까지의 시간
     private Coroutine comboCo;
-    private Coroutine comboCooldownCo;
     private Vector2 _comboBoxOrigin;
     private Vector2 _comboBoxTarget;
 
-   
-    public void SetCombo(int value)
+    public void AddCombo()
     {
-        _combo = value;
+        _combo++;
         GetText((int)Texts.ComboText).text = $"{_combo} combo!";
-        if (comboCooldownCo != null) StopCoroutine(comboCooldownCo);
-        comboCooldownCo = StartCoroutine(CoolDownCo());
         // 콤보박스가 사라지거나 대기 상태이면 새로 등장 애니메이션을 실행
         if (_comboBoxState == ComboBoxState.Idle || _comboBoxState == ComboBoxState.Hiding)
         {
             if (comboCo != null) StopCoroutine(comboCo);
-            comboCo = StartCoroutine(ShowComboBox());
+            comboCo = StartCoroutine(AppearComboBox());
         }
-        // 이미 등장 중이거나 광고 대기 중이면 광고 대기 시간을 갱신(재시작)
-        else if (_comboBoxState == ComboBoxState.Advertising)
+        // 이미 등장 중이면 광고 대기 시간을 갱신(재시작)
+        else if (_comboBoxState == ComboBoxState.Displaying)
         {
             if (comboCo != null) StopCoroutine(comboCo);
-            comboCo = StartCoroutine(AdvertisementWait());
+            comboCo = StartCoroutine(DisplayComboBox());
         }
     }
 
-
-    IEnumerator ShowComboBox()
+    public void AdjustComboTimer(float seconds)
     {
-        _comboBoxState = ComboBoxState.Showing;
+        _comboTimer += seconds;
+        _comboTimer = Mathf.Clamp(_comboTimer, 0, _comboDuration);
+    }
+
+    private IEnumerator AppearComboBox()
+    {
+        _comboBoxState = ComboBoxState.Appearing;
         Image comboBoxImage = GetImage((int)Images.ComboBox);
         RectTransform rt = comboBoxImage.GetComponent<RectTransform>();
         Vector2 startPos = rt.anchoredPosition;
@@ -135,17 +112,29 @@ public class NormalStageUI : UIBase
         }
 
         rt.anchoredPosition = targetPos;
-        yield return AdvertisementWait();
+        yield return DisplayComboBox();
     }
 
-    IEnumerator AdvertisementWait()
+    private IEnumerator DisplayComboBox()
     {
-        _comboBoxState = ComboBoxState.Advertising;
-        yield return new WaitForSeconds(6f);
+        _comboBoxState = ComboBoxState.Displaying;
+        _comboTimer = _comboDuration;
+        GetSlider((int)Sliders.Slider).value = 1;
+
+        while (_comboTimer > 0)
+        {
+            _comboTimer -= Time.deltaTime;
+            GetSlider((int)Sliders.Slider).value = _comboTimer / _comboDuration;
+            yield return null;
+        }
+
+        AddScore((int)(Mathf.Pow(_combo, 2) / 0.25f) + _combo * 10);
+        _combo = 0;
+
         comboCo = StartCoroutine(HideComboBox());
     }
 
-    IEnumerator HideComboBox()
+    private IEnumerator HideComboBox()
     {
         _comboBoxState = ComboBoxState.Hiding;
         Image comboBoxImage = GetImage((int)Images.ComboBox);
@@ -165,19 +154,6 @@ public class NormalStageUI : UIBase
         rt.anchoredPosition = targetPos;
         _comboBoxState = ComboBoxState.Idle;
         comboCo = null;
-    }
-    IEnumerator CoolDownCo()
-    {
-        GetSlider((int)Sliders.Slider).value = 1;
-        float duration = 6.7f;
-        float elapsedTime = 0f;
-
-        while (elapsedTime < duration)
-        {
-            elapsedTime += Time.deltaTime;
-            GetSlider((int)Sliders.Slider).value = 1 - (elapsedTime / duration);
-            yield return null;
-        }
     }
     #endregion
 }

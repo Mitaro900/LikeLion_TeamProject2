@@ -5,8 +5,10 @@ public class Enemy : Entity
 {
     [Header("Enemy")]
     [Header("스턴 정보")]
-    public float stunDuration;
-    public Vector2 stunDirection;
+    [SerializeField] private float stunDuration = 3f;
+    public float StunDuration { get => stunDuration; }
+    [SerializeField] private Vector2 stunDirection;
+    public Vector2 StunDirection { get => stunDirection; }
     protected bool canBeStunned;
 
     [Header("이동 정보")]
@@ -23,11 +25,8 @@ public class Enemy : Entity
     public float PlayerCheckRadius { get => playerCheckRadius; set => playerCheckRadius = value; }
 
     [SerializeField] protected LayerMask whatIsPlayer;
-    [SerializeField] protected float distance;
-    public float Distance { get => distance; set => distance = value; }
-    
-    [SerializeField] protected float radius;
-    public float Radius { get => radius; set => radius = value; }
+    [SerializeField] protected float playerCheckDistance;
+    public float PlayerCheckDistance { get => playerCheckDistance; set => playerCheckDistance = value; }
 
     [Header("공격 정보")]
     [SerializeField] protected Transform attackCheck;
@@ -46,12 +45,21 @@ public class Enemy : Entity
 
     protected bool isGrabbed = false;
     public bool IsGrabbed { get => isGrabbed; set => isGrabbed = value; }
+    protected bool isThrowing = false;
+    public bool IsThrowing { get => isThrowing; set => isThrowing = value; }
+    protected bool isDead = false;
+    public bool IsDead { get => isDead; set => isDead = value; }
 
-    public StateMachine stateMachine { get; private set; }
+    public StateMachine stateMachine { get; protected set; }
+    public State idleState { get; protected set; }
+    public EnemyStunnedState stunnedState { get; protected set; }
+    public EnemyPanicState panicState { get; protected set; }
+    public EnemyDeadState deadState { get; protected set; }
 
     protected override void Awake()
     {
         base.Awake();
+
         stateMachine = new StateMachine();
         defaultMoveSpeed = moveSpeed;
     }
@@ -60,19 +68,36 @@ public class Enemy : Entity
     {
         base.Update();
 
-        if(IsOutOfView() && isGrabbed)
+        if(IsOutOfView() && (isThrowing || isDead))
         {
             Destroy(gameObject);
         }
 
-        stateMachine.currentState.Update();
+        if (isGrabbed && !isDead)
+        {
+            stateMachine.ChangeState(stunnedState);
+        }
 
-        RaycastHit2D hit = IsPlayerDetected();
+        RaycastHit2D hit = Physics2D.Raycast(playerCheck.position, Vector3.right * facingDir, playerCheckRadius);
         if (hit.collider != null)
         {
-            Debug.Log("플레이어발견");
             playerTransform = hit.transform;
+            var pl = hit.collider.GetComponent<Player>();
+            if (pl != null && pl.IsOverSpeedThreshold && !isDead)
+            {
+                stateMachine.ChangeState(panicState);
+                return;
+            }
         }
+
+        stateMachine.currentState.Update();
+    }
+
+    public override void DamageImpact()
+    {
+        base.DamageImpact();
+
+        UIManager.Instance.GetUI<NormalStageUI>()?.AddCombo();
     }
 
     public virtual void FreezeTime(bool _timeFrozen)
@@ -96,14 +121,11 @@ public class Enemy : Entity
         FreezeTime(false);
     }
 
-
-
     #region Counter Attack Window
     public virtual void OpenCounterAttackWindow()
     {
         canBeStunned = true;
     }
-
 
     public virtual void CloseCounterAttackWindow()
     {
@@ -131,12 +153,10 @@ public class Enemy : Entity
                transform.position.y < min.y || transform.position.y > max.y;
     }
 
-
     public virtual void AnimationFinishTrigger() => stateMachine.currentState.AnimationFinishTrigger();
 
     public virtual RaycastHit2D IsPlayerDetected()
-    => Physics2D.CircleCast(playerCheck.position, Radius, Vector2.down * facingDir, Distance, whatIsPlayer);
-
+    => Physics2D.CircleCast(playerCheck.position, playerCheckRadius, Vector2.down * facingDir, PlayerCheckDistance, whatIsPlayer);
 
     protected override void OnDrawGizmos()
     {
@@ -144,5 +164,36 @@ public class Enemy : Entity
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + AttackDistance * facingDir, transform.position.y));
+        Gizmos.DrawWireSphere(playerCheck.position, playerCheckRadius);
+        Gizmos.DrawWireSphere(attackCheck.position, attackCheckRadius);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Player player = collision.gameObject.GetComponent<Player>();
+
+            var currState = player.stateMachine.currentState;
+            bool isDashHit = currState == player.dashState && player.IsOverSpeedThreshold;
+            bool isBslamHit = currState == player.bodyslamState && player.rb.linearVelocity.y < 0f;
+
+            if (isDashHit || isBslamHit)
+            {
+                DamageImpact();
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+            if (enemy.IsThrowing)
+            {
+                DamageImpact();
+            }
+        }
     }
 }

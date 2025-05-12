@@ -25,17 +25,19 @@ public class MushMoveState : State
         waitCounter = 0f;
     }
 
-    public override void Exit()
-    {
-        base.Exit();
-    }
-
     public override void Update()
     {
         base.Update();
 
         if (enemy.IsPlayerDetected())
             stateMachine.ChangeState(enemy.battleState);
+
+        if (!enemy.IsGroundDetected())
+        {
+            enemy.Flip();
+            stateMachine.ChangeState(enemy.idleState);
+            return;
+        }
 
         if (isWaiting)
         {
@@ -75,8 +77,10 @@ public class MushMoveState : State
                 isWaiting = true;
             }
         }
+    }
 
-
-
+    public override void Exit()
+    {
+        base.Exit();
     }
 }

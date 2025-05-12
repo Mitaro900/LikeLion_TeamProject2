@@ -15,6 +15,7 @@ public class PoinItemBase : MonoBehaviour
     [SerializeField] protected string disableAnimName = "Disable";
     [SerializeField] protected AnimationClip disableAnimClip;
     [SerializeField] protected Animator anim;
+    [SerializeField] protected int scoreValue;
     public UnityAction disableEvent = null;
 
     [Tooltip("비활성화 애니메이션 플레이 여부")]
@@ -31,8 +32,10 @@ public class PoinItemBase : MonoBehaviour
             anim.enabled = true;
 
         //임시
-        disableEvent = () => { Debug.Log("포인트업!",gameObject); };
-
+        disableEvent = () => {
+            UIManager.Instance.GetUI<NormalStageUI>()?.AddScore(scoreValue);
+            UIManager.Instance.GetUI<NormalStageUI>()?.AdjustComboTimer(scoreValue * 0.11f);
+        };
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
